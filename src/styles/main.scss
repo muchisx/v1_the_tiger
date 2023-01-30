@@ -1,0 +1,14 @@
+$header-color: black;
+
+.test-title {
+  color: red;
+  color: $header-color;
+
+  & span {
+    color: white;
+  }
+}
+
+span {
+  color: blue;
+}
