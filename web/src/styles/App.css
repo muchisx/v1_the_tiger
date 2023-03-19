@@ -92,12 +92,19 @@ select {
 /*  --------------------------------------------------
                 MAIN CSS BELOW
 --------------------------------------------------- */
+
+:root {
+  --button-bg-primary: #1d1f21;
+  --button-text-primary: #fff
+}
+
 html,
 body {
   height: 100%;
 }
 
 body {
+  font-family: 'Microsoft Sans Serif';
   min-height: 100vh;
   min-height: 100dvh;
 }
@@ -105,6 +112,10 @@ body {
 #root {
   width: 100%;
   height: 100%;
+}
+
+button {
+  border: none;
 }
 
 /* Temp  */
