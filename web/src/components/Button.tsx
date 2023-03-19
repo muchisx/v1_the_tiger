@@ -4,7 +4,12 @@ import ButtonStyled from './styled/ButtonStyled';
 function Button(props) {
   const { text } = props;
 
-  return <ButtonStyled>{text}</ButtonStyled>;
+  return (
+    <ButtonStyled type="primary">
+      {text}
+      <span>👉🏼</span>
+    </ButtonStyled>
+  );
 }
 
 export default Button;

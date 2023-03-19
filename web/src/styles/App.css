@@ -94,8 +94,12 @@ select {
 --------------------------------------------------- */
 
 :root {
+
+  --body-text-primary: #1d1f21;
   --button-bg-primary: #1d1f21;
-  --button-text-primary: #fff
+  --button-text-primary: #fff;
+  --button-bg-secondary: #e7e7e7;
+  --button-text-secondary: #1d1f21;
 }
 
 html,
@@ -107,6 +111,7 @@ body {
   font-family: 'Microsoft Sans Serif';
   min-height: 100vh;
   min-height: 100dvh;
+  color: var(--body-text-primary);
 }
 
 #root {
