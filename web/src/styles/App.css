@@ -92,3 +92,26 @@ select {
 /*  --------------------------------------------------
                 MAIN CSS BELOW
 --------------------------------------------------- */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Temp  */
+nav {
+  display: flex;
+  gap: 12px;
+  position: fixed;
+  inset: 0;
+  bottom: auto;
+}
