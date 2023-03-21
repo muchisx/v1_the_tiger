@@ -95,11 +95,20 @@ select {
 
 :root {
 
-  --body-text-primary: #1d1f21;
+  --accent-color: #ff0004;
+
   --button-bg-primary: #1d1f21;
   --button-text-primary: #fff;
+  --button-border-primary: var(--button-bg-primary);
   --button-bg-secondary: #e7e7e7;
   --button-text-secondary: #1d1f21;
+  --button-border-secondary: var(--button-bg-secondary);
+  --button-bg-tertiary: var(--accent-color);
+  --button-text-tertiary: #fff;
+  --button-border-tertiary: var(--button-bg-tertiary);
+  --button-bg-quaternary: #fff;
+  --button-text-quaternary: #747474;
+  --button-border-quaternary: #bebebe;
 }
 
 html,
@@ -121,6 +130,7 @@ body {
 
 button {
   border: none;
+  color: inherit;
 }
 
 /* Temp  */

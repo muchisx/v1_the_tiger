@@ -1,12 +1,15 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 function ButtonStyled(props) {
-  const { role, type = 'primary', children } = props;
+  const { role, type = 'primary', children, attributes } = props;
 
   const Container = styled.div`
     background: var(--button-bg-${type});
     border-radius: 100px;
     padding: 2rem 8rem;
+    color: var(--button-text-${type});
+    border: 1px solid var(--button-border-${type});
     cursor: pointer;
   `;
 
@@ -17,14 +20,17 @@ function ButtonStyled(props) {
     gap: 8rem;
     padding: 2rem 4rem;
     font-size: 14rem;
-    color: var(--button-text-${type});
     background: none;
     cursor: pointer;
   `;
 
   return (
     <Container>
-      <Button>{children}</Button>
+      {role === 'button' ? (
+        <Button>{children}</Button>
+      ) : (
+        <Link to={attributes.href}>{children}</Link>
+      )}
     </Container>
   );
 }
