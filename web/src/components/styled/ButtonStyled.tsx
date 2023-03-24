@@ -1,8 +1,15 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-function ButtonStyled(props) {
-  const { role, type = 'primary', children, attributes } = props;
+type Props = {
+  role: string;
+  type: string;
+  to: string;
+  children: React.ReactNode;
+};
+
+function ButtonStyled(props: Props) {
+  const { role, type = 'primary', children, to } = props;
 
   const Container = styled.div`
     background: var(--btn-color-bg-${type});
@@ -29,7 +36,7 @@ function ButtonStyled(props) {
       {role === 'button' ? (
         <Button>{children}</Button>
       ) : (
-        <Link to={attributes.href}>{children}</Link>
+        <Link to={to}>{children}</Link>
       )}
     </Container>
   );

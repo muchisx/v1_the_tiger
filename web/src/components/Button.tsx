@@ -1,14 +1,14 @@
 import ButtonStyled from './styled/ButtonStyled';
 
-function Button(props) {
+type Props = {
+  text: string;
+};
+
+function Button(props: Props) {
   const { text } = props;
 
-  const attributes = {
-    href: '/',
-  };
-
   return (
-    <ButtonStyled type="quaternary" role="button" attributes={attributes}>
+    <ButtonStyled type="quaternary" role="button" to="/">
       {text}
       <span>👉🏼</span>
     </ButtonStyled>

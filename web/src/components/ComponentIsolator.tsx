@@ -1,13 +1,12 @@
-import PropTypes from 'prop-types';
 import ComponentIsolatorStyled from './styled/ComponentIsolatorStyled';
 
-function ComponentIsolator(props) {
+type Props = {
+  children: React.ReactNode;
+};
+
+function ComponentIsolator(props: Props) {
   const { children } = props;
   return <ComponentIsolatorStyled>{children}</ComponentIsolatorStyled>;
 }
-
-ComponentIsolator.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default ComponentIsolator;
