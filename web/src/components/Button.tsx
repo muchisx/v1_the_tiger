@@ -1,4 +1,3 @@
-import React from 'react';
 import ButtonStyled from './styled/ButtonStyled';
 
 function Button(props) {

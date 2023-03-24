@@ -1,11 +1,11 @@
-import React from 'react';
 import ComponentIsolator from '../components/ComponentIsolator';
 import Button from '../components/Button';
+import Logo from '../components/Logo';
 
 function Playground() {
   return (
     <ComponentIsolator>
-      <Button text="Button text" />
+      <Logo />
     </ComponentIsolator>
   );
 }

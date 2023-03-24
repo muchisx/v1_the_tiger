@@ -5,11 +5,11 @@ function ButtonStyled(props) {
   const { role, type = 'primary', children, attributes } = props;
 
   const Container = styled.div`
-    background: var(--button-bg-${type});
+    background: var(--btn-color-bg-${type});
     border-radius: 100px;
     padding: 2rem 8rem;
-    color: var(--button-text-${type});
-    border: 1px solid var(--button-border-${type});
+    color: var(--btn-color-text-${type});
+    border: 1px solid var(--btn-color-border-${type});
     cursor: pointer;
   `;
 
