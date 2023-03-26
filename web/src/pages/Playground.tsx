@@ -6,6 +6,7 @@ function Playground() {
   return (
     <ComponentIsolator>
       <Logo />
+      <Button text="Hey!" type="primary" role="button" />
     </ComponentIsolator>
   );
 }

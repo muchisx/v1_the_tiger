@@ -1,4 +1,9 @@
-function LogoStyled() {
+type Props = {
+  isUppercase?: boolean;
+};
+
+function LogoStyled(props: Props) {
+  const { isUppercase } = props;
   return (
     <div>
       <span>Miguel</span>
@@ -6,5 +11,9 @@ function LogoStyled() {
     </div>
   );
 }
+
+LogoStyled.defaultProps = {
+  isUppercase: false,
+};
 
 export default LogoStyled;

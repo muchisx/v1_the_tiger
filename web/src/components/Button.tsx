@@ -1,18 +1,20 @@
 import ButtonStyled from './styled/ButtonStyled';
 
-type Props = {
+type CommonProps = {
   text: string;
+  type: string;
 };
 
-function Button(props: Props) {
-  const { text } = props;
+type ConditionalProps =
+  | { role: 'button'; to?: never }
+  | { role: 'link'; to: string };
 
-  return (
-    <ButtonStyled type="quaternary" role="button" to="/">
-      {text}
-      <span>👉🏼</span>
-    </ButtonStyled>
-  );
+type Props = CommonProps & ConditionalProps;
+
+function Button(props: Props) {
+  const { text, role, type, to } = props;
+
+  return <ButtonStyled type={type} role={role} to={to} text={text} />;
 }
 
 export default Button;
