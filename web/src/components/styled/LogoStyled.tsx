@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 type WordWrapAttributes = {
   instance: number;
@@ -9,10 +10,12 @@ type WordWrapProps = {
 
 type Props = WordWrapProps;
 
-const Container = styled.div`
+const ContainerLink = styled(Link)`
   display: flex;
   padding: 2px;
   gap: 8px;
+  font-family: var(--heading-family);
+  text-decoration: none;
 `;
 
 const WordWrap = styled.div<WordWrapProps & WordWrapAttributes>`
@@ -25,7 +28,7 @@ const WordWrap = styled.div<WordWrapProps & WordWrapAttributes>`
 `;
 
 const LetterSpan = styled.span`
-  font-size: 32px;
+  font-size: 28px;
 `;
 
 function LogoStyled(props: Props) {
@@ -33,7 +36,7 @@ function LogoStyled(props: Props) {
   const instances = ['Miguel', 'Ángel'];
 
   return (
-    <Container>
+    <ContainerLink to="/">
       {instances.map((instance, i) => {
         const lettersArray = instance.split('');
 
@@ -45,7 +48,7 @@ function LogoStyled(props: Props) {
           </WordWrap>
         );
       })}
-    </Container>
+    </ContainerLink>
   );
 }
 

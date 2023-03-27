@@ -1,8 +1,16 @@
 import LogoStyled from './styled/LogoStyled';
 
-function Logo(props) {
+type Props = {
+  isUppercase?: boolean;
+};
+
+function Logo(props: Props) {
   const { isUppercase } = props;
-  return <LogoStyled isUppercase />;
+  return <LogoStyled isUppercase={isUppercase} />;
 }
+
+Logo.defaultProps = {
+  isUppercase: false,
+};
 
 export default Logo;

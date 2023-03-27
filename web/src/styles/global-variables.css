@@ -24,4 +24,8 @@
   --btn-color-bg-quaternary: #fff;
   --btn-color-text-quaternary: #747474;
   --btn-color-border-quaternary: #bebebe;
+
+
+  --text-family: 'General Sans', sans-serif;
+  --heading-family: 'Satoshi', sans-serif;
 }
