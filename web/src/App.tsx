@@ -5,10 +5,12 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Playground from './pages/Playground';
+import Header from './components/Header';
 
 function App() {
   return (
     <>
+      <Header />
       <nav>
         <Link to="/">Home</Link>
         <Link to="/playground">Playground</Link>

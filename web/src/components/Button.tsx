@@ -7,9 +7,7 @@ type CommonProps = {
   variant: Variant;
 };
 
-type ConditionalProps =
-  | { role: 'button'; to?: never }
-  | { role: 'link'; to: string };
+type ConditionalProps = { role: 'button'; to?: never } | { role: 'link'; to: string };
 
 type Props = CommonProps & ConditionalProps;
 

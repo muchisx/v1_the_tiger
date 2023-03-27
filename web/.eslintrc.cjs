@@ -27,5 +27,6 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
+    'max-len': ['error', { code: 100, ignoreUrls: true }],
   },
 };
