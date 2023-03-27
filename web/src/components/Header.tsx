@@ -7,6 +7,7 @@ function Header() {
     <HeaderStyled>
       <Logo isUppercase />
       <Button text="Contact" variant="secondary" role="link" to="/contact" />
+      <Button role="button" variant="secondary" />
     </HeaderStyled>
   );
 }

@@ -5,7 +5,7 @@ import type { Variant } from '../Button';
 type Role = 'link' | 'button';
 type ContainerProps = { variant: Variant };
 type Props = {
-  text: string;
+  text?: string;
   role: Role;
   to?: string;
 } & ContainerProps;
@@ -61,7 +61,8 @@ function ButtonStyled(props: Props) {
 }
 
 ButtonStyled.defaultProps = {
-  to: '',
+  to: undefined,
+  text: undefined,
 };
 
 export default ButtonStyled;

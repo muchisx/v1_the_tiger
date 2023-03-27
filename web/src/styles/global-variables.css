@@ -1,5 +1,8 @@
 :root {
 
+  --accent-color: #ff0004;
+  --body-bg-color: #fffFFF;
+
   --text-primary: #1d1f21;
   --text-secondary: #909090;
 
@@ -9,8 +12,6 @@
 
   --body-text-primary: var(--text-primary);
   --body-text-complementary: var(--text-secondary);
-
-  --accent-color: #ff0004;
 
   --btn-color-bg-primary: #1d1f21;
   --btn-color-text-primary: #fff;

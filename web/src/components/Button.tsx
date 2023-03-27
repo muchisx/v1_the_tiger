@@ -3,7 +3,7 @@ import ButtonStyled from './styled/ButtonStyled';
 export type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 
 type CommonProps = {
-  text: string;
+  text?: string;
   variant: Variant;
 };
 
@@ -16,5 +16,9 @@ function Button(props: Props) {
 
   return <ButtonStyled variant={variant} role={role} to={to} text={text} />;
 }
+
+Button.defaultProps = {
+  text: undefined,
+};
 
 export default Button;

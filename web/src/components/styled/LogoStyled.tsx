@@ -22,9 +22,7 @@ const WordWrap = styled.div<WordWrapProps & WordWrapAttributes>`
   text-transform: ${(props) => (props.isUppercase ? 'uppercase' : 'none')};
   display: flex;
   gap: 1px;
-  color: var(
-    --logo-${(props) => (props.instance === 0 ? 'primary' : 'secondary')}
-  );
+  color: var(--logo-${(props) => (props.instance === 0 ? 'primary' : 'secondary')});
 `;
 
 const LetterSpan = styled.span`
