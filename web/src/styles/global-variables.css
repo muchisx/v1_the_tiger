@@ -1,7 +1,14 @@
 :root {
 
-  --body-text-primary: #1d1f21;
-  --body-text-complementary: #909090;
+  --text-primary: #1d1f21;
+  --text-secondary: #909090;
+
+  --logo-primary: var(--text-primary);
+  --logo-secondary: var(--text-secondary);
+
+
+  --body-text-primary: var(--text-primary);
+  --body-text-complementary: var(--text-secondary);
 
   --accent-color: #ff0004;
 

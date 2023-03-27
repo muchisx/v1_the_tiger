@@ -1,8 +1,10 @@
 import ButtonStyled from './styled/ButtonStyled';
 
+export type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
+
 type CommonProps = {
   text: string;
-  type: string;
+  variant: Variant;
 };
 
 type ConditionalProps =
@@ -12,9 +14,9 @@ type ConditionalProps =
 type Props = CommonProps & ConditionalProps;
 
 function Button(props: Props) {
-  const { text, role, type, to } = props;
+  const { text, role, variant, to } = props;
 
-  return <ButtonStyled type={type} role={role} to={to} text={text} />;
+  return <ButtonStyled variant={variant} role={role} to={to} text={text} />;
 }
 
 export default Button;

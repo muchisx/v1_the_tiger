@@ -1,7 +1,8 @@
-import LogoStyled from './styled/LogoStylex';
+import LogoStyled from './styled/LogoStyled';
 
-function Logo() {
-  return <LogoStyled />;
+function Logo(props) {
+  const { isUppercase } = props;
+  return <LogoStyled isUppercase />;
 }
 
 export default Logo;

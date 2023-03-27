@@ -1,23 +1,22 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import type { Variant } from '../Button';
 
-type ContainerProps = {
-  type: string;
-};
-
+type Role = 'link' | 'button';
+type ContainerProps = { variant: Variant };
 type Props = {
   text: string;
-  role: string;
+  role: Role;
   to?: string;
 } & ContainerProps;
 
 const Container = styled.div<ContainerProps>`
-  background: var(--btn-color-bg-${(props: ContainerProps) => props.type});
+  background: var(--btn-color-bg-${(props: ContainerProps) => props.variant});
   border-radius: 100px;
   padding: 2rem 8rem;
-  color: var(--btn-color-text-${(props: ContainerProps) => props.type});
+  color: var(--btn-color-text-${(props: ContainerProps) => props.variant});
   border: 1px solid
-    var(--btn-color-border-${(props: ContainerProps) => props.type});
+    var(--btn-color-border-${(props: ContainerProps) => props.variant});
   cursor: pointer;
 `;
 
@@ -33,10 +32,10 @@ const Button = styled.button`
 `;
 
 function ButtonStyled(props: Props) {
-  const { role, to, text, type } = props;
+  const { role, to, text, variant } = props;
 
   return (
-    <Container type={type}>
+    <Container variant={variant}>
       {role === 'button' ? (
         <Button>
           {text} <span>👉🏼</span>{' '}
