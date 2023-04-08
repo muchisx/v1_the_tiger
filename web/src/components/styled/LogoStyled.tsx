@@ -21,12 +21,12 @@ const ContainerLink = styled(Link)`
 const WordWrap = styled.div<WordWrapProps & WordWrapAttributes>`
   text-transform: ${(props) => (props.isUppercase ? 'uppercase' : 'none')};
   display: flex;
-  gap: 1px;
   color: var(--logo-${(props) => (props.instance === 0 ? 'primary' : 'secondary')});
 `;
 
 const LetterSpan = styled.span`
   font-size: 28px;
+  font-weight: 500;
 `;
 
 function LogoStyled(props: Props) {
@@ -34,7 +34,7 @@ function LogoStyled(props: Props) {
   const instances = ['Miguel', 'Ángel'];
 
   return (
-    <ContainerLink to="/">
+    <ContainerLink className="logo" to="/">
       {instances.map((instance, i) => {
         const lettersArray = instance.split('');
 

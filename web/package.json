@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@styled-icons/fluentui-system-filled": "^10.47.0",
+    "@styled-icons/fluentui-system-regular": "^10.47.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",

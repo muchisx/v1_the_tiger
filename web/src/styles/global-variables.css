@@ -1,7 +1,9 @@
 :root {
 
   --accent-color: #ff0004;
-  --body-bg-color: #fffFFF;
+  --body-bg-color: #FFFFFF;
+
+  --header-bg-color: #FFFFFF;
 
   --text-primary: #1d1f21;
   --text-secondary: #909090;

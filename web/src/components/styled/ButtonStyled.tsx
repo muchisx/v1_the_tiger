@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 import type { Variant } from '../Button';
 
 type Role = 'link' | 'button';
-type ContainerProps = { variant: Variant };
+type ContainerProps = { variant: Variant; text?: string };
 type Props = {
   text?: string;
   role: Role;
@@ -14,8 +15,8 @@ const Container = styled.div<ContainerProps>`
   cursor: pointer;
   width: fit-content;
   height: fit-content;
-  padding: 2rem 8rem;
-  border-radius: 100px;
+  padding: ${(props: ContainerProps) => (props.text ? '2rem 8rem' : '2rem')};
+  border-radius: ${(props: ContainerProps) => (props.text ? '100px' : '50%')};
   color: var(--btn-color-text-${(props: ContainerProps) => props.variant});
   background: var(--btn-color-bg-${(props: ContainerProps) => props.variant});
   border: 1px solid var(--btn-color-border-${(props: ContainerProps) => props.variant});
@@ -46,14 +47,16 @@ function ButtonStyled(props: Props) {
   const { role, to, text, variant } = props;
 
   return (
-    <Container variant={variant}>
+    <Container variant={variant} text={text}>
       {role === 'button' ? (
         <Button>
-          {text} <span>👉🏼</span>
+          {text}
+          <ArrowRight size={14} />
         </Button>
       ) : (
         <LinkStyled to={to ?? ''}>
-          {text} <span>👉🏼</span>
+          {text}
+          <ArrowRight size={14} />
         </LinkStyled>
       )}
     </Container>

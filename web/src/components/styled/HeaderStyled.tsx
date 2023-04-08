@@ -8,13 +8,17 @@ type Props = {
 const Header = styled.header`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 8px;
   position: fixed;
   inset: 0;
   bottom: auto;
   padding-inline: calc(12px + 2%);
   padding-block: 12px;
-  background: var(--body-bg-color);
+  background: var(--header-bg-color);
+
+  & .logo {
+    margin-right: auto;
+  }
 `;
 
 function HeaderStyled(props: Props) {
