@@ -18,9 +18,13 @@
   --btn-color-bg-primary: #1d1f21;
   --btn-color-text-primary: #fff;
   --btn-color-border-primary: var(--btn-color-bg-primary);
+  --btn-color-icon-primary: var(--btn-color-text-primary);
+  --btn-color-icon-bg-primary: var(--accent-color);
   --btn-color-bg-secondary: #e7e7e7;
   --btn-color-text-secondary: #1d1f21;
   --btn-color-border-secondary: var(--btn-color-bg-secondary);
+  --btn-color-icon-secondary: #FFFFFF;
+  --btn-color-icon-bg-secondary: var(--btn-color-text-secondary);
   --btn-color-bg-tertiary: var(--accent-color);
   --btn-color-text-tertiary: #fff;
   --btn-color-border-tertiary: var(--btn-color-bg-tertiary);

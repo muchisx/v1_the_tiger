@@ -21,12 +21,13 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 0,
     'react/prop-types': 'off',
+    'no-nested-ternary': 'off',
     'prettier/prettier': [
       'error',
       {
         endOfLine: 'auto',
       },
     ],
-    'max-len': ['error', { code: 100, ignoreUrls: true }],
+    'max-len': ['error', { code: 120, ignoreUrls: true }],
   },
 };
