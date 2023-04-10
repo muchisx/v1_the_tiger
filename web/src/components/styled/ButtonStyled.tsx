@@ -25,8 +25,7 @@ const Container = styled.div<ContainerProps>`
   color: var(--btn-color-text-${(props: ContainerProps) => props.variant});
   background: var(--btn-color-bg-${(props: ContainerProps) => props.variant});
   border: 1px solid var(--btn-color-border-${(props: ContainerProps) => props.variant});
-
-  padding: ${(props: ContainerProps) => (props.text ? (props.Icon ? '2rem 4rem 2rem 14rem' : '7rem 14rem') : '6rem')};
+  padding: ${(props: ContainerProps) => (props.text ? (props.Icon ? '2rem 2rem 2rem 14rem' : '7rem 14rem') : '6rem')};
 `;
 
 const buttonLikeStyles = css`
