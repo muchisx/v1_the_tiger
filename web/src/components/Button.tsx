@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { StyledIcon } from '@styled-icons/styled-icon';
 import ButtonStyled from './styled/ButtonStyled';
 
@@ -15,8 +16,23 @@ type Props = CommonProps & ConditionalProps;
 
 function Button(props: Props) {
   const { text, role, variant, to, Icon } = props;
+  const [isHovered, setIsHovered] = useState(false);
 
-  return <ButtonStyled variant={variant} role={role} to={to} text={text} Icon={Icon} />;
+  const handleHover = () => {
+    setIsHovered((current: boolean) => !current);
+  };
+
+  return (
+    <ButtonStyled
+      variant={variant}
+      role={role}
+      to={to}
+      text={text}
+      Icon={Icon}
+      handleHover={handleHover}
+      isHovered={isHovered}
+    />
+  );
 }
 
 Button.defaultProps = {

@@ -7,8 +7,8 @@ function Header() {
   return (
     <HeaderStyled>
       <Logo isUppercase />
-      <Button text="Contact" variant="quaternary" role="link" to="/contact" Icon={ArrowRight} />
-      <Button role="button" variant="quaternary" Icon={Navigation} />
+      <Button text="Contact" variant="secondary" role="link" to="/contact" Icon={ArrowRight} />
+      <Button role="button" variant="secondary" Icon={Navigation} />
     </HeaderStyled>
   );
 }
