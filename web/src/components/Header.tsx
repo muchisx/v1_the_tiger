@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, Navigation } from '@styled-icons/fluentui-system-filled';
+import { ArrowRight, Navigation, LineHorizontal1 } from '@styled-icons/fluentui-system-filled';
 import HeaderStyled from './styled/HeaderStyled';
 import Logo from './Logo';
 import Button from './Button';
@@ -17,13 +17,23 @@ function Header() {
     <HeaderStyled>
       <Logo isUppercase />
       <Button role="link" variant="secondary" Icon={ArrowRight} text="Contact" to="/contact" />
-      <Button
-        role="button"
-        variant="secondary"
-        Icon={Navigation}
-        action={toggleNavigation}
-        className="header-nav-toggle"
-      />
+      {showNavigation ? (
+        <Button
+          role="button"
+          variant="primary"
+          Icon={LineHorizontal1}
+          action={toggleNavigation}
+          className="header-nav-toggle"
+        />
+      ) : (
+        <Button
+          role="button"
+          variant="secondary"
+          Icon={Navigation}
+          action={toggleNavigation}
+          className="header-nav-toggle"
+        />
+      )}
 
       {showNavigation && (
         <>
