@@ -17,7 +17,18 @@ function Header() {
       <Button text="Contact" variant="secondary" role="link" to="/contact" Icon={ArrowRight} />
       <Button role="button" variant="secondary" Icon={Navigation} action={toggleNavigation} />
 
-      {showNavigation && <div>Im navigation!</div>}
+      {showNavigation && (
+        <div className="try">
+          Im navigation!
+          <br />
+          Im navigation!
+          <br />
+          Im navigation!
+          <br />
+          Im navigation!
+          <br />
+        </div>
+      )}
     </HeaderStyled>
   );
 }
