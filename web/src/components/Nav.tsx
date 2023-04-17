@@ -10,8 +10,16 @@ const navItems = [
   <NavItem text="CONTACT" key="CONTACT" to="/contact" Icon={ArrowUpRight} />,
 ];
 
+const subNavItems = [<NavItem text="404" key="404" to="/notfound" Icon={ArrowUpRight} />];
+
+const subNavSocials = [
+  <NavItem text="IG" key="IG" to="https://instagram.com/imiguel.angel" />,
+  <NavItem text="IN" key="IN" to="https://www.linkedin.com/miguelangel" />,
+  <NavItem text="GIT" key="GIT" to="https://github.com/muchisx" />,
+];
+
 function Nav() {
-  return <NavStyled navItems={navItems} />;
+  return <NavStyled navItems={navItems} subNavItems={subNavItems} subNavSocials={subNavSocials} />;
 }
 
 export default Nav;
