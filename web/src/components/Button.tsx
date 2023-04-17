@@ -10,12 +10,14 @@ type CommonProps = {
   variant: Variant;
 };
 
-type ConditionalProps = { role: 'button'; to?: never } | { role: 'link'; to: string };
+type ConditionalProps =
+  | { role: 'button'; to?: never; action: () => void }
+  | { role: 'link'; to: string; action?: never };
 
 type Props = CommonProps & ConditionalProps;
 
 function Button(props: Props) {
-  const { text, role, variant, to, Icon } = props;
+  const { text, role, variant, to, Icon, action } = props;
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -31,6 +33,7 @@ function Button(props: Props) {
       Icon={Icon}
       handleHover={handleHover}
       isHovered={isHovered}
+      action={action}
     />
   );
 }

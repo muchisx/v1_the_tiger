@@ -7,12 +7,13 @@ import type { Variant } from '../Button';
 type Role = 'link' | 'button';
 type ContainerProps = { Icon?: StyledIcon; variant: Variant; text?: string };
 type IconWrapProps = { text?: string; variant: Variant };
-type ButtonLikeProps = { isHovered: boolean; text?: string; Icon?: StyledIcon };
+type ButtonLikeProps = { $isHovered: boolean; $text?: string; $Icon?: StyledIcon };
 type Props = {
   text?: string;
   role: Role;
   to?: string;
   Icon?: StyledIcon;
+  action?: () => void;
   variant: Variant;
   handleHover: () => void;
   isHovered: boolean;
@@ -29,9 +30,9 @@ const buttonLikeStyles = css`
   cursor: pointer;
 
   ${(props: ButtonLikeProps) =>
-    props.isHovered &&
-    props.Icon &&
-    props.text &&
+    props.$isHovered &&
+    props.$Icon &&
+    props.$text &&
     css`
       flex-direction: row-reverse;
     `}
@@ -82,7 +83,18 @@ const Container = styled(motion.div)<ContainerProps>`
 `;
 
 function ButtonStyled(props: Props) {
-  const { role, to, text, variant, Icon, handleHover, isHovered } = props;
+  const { role, to, text, variant, Icon, handleHover, isHovered, action } = props;
+
+  const buttonContent = (
+    <>
+      {text && <Span layout>{text}</Span>}
+      {Icon && (
+        <IconWrap variant={variant} text={text} layout>
+          <Icon size={16} />
+        </IconWrap>
+      )}
+    </>
+  );
 
   const hoverAnimation = (buttonIcon: StyledIcon | undefined, buttonText: string | undefined) => {
     const animation = buttonIcon && buttonText ? undefined : { scale: 1.1 };
@@ -97,24 +109,15 @@ function ButtonStyled(props: Props) {
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
       whileHover={hoverAnimation(Icon, text)}
+      onClick={action}
     >
       {role === 'button' ? (
-        <Button isHovered={isHovered} text={text} Icon={Icon}>
-          {text && <Span layout>{text}</Span>}
-          {Icon && (
-            <IconWrap variant={variant} text={text} layout>
-              <Icon size={16} />
-            </IconWrap>
-          )}
+        <Button $isHovered={isHovered} $text={text} $Icon={Icon}>
+          {buttonContent}
         </Button>
       ) : (
-        <LinkStyled to={to ?? ''} isHovered={isHovered} text={text} Icon={Icon}>
-          {text && <Span layout>{text}</Span>}
-          {Icon && (
-            <IconWrap variant={variant} text={text} layout>
-              <Icon size={16} />
-            </IconWrap>
-          )}
+        <LinkStyled to={to ?? ''} $isHovered={isHovered} $text={text} $Icon={Icon}>
+          {buttonContent}
         </LinkStyled>
       )}
     </Container>
@@ -125,6 +128,7 @@ ButtonStyled.defaultProps = {
   to: undefined,
   text: undefined,
   Icon: undefined,
+  action: undefined,
 };
 
 export default ButtonStyled;
