@@ -126,12 +126,7 @@ button {
   color: inherit;
 }
 
-/* Temp  */
-nav {
-  display: flex;
-  gap: 12px;
-  position: fixed;
-  inset: 0;
-  bottom: auto;
-  margin-top: 70px;
+/* temp */
+main {
+  padding-top: 120px;
 }

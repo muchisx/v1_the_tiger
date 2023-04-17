@@ -3,13 +3,11 @@ import { StyledIcon } from '@styled-icons/styled-icon';
 import ButtonStyled from './styled/ButtonStyled';
 
 export type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
-
 type CommonProps = {
   text?: string;
   Icon?: StyledIcon;
   variant: Variant;
 };
-
 type ConditionalProps =
   | { role: 'button'; to?: never; action: () => void }
   | { role: 'link'; to: string; action?: never };

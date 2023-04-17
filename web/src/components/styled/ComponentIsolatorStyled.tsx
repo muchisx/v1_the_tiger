@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ComponentIsolatorStyled = styled.div`
+const ComponentIsolatorStyled = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;

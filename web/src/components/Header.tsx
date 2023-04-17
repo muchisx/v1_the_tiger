@@ -3,6 +3,7 @@ import { ArrowRight, Navigation } from '@styled-icons/fluentui-system-filled';
 import HeaderStyled from './styled/HeaderStyled';
 import Logo from './Logo';
 import Button from './Button';
+import Nav from './Nav';
 
 function Header() {
   const [showNavigation, setShowNavigation] = useState(false);
@@ -18,16 +19,9 @@ function Header() {
       <Button role="button" variant="secondary" Icon={Navigation} action={toggleNavigation} />
 
       {showNavigation && (
-        <div className="try">
-          Im navigation!
-          <br />
-          Im navigation!
-          <br />
-          Im navigation!
-          <br />
-          Im navigation!
-          <br />
-        </div>
+        <>
+          <Nav />
+        </>
       )}
     </HeaderStyled>
   );

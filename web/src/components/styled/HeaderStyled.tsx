@@ -19,20 +19,6 @@ const Header = styled.header`
   & .logo {
     margin-right: auto;
   }
-
-  & .try {
-    position: absolute;
-    inset: 0px 0px auto;
-    min-height: calc(100% - 16px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-inline: calc(4px + 2%);
-    margin-block: 8px;
-    background-color: grey;
-    border-radius: 8px;
-    z-index: -1;
-  }
 `;
 
 function HeaderStyled(props: Props) {
