@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-const styledBodyOverlay = styled.div`
-  width: 100vw;
-  width: 100dvw;
-  height: 100vh;
-  height: 100dvh;
-  background-color: #00000024;
+const StyledBodyOverlay = styled.div`
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
 `;
 
 function BodyOverlay() {
-  return <styledBodyOverlay />;
+  return <StyledBodyOverlay />;
 }
 
 export default BodyOverlay;

@@ -7,6 +7,7 @@ type CommonProps = {
   text?: string;
   Icon?: StyledIcon;
   variant: Variant;
+  className?: string;
 };
 type ConditionalProps =
   | { role: 'button'; to?: never; action: () => void }
@@ -15,7 +16,7 @@ type ConditionalProps =
 type Props = CommonProps & ConditionalProps;
 
 function Button(props: Props) {
-  const { text, role, variant, to, Icon, action } = props;
+  const { text, role, variant, to, Icon, action, className } = props;
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -32,12 +33,14 @@ function Button(props: Props) {
       handleHover={handleHover}
       isHovered={isHovered}
       action={action}
+      className={className}
     />
   );
 }
 
 Button.defaultProps = {
   text: undefined,
+  className: undefined,
   Icon: undefined,
 };
 

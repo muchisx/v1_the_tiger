@@ -9,6 +9,7 @@ type ContainerProps = { Icon?: StyledIcon; variant: Variant; text?: string };
 type IconWrapProps = { text?: string; variant: Variant };
 type ButtonLikeProps = { $isHovered: boolean; $text?: string; $Icon?: StyledIcon };
 type Props = {
+  className?: string;
   text?: string;
   role: Role;
   to?: string;
@@ -83,7 +84,7 @@ const Container = styled(motion.div)<ContainerProps>`
 `;
 
 function ButtonStyled(props: Props) {
-  const { role, to, text, variant, Icon, handleHover, isHovered, action } = props;
+  const { role, to, text, variant, Icon, handleHover, isHovered, action, className } = props;
 
   const buttonContent = (
     <>
@@ -110,6 +111,7 @@ function ButtonStyled(props: Props) {
       onMouseLeave={handleHover}
       whileHover={hoverAnimation(Icon, text)}
       onClick={action}
+      className={className}
     >
       {role === 'button' ? (
         <Button $isHovered={isHovered} $text={text} $Icon={Icon}>
@@ -127,6 +129,7 @@ function ButtonStyled(props: Props) {
 ButtonStyled.defaultProps = {
   to: undefined,
   text: undefined,
+  className: undefined,
   Icon: undefined,
   action: undefined,
 };
