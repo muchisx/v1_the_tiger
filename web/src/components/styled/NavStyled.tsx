@@ -28,8 +28,6 @@ const NavItemsList = styled.ul`
     display: flex;
     flex: 1 1 100%;
     align-items: flex-end;
-    justify-content: space-between;
-    gap: 16px;
   }
   & .nav-item:not(:last-of-type) {
     border-right: 1px solid #d1d1d1;
@@ -49,9 +47,12 @@ const NavItemsList = styled.ul`
     color: var(--text-primary);
     font-size: 24rem;
   }
+
+  // TODO: Fix Icon shrinking when text is large or when available space is scarce
   & .nav-item a span {
     width: 100%;
     display: flex;
+    gap: 12px;
     align-items: center;
     justify-content: space-between;
   }
