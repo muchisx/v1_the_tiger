@@ -1,16 +1,34 @@
-type Text = {
-  text: string;
-  text2: string;
-};
-type Props = {
-  text: Text['text'];
+import styled from 'styled-components';
+
+type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+type HeadingProps = { fontWeight?: StyledProps['fontWeight'] };
+export type StyledProps = {
+  text: string | JSX.Element;
+  fontWeight?: number | undefined;
+  headingLevel?: HeadingLevel;
+  className?: string;
 };
 
-function HeadingStyled(props) {
-  const { headingLevel, text, className } = props;
-  const Heading = headingLevel;
+const Heading = styled.span<HeadingProps>`
+  line-height: 1;
+  font-family: var(--heading-family);
+  font-weight: ${(props) => props.fontWeight};
+`;
 
-  return <Heading className={className}>{text}</Heading>;
+function HeadingStyled(props: StyledProps) {
+  const { headingLevel, text, className, fontWeight } = props;
+
+  return (
+    <Heading as={headingLevel} className={className} fontWeight={fontWeight}>
+      {text}
+    </Heading>
+  );
 }
+
+HeadingStyled.defaultProps = {
+  headingLevel: 'h2',
+  className: undefined,
+  fontWeight: 500,
+};
 
 export default HeadingStyled;

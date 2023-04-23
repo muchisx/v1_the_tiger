@@ -126,7 +126,27 @@ button {
   color: inherit;
 }
 
-/* temp */
-main {
-  padding-top: 120px;
+/*=============================================
+-->             UTILITY CLASSES             <--
+=============================================*/
+
+.highlight-primary {
+  color: var(--text-highlight-primary);
+}
+
+.highlight-secondary {
+  color: var(--text-highlight-secondary);
+}
+
+/*=============================================
+-->               DECLARATIVE               <--
+=============================================*/
+
+.page {
+  padding-top: 220px;
+}
+
+.page .hero-heading {
+  font-size: 6.6vw;
+  padding-inline: var(--gutter);
 }

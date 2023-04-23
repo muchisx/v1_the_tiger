@@ -1,24 +1,27 @@
 :root {
   /* <-----|    Colors    |-----> */
 
-  /* General colors */
+  /* --- General colors */
   --accent-color: #ff0004;
   --body-bg-color: #FFFFFF;
 
-  /* Header colors */
+  /* --- Header colors */
   --header-bg-color: #FFFFFF;
 
-  /* Text colors */
+  /* --- Text colors */
   --text-primary: #1d1f21;
   --text-secondary: #909090;
   --body-text-primary: var(--text-primary);
   --body-text-complementary: var(--text-secondary);
+  /* -highlights */
+  --text-highlight-primary: #909090;
+  --text-highlight-secondary: var(--accent-color);
 
-  /* Logo colors */
+  /* --- Logo colors */
   --logo-primary: var(--text-primary);
   --logo-secondary: var(--text-secondary);
 
-  /* Buttons colors */
+  /* --- Buttons colors */
   /* -primary */
   --btn-color-bg-primary: #1d1f21;
   --btn-color-text-primary: #fff;
@@ -49,4 +52,7 @@
   /* Font Families */
   --text-family: 'General Sans', sans-serif;
   --heading-family: 'Satoshi', sans-serif;
+
+  /* <-----|    Spacings    |-----> */
+  --gutter: 20px;
 }
