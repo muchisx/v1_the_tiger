@@ -1,14 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-type WordWrapAttributes = {
-  instance: number;
-};
-type WordWrapProps = {
+type WordWrapAttributes = { instance: number };
+type WordWrapProps = { isUppercase?: StyledProps['isUppercase'] };
+export type StyledProps = {
   isUppercase?: boolean;
 };
-
-type Props = WordWrapProps;
 
 const ContainerLink = styled(Link)`
   display: flex;
@@ -29,7 +26,7 @@ const LetterSpan = styled.span`
   font-weight: 500;
 `;
 
-function LogoStyled(props: Props) {
+function LogoStyled(props: StyledProps) {
   const { isUppercase } = props;
   const instances = ['Miguel', 'Ángel'];
 

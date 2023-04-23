@@ -2,13 +2,8 @@ import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { StyledIcon } from '@styled-icons/styled-icon';
-import type { Variant } from '../Button';
 
-type Role = 'link' | 'button';
-type ContainerProps = { Icon?: StyledIcon; variant: Variant; text?: string };
-type IconWrapProps = { text?: string; variant: Variant };
-type ButtonLikeProps = { $isHovered: boolean; $text?: string; $Icon?: StyledIcon };
-type Props = {
+export type StyledProps = {
   className?: string;
   text?: string;
   role: Role;
@@ -18,6 +13,15 @@ type Props = {
   variant: Variant;
   handleHover: () => void;
   isHovered: boolean;
+};
+type Role = 'button' | 'link';
+type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
+type ContainerProps = { Icon?: StyledProps['Icon']; variant: StyledProps['variant']; text?: StyledProps['text'] };
+type IconWrapProps = { text?: StyledProps['text']; variant: StyledProps['variant'] };
+type ButtonLikeProps = {
+  $text?: StyledProps['text'];
+  $Icon?: StyledProps['Icon'];
+  $isHovered: StyledProps['isHovered'];
 };
 
 const buttonLikeStyles = css`
@@ -83,7 +87,7 @@ const Container = styled(motion.div)<ContainerProps>`
   }
 `;
 
-function ButtonStyled(props: Props) {
+function ButtonStyled(props: StyledProps) {
   const { role, to, text, variant, Icon, handleHover, isHovered, action, className } = props;
 
   const buttonContent = (

@@ -1,10 +1,9 @@
-import { StyledIcon } from '@styled-icons/styled-icon';
-import NavItemStyled from './styled/NavItemStyled';
+import NavItemStyled, { type StyledProps } from './styled/NavItemStyled';
 
 type Props = {
-  text: string;
-  to: string;
-  Icon?: StyledIcon;
+  text: StyledProps['text'];
+  to: StyledProps['to'];
+  Icon?: StyledProps['Icon'];
 };
 
 function NavItem(props: Props) {

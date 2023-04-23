@@ -1,17 +1,16 @@
 import { useState } from 'react';
-import { StyledIcon } from '@styled-icons/styled-icon';
 import ButtonStyled from './styled/ButtonStyled';
+import type { StyledProps } from './styled/ButtonStyled';
 
-export type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 type CommonProps = {
-  text?: string;
-  Icon?: StyledIcon;
-  variant: Variant;
-  className?: string;
+  text?: StyledProps['text'];
+  Icon?: StyledProps['Icon'];
+  variant: StyledProps['variant'];
+  className?: StyledProps['className'];
 };
 type ConditionalProps =
-  | { role: 'button'; to?: never; action: () => void }
-  | { role: 'link'; to: string; action?: never };
+  | { role: 'button'; to?: never; action: StyledProps['action'] }
+  | { role: 'link'; to: StyledProps['to']; action?: never };
 
 type Props = CommonProps & ConditionalProps;
 

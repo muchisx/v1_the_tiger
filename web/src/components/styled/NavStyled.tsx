@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 // TODO: Make these props only accept the component NavItem, not any JSX ElementS
-type Props = {
+type StyledProps = {
   navItems: JSX.Element[];
   subNavItems: JSX.Element[];
   subNavSocials: JSX.Element[];
@@ -94,7 +94,7 @@ const SubNavSocialsList = styled.ul`
   }
 `;
 
-function NavStyled(props: Props) {
+function NavStyled(props: StyledProps) {
   const { navItems, subNavItems, subNavSocials } = props;
   return (
     <Nav>

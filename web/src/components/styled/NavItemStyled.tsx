@@ -2,7 +2,7 @@ import { StyledIcon } from '@styled-icons/styled-icon';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-type Props = {
+export type StyledProps = {
   text: string;
   to: string;
   Icon?: StyledIcon;
@@ -16,7 +16,7 @@ const StyledLink = styled(Link)`
   text-transform: uppercase;
 `;
 
-function NavItemStyled(props: Props) {
+function NavItemStyled(props: StyledProps) {
   const { text, Icon, to } = props;
   return (
     <NavItem className="nav-item">

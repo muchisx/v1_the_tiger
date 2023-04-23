@@ -1,7 +1,7 @@
-import LogoStyled from './styled/LogoStyled';
+import LogoStyled, { type StyledProps } from './styled/LogoStyled';
 
 type Props = {
-  isUppercase?: boolean;
+  isUppercase?: StyledProps['isUppercase'];
 };
 
 function Logo(props: Props) {

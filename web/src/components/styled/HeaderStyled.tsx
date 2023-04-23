@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Logo from '../Logo';
 
-type Props = {
+type StyledProps = {
   children?: React.ReactNode;
 };
 
@@ -25,7 +25,7 @@ const Header = styled.header`
   }
 `;
 
-function HeaderStyled(props: Props) {
+function HeaderStyled(props: StyledProps) {
   const { children } = props;
   return <Header>{children}</Header>;
 }
