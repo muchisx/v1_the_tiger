@@ -1,11 +1,7 @@
 import Heading from '../components/Heading';
+import homeContent from './content/homeContent';
 
-const homeHeading = (
-  <>
-    <span className="highlight-primary">FREELANCE </span> WEB DEVELOPER, REACT
-    <span className="highlight-primary"> & </span>SHOPIFY EXPERT⚡
-  </>
-);
+const { homeHeading } = homeContent;
 
 function Home() {
   return (

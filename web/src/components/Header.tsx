@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowRight, Navigation, LineHorizontal1 } from '@styled-icons/fluentui-system-filled';
+import { useLocation } from 'react-router-dom';
 import HeaderStyled from './styled/HeaderStyled';
 import Logo from './Logo';
 import Button from './Button';
@@ -8,10 +9,14 @@ import BodyOverlay from './BodyOverlay';
 
 function Header() {
   const [showNavigation, setShowNavigation] = useState(false);
+  const { pathname } = useLocation();
 
   const toggleNavigation = () => {
     setShowNavigation((state) => !state);
   };
+  useEffect(() => {
+    setShowNavigation(false);
+  }, [pathname]);
 
   return (
     <HeaderStyled>
@@ -38,7 +43,7 @@ function Header() {
       {showNavigation && (
         <>
           <Nav />
-          <BodyOverlay />
+          <BodyOverlay onClickAction={toggleNavigation} />
         </>
       )}
     </HeaderStyled>

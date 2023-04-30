@@ -6,6 +6,8 @@ export type StyledProps = {
   text: string;
   to: string;
   Icon?: StyledIcon;
+  newTab?: boolean;
+  rel?: string;
 };
 
 const NavItem = styled.li`
@@ -17,10 +19,12 @@ const StyledLink = styled(Link)`
 `;
 
 function NavItemStyled(props: StyledProps) {
-  const { text, Icon, to } = props;
+  const { text, Icon, to, newTab, rel } = props;
+  const target = newTab ? '_blank' : '_self';
+
   return (
     <NavItem className="nav-item">
-      <StyledLink to={to}>
+      <StyledLink to={to} target={target} rel={rel}>
         <span>
           {text}
           {Icon && <Icon size={24} />}
@@ -32,6 +36,8 @@ function NavItemStyled(props: StyledProps) {
 
 NavItemStyled.defaultProps = {
   Icon: undefined,
+  newTab: false,
+  rel: undefined,
 };
 
 export default NavItemStyled;
