@@ -1,12 +1,16 @@
 import Heading from '../components/Heading';
-import homeContent from './content/homeContent';
+import { HeroHeadingText, HomeCTA } from '../components/home';
+import SectionStyled from '../components/styled/SectionStyled';
 
-const { homeHeading } = homeContent;
+const Section = SectionStyled;
 
 function Home() {
   return (
     <main className="page page--home">
-      <Heading text={homeHeading} headingLevel="h1" className="hero-heading" />
+      <Section enableGutter marginBottom={20}>
+        <Heading text={HeroHeadingText} headingLevel="h1" $fontSize="6.6vw" />
+      </Section>
+      <HomeCTA />
     </main>
   );
 }

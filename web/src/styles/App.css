@@ -145,8 +145,3 @@ button {
 .page {
   padding-top: 220px;
 }
-
-.page .hero-heading {
-  font-size: 6.6vw;
-  padding-inline: var(--gutter);
-}

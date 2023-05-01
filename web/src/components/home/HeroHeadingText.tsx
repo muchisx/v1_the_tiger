@@ -40,7 +40,7 @@ const SpanThree = styled.span`
   }
 `;
 
-const homeHeading = (
+const HeroHeadingText = (
   <>
     <SpanOne className="highlight-primary">FREELANCE </SpanOne>
     <SpanTwo>WEB DEVELOPER </SpanTwo>
@@ -52,8 +52,4 @@ const homeHeading = (
   </>
 );
 
-const homeContent = {
-  homeHeading,
-};
-
-export default homeContent;
+export default HeroHeadingText;
