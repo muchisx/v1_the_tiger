@@ -63,32 +63,52 @@ const Nav = styled(motion.nav)`
 
 const NavItemsList = styled.ul`
   display: flex;
-  min-height: 200rem;
   flex-grow: 1;
+  min-height: 200rem;
   overflow: hidden;
   background-color: white;
   border-radius: 8px;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+
+    & .nav-item:not(:last-of-type) {
+      border-right: none;
+      border-bottom: 1px solid #d1d1d1;
+    }
+  }
 `;
 
 const SubNav = styled.div`
   display: flex;
   background-color: white;
   border-radius: 8px;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const SubNavItemsList = styled.ul`
   display: flex;
   flex-grow: 1;
   border-right: 1px solid #d1d1d1;
+  @media only screen and (max-width: 768px) {
+    border-right: none;
+    border-bottom: 1px solid #d1d1d1;
+  }
 `;
 
 const SubNavSocialsList = styled.ul`
-  flex: 0 0 25%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
 
   & .nav-item {
-    flex: 1 1 100%;
+    border-right: 1px solid #d1d1d1;
   }
+
   & .nav-item a span {
     justify-content: center;
   }

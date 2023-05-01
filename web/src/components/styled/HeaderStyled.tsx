@@ -23,6 +23,18 @@ const Header = styled.header`
   & .header-nav-toggle {
     z-index: 100;
   }
+  .header_m-contact {
+    display: none;
+  }
+
+  @media only screen and (max-width: 400px) {
+    .header_contact {
+      display: none;
+    }
+    .header_m-contact {
+      display: block;
+    }
+  }
 `;
 
 function HeaderStyled(props: StyledProps) {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, Navigation, LineHorizontal1 } from '@styled-icons/fluentui-system-filled';
+import { ArrowRight, Navigation, LineHorizontal1, Mail } from '@styled-icons/fluentui-system-filled';
 import { useLocation } from 'react-router-dom';
 import HeaderStyled from './styled/HeaderStyled';
 import Logo from './Logo';
@@ -21,7 +21,15 @@ function Header() {
   return (
     <HeaderStyled>
       <Logo isUppercase />
-      <Button role="link" variant="secondary" Icon={ArrowRight} text="Contact" to="/contact" />
+      <Button
+        role="link"
+        variant="secondary"
+        Icon={ArrowRight}
+        text="Contact"
+        to="/contact"
+        className="header_contact"
+      />
+      <Button role="link" variant="primary" Icon={Mail} to="/contact" className="header_m-contact" />
       {showNavigation ? (
         <Button
           role="button"
