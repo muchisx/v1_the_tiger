@@ -16,74 +16,71 @@ export type StyledProps = {
 };
 type Role = 'button' | 'link';
 type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
-type ContainerProps = { Icon?: StyledProps['Icon']; variant: StyledProps['variant']; text?: StyledProps['text'] };
-type IconWrapProps = { text?: StyledProps['text']; variant: StyledProps['variant'] };
-type ButtonLikeProps = {
-  $text?: StyledProps['text'];
-  $Icon?: StyledProps['Icon'];
-  $isHovered: StyledProps['isHovered'];
+type ContainerProps = {
+  Icon?: StyledProps['Icon'];
+  variant: StyledProps['variant'];
+  text?: StyledProps['text'];
+  isHovered: StyledProps['isHovered'];
 };
 
-const buttonLikeStyles = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10rem;
-  background: none;
-  font-size: 14rem;
-  line-height: 1;
-  cursor: pointer;
-
-  ${(props: ButtonLikeProps) =>
-    props.$isHovered &&
-    props.$Icon &&
-    props.$text &&
-    css`
-      flex-direction: row-reverse;
-    `}
-`;
-
-const Button = styled(motion.button)<ButtonLikeProps>`
-  ${buttonLikeStyles}
-`;
-
-const LinkStyled = styled(motion(Link))<ButtonLikeProps>`
-  ${buttonLikeStyles}
-  color: inherit;
-  text-decoration: none;
-`;
-
-const Span = styled(motion.span)`
-  line-height: 1;
-`;
-
-const ConditionalIconWrapStyles = css`
+const ConditionalIconWrapStyles = css<ContainerProps>`
   padding: 4px;
-  background-color: var(--btn-color-icon-bg-${(props: IconWrapProps) => props.variant});
+  background-color: var(--btn-color-icon-bg-${(props) => props.variant});
 `;
 
-const IconWrap = styled(motion.div)<IconWrapProps>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: var(--btn-color-${(props: IconWrapProps) => (props.text ? `icon-${props.variant}` : `text-${props.variant}`)});
-  ${(props: IconWrapProps) => props.text && ConditionalIconWrapStyles}
-`;
-
+const Button = styled(motion.button)``;
+const LinkStyled = styled(motion(Link))``;
+const Span = styled(motion.span)``;
+const IconWrap = styled(motion.div)``;
 const Container = styled(motion.div)<ContainerProps>`
   cursor: pointer;
   width: fit-content;
   height: fit-content;
-  border-radius: ${(props: ContainerProps) => (props.text ? '100px' : '50%')};
-  color: var(--btn-color-text-${(props: ContainerProps) => props.variant});
-  background: var(--btn-color-bg-${(props: ContainerProps) => props.variant});
-  border: 1px solid var(--btn-color-border-${(props: ContainerProps) => props.variant});
-  padding: ${(props: ContainerProps) => (props.text ? (props.Icon ? '2rem 2rem 2rem 14rem' : '7rem 14rem') : '6rem')};
+  border-radius: ${(props) => (props.text ? '100px' : '50%')};
+  color: var(--btn-color-text-${(props) => props.variant});
+  background: var(--btn-color-bg-${(props) => props.variant});
+  border: 1px solid var(--btn-color-border-${(props) => props.variant});
+  padding: ${(props) => (props.text ? (props.Icon ? '2rem 2rem 2rem 14rem' : '7rem 14rem') : '6rem')};
   transition: padding 200ms ease-in-out;
 
   &:hover {
-    ${(props: ContainerProps) => props.text && props.Icon && 'padding: 2rem 14rem 2rem 2rem '};
+    ${(props) => props.text && props.Icon && 'padding: 2rem 14rem 2rem 2rem '};
+  }
+
+  & ${IconWrap} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--btn-color-${(props) => (props.text ? `icon-${props.variant}` : `text-${props.variant}`)});
+    ${(props) => props.text && ConditionalIconWrapStyles}
+  }
+
+  & ${LinkStyled}, ${Button} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    background: none;
+    font-size: 14rem;
+    line-height: 1;
+    cursor: pointer;
+    ${(props) =>
+      props.isHovered &&
+      props.Icon &&
+      props.text &&
+      css`
+        flex-direction: row-reverse;
+      `}
+  }
+
+  & ${LinkStyled} {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  & ${Span} {
+    line-height: 1;
   }
 `;
 
@@ -94,7 +91,7 @@ function ButtonStyled(props: StyledProps) {
     <>
       {text && <Span layout>{text}</Span>}
       {Icon && (
-        <IconWrap variant={variant} text={text} layout>
+        <IconWrap layout>
           <Icon size={16} />
         </IconWrap>
       )}
@@ -116,16 +113,9 @@ function ButtonStyled(props: StyledProps) {
       whileHover={hoverAnimation(Icon, text)}
       onClick={action}
       className={className}
+      isHovered={isHovered}
     >
-      {role === 'button' ? (
-        <Button $isHovered={isHovered} $text={text} $Icon={Icon}>
-          {buttonContent}
-        </Button>
-      ) : (
-        <LinkStyled to={to ?? ''} $isHovered={isHovered} $text={text} $Icon={Icon}>
-          {buttonContent}
-        </LinkStyled>
-      )}
+      {role === 'button' ? <Button>{buttonContent}</Button> : <LinkStyled to={to ?? ''}>{buttonContent}</LinkStyled>}
     </Container>
   );
 }
