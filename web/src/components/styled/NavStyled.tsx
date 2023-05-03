@@ -45,7 +45,7 @@ const Nav = styled(motion.nav)`
     align-items: flex-end;
     text-decoration: none;
     color: var(--text-primary);
-    font-size: 24rem;
+    font-size: 2.4rem;
   }
 
   & .nav-item a span {
@@ -64,7 +64,7 @@ const Nav = styled(motion.nav)`
 const NavItemsList = styled.ul`
   display: flex;
   flex-grow: 1;
-  min-height: 200rem;
+  min-height: 20rem;
   overflow: hidden;
   background-color: white;
   border-radius: 8px;

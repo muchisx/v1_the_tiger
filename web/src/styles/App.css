@@ -36,9 +36,9 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Sets rem unit equal to pixel, so 1rem == 1px */
+/* Sets rem unit equal to 10 pixels, so 1rem == 10px */
 html {
-  font-size: 6.25%;
+  font-size: 62.5%;
 }
 
 /* Set core body defaults */
@@ -47,7 +47,7 @@ body {
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
-  font-size: 16rem;
+  font-size: 1.6rem;
 }
 
 /* A elements that don't have a class get default styles */

@@ -35,11 +35,11 @@ const Container = styled(motion.div)<ContainerProps>`
   color: var(--btn-color-text-${(props) => props.variant});
   background: var(--btn-color-bg-${(props) => props.variant});
   border: 1px solid var(--btn-color-border-${(props) => props.variant});
-  padding: ${(props) => (props.text ? (props.Icon ? '2rem 2rem 2rem 14rem' : '7rem 14rem') : '6rem')};
+  padding: ${(props) => (props.text ? (props.Icon ? '.2rem .2rem .2rem 1.4rem' : '.7rem .4rem') : '.6rem')};
   transition: padding 200ms ease-in-out;
 
   &:hover {
-    ${(props) => props.text && props.Icon && 'padding: 2rem 14rem 2rem 2rem '};
+    ${(props) => props.text && props.Icon && 'padding: .2rem 1.4rem .2rem .2rem '};
   }
 
   & ${IconWrap} {
@@ -60,9 +60,9 @@ const Container = styled(motion.div)<ContainerProps>`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10rem;
+    gap: 1rem;
     background: none;
-    font-size: 14rem;
+    font-size: 1.4rem;
     line-height: 1;
     cursor: pointer;
     ${(props) =>

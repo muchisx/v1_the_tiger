@@ -18,7 +18,7 @@ Text.defaultProps = {
   tag: 'p',
   className: undefined,
   fontWeight: 400,
-  fontSize: '16rem',
+  fontSize: '1.6rem',
 };
 
 export default Text;
