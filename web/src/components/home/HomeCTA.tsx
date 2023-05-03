@@ -2,6 +2,7 @@ import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 import styled, { css } from 'styled-components';
 import Button from '../Button';
 import SectionStyled from '../styled/SectionStyled';
+import Text from '../Text';
 
 const Section = SectionStyled;
 
@@ -31,13 +32,15 @@ function HomeCTA() {
   return (
     <Section css={SectionCSS} id="home-cta" enableGutter>
       <SubSection>
-        <p>EXPERIENCED WEB DEVELOPER HARNESSING THE POWER OF CODE TO ACHIEVE YOUR ONLINE GOALS.</p>
+        <Text fontWeight={500}>
+          EXPERIENCED WEB DEVELOPER HARNESSING THE POWER OF CODE TO ACHIEVE YOUR CREATIVE GOALS.
+        </Text>
       </SubSection>
       <SubSection>
-        <p>
+        <Text>
           I create successful digital presences for innovative startups and established businesses with robust coding
           practices on Shopify or React Development.
-        </p>
+        </Text>
         <Button text="Book a free call" role="link" to="/contact" variant="primary" Icon={ArrowRight} />
       </SubSection>
     </Section>

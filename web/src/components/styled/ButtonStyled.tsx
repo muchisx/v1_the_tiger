@@ -3,6 +3,14 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { StyledIcon } from '@styled-icons/styled-icon';
 
+type Role = 'button' | 'link';
+type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
+type ContainerProps = {
+  Icon?: StyledProps['Icon'];
+  variant: StyledProps['variant'];
+  text?: StyledProps['text'];
+  isHovered: StyledProps['isHovered'];
+};
 export type StyledProps = {
   className?: string;
   text?: string;
@@ -14,19 +22,6 @@ export type StyledProps = {
   handleHover: () => void;
   isHovered: boolean;
 };
-type Role = 'button' | 'link';
-type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
-type ContainerProps = {
-  Icon?: StyledProps['Icon'];
-  variant: StyledProps['variant'];
-  text?: StyledProps['text'];
-  isHovered: StyledProps['isHovered'];
-};
-
-const ConditionalIconWrapStyles = css<ContainerProps>`
-  padding: 4px;
-  background-color: var(--btn-color-icon-bg-${(props) => props.variant});
-`;
 
 const Button = styled(motion.button)``;
 const LinkStyled = styled(motion(Link))``;
@@ -53,7 +48,12 @@ const Container = styled(motion.div)<ContainerProps>`
     justify-content: center;
     border-radius: 50%;
     color: var(--btn-color-${(props) => (props.text ? `icon-${props.variant}` : `text-${props.variant}`)});
-    ${(props) => props.text && ConditionalIconWrapStyles}
+    ${(props) =>
+      props.text &&
+      css`
+        padding: 4px;
+        background-color: var(--btn-color-icon-bg-${props.variant});
+      `}
   }
 
   & ${LinkStyled}, ${Button} {

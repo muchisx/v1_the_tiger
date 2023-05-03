@@ -8,6 +8,7 @@ import Playground from './pages/Playground';
 import Header from './components/Header';
 import About from './pages/About';
 import Work from './pages/Work';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/work" element={<Work />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </>
   );
 }

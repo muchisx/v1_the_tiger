@@ -1,0 +1,9 @@
+# Todo List
+
+## Components
+- [ ] Footer
+  - [ ] Menu Lists
+  - [ ] Footer Newsletter
+- [ ] Contact Form
+- [ ] Input and Select Field with "\<label>"
+- [ ] Blockquote with "\<blockquote>" or "\<q>" and "\<cite>"
