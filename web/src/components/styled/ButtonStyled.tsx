@@ -28,9 +28,10 @@ const LinkStyled = styled(motion(Link))``;
 const Span = styled(motion.span)``;
 const IconWrap = styled(motion.div)``;
 const Container = styled(motion.div)<ContainerProps>`
-  cursor: pointer;
+  flex-shrink: 0;
   width: fit-content;
   height: fit-content;
+  cursor: pointer;
   border-radius: ${(props) => (props.text ? '100px' : '50%')};
   color: var(--btn-color-text-${(props) => props.variant});
   background: var(--btn-color-bg-${(props) => props.variant});

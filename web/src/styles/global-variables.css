@@ -55,4 +55,5 @@
 
   /* <-----|    Spacings    |-----> */
   --gutter: 20px;
+  --scrollbar-width: 8px;
 }

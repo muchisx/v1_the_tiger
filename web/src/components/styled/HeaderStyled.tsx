@@ -19,6 +19,9 @@ const Header = styled.header`
 
   & .logo {
     margin-right: auto;
+    @media only screen and (max-width: 375px) {
+      font-size: 22px;
+    }
   }
   & .header-nav-toggle {
     z-index: 100;

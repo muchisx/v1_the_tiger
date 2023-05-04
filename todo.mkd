@@ -5,5 +5,8 @@
   - [ ] Menu Lists
   - [ ] Footer Newsletter
 - [ ] Contact Form
+- [ ] Playground layout (with more than one tool, not just component explorer)
 - [ ] Input and Select Field with "\<label>"
 - [ ] Blockquote with "\<blockquote>" or "\<q>" and "\<cite>"
+- [ ] Add loading state before images and fonts load
+- [ ] Add animation for route change

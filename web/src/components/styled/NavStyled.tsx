@@ -46,6 +46,11 @@ const Nav = styled(motion.nav)`
     text-decoration: none;
     color: var(--text-primary);
     font-size: 2.4rem;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 2rem;
+      padding: 20px 24px;
+    }
   }
 
   & .nav-item a span {
