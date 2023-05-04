@@ -3,6 +3,7 @@ import { Chat } from '@styled-icons/fluentui-system-filled';
 import SectionStyled from './SectionStyled';
 import Logo from '../Logo';
 import Button from '../Button';
+import { Link } from 'react-router-dom';
 
 const Footer = styled.footer`
   margin-top: auto;
@@ -14,6 +15,8 @@ const FooterBlock = styled.div`
   flex-direction: column;
   gap: 12px;
 `;
+
+const FooterItem = styled(Link)``;
 
 const sectionCSS = css`
   display: flex;
@@ -27,6 +30,15 @@ function FooterStyled() {
       <SectionStyled contain enableGutter css={sectionCSS}>
         <FooterBlock>
           <Logo isUppercase />
+        </FooterBlock>
+        <FooterBlock>
+          <FooterItem to="/work">Work</FooterItem>
+          <FooterItem to="/services">Services</FooterItem>
+          <FooterItem to="/about">About</FooterItem>
+          <FooterItem to="/web-dev">Web Development</FooterItem>
+          <FooterItem to="/shopify">Shopify Development</FooterItem>
+          <FooterItem to="/contact">Book a free call</FooterItem>
+          <FooterItem to="/contact">Contact</FooterItem>
         </FooterBlock>
         <FooterBlock>
           <Button
