@@ -1,10 +1,11 @@
+import { ArrowRight } from '@styled-icons/fluentui-system-filled';
+import Button from '../components/Button/Button';
 import ComponentIsolator from '../components/ComponentIsolator';
-import Logo from '../components/Logo';
 
 function Playground() {
   return (
     <ComponentIsolator>
-      <Logo isUppercase />
+      <Button role="link" variant="primary" to="www.google.com" text="hey" Icon={ArrowRight} />
     </ComponentIsolator>
   );
 }

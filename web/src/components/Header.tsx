@@ -3,9 +3,9 @@ import { ArrowRight, Navigation, LineHorizontal1, Mail } from '@styled-icons/flu
 import { useLocation } from 'react-router-dom';
 import HeaderStyled from './styled/HeaderStyled';
 import Logo from './Logo';
-import Button from './Button';
 import Nav from './Nav';
 import BodyOverlay from './BodyOverlay';
+import Button from './Button/Button';
 
 function Header() {
   const [showNavigation, setShowNavigation] = useState(false);

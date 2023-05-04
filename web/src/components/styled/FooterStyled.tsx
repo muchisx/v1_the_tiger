@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 import { Chat } from '@styled-icons/fluentui-system-filled';
-import SectionStyled from './SectionStyled';
-import Logo from '../Logo';
-import Button from '../Button';
 import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
+import Logo from '../Logo';
+import SectionStyled from './SectionStyled';
 
 const Footer = styled.footer`
   margin-top: auto;

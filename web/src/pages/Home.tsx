@@ -1,5 +1,5 @@
 import Heading from '../components/Heading';
-import { HeroHeadingText, HomeCTA } from '../components/home';
+import { HeroHeadingText, HomeCTA } from '../components/pages/home';
 import SectionStyled from '../components/styled/SectionStyled';
 
 const Section = SectionStyled;

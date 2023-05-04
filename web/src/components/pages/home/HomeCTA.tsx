@@ -1,8 +1,8 @@
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 import styled, { css } from 'styled-components';
-import Button from '../Button';
-import SectionStyled from '../styled/SectionStyled';
-import Text from '../Text';
+import SectionStyled from '../../styled/SectionStyled';
+import Text from '../../Text';
+import Button from '../../Button/Button';
 
 const Section = SectionStyled;
 
