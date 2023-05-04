@@ -1,10 +1,7 @@
-import { Link } from 'react-router-dom';
-
 function NotFound() {
   return (
-    <main>
+    <main className="page page--not-found">
       <h1>Not Found</h1>
-      <Link to="/">Home</Link>
     </main>
   );
 }

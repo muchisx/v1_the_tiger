@@ -29,8 +29,10 @@ const Nav = styled(motion.nav)`
     align-items: flex-end;
     overflow: hidden;
   }
-  & .nav-item:not(:last-of-type) {
-    border-right: 1px solid #d1d1d1;
+  & .nav-item {
+    /* Using box shadow in combination with overflow hidden on parents to be able to wrap items
+    and always be able to have the "border" showing regardless of the direction */
+    box-shadow: 1px -1px 0 rgb(209, 209, 209);
   }
 
   & .nav-item:hover {
@@ -68,6 +70,7 @@ const Nav = styled(motion.nav)`
 
 const NavItemsList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
   min-height: 20rem;
   overflow: hidden;
@@ -76,11 +79,6 @@ const NavItemsList = styled.ul`
 
   @media only screen and (max-width: 768px) {
     flex-direction: column;
-
-    & .nav-item:not(:last-of-type) {
-      border-right: none;
-      border-bottom: 1px solid #d1d1d1;
-    }
   }
 `;
 
@@ -88,6 +86,7 @@ const SubNav = styled.div`
   display: flex;
   background-color: white;
   border-radius: 8px;
+  overflow: hidden;
 
   @media only screen and (max-width: 768px) {
     flex-direction: column;
@@ -97,11 +96,6 @@ const SubNav = styled.div`
 const SubNavItemsList = styled.ul`
   display: flex;
   flex-grow: 1;
-  border-right: 1px solid #d1d1d1;
-  @media only screen and (max-width: 768px) {
-    border-right: none;
-    border-bottom: 1px solid #d1d1d1;
-  }
 `;
 
 const SubNavSocialsList = styled.ul`
@@ -109,10 +103,6 @@ const SubNavSocialsList = styled.ul`
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
-
-  & .nav-item {
-    border-right: 1px solid #d1d1d1;
-  }
 
   & .nav-item a span {
     justify-content: center;

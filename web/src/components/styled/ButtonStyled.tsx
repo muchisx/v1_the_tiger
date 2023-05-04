@@ -36,7 +36,7 @@ const Container = styled(motion.div)<ContainerProps>`
   color: var(--btn-color-text-${(props) => props.variant});
   background: var(--btn-color-bg-${(props) => props.variant});
   border: 1px solid var(--btn-color-border-${(props) => props.variant});
-  padding: ${(props) => (props.text ? (props.Icon ? '.2rem .2rem .2rem 1.4rem' : '.7rem .4rem') : '.6rem')};
+  padding: ${(props) => (props.text ? (props.Icon ? '.2rem .2rem .2rem 1.4rem' : '.7rem 1.4rem') : '.6rem')};
   transition: padding 200ms ease-in-out;
 
   &:hover {
@@ -100,7 +100,8 @@ function ButtonStyled(props: StyledProps) {
   );
 
   const hoverAnimation = (buttonIcon: StyledIcon | undefined, buttonText: string | undefined) => {
-    const animation = buttonIcon && buttonText ? undefined : { scale: 1.1 };
+    const animation =
+      buttonIcon && buttonText ? undefined : { scale: 1.1, transition: { ease: 'circIn', duration: 0.4 } };
     return animation;
   };
 
