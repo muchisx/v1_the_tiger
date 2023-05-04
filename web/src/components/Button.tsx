@@ -7,15 +7,17 @@ type CommonProps = {
   Icon?: StyledProps['Icon'];
   variant: StyledProps['variant'];
   className?: StyledProps['className'];
+  newTab?: StyledProps['newTab'];
+  rel?: StyledProps['rel'];
 };
 type ConditionalProps =
-  | { role: 'button'; to?: never; action: StyledProps['action'] }
+  | { role: 'button'; to?: never; newTab?: never; rel?: never; action: StyledProps['action'] }
   | { role: 'link'; to: StyledProps['to']; action?: never };
 
 type Props = CommonProps & ConditionalProps;
 
 function Button(props: Props) {
-  const { text, role, variant, to, Icon, action, className } = props;
+  const { text, role, variant, to, Icon, action, className, newTab, rel } = props;
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -33,6 +35,8 @@ function Button(props: Props) {
       isHovered={isHovered}
       action={action}
       className={className}
+      newTab={newTab}
+      rel={rel}
     />
   );
 }
@@ -41,6 +45,8 @@ Button.defaultProps = {
   text: undefined,
   className: undefined,
   Icon: undefined,
+  newTab: false,
+  rel: undefined,
 };
 
 export default Button;

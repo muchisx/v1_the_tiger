@@ -16,6 +16,8 @@ export type StyledProps = {
   text?: string;
   role: Role;
   to?: string;
+  newTab?: boolean;
+  rel?: string;
   Icon?: StyledIcon;
   action?: () => void;
   variant: Variant;
@@ -86,7 +88,8 @@ const Container = styled(motion.div)<ContainerProps>`
 `;
 
 function ButtonStyled(props: StyledProps) {
-  const { role, to, text, variant, Icon, handleHover, isHovered, action, className } = props;
+  const { role, to, text, variant, Icon, handleHover, isHovered, action, className, newTab, rel } = props;
+  const target = newTab ? '_blank' : '_self';
 
   const buttonContent = (
     <>
@@ -117,7 +120,13 @@ function ButtonStyled(props: StyledProps) {
       className={className}
       isHovered={isHovered}
     >
-      {role === 'button' ? <Button>{buttonContent}</Button> : <LinkStyled to={to ?? ''}>{buttonContent}</LinkStyled>}
+      {role === 'button' ? (
+        <Button>{buttonContent}</Button>
+      ) : (
+        <LinkStyled to={to ?? ''} target={target} rel={rel}>
+          {buttonContent}
+        </LinkStyled>
+      )}
     </Container>
   );
 }

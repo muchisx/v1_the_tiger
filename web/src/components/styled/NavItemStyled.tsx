@@ -14,7 +14,7 @@ const NavItem = styled.li`
   list-style: none;
 `;
 
-const StyledLink = styled(Link)`
+const LinkStyled = styled(Link)`
   text-transform: uppercase;
 `;
 
@@ -24,12 +24,12 @@ function NavItemStyled(props: StyledProps) {
 
   return (
     <NavItem className="nav-item">
-      <StyledLink to={to} target={target} rel={rel}>
+      <LinkStyled to={to} target={target} rel={rel}>
         <span>
           {text}
           {Icon && <Icon size={24} />}
         </span>
-      </StyledLink>
+      </LinkStyled>
     </NavItem>
   );
 }
