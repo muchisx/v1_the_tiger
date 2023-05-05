@@ -1,33 +1,14 @@
-import styled, { css } from 'styled-components';
 import { Chat } from '@styled-icons/fluentui-system-filled';
-import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
-import Logo from '../Logo';
-import SectionStyled from './SectionStyled';
+import Logo from '../Logo/Logo';
+import Section from '../Section/Section';
 
-const Footer = styled.footer`
-  margin-top: auto;
-  padding-block: 100px 52px;
-`;
+import { FooterStyled, FooterBlock, FooterItem, sectionCSS } from './Footer.styles';
 
-const FooterBlock = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-`;
-
-const FooterItem = styled(Link)``;
-
-const sectionCSS = css`
-  display: flex;
-  gap: 12px;
-  justify-content: space-between;
-`;
-
-function FooterStyled() {
+function Footer() {
   return (
-    <Footer>
-      <SectionStyled contain enableGutter css={sectionCSS}>
+    <FooterStyled>
+      <Section contain enableGutter css={sectionCSS}>
         <FooterBlock>
           <Logo isUppercase />
         </FooterBlock>
@@ -49,9 +30,9 @@ function FooterStyled() {
           />
           <Button Icon={Chat} text="Telegram" variant="quaternary" role="link" to="https://t.me/muchisx" newTab />
         </FooterBlock>
-      </SectionStyled>
-    </Footer>
+      </Section>
+    </FooterStyled>
   );
 }
 
-export default FooterStyled;
+export default Footer;

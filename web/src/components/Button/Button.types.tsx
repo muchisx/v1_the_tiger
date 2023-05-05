@@ -15,3 +15,11 @@ type ConditionalProps =
   | { role: 'link'; to: string; newTab?: boolean; rel?: string; action?: never };
 
 export type Props = CommonProps & ConditionalProps;
+
+// Styled Components
+export type ContainerProps = {
+  Icon?: Props['Icon'];
+  variant: Props['variant'];
+  text?: Props['text'];
+  isHovered: boolean;
+};

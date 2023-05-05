@@ -1,6 +1,6 @@
 import { ArrowUpRight } from '@styled-icons/fluentui-system-filled';
-import NavStyled from './styled/NavStyled';
-import NavItem from './NavItem';
+import { NavStyled, NavItemsList, SubNav, SubNavItemsList, SubNavSocialsList } from './Nav.styles';
+import NavItem from '../NavItem/NavItem';
 
 const navItems = [
   <NavItem text="HOME" key="HOME" to="/" Icon={ArrowUpRight} />,
@@ -19,7 +19,15 @@ const subNavSocials = [
 ];
 
 function Nav() {
-  return <NavStyled navItems={navItems} subNavItems={subNavItems} subNavSocials={subNavSocials} />;
+  return (
+    <NavStyled>
+      <NavItemsList>{...navItems}</NavItemsList>
+      <SubNav>
+        <SubNavItemsList>{...subNavItems}</SubNavItemsList>
+        <SubNavSocialsList>{...subNavSocials}</SubNavSocialsList>
+      </SubNav>
+    </NavStyled>
+  );
 }
 
 export default Nav;

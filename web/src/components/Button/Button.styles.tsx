@@ -1,14 +1,7 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import type { Props } from './Button.types';
-
-type ContainerProps = {
-  Icon?: Props['Icon'];
-  variant: Props['variant'];
-  text?: Props['text'];
-  isHovered: boolean;
-};
+import type { ContainerProps } from './Button.types';
 
 export const ButtonStyled = styled(motion.button)``;
 export const LinkStyled = styled(motion(Link))``;

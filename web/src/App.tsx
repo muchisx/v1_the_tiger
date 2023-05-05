@@ -5,10 +5,10 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Playground from './pages/Playground';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import About from './pages/About';
 import Work from './pages/Work';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (

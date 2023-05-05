@@ -10,7 +10,7 @@ type Props = {
   marginBottom?: number;
 };
 
-const SectionStyled = styled.section<Props>`
+const Section = styled.section<Props>`
   ${(props) => props.css}
   ${(props) =>
     props.contain &&
@@ -26,4 +26,4 @@ const SectionStyled = styled.section<Props>`
   margin-bottom: ${(props) => `${props.marginBottom}px`};
 `;
 
-export default SectionStyled;
+export default Section;

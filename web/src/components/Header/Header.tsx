@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, Navigation, LineHorizontal1, Mail } from '@styled-icons/fluentui-system-filled';
 import { useLocation } from 'react-router-dom';
-import HeaderStyled from './styled/HeaderStyled';
-import Logo from './Logo';
-import Nav from './Nav';
-import BodyOverlay from './BodyOverlay';
-import Button from './Button/Button';
+import HeaderStyled from './Header.styles';
+import Logo from '../Logo/Logo';
+import Nav from '../Nav/Nav';
+import BodyOverlay from '../BodyOverlay/BodyOverlay';
+import Button from '../Button/Button';
 
 function Header() {
   const [showNavigation, setShowNavigation] = useState(false);
   const { pathname } = useLocation();
 
   const toggleNavigation = () => {
-    setShowNavigation((state) => !state);
+    setShowNavigation((prevShowNavigation: boolean) => !prevShowNavigation);
   };
   useEffect(() => {
     setShowNavigation(false);

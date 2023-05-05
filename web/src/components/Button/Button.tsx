@@ -4,12 +4,14 @@ import type { Props } from './Button.types';
 
 function Button(props: Props) {
   const { role, to, text, variant, Icon, action, className, newTab, rel } = props;
-  const target = newTab ? '_blank' : '_self';
-  const [isHovered, setIsHovered] = useState(false);
 
+  const [isHovered, setIsHovered] = useState(false);
   const handleHover = () => {
-    setIsHovered((current: boolean) => !current);
+    setIsHovered((prevIsHovered: boolean) => !prevIsHovered);
   };
+
+  const target = newTab ? '_blank' : '_self';
+  const relValue = newTab ? rel : undefined;
 
   const buttonContent = (
     <>
@@ -43,7 +45,7 @@ function Button(props: Props) {
       {role === 'button' ? (
         <ButtonStyled>{buttonContent}</ButtonStyled>
       ) : (
-        <LinkStyled to={to ?? ''} target={target} rel={rel}>
+        <LinkStyled to={to ?? ''} target={target} rel={relValue}>
           {buttonContent}
         </LinkStyled>
       )}

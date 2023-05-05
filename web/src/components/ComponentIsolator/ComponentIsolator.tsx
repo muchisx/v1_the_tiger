@@ -1,4 +1,4 @@
-import ComponentIsolatorStyled from './styled/ComponentIsolatorStyled';
+import ComponentIsolatorStyled from './ComponentIsolator.styles';
 
 type Props = {
   children: React.ReactNode;

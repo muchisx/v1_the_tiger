@@ -1,11 +1,6 @@
 import styled from 'styled-components';
-import Logo from '../Logo';
 
-type StyledProps = {
-  children?: React.ReactNode;
-};
-
-const Header = styled.header`
+const HeaderStyled = styled.header`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -39,14 +34,5 @@ const Header = styled.header`
     }
   }
 `;
-
-function HeaderStyled(props: StyledProps) {
-  const { children } = props;
-  return <Header>{children}</Header>;
-}
-
-HeaderStyled.defaultProps = {
-  children: <Logo />,
-};
 
 export default HeaderStyled;
