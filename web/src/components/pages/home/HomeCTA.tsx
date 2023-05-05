@@ -33,15 +33,22 @@ function HomeCTA() {
     <Section css={SectionCSS} id="home-cta" enableGutter>
       <SubSection>
         <Text fontWeight={500}>
-          EXPERIENCED WEB DEVELOPER HARNESSING THE POWER OF CODE TO ACHIEVE YOUR CREATIVE GOALS.
+          SKILLED WEB DEVELOPER CAPITALIZING ON THE POTENTIAL OF CODING TO ACCOMPLISH YOUR CREATIVE ASPIRATIONS.
         </Text>
       </SubSection>
       <SubSection>
         <Text>
-          I create successful digital presences for innovative startups and established businesses with robust coding
-          practices on Shopify or React Development.
+          I use my proficiency in Shopify or React Development and thorough coding practices to create robust digital
+          presences for innovative startups and established businesses alike.
         </Text>
-        <Button text="Book a free call" role="link" to="/contact" variant="primary" Icon={ArrowRight} />
+        <Button
+          text="Reserve a free meeting"
+          role="link"
+          to="https://calendly.com/miguel-angel-creator/free-meeting"
+          newTab
+          variant="primary"
+          Icon={ArrowRight}
+        />
       </SubSection>
     </Section>
   );

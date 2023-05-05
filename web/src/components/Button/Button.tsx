@@ -55,6 +55,7 @@ Button.defaultProps = {
   text: undefined,
   className: undefined,
   Icon: undefined,
+  rel: 'noopener noreferrer',
 };
 
 export default Button;

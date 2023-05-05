@@ -16,7 +16,7 @@ function NavItem(props: Props) {
 NavItem.defaultProps = {
   Icon: undefined,
   newTab: false,
-  rel: undefined,
+  rel: 'noopener noreferrer',
 };
 
 export default NavItem;

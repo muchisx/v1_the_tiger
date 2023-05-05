@@ -47,15 +47,7 @@ function FooterStyled() {
             role="link"
             to="mailto:miguel.angel.creator@gmail.com?subject=Miguel!%20-%20Help%20me%20with:%20"
           />
-          <Button
-            Icon={Chat}
-            text="Telegram"
-            variant="quaternary"
-            role="link"
-            to="https://t.me/muchisx"
-            newTab
-            rel="noopener noreferrer"
-          />
+          <Button Icon={Chat} text="Telegram" variant="quaternary" role="link" to="https://t.me/muchisx" newTab />
         </FooterBlock>
       </SectionStyled>
     </Footer>

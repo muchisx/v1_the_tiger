@@ -13,9 +13,9 @@ const navItems = [
 const subNavItems = [<NavItem text="404" key="404" to="/notfound" Icon={ArrowUpRight} />];
 
 const subNavSocials = [
-  <NavItem newTab rel="noopener noreferrer" text="IG" key="IG" to="https://instagram.com/imiguel.angel" />,
-  <NavItem newTab rel="noopener noreferrer" text="IN" key="IN" to="https://www.linkedin.com/in/miguelangelpro/" />,
-  <NavItem newTab rel="noopener noreferrer" text="GIT" key="GIT" to="https://github.com/muchisx" />,
+  <NavItem newTab text="IG" key="IG" to="https://instagram.com/imiguel.angel" />,
+  <NavItem newTab text="IN" key="IN" to="https://www.linkedin.com/in/miguelangelpro/" />,
+  <NavItem newTab text="GIT" key="GIT" to="https://github.com/muchisx" />,
 ];
 
 function Nav() {
