@@ -12,6 +12,7 @@ export const Container = styled(motion.div)<ContainerProps>`
   width: fit-content;
   height: fit-content;
   cursor: pointer;
+  overflow: hidden;
   border-radius: ${(props) => (props.text ? '100px' : '50%')};
   color: var(--btn-color-text-${(props) => props.variant});
   background: var(--btn-color-bg-${(props) => props.variant});

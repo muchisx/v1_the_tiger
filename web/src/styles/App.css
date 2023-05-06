@@ -131,7 +131,8 @@ button {
 
 /*width*/
 ::-webkit-scrollbar {
-  width: var(--scrollbar-width);
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
 }
 
 /*thumb*/
