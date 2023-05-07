@@ -5,7 +5,7 @@ import type { Props } from './Button.types';
 function Button(props: Props) {
   const { role, to, text, variant, Icon, action, className, newTab, rel } = props;
 
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
   const isHoveredRef = useRef<boolean>(false);
   const timeoutRef = useRef<number>();
 
