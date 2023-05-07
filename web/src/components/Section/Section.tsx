@@ -15,7 +15,7 @@ const Section = styled.section<Props>`
   ${(props) =>
     props.contain &&
     css`
-      max-width: 1280px;
+      max-width: 1320px;
       margin-inline: auto;
     `}
     

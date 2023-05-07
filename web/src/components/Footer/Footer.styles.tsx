@@ -22,9 +22,10 @@ export const FooterMenu = styled.ul`
 export const FooterBlock = styled.div``;
 export const sectionCSS = css`
   display: grid;
-  grid-auto-flow: column;
-  gap: 12px;
+  grid-template-rows: auto;
+  grid-template-columns: 0.25fr 0.7fr 0.5fr;
   justify-content: space-between;
+  gap: 8px;
 
   @media only screen and (max-width: 768px) {
     grid-column-gap: 1rem;
@@ -43,8 +44,12 @@ export const FooterStyled = styled.footer`
 
   .footer__menus {
     gap: 12px;
+    justify-content: space-around;
   }
 
+  .footer__CTAs {
+    justify-content: flex-end;
+  }
   .footer__CTAs ul {
     align-items: flex-end;
   }
@@ -73,6 +78,7 @@ export const FooterStyled = styled.footer`
       }
     }
     .footer__CTAs {
+      justify-content: flex-start;
       grid-area: 2/1/2/4;
       ul {
         align-items: flex-start;
