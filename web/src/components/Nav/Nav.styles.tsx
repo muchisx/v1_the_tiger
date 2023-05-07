@@ -7,7 +7,7 @@ export const SubNavSocialsList = styled.ul`
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
 
-  & .nav-item a span {
+  & li.nav-item a span {
     justify-content: center;
   }
 `;

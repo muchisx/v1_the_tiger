@@ -11,7 +11,7 @@ function Button(props: Props) {
 
   const handleHover = () => {
     // A more complex handler is needed for the hover animation so it doesn't break
-    // The animation needs a delay on activation if the hover is too fast, it shouldn't happent
+    // The animation needs a delay on activation if the hover is too fast, it shouldn't happen
     isHoveredRef.current = !isHoveredRef.current;
     window.clearTimeout(timeoutRef.current);
     timeoutRef.current = window.setTimeout(() => {
