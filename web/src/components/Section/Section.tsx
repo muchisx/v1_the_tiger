@@ -1,4 +1,4 @@
-import styled, { FlattenSimpleInterpolation, css } from 'styled-components';
+import styled, { type FlattenSimpleInterpolation, css } from 'styled-components';
 
 type Props = {
   enableGutter?: boolean;

@@ -28,7 +28,7 @@ const SectionCSS = css`
 
 function HomeCTA() {
   return (
-    <Section css={SectionCSS} id="home-cta" enableGutter>
+    <Section css={SectionCSS} id="home-cta" enableGutter marginBottom={32}>
       <SubSection>
         <Text fontWeight={500}>
           SKILLED WEB DEVELOPER CAPITALIZING ON THE POTENTIAL OF CODING TO ACCOMPLISH YOUR CREATIVE ASPIRATIONS.
