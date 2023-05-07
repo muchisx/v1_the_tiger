@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { SpanStyled, ButtonStyled, Container, IconWrap, LinkStyled } from './Button.styles';
 import type { Props } from './Button.types';
 
@@ -6,8 +6,17 @@ function Button(props: Props) {
   const { role, to, text, variant, Icon, action, className, newTab, rel } = props;
 
   const [isHovered, setIsHovered] = useState(false);
+  const isHoveredRef = useRef<boolean>(false);
+  const timeoutRef = useRef<number>();
+
   const handleHover = () => {
-    setIsHovered((prevIsHovered: boolean) => !prevIsHovered);
+    // A more complex handler is needed for the hover animation so it doesn't break
+    // The animation needs a delay on activation if the hover is too fast, it shouldn't happent
+    isHoveredRef.current = !isHoveredRef.current;
+    window.clearTimeout(timeoutRef.current);
+    timeoutRef.current = window.setTimeout(() => {
+      setIsHovered(isHoveredRef.current);
+    }, 50);
   };
 
   const target = newTab ? '_blank' : '_self';
