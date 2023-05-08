@@ -55,8 +55,14 @@ const SectionCSS = css`
   position: relative;
 
   @media only screen and (max-width: 768px) {
-    overflow: hidden;
     flex-direction: column;
+    gap: 2.4rem;
+    padding-top: 12px;
+    overflow: hidden;
+
+    ${ButtonsContainer} {
+      margin-top: 4rem;
+    }
   }
 
   ${SubSection} {
@@ -74,6 +80,7 @@ function HomeAboutMe() {
       <SubSection>
         <Button text="About me" variant="tertiary" role="link" to="/about" />
         <ButtonsContainer>
+          <ImageMasked height={144} width={144} src={ProfilePicture} css={ImageMaskedCSS} />
           <ButtonsHeading>Socials</ButtonsHeading>
           <Button
             text="LinkedIn"
@@ -84,7 +91,6 @@ function HomeAboutMe() {
           />
           <Button text="Github" variant="quaternary" role="link" to="https://github.com/muchisx" newTab />
         </ButtonsContainer>
-        <ImageMasked height={144} width={144} src={ProfilePicture} css={ImageMaskedCSS} />
       </SubSection>
       <SubSection>
         <Text fontWeight={500}>
