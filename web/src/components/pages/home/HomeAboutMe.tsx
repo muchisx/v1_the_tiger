@@ -4,6 +4,7 @@ import Button from '../../Button/Button';
 import Section from '../../Section/Section';
 import Text from '../../Text/Text';
 import ImageMasked from '../../ImageMasked/ImageMasked';
+import ProfilePicture from '../../../assets/images/profile-pic.jpeg';
 
 const SubSection = styled.div`
   display: flex;
@@ -46,7 +47,7 @@ function HomeAboutMe() {
           to="https://www.linkedin.com/in/miguelangelpro/"
           newTab
         />
-        <ImageMasked height={144} width={144} src="/src/assets/images/profile-pic.jpeg" css={ImageMaskedCSS} />
+        <ImageMasked height={144} width={144} src={ProfilePicture} css={ImageMaskedCSS} />
       </SubSection>
       <SubSection>
         <Text fontWeight={500}>
