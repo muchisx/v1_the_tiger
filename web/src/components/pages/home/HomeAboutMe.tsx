@@ -23,6 +23,9 @@ const ButtonsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  @media only screen and (max-width: 768px) {
+    max-width: 50%;
+  }
 `;
 
 const SubSection = styled.div`
@@ -37,6 +40,7 @@ const BackgroundShape = styled(motion.img)`
   left: 0;
   width: 50%;
   opacity: 0.1;
+  z-index: -1;
   transform: rotate(180deg);
 
   @media only screen and (max-width: 768px) {
@@ -51,6 +55,7 @@ const SectionCSS = css`
   position: relative;
 
   @media only screen and (max-width: 768px) {
+    overflow: hidden;
     flex-direction: column;
   }
 

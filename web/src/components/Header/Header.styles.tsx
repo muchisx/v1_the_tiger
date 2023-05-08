@@ -11,6 +11,7 @@ const HeaderStyled = styled.header`
   padding-block: 12px;
   background: var(--header-bg-color);
   isolation: isolate;
+  z-index: 10;
 
   & .logo {
     margin-right: auto;
