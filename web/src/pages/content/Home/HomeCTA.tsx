@@ -1,8 +1,8 @@
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 import styled, { css } from 'styled-components';
-import Text from '../../Text/Text';
-import Button from '../../Button/Button';
-import Section from '../../Section/Section';
+import Text from '../../../components/Text/Text';
+import Button from '../../../components/Button/Button';
+import Section from '../../../components/Section/Section';
 
 const SubSection = styled.div`
   display: flex;
