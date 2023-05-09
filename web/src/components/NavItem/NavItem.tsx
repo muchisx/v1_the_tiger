@@ -1,5 +1,5 @@
 import { type StyledIcon } from '@styled-icons/styled-icon';
-import { LinkStyled, NavItemStyled } from './NavItem.styles';
+import { NavLinkStyled, NavItemStyled, NavLinkSpan } from './NavItem.styles';
 
 type Props = {
   text: string;
@@ -16,12 +16,12 @@ function NavItem(props: Props) {
 
   return (
     <NavItemStyled className="nav-item">
-      <LinkStyled to={to} target={target} rel={relValue}>
-        <span>
+      <NavLinkStyled to={to} target={target} rel={relValue}>
+        <NavLinkSpan>
           {text}
           {Icon && <Icon size={24} />}
-        </span>
-      </LinkStyled>
+        </NavLinkSpan>
+      </NavLinkStyled>
     </NavItemStyled>
   );
 }

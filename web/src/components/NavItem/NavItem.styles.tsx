@@ -1,7 +1,15 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-export const LinkStyled = styled(Link)`
+export const NavLinkSpan = styled.span`
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const NavLinkStyled = styled(NavLink)`
   height: 100%;
   padding: 24px;
   flex-grow: 1;
@@ -30,5 +38,9 @@ export const NavItemStyled = styled.li`
 
   &:hover {
     background-color: rgba(209, 209, 209, 0.36);
+  }
+
+  & ${NavLinkStyled} svg {
+    flex-shrink: 0;
   }
 `;

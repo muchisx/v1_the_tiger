@@ -56,16 +56,4 @@ export const NavStyled = styled(motion.nav)`
   & ul {
     padding: 0;
   }
-
-  & .nav-item a span {
-    width: 100%;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  & .nav-item a svg {
-    flex-shrink: 0;
-  }
 `;
