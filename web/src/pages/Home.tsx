@@ -1,7 +1,8 @@
 import Heading from '../components/Heading/Heading';
+import ImageBanner from '../components/ImageBanner/ImageBanner';
 import Section from '../components/Section/Section';
 import SplitContent from '../components/SplitContent/SplitContent';
-import { HeroHeadingText, HomeCTA, homeAboutMe } from './content/Home';
+import { HeroHeadingText, HomeCTA, homeAboutMe, heroImage } from './content/Home';
 
 const { leftContent, rightContent } = homeAboutMe;
 
@@ -12,6 +13,7 @@ function Home() {
         <Heading text={HeroHeadingText} headingLevel="h1" fontSize="6.6vw" />
       </Section>
       <HomeCTA />
+      <ImageBanner src={heroImage} />
       <SplitContent leftContent={leftContent} rightContent={rightContent} />
     </main>
   );

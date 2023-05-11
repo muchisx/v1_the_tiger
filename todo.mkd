@@ -1,8 +1,8 @@
 # Todo List
 
 ## Components
-- [ ] Footer
-  - [ ] Menu Lists
+- [x] Footer
+  - [x] Menu Lists
   - [ ] Footer Newsletter
 - [ ] Contact Form
 - [ ] Playground layout (with more than one tool, not just component explorer)
@@ -11,3 +11,4 @@
 - [ ] Add loading state before images and fonts load
 - [ ] Add animation for route change
 - [ ] Embed calendly form instead of linking out of my porfolio
+- [ ] Change types of css values from 'string' to a more complex type that accepts `${number}${unit}` with template literals.

@@ -23,7 +23,7 @@ function SplitContent(props: Props) {
   const shapeRotation = useTransform(scrollYProgress, [0, 1], [180, 192]);
 
   return (
-    <Section css={SectionCSS} contain enableGutter>
+    <Section css={SectionCSS} contain enableGutter paddingTop={20} paddingBottom={20}>
       {backgroundShapeURL && <BackgroundShape src={backgroundShapeURL} style={{ rotateZ: shapeRotation }} />}
 
       <SubSection className="split-content__first">
@@ -43,7 +43,7 @@ function SplitContent(props: Props) {
       <SubSection className="split-content__second">
         {textsList?.length && textsList.map((textProps) => <Text key={textProps.id} {...textProps} />)}
 
-        {rightButtonList.length && (
+        {rightButtonList?.length && (
           <ButtonsContainer>
             {rightButtonList.map((buttonProps) => (
               <Button key={buttonProps.id} {...buttonProps} />
