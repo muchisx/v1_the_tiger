@@ -13,7 +13,7 @@ function Home() {
         <Heading text={HeroHeadingText} headingLevel="h1" fontSize="6.6vw" />
       </Section>
       <HomeCTA />
-      <ImageBanner src={heroImage} />
+      <ImageBanner src={heroImage} enableParallax />
       <SplitContent leftContent={leftContent} rightContent={rightContent} />
     </main>
   );
