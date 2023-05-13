@@ -103,6 +103,7 @@ body {
   min-height: 100dvh;
   color: var(--body-text-primary);
   font-family: var(--text-family);
+  background-color: var(--body-bg-color);
 }
 
 #root {
