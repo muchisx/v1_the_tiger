@@ -1,6 +1,6 @@
-import Heading from '../components/Heading/Heading';
+import Heading from '../components/shared/Heading/Heading';
 import ImageBanner from '../components/ImageBanner/ImageBanner';
-import Section from '../components/Section/Section';
+import Section from '../components/shared/Section/Section';
 import SplitContent from '../components/SplitContent/SplitContent';
 import { HeroHeadingText, homeCTA, homeAboutMe, heroImage } from './content/Home';
 

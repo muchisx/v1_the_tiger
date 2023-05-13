@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import { ArrowRight, Navigation, LineHorizontal1, Mail } from '@styled-icons/fluentui-system-filled';
 import { useLocation } from 'react-router-dom';
 import HeaderStyled from './Header.styles';
-import Logo from '../Logo/Logo';
+import Logo from '../shared/Logo/Logo';
 import Nav from '../Nav/Nav';
-import BodyOverlay from '../BodyOverlay/BodyOverlay';
-import Button from '../Button/Button';
+import BodyOverlay from '../shared/BodyOverlay/BodyOverlay';
+import Button from '../shared/Button/Button';
 
 function Header() {
   const [showNavigation, setShowNavigation] = useState(false);

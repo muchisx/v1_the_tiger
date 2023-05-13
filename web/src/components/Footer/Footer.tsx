@@ -1,8 +1,8 @@
 import { Chat } from '@styled-icons/fluentui-system-filled';
 import { Link } from 'react-router-dom';
-import Button from '../Button/Button';
-import Logo from '../Logo/Logo';
-import Section from '../Section/Section';
+import Button from '../shared/Button/Button';
+import Logo from '../shared/Logo/Logo';
+import Section from '../shared/Section/Section';
 
 import { FooterStyled, FooterBlock, FooterMenuItem, sectionCSS, FooterMenu } from './Footer.styles';
 

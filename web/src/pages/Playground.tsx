@@ -1,5 +1,5 @@
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
-import Button from '../components/Button/Button';
+import Button from '../components/shared/Button/Button';
 import ComponentIsolator from '../components/ComponentIsolator/ComponentIsolator';
 
 function Playground() {

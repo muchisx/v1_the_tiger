@@ -1,6 +1,6 @@
 import { type FlattenSimpleInterpolation } from 'styled-components';
-import { type Props as ButtonProps } from '../Button/Button.types';
-import { type Props as TextProps } from '../Text/Text.types';
+import { type Props as ButtonProps } from '../shared/Button/Button.types';
+import { type Props as TextProps } from '../shared/Text/Text.types';
 
 type ButtonWithIdProps = { id: number } & ButtonProps;
 type TextWithIdProps = { id: number } & TextProps;

@@ -1,6 +1,6 @@
 import { useScroll, useTransform } from 'framer-motion';
-import ImageResponsive from '../ImageResponsive/ImageResponsive';
-import Section from '../Section/Section';
+import ImageResponsive from '../shared/ImageResponsive/ImageResponsive';
+import Section from '../shared/Section/Section';
 import { ParallaxContainer, sectionCSS } from './ImageBanner.styles';
 
 type Props = {

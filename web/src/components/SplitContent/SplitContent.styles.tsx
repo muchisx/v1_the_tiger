@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
-import Text from '../Text/Text';
+import Text from '../shared/Text/Text';
 
 export const ImageMaskedCSS = css`
   position: absolute;

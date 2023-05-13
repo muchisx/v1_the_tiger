@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { useScroll, useTransform } from 'framer-motion';
-import Button from '../Button/Button';
-import Section from '../Section/Section';
-import ImageMasked from '../ImageMasked/ImageMasked';
-import Text from '../Text/Text';
+import Button from '../shared/Button/Button';
+import Section from '../shared/Section/Section';
+import ImageMasked from '../shared/ImageMasked/ImageMasked';
+import Text from '../shared/Text/Text';
 import {
   SectionCSS,
   BackgroundShape,
