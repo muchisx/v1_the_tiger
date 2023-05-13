@@ -54,6 +54,6 @@
   --heading-family: 'Satoshi', sans-serif;
 
   /* <-----|    Spacings    |-----> */
-  --gutter: 20px;
+  --gutter: max(20px, 2%);
   --scrollbar-size: 8px;
 }

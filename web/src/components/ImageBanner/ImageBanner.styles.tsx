@@ -12,6 +12,8 @@ export const sectionCSS = css`
   }
 
   @media only screen and (max-width: 768px) {
+    height: 360px;
+
     img {
       object-position: 90%;
     }

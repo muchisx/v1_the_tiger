@@ -6,9 +6,9 @@ type ImageProps = {
 };
 
 type ImageContainerProps = {
-  height: Props['height'];
-  width: Props['width'];
-  padding?: Props['padding'];
+  $height: Props['height'];
+  $width: Props['width'];
+  $padding?: Props['padding'];
 };
 
 export const Image = styled.img<ImageProps>`
@@ -18,7 +18,7 @@ export const Image = styled.img<ImageProps>`
 `;
 
 export const ImageContainer = styled.div<ImageContainerProps>`
-  height: ${(props) => props.height};
-  width: ${(props) => props.width};
-  padding: ${(props) => props.padding};
+  height: ${(props) => props.$height};
+  width: ${(props) => props.$width};
+  padding: ${(props) => props.$padding};
 `;

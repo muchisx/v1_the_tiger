@@ -51,7 +51,7 @@ const textTwo = (
 );
 
 const rightContent: SplitContentProps['rightContent'] = {
-  textsList: [
+  rightTextsList: [
     {
       id: 1,
       children: textOne,

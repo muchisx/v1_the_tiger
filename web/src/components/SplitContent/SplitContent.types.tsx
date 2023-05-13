@@ -1,3 +1,4 @@
+import { type FlattenSimpleInterpolation } from 'styled-components';
 import { type Props as ButtonProps } from '../Button/Button.types';
 import { type Props as TextProps } from '../Text/Text.types';
 
@@ -6,14 +7,16 @@ type TextWithIdProps = { id: number } & TextProps;
 
 export type Props = {
   leftContent: {
-    topButton: ButtonProps;
+    topButton?: ButtonProps;
+    leftTextList?: TextWithIdProps[];
     maskedImageURL?: string;
     backgroundShapeURL?: string;
     buttonListLabel?: string;
     leftButtonList?: ButtonWithIdProps[];
   };
   rightContent: {
-    textsList?: TextWithIdProps[];
-    rightButtonList: ButtonWithIdProps[];
+    rightTextsList?: TextWithIdProps[];
+    rightButtonList?: ButtonWithIdProps[];
   };
+  customStyles?: FlattenSimpleInterpolation;
 };

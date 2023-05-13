@@ -12,22 +12,24 @@ import {
   ImageMaskedCSS,
   SubSection,
 } from './SplitContent.styles';
-
 import { Props } from './SplitContent.types';
 
 function SplitContent(props: Props) {
-  const { leftContent, rightContent } = props;
-  const { topButton, backgroundShapeURL, buttonListLabel, leftButtonList, maskedImageURL } = leftContent;
-  const { rightButtonList, textsList } = rightContent;
+  const { leftContent, rightContent, customStyles } = props;
+  const { topButton, leftTextList, backgroundShapeURL, buttonListLabel, leftButtonList, maskedImageURL } = leftContent;
+  const { rightButtonList, rightTextsList } = rightContent;
+
   const { scrollYProgress } = useScroll();
   const shapeRotation = useTransform(scrollYProgress, [0, 1], [180, 192]);
 
   return (
-    <Section css={SectionCSS} contain enableGutter paddingTop={20} paddingBottom={20}>
+    <Section css={SectionCSS.concat(customStyles)} contain enableGutter paddingTop={32} paddingBottom={32}>
       {backgroundShapeURL && <BackgroundShape src={backgroundShapeURL} style={{ rotateZ: shapeRotation }} />}
 
       <SubSection className="split-content__first">
         {topButton && <Button {...topButton} />}
+
+        {leftTextList?.length && leftTextList.map((textProps) => <Text key={textProps.id} {...textProps} />)}
 
         {leftButtonList?.length && (
           <ButtonsContainer>
@@ -41,7 +43,7 @@ function SplitContent(props: Props) {
         {maskedImageURL && <ImageMasked height={144} width={144} src={maskedImageURL} css={ImageMaskedCSS} />}
       </SubSection>
       <SubSection className="split-content__second">
-        {textsList?.length && textsList.map((textProps) => <Text key={textProps.id} {...textProps} />)}
+        {rightTextsList?.length && rightTextsList.map((textProps) => <Text key={textProps.id} {...textProps} />)}
 
         {rightButtonList?.length && (
           <ButtonsContainer>
@@ -57,13 +59,16 @@ function SplitContent(props: Props) {
 
 SplitContent.defaultProps = {
   leftContent: {
+    topButton: undefined,
+    leftTextList: undefined,
     maskedImageURL: undefined,
     backgroundShapeURL: undefined,
     buttonListLabel: undefined,
     leftButtonList: undefined,
   },
   rightContent: {
-    text: undefined,
+    rightTextsList: undefined,
+    rightButtonList: undefined,
   },
 };
 

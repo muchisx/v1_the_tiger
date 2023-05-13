@@ -2,19 +2,21 @@ import Heading from '../components/Heading/Heading';
 import ImageBanner from '../components/ImageBanner/ImageBanner';
 import Section from '../components/Section/Section';
 import SplitContent from '../components/SplitContent/SplitContent';
-import { HeroHeadingText, HomeCTA, homeAboutMe, heroImage } from './content/Home';
-
-const { leftContent, rightContent } = homeAboutMe;
+import { HeroHeadingText, homeCTA, homeAboutMe, heroImage } from './content/Home';
 
 function Home() {
   return (
     <main className="page page--home">
-      <Section enableGutter marginBottom={20}>
-        <Heading text={HeroHeadingText} headingLevel="h1" fontSize="6.6vw" />
+      <Section enableGutter>
+        <Heading text={HeroHeadingText} headingLevel="h1" fontSize="6.5vw" />
       </Section>
-      <HomeCTA />
+      <SplitContent
+        leftContent={homeCTA.leftContent}
+        rightContent={homeCTA.rightContent}
+        customStyles={homeCTA.customStyles}
+      />
       <ImageBanner src={heroImage} enableParallax />
-      <SplitContent leftContent={leftContent} rightContent={rightContent} />
+      <SplitContent leftContent={homeAboutMe.leftContent} rightContent={homeAboutMe.rightContent} />
     </main>
   );
 }

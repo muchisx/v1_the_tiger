@@ -1,55 +1,60 @@
+import { css } from 'styled-components';
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
-import styled, { css } from 'styled-components';
-import Text from '../../../components/Text/Text';
-import Button from '../../../components/Button/Button';
-import Section from '../../../components/Section/Section';
+import type { Props as SplitContentProps } from '../../../components/SplitContent/SplitContent.types';
 
-const SubSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 44%;
-`;
-
-const SectionCSS = css`
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
-
-    & ${SubSection} {
-      width: 100%;
-      gap: 32px;
+const customStyles = css`
+  @media only screen and (min-width: 768px) {
+    .split-content__first p:first-of-type {
+      text-transform: uppercase;
     }
   }
 `;
 
-function HomeCTA() {
-  return (
-    <Section css={SectionCSS} id="home-cta" enableGutter marginBottom={32}>
-      <SubSection>
-        <Text fontWeight={500}>
-          SKILLED WEB DEVELOPER CAPITALIZING ON THE POTENTIAL OF CODING TO ACCOMPLISH YOUR CREATIVE ASPIRATIONS.
-        </Text>
-      </SubSection>
-      <SubSection>
-        <Text>
-          I use my proficiency in Shopify or React Development and thorough coding practices to create robust digital
-          presences for innovative startups and established businesses alike.
-        </Text>
-        <Button
-          text="Reserve a free meeting"
-          role="link"
-          to="https://calendly.com/miguel-angel-creator/free-meeting"
-          newTab
-          variant="primary"
-          Icon={ArrowRight}
-        />
-      </SubSection>
-    </Section>
-  );
-}
+const textLeft = (
+  <>Skilled web developer capitalizing on the potential of coding to accomplish your creative aspirations.</>
+);
 
-export default HomeCTA;
+const textRight = (
+  <>
+    I use my proficiency in Shopify or React Development and thorough coding practices to create robust digital
+    presences for innovative startups and established businesses alike.
+  </>
+);
+
+const leftContent: SplitContentProps['leftContent'] = {
+  leftTextList: [
+    {
+      id: 1,
+      fontWeight: 500,
+      children: textLeft,
+    },
+  ],
+};
+
+const rightContent: SplitContentProps['rightContent'] = {
+  rightTextsList: [
+    {
+      id: 1,
+      children: textRight,
+    },
+  ],
+  rightButtonList: [
+    {
+      id: 1,
+      role: 'link',
+      newTab: true,
+      Icon: ArrowRight,
+      variant: 'primary',
+      text: 'Reserve a free meeting',
+      to: 'https://calendly.com/miguel-angel-creator/free-meeting',
+    },
+  ],
+};
+
+const homeCTA = {
+  leftContent,
+  rightContent,
+  customStyles,
+};
+
+export default homeCTA;
