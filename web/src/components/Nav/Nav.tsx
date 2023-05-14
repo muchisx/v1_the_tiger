@@ -5,12 +5,12 @@ import NavItem from '../NavItem/NavItem';
 const navItems = [
   <NavItem text="HOME" key="HOME" to="/" Icon={ArrowUpRight} />,
   <NavItem text="WORK" key="WORK" to="/work" Icon={ArrowUpRight} />,
+  <NavItem text="SERVICES" key="SERVICES" to="/services" Icon={ArrowUpRight} />,
   <NavItem text="ABOUT" key="ABOUT" to="/about" Icon={ArrowUpRight} />,
-  <NavItem text="PLAYGROUND" key="PLAYGROUND" to="/playground" Icon={ArrowUpRight} />,
   <NavItem text="CONTACT" key="CONTACT" to="/contact" Icon={ArrowUpRight} />,
 ];
 
-const subNavItems = [<NavItem text="404" key="404" to="/notfound" Icon={ArrowUpRight} />];
+const subNavItems = [<NavItem text="PLAYGROUND" key="PLAYGROUND" to="/playground" Icon={ArrowUpRight} />];
 
 const subNavSocials = [
   <NavItem newTab text="IG" key="IG" to="https://instagram.com/imiguel.angel" />,
