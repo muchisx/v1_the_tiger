@@ -20,7 +20,11 @@ export const GridItem = styled.div`
   width: var(--grid-item--max-width);
   min-width: var(--grid-item--min-width);
   padding: 12px;
-  outline: 1px solid var(--neutral-color);
+  /* Using box shadow in combination with overflow hidden on parents to be able to wrap items
+    This allows the following:
+    - always be able to have the "border" showing regardless of the direction
+    - prevent the the double border when border or outlines overlap  */
+  box-shadow: 1px -1px 0 var(--neutral-color);
 `;
 
 export const sectionCSS = css`

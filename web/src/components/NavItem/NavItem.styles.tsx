@@ -33,7 +33,9 @@ export const NavItemStyled = styled.li`
   overflow: hidden;
   list-style: none;
   /* Using box shadow in combination with overflow hidden on parents to be able to wrap items
-    and always be able to have the "border" showing regardless of the direction */
+    This allows the following:
+    - always be able to have the "border" showing regardless of the direction
+    - prevent the the double border when border or outlines overlap  */
   box-shadow: 1px -1px 0 rgb(209, 209, 209);
 
   &:hover {
