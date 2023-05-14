@@ -3,7 +3,9 @@
 
   /* --- General colors */
   --accent-color: #ff0004;
+  --neutral-color: #e7e7e7;
   --body-bg-color: #FFFFFF;
+
 
   /* --- Header colors */
   --header-bg-color: #FFFFFF;
@@ -29,7 +31,7 @@
   --btn-color-icon-primary: var(--btn-color-bg-primary);
   --btn-color-icon-bg-primary: #FFF;
   /* -secondary */
-  --btn-color-bg-secondary: #e7e7e7;
+  --btn-color-bg-secondary: var(--neutral-color);
   --btn-color-text-secondary: #1d1f21;
   --btn-color-border-secondary: var(--btn-color-bg-secondary);
   --btn-color-icon-secondary: #FFFFFF;

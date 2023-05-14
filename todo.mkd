@@ -5,6 +5,7 @@
   - [x] Menu Lists
   - [ ] Footer Newsletter
 - [ ] Contact Form
+- [ ] Finish ImageResponsive Compontent to accept srcset and different versions of the image, and alt and more accessible attributes
 - [ ] Playground layout (with more than one tool, not just component explorer)
 - [ ] Input and Select Field with "\<label>"
 - [ ] Blockquote with "\<blockquote>" or "\<q>" and "\<cite>"
