@@ -1,6 +1,8 @@
 # Todo List
 
-## Components
+
+- [ ] Refactor ImageMasked to use ImageResponsive as dependency 
+- [ ] Add Logo to Nav to make spacing for hamburger icon
 - [x] Footer
   - [x] Menu Lists
   - [ ] Footer Newsletter
