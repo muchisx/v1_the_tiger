@@ -2,14 +2,16 @@ import shopifyPartnerSecondary from '../../../assets/svgs/ShopifyPartner_Seconda
 import shopifyPlusPrimary from '../../../assets/svgs/ShopifyPlus_Primary.svg';
 import reactLogoBW from '../../../assets/svgs/react-logo-bw.svg';
 import typescriptLogoBW from '../../../assets/svgs/typescript-logo-neutral.svg';
+import liquidLogo from '../../../assets/svgs/loquid-logo.svg';
+import webflowLogo from '../../../assets/svgs/webflow-logo.svg';
 
 const logoUrlList = [
-  shopifyPartnerSecondary,
-  shopifyPlusPrimary,
   reactLogoBW,
   typescriptLogoBW,
-  shopifyPartnerSecondary,
+  webflowLogo,
+  liquidLogo,
   shopifyPlusPrimary,
+  shopifyPartnerSecondary,
 ];
 
 const logoUrlWithIdList = logoUrlList.map((logoUrl, index) => ({
