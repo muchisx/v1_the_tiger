@@ -4,6 +4,7 @@
   /* --- General colors */
   --accent-color: #ff0004;
   --neutral-color: #e7e7e7;
+  --neutral-color-secondary: #bebebe;
   --body-bg-color: #FFFFFF;
 
 
@@ -43,9 +44,9 @@
   --btn-color-icon-tertiary: var(--accent-color);
   --btn-color-icon-bg-tertiary: var(--btn-color-text-tertiary);
   /* -quaternary */
-  --btn-color-bg-quaternary: #fff;
+  --btn-color-bg-quaternary: transparent;
   --btn-color-text-quaternary: #747474;
-  --btn-color-border-quaternary: #bebebe;
+  --btn-color-border-quaternary: var(--neutral-color-secondary);
   --btn-color-icon-quaternary: var(--btn-color-text-quaternary);
   --btn-color-icon-bg-quaternary: var(--btn-color-bg-quaternary);
 

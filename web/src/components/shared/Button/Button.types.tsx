@@ -1,7 +1,7 @@
 import { type StyledIcon } from '@styled-icons/styled-icon';
 
 type Role = 'button' | 'link';
-type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
+export type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 type CommonProps = {
   // Common
   variant: Variant;
