@@ -22,7 +22,7 @@ const textRight = (
 );
 
 const leftContent: SplitContentProps['leftContent'] = {
-  leftTextList: [
+  leftTexts: [
     {
       id: 1,
       fontWeight: 500,
@@ -32,13 +32,13 @@ const leftContent: SplitContentProps['leftContent'] = {
 };
 
 const rightContent: SplitContentProps['rightContent'] = {
-  rightTextsList: [
+  rightTexts: [
     {
       id: 1,
       children: textRight,
     },
   ],
-  rightButtonList: [
+  rightButtons: [
     {
       id: 1,
       role: 'link',

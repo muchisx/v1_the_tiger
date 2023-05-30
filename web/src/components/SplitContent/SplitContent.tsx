@@ -4,6 +4,8 @@ import Button from '../shared/Button/Button';
 import Section from '../shared/Section/Section';
 import ImageMasked from '../shared/ImageMasked/ImageMasked';
 import Text from '../shared/Text/Text';
+import Card from '../Card/Card';
+import Heading from '../shared/Heading/Heading';
 import {
   SectionCSS,
   BackgroundShape,
@@ -15,26 +17,32 @@ import {
 import { Props } from './SplitContent.types';
 
 function SplitContent(props: Props) {
-  const { leftContent, rightContent, customStyles } = props;
-  const { topButton, leftTextList, backgroundShapeURL, buttonListLabel, leftButtonList, maskedImageURL } = leftContent;
-  const { rightButtonList, rightTextsList } = rightContent;
+  const { leftContent, rightContent, customStyles, contain, containType } = props;
+  const { topButton, leftTexts, backgroundShapeURL, buttonsLabel, leftButtons, maskedImageURL, leftHeading } =
+    leftContent;
+  const { rightButtons, rightTexts, cards } = rightContent;
+  const containProps = contain ? { contain, containType } : { contain };
 
   const { scrollYProgress } = useScroll();
   const shapeRotation = useTransform(scrollYProgress, [0, 1], [180, 192]);
 
   return (
-    <Section css={SectionCSS.concat(customStyles)} contain enableGutter paddingTop={32} paddingBottom={32}>
-      {backgroundShapeURL && <BackgroundShape src={backgroundShapeURL} style={{ rotateZ: shapeRotation }} />}
+    <Section css={SectionCSS.concat(customStyles)} {...containProps} enableGutter paddingTop={32} paddingBottom={32}>
+      {backgroundShapeURL && (
+        <BackgroundShape src={backgroundShapeURL} style={{ rotateZ: shapeRotation }} loading="lazy" />
+      )}
 
       <SubSection className="split-content__first">
         {topButton && <Button {...topButton} />}
 
-        {leftTextList?.length && leftTextList.map((textProps) => <Text key={textProps.id} {...textProps} />)}
+        {leftHeading && <Heading {...leftHeading} />}
 
-        {leftButtonList?.length && (
+        {leftTexts?.length && leftTexts.map((textProps) => <Text key={textProps.id} {...textProps} />)}
+
+        {leftButtons?.length && (
           <ButtonsContainer>
-            {buttonListLabel && <ButtonsHeading>{buttonListLabel}</ButtonsHeading>}
-            {leftButtonList.map((buttonProps) => (
+            {buttonsLabel && <ButtonsHeading>{buttonsLabel}</ButtonsHeading>}
+            {leftButtons.map((buttonProps) => (
               <Button key={buttonProps.id} {...buttonProps} />
             ))}
           </ButtonsContainer>
@@ -43,11 +51,13 @@ function SplitContent(props: Props) {
         {maskedImageURL && <ImageMasked height={144} width={144} src={maskedImageURL} css={ImageMaskedCSS} />}
       </SubSection>
       <SubSection className="split-content__second">
-        {rightTextsList?.length && rightTextsList.map((textProps) => <Text key={textProps.id} {...textProps} />)}
+        {rightTexts?.length && rightTexts.map((textProps) => <Text key={textProps.id} {...textProps} />)}
 
-        {rightButtonList?.length && (
+        {cards?.length && cards.map((cardProps) => <Card key={cardProps.id} {...cardProps} />)}
+
+        {rightButtons?.length && (
           <ButtonsContainer>
-            {rightButtonList.map((buttonProps) => (
+            {rightButtons.map((buttonProps) => (
               <Button key={buttonProps.id} {...buttonProps} />
             ))}
           </ButtonsContainer>
@@ -56,20 +66,5 @@ function SplitContent(props: Props) {
     </Section>
   );
 }
-
-SplitContent.defaultProps = {
-  leftContent: {
-    topButton: undefined,
-    leftTextList: undefined,
-    maskedImageURL: undefined,
-    backgroundShapeURL: undefined,
-    buttonListLabel: undefined,
-    leftButtonList: undefined,
-  },
-  rightContent: {
-    rightTextsList: undefined,
-    rightButtonList: undefined,
-  },
-};
 
 export default SplitContent;

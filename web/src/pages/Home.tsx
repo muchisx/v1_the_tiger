@@ -3,7 +3,7 @@ import ImageBanner from '../components/ImageBanner/ImageBanner';
 import Section from '../components/shared/Section/Section';
 import SplitContent from '../components/SplitContent/SplitContent';
 import LogoGrid from '../components/LogoGrid/LogoGrid';
-import { HeroHeadingText, homeCTA, homeAboutMe, heroImage, homeLogoGrid } from './content/Home';
+import { HeroHeadingText, homeCTA, homeAboutMe, heroImage, homeLogoGrid, homeServices } from './content/Home';
 
 function Home() {
   return (
@@ -15,10 +15,24 @@ function Home() {
         leftContent={homeCTA.leftContent}
         rightContent={homeCTA.rightContent}
         customStyles={homeCTA.customStyles}
+        contain
+        containType="margin"
       />
       <ImageBanner src={heroImage} enableParallax />
-      <SplitContent leftContent={homeAboutMe.leftContent} rightContent={homeAboutMe.rightContent} />
+      <SplitContent
+        leftContent={homeAboutMe.leftContent}
+        rightContent={homeAboutMe.rightContent}
+        contain
+        containType="margin"
+      />
       <LogoGrid logoUrlWithIdList={homeLogoGrid.logoUrlWithIdList} title="PROUD TO WORK WITH" />
+      <SplitContent
+        leftContent={homeServices.leftContent}
+        rightContent={homeServices.rightContent}
+        customStyles={homeServices.customStyles}
+        contain
+        containType="padding"
+      />
     </main>
   );
 }

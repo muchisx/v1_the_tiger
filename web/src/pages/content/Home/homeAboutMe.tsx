@@ -10,8 +10,8 @@ const leftContent: SplitContentProps['leftContent'] = {
     variant: 'tertiary',
     text: 'About Me',
   },
-  buttonListLabel: 'Socials',
-  leftButtonList: [
+  buttonsLabel: 'Socials',
+  leftButtons: [
     {
       id: 1,
       role: 'link',
@@ -51,7 +51,7 @@ const textTwo = (
 );
 
 const rightContent: SplitContentProps['rightContent'] = {
-  rightTextsList: [
+  rightTexts: [
     {
       id: 1,
       children: textOne,
@@ -62,7 +62,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       children: textTwo,
     },
   ],
-  rightButtonList: [
+  rightButtons: [
     {
       id: 1,
       text: 'Get the full story',
