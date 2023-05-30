@@ -22,6 +22,7 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/prop-types': 'off',
     'no-nested-ternary': 'off',
+    'react/require-default-props': 'off',
     'prettier/prettier': [
       'error',
       {

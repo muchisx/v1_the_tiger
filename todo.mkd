@@ -3,6 +3,7 @@
 
 - [ ] Refactor ImageMasked to use ImageResponsive as dependency 
 - [ ] Add Logo to Nav to make spacing for hamburger icon
+- [ ] Replace defaultProps for default Attributtes for optional props on all components
 - [x] Footer
   - [x] Menu Lists
   - [ ] Footer Newsletter
