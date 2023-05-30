@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import type { Variant } from '../Button/Button.types';
 
-type Props = {
+export type Props = {
   variant: Variant;
+  children: string;
 };
 
 const Tag = styled.span<Props>`

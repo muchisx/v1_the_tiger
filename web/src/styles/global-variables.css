@@ -5,7 +5,10 @@
   --accent-color: #ff0004;
   --neutral-color: #e7e7e7;
   --neutral-color-secondary: #bebebe;
+
   --body-bg-color: #FFFFFF;
+  --body-bg-color-secondary: #1d1f21;
+
 
 
   /* --- Header colors */
@@ -19,6 +22,8 @@
   /* -highlights */
   --text-highlight-primary: #909090;
   --text-highlight-secondary: var(--accent-color);
+  --text-highlight-tertiary: var(--accent-color);
+  --text-highlight-quaternary: #FFFFFF;
 
   /* --- Logo colors */
   --logo-primary: var(--text-primary);
@@ -58,5 +63,14 @@
 
   /* <-----|    Spacings    |-----> */
   --gutter: max(20px, 2%);
+  --section-max-width: 1320px;
   --scrollbar-size: 8px;
+}
+
+@media only screen and (max-width: 1320px) {
+  :root {
+    /* <-----|    Spacings    |-----> */
+    /* This fixes max-width variable when used in combination with containType === 'padding' in Section Component  */
+    --section-max-width: 100%;
+  }
 }

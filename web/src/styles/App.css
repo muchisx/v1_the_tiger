@@ -157,6 +157,14 @@ button {
   color: var(--text-highlight-secondary);
 }
 
+.highlight-tertiary {
+  color: var(--text-highlight-tertiary);
+}
+
+.highlight-quaternary {
+  color: var(--text-highlight-quaternary);
+}
+
 /*=============================================
 -->               DECLARATIVE               <--
 =============================================*/

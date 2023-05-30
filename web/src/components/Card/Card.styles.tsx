@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
-export const HeaderIcon = styled.div`
+export const HeaderIconWrap = styled.div`
   width: 8rem;
   height: 8rem;
   border-radius: 10px;
   background-color: #1d1f21;
+  color: white;
+  padding: 12px;
 `;
 
 export const TagsContainer = styled.div`
@@ -19,7 +21,7 @@ export const CardHeader = styled.header`
   grid-template-rows: auto auto;
   column-gap: 2rem;
 
-  & ${HeaderIcon} {
+  & ${HeaderIconWrap} {
     grid-area: 1 / 1 / 3 / 2;
   }
 `;
