@@ -33,6 +33,12 @@ function Home() {
         contain
         containType="padding"
       />
+      <SplitContent
+        leftContent={homeAboutMe.leftContent}
+        rightContent={homeAboutMe.rightContent}
+        contain
+        containType="margin"
+      />
     </main>
   );
 }
