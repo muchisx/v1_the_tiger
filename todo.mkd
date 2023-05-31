@@ -24,3 +24,28 @@
   - [ ] Nav reveal animation
 - [ ] Embed calendly form instead of linking out of my porfolio
 - [ ] Change types of css values from 'string' to a more complex type that accepts `${number}${unit}` with template literals.
+- [ ] Use theme instead of variables in css and use this breakpoint system inspired in Tailwind and MiUI
+
+      `module.exports = {
+        theme: {
+          screens: {
+
+            'sm': '600px',
+            // => @media (min-width: 640px) { ... }
+
+            'md': '768px',
+            // => @media (min-width: 768px) { ... }
+
+            'lg': '1024px',
+            // => @media (min-width: 1024px) { ... }
+
+            'xl': '1280px',
+            // => @media (min-width: 1280px) { ... }
+
+            '2xl': '1536px',
+            // => @media (min-width: 1536px) { ... }
+            
+          }
+        }
+      }`
+- [ ] 

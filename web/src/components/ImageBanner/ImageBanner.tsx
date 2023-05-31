@@ -16,7 +16,7 @@ function ImageBanner(props: Props) {
   const parallaxController = enableParallax ? { y } : undefined;
 
   return (
-    <Section css={sectionCSS}>
+    <Section customStyles={sectionCSS}>
       <ParallaxContainer style={parallaxController}>
         <ImageResponsive width="100%" fit="cover" height="100%" src={src} />
       </ParallaxContainer>

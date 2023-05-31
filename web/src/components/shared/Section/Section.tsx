@@ -12,7 +12,7 @@ export type ConditionalProps =
 
 export type Props = {
   enableGutter?: boolean;
-  css?: FlattenSimpleInterpolation;
+  customStyles?: FlattenSimpleInterpolation;
   paddingTop?: number;
   paddingBottom?: number;
   marginTop?: number;
@@ -26,7 +26,6 @@ const Section = styled.section<Props>`
   margin-top: ${(props) => `${props.marginTop}px`};
   margin-bottom: ${(props) => `${props.marginBottom}px`};
 
-  ${(props) => props.css}
   // TODO: Find a way to better write this without needing a nested ternary operator, && seems not to work
   ${(props) =>
     props.contain
@@ -39,6 +38,8 @@ const Section = styled.section<Props>`
             margin-inline: auto;
           `
       : null}
+
+  ${(props) => props.customStyles}
 `;
 
 export default Section;

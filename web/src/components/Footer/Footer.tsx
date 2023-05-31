@@ -9,7 +9,7 @@ import { FooterStyled, FooterBlock, FooterMenuItem, sectionCSS, FooterMenu } fro
 function Footer() {
   return (
     <FooterStyled>
-      <Section contain enableGutter css={sectionCSS}>
+      <Section contain containType="margin" enableGutter customStyles={sectionCSS}>
         <FooterBlock className="footer__logo">
           <Logo isUppercase />
         </FooterBlock>

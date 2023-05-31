@@ -7,7 +7,6 @@ export type Props = {
 };
 
 const Tag = styled.span<Props>`
-  display: inline-flex;
   width: fit-content;
   height: fit-content;
   font-size: 1.4rem;
@@ -17,6 +16,9 @@ const Tag = styled.span<Props>`
   color: var(--btn-color-text-${(props) => props.variant});
   background: var(--btn-color-bg-${(props) => props.variant});
   border: 1px solid var(--btn-color-border-${(props) => props.variant});
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export default Tag;
