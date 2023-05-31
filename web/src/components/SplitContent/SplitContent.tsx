@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { useScroll, useTransform } from 'framer-motion';
+import { css } from 'styled-components';
 import Button from '../shared/Button/Button';
 import Section from '../shared/Section/Section';
 import ImageMasked from '../shared/ImageMasked/ImageMasked';
@@ -13,6 +14,7 @@ import {
   ButtonsHeading,
   ImageMaskedCSS,
   SubSection,
+  CardsContainer,
 } from './SplitContent.styles';
 import { Props } from './SplitContent.types';
 
@@ -27,7 +29,13 @@ function SplitContent(props: Props) {
   const shapeRotation = useTransform(scrollYProgress, [0, 1], [180, 192]);
 
   return (
-    <Section css={SectionCSS.concat(customStyles)} {...containProps} enableGutter paddingTop={32} paddingBottom={32}>
+    <Section
+      customStyles={SectionCSS.concat(customStyles)}
+      {...containProps}
+      enableGutter
+      paddingTop={32}
+      paddingBottom={32}
+    >
       {backgroundShapeURL && (
         <BackgroundShape src={backgroundShapeURL} style={{ rotateZ: shapeRotation }} loading="lazy" />
       )}
@@ -53,7 +61,19 @@ function SplitContent(props: Props) {
       <SubSection className="split-content__second">
         {rightTexts?.length && rightTexts.map((textProps) => <Text key={textProps.id} {...textProps} />)}
 
-        {cards?.length && cards.map((cardProps) => <Card key={cardProps.id} {...cardProps} />)}
+        {cards?.length && (
+          <CardsContainer>
+            {cards.map((cardProps, index) => (
+              <Card
+                key={cardProps.id}
+                {...cardProps}
+                customStyles={css`
+                  --order: ${index + 1};
+                `}
+              />
+            ))}
+          </CardsContainer>
+        )}
 
         {rightButtons?.length && (
           <ButtonsContainer>

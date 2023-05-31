@@ -19,6 +19,13 @@ export const ButtonsContainer = styled.div`
   gap: 8px;
 `;
 
+export const CardsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+`;
+
 export const SubSection = styled.div`
   display: flex;
   flex-direction: column;
