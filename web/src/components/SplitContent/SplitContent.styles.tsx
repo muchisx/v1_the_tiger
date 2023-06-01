@@ -55,7 +55,7 @@ export const SectionCSS = css`
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     gap: 2.4rem;
-    padding-top: 12px;
+    padding-block: 40px;
     overflow: hidden;
 
     .split-content__first ${ButtonsContainer} {

@@ -22,7 +22,7 @@ function SplitContent(props: Props) {
   const { leftContent, rightContent, customStyles, contain, containType } = props;
   const { topButton, leftTexts, backgroundShapeURL, buttonsLabel, leftButtons, maskedImageURL, leftHeading } =
     leftContent;
-  const { rightButtons, rightTexts, cards } = rightContent;
+  const { rightHeading, rightButtons, rightTexts, cards } = rightContent;
 
   // Validation - Section Props - checks if contain is passed in before passing down containType
   const containProps = contain ? { contain, containType } : { contain };
@@ -30,7 +30,7 @@ function SplitContent(props: Props) {
   // Validation - Parent Renders - checks if children exist before rendering parents
   const renderLeftContent =
     topButton || leftTexts || backgroundShapeURL || buttonsLabel || leftButtons || maskedImageURL || leftHeading;
-  const renderRightContent = rightButtons || rightTexts || cards;
+  const renderRightContent = rightHeading || rightButtons || rightTexts || cards;
 
   // Animations - Scroll Progress variables - checks the scroll progress of the page and assigns its value in a variable
   const { scrollYProgress } = useScroll();
@@ -41,8 +41,8 @@ function SplitContent(props: Props) {
       customStyles={SectionCSS.concat(customStyles)}
       {...containProps}
       enableGutter
-      paddingTop={32}
-      paddingBottom={32}
+      paddingTop={56}
+      paddingBottom={56}
     >
       {backgroundShapeURL && (
         <BackgroundShape src={backgroundShapeURL} style={{ rotateZ: shapeRotation }} loading="lazy" />
@@ -71,6 +71,8 @@ function SplitContent(props: Props) {
 
       {renderRightContent && (
         <SubSection className="split-content__second">
+          {rightHeading && <Heading {...rightHeading} />}
+
           {rightTexts?.length && rightTexts.map((textProps) => <Text key={textProps.id} {...textProps} />)}
 
           {cards?.length && (

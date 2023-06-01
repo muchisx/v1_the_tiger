@@ -20,6 +20,7 @@ export type Props = {
     leftButtons?: ButtonWithIdProps[];
   };
   rightContent: {
+    rightHeading?: HeadingProps;
     rightTexts?: TextWithIdProps[];
     rightButtons?: ButtonWithIdProps[];
     cards?: CardWithIdProps[];
