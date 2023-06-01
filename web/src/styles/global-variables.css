@@ -62,12 +62,12 @@
   --heading-family: 'Satoshi', sans-serif;
 
   /* <-----|    Spacings    |-----> */
-  --gutter: max(20px, 2%);
-  --section-max-width: 1320px;
+  --gutter: max(20px, 4%);
+  --section-max-width: 1440px;
   --scrollbar-size: 8px;
 }
 
-@media only screen and (max-width: 1320px) {
+@media only screen and (max-width: 1440px) {
   :root {
     /* <-----|    Spacings    |-----> */
     /* This fixes max-width variable when used in combination with containType === 'padding' in Section Component  */

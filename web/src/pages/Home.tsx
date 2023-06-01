@@ -3,13 +3,21 @@ import ImageBanner from '../components/ImageBanner/ImageBanner';
 import Section from '../components/shared/Section/Section';
 import SplitContent from '../components/SplitContent/SplitContent';
 import LogoGrid from '../components/LogoGrid/LogoGrid';
-import { HeroHeadingText, homeCTA, homeAboutMe, heroImage, homeLogoGrid, homeServices } from './content/Home';
+import {
+  HeroHeadingText,
+  homeCTA,
+  homeAboutMe,
+  heroImage,
+  homeLogoGrid,
+  homeServices,
+  homeContact,
+} from './content/Home';
 
 function Home() {
   return (
     <main className="page page--home">
       <Section enableGutter>
-        <Heading text={HeroHeadingText} headingLevel="h1" fontSize="6.5vw" />
+        <Heading text={HeroHeadingText} headingLevel="h1" fontSize="6.4vw" />
       </Section>
       <SplitContent
         leftContent={homeCTA.leftContent}
@@ -34,8 +42,8 @@ function Home() {
         containType="padding"
       />
       <SplitContent
-        leftContent={homeAboutMe.leftContent}
-        rightContent={homeAboutMe.rightContent}
+        leftContent={homeContact.leftContent}
+        rightContent={homeContact.rightContent}
         contain
         containType="margin"
       />
