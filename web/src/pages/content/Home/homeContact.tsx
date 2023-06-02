@@ -1,6 +1,6 @@
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 import { Props as SplitContentProps } from '../../../components/SplitContent/SplitContent.types';
-import svgShape from '../../../assets/svgs/abstract-1.svg';
+import svgShape from '../../../assets/svgs/abstract-8.svg';
 
 const leftContent: SplitContentProps['leftContent'] = {
   topButton: {
@@ -21,9 +21,9 @@ const textOne = (
 
 const rightHeading = (
   <>
-    <span className="highlight-primary">HAVE AN IDEA?</span>
+    <span className="highlight-primary">GOT AN IDEA?</span>
     <br />
-    <span>LET&#39;S DO IT TOGETHER!</span>
+    <span>LET&#39;S WORK TOGETHER!</span>
   </>
 );
 
@@ -36,7 +36,6 @@ const rightContent: SplitContentProps['rightContent'] = {
     {
       id: 1,
       children: textOne,
-      fontWeight: 500,
     },
   ],
   rightButtons: [
