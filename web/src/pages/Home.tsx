@@ -11,6 +11,7 @@ import {
   homeLogoGrid,
   homeServices,
   homeContact,
+  homeLogoGridTwo,
 } from './content/Home';
 
 function Home() {
@@ -47,6 +48,7 @@ function Home() {
         contain
         containType="margin"
       />
+      <LogoGrid logoUrlWithIdList={homeLogoGridTwo.logoUrlWithIdList} title="TRUSTED BY" />
     </main>
   );
 }
