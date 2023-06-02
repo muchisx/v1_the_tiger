@@ -14,6 +14,8 @@ import k9Arsenal from '../../../assets/images/companies/k9arsenal-darker-smaller
 import dialogEdu from '../../../assets/images/companies/dialogedu.png';
 import diamondMattress from '../../../assets/images/companies/diamondmattress.png';
 import freshVictor from '../../../assets/images/companies/freshvictor-smaller.png';
+import safkanHealth from '../../../assets/images/companies/safkanhealth.png';
+import veme from '../../../assets/svgs/companies/veme.svg';
 
 const logoUrlList = [
   bigLittleBar,
@@ -32,6 +34,8 @@ const logoUrlList = [
   dialogEdu,
   diamondMattress,
   freshVictor,
+  safkanHealth,
+  veme,
 ];
 
 const logoUrlWithIdList = logoUrlList.map((logoUrl, index) => ({
