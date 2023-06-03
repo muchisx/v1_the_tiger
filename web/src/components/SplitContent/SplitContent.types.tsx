@@ -27,3 +27,7 @@ export type Props = {
   };
   customStyles?: FlattenSimpleInterpolation;
 } & SectionConditionalProps;
+
+export type SubSectionProps = {
+  maskedImageURL?: Props['leftContent']['maskedImageURL'];
+};

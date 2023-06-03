@@ -49,7 +49,7 @@ function SplitContent(props: Props) {
       )}
 
       {renderLeftContent && (
-        <SubSection className="split-content__first">
+        <SubSection className="split-content__first" {...leftContent}>
           {topButton && <Button {...topButton} />}
 
           {leftHeading && <Heading {...leftHeading} />}

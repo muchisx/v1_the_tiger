@@ -149,6 +149,8 @@ button {
 -->             UTILITY CLASSES             <--
 =============================================*/
 
+/* <-----|    Highlights    |-----> */
+
 .highlight-primary {
   color: var(--text-highlight-primary);
 }
@@ -163,6 +165,14 @@ button {
 
 .highlight-quaternary {
   color: var(--text-highlight-quaternary);
+}
+
+/* <-----|    Media Queries    |-----> */
+
+@media only screen and (min-width: 426px) {
+  .xsm-hidden {
+    display: none;
+  }
 }
 
 /*=============================================

@@ -43,7 +43,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       id: 1,
       text: 'Contact',
       role: 'link',
-      to: '/about',
+      to: '/contact',
       variant: 'primary',
       Icon: ArrowRight,
     },

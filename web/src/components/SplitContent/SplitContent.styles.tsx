@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 import Text from '../shared/Text/Text';
+import type { SubSectionProps } from './SplitContent.types';
 
 export const ImageMaskedCSS = css`
   position: absolute;
@@ -26,10 +27,20 @@ export const CardsContainer = styled.div`
   position: relative;
 `;
 
-export const SubSection = styled.div`
+export const SubSection = styled.div<SubSectionProps>`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  ${(props) =>
+    props.maskedImageURL &&
+    css`
+      ${ButtonsContainer} {
+        @media only screen and (max-width: 768px) {
+          max-width: 50%;
+        }
+      }
+    `}
 `;
 
 export const BackgroundShape = styled(motion.img)`
@@ -60,9 +71,6 @@ export const SectionCSS = css`
 
     .split-content__first ${ButtonsContainer} {
       margin-top: 4rem;
-      @media only screen and (max-width: 768px) {
-        max-width: 50%;
-      }
     }
   }
 

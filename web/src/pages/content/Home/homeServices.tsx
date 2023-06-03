@@ -48,6 +48,7 @@ const leftText = (
 const leftHeading = (
   <>
     <span className="highlight-quaternary">WAYS I </span>
+    <br className="xsm-hidden" />
     <span className="highlight-primary">CAN HELP</span>
   </>
 );
