@@ -1,5 +1,4 @@
 import { type StyledIcon } from '@styled-icons/styled-icon';
-import type { Props as CustomIconProps } from '../CustomIcon/CustomIcon.types';
 
 type Role = 'button' | 'link';
 export type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
@@ -9,7 +8,9 @@ type CommonProps = {
   role: Role;
   className?: string;
   text?: string;
-  Icon?: StyledIcon | CustomIconProps;
+
+  // TODO - Make Icon prop also accept CustomIcon component
+  Icon?: StyledIcon;
 };
 type ConditionalProps =
   | { role: 'button'; to?: never; newTab?: never; rel?: never; action: () => void }
