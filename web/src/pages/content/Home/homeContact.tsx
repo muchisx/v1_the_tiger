@@ -1,6 +1,20 @@
+import { css } from 'styled-components';
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 import { Props as SplitContentProps } from '../../../components/SplitContent/SplitContent.types';
 import svgShape from '../../../assets/svgs/abstract-8.svg';
+import { BackgroundShape } from '../../../components/SplitContent/SplitContent.styles';
+
+const customStyles = css`
+  ${BackgroundShape} {
+    @media only screen and (min-width: 769px) {
+      left: 10%;
+      width: 40%;
+    }
+    @media only screen and (max-width: 768px) {
+      left: 24%;
+    }
+  }
+`;
 
 const leftContent: SplitContentProps['leftContent'] = {
   topButton: {
@@ -53,9 +67,10 @@ const rightContent: SplitContentProps['rightContent'] = {
   ],
 };
 
-const homeContact = {
+const homeContact: SplitContentProps = {
   leftContent,
   rightContent,
+  customStyles,
 };
 
 export default homeContact;

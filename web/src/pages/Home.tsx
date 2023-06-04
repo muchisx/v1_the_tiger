@@ -45,6 +45,7 @@ function Home() {
       <SplitContent
         leftContent={homeContact.leftContent}
         rightContent={homeContact.rightContent}
+        customStyles={homeContact.customStyles}
         contain
         containType="margin"
       />
