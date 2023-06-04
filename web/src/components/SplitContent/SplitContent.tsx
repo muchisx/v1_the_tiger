@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { useRef } from 'react';
-import { useScroll, useTransform } from 'framer-motion';
+import { useScroll, useSpring, useTransform } from 'framer-motion';
 import { css } from 'styled-components';
 import Button from '../shared/Button/Button';
 import Section from '../shared/Section/Section';
@@ -35,8 +35,9 @@ function SplitContent(props: Props) {
   // Animations - Scroll Progress variables - checks the scroll progress of the page and assigns its value in a variable
   const sectionRef = useRef(null);
   const rotationValues = backgroundShape?.rotation || [180, 220];
-  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', '132vh 100vw'] });
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', '132vh end'] });
   const shapeRotation = useTransform(scrollYProgress, [0, 1], rotationValues);
+  const shapeRotationSpring = useSpring(shapeRotation, { stiffness: 10, damping: 10, mass: 1 });
 
   return (
     <Section
@@ -48,7 +49,7 @@ function SplitContent(props: Props) {
       ref={sectionRef}
     >
       {backgroundShape && (
-        <BackgroundShape src={backgroundShape.url} style={{ rotateZ: shapeRotation }} loading="lazy" />
+        <BackgroundShape src={backgroundShape.url} style={{ rotateZ: shapeRotationSpring }} loading="lazy" />
       )}
 
       {renderLeftContent && (
