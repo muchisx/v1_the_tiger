@@ -10,7 +10,7 @@ type Props = {
 };
 
 function NavItem(props: Props) {
-  const { text, Icon, to, newTab, rel } = props;
+  const { text, Icon, to, newTab, rel = 'noopener noreferrer' } = props;
   const target = newTab ? '_blank' : '_self';
   const relValue = newTab ? rel : undefined;
 
@@ -25,11 +25,5 @@ function NavItem(props: Props) {
     </NavItemStyled>
   );
 }
-
-NavItem.defaultProps = {
-  Icon: undefined,
-  newTab: false,
-  rel: 'noopener noreferrer',
-};
 
 export default NavItem;

@@ -2,7 +2,7 @@ import HeadingStyled from './Heading.styles';
 import { Props } from './Heading.types';
 
 function Heading(props: Props) {
-  const { headingLevel, text, className, fontWeight, fontSize } = props;
+  const { headingLevel = 'h2', text, className, fontWeight = 500, fontSize } = props;
 
   return (
     <HeadingStyled as={headingLevel} className={className} $fontWeight={fontWeight} $fontSize={fontSize}>
@@ -10,12 +10,5 @@ function Heading(props: Props) {
     </HeadingStyled>
   );
 }
-
-Heading.defaultProps = {
-  headingLevel: 'h2',
-  className: undefined,
-  fontWeight: 500,
-  fontSize: undefined,
-};
 
 export default Heading;

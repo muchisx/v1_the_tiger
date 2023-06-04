@@ -27,9 +27,4 @@ function LogoGrid(props: Props) {
   );
 }
 
-LogoGrid.defaultProps = {
-  title: undefined,
-  customStyles: undefined,
-};
-
 export default LogoGrid;

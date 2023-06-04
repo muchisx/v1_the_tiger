@@ -17,8 +17,4 @@ function ImageMasked(props: Props) {
   );
 }
 
-ImageMasked.defaultProps = {
-  css: undefined,
-};
-
 export default ImageMasked;

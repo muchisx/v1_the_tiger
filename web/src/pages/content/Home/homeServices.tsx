@@ -76,7 +76,7 @@ const leftContent: SplitContentProps['leftContent'] = {
     {
       id: 2,
       role: 'link',
-      to: 'https://github.com/muchisx',
+      to: '/contact',
       text: 'Contact',
       variant: 'secondary',
       Icon: ArrowRight,

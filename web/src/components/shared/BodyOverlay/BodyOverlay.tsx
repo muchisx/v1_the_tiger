@@ -9,8 +9,4 @@ function BodyOverlay(props: Props) {
   return <BodyOverlayStyled onClick={onClickAction} />;
 }
 
-BodyOverlay.defaultProps = {
-  onClickAction: undefined,
-};
-
 export default BodyOverlay;

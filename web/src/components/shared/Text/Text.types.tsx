@@ -25,7 +25,8 @@ export type Tag =
   | 'sup'
   | 'time'
   | 'u'
-  | 'pre';
+  | 'pre'
+  | 'p';
 
 export type TextProps = {
   $fontWeight?: Props['fontWeight'];

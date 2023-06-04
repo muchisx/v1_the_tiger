@@ -3,7 +3,7 @@ import { SpanStyled, ButtonStyled, Container, IconWrap, LinkStyled } from './But
 import type { Props } from './Button.types';
 
 function Button(props: Props) {
-  const { role, to, text, variant, Icon, action, className, newTab, rel } = props;
+  const { role, to, text, variant, Icon, action, className, newTab, rel = 'noopener noreferrer' } = props;
 
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const isHoveredRef = useRef<boolean>(false);
@@ -61,12 +61,5 @@ function Button(props: Props) {
     </Container>
   );
 }
-
-Button.defaultProps = {
-  text: undefined,
-  className: undefined,
-  Icon: undefined,
-  rel: 'noopener noreferrer',
-};
 
 export default Button;

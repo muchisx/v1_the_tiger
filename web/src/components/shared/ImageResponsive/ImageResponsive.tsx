@@ -10,7 +10,7 @@ export type Props = {
 };
 
 function ImageResponsive(props: Props) {
-  const { height, width, fit, padding, src, loading } = props;
+  const { height, width, fit = 'cover', padding, src, loading = 'lazy' } = props;
 
   return (
     <ImageContainer $height={height} $width={width} $padding={padding}>
@@ -18,11 +18,5 @@ function ImageResponsive(props: Props) {
     </ImageContainer>
   );
 }
-
-ImageResponsive.defaultProps = {
-  fit: 'cover',
-  padding: undefined,
-  loading: 'lazy',
-};
 
 export default ImageResponsive;

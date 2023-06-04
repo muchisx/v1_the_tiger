@@ -22,8 +22,4 @@ function Logo(props: Props) {
   );
 }
 
-Logo.defaultProps = {
-  isUppercase: false,
-};
-
 export default Logo;

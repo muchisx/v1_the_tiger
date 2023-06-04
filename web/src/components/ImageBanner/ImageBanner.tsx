@@ -20,14 +20,10 @@ function ImageBanner(props: Props) {
   return (
     <Section ref={sectionRef} customStyles={sectionCSS}>
       <ParallaxContainer style={parallaxController}>
-        <ImageResponsive width="100%" fit="cover" height="100%" src={src} />
+        <ImageResponsive width="100%" height="100%" src={src} />
       </ParallaxContainer>
     </Section>
   );
 }
-
-ImageBanner.defaultProps = {
-  enableParallax: false,
-};
 
 export default ImageBanner;
