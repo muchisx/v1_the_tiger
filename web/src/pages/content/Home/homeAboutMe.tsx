@@ -30,7 +30,9 @@ const leftContent: SplitContentProps['leftContent'] = {
     },
   ],
   maskedImageURL: profilePic,
-  backgroundShapeURL: svgShape,
+  backgroundShape: {
+    url: svgShape,
+  },
 };
 
 const textOne = (

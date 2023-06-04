@@ -10,8 +10,7 @@
 - [ ] Contact Form
 - [ ] Customize via props:
   - [ ] Add customStyles prop to all section components
-  - [ ] SplitContent Background shape rotation vs scroll
-  - [ ] Image banner parallax progress vs scroll
+  - [x] SplitContent Background shape rotation vs scroll
 - [ ] Finish ImageResponsive Compontent to accept srcset and different versions of the image, and alt and more accessible attributes
 - [ ] Playground layout (with more than one tool, not just component explorer)
 - [ ] Input and Select Field with "\<label>"

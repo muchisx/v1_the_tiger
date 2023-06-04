@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import { useRef } from 'react';
 import { useScroll, useTransform } from 'framer-motion';
 import { css } from 'styled-components';
 import Button from '../shared/Button/Button';
@@ -20,8 +21,7 @@ import { Props } from './SplitContent.types';
 
 function SplitContent(props: Props) {
   const { leftContent, rightContent, customStyles, contain, containType } = props;
-  const { topButton, leftTexts, backgroundShapeURL, buttonsLabel, leftButtons, maskedImageURL, leftHeading } =
-    leftContent;
+  const { topButton, leftTexts, backgroundShape, buttonsLabel, leftButtons, maskedImageURL, leftHeading } = leftContent;
   const { rightHeading, rightButtons, rightTexts, cards } = rightContent;
 
   // Validation - Section Props - checks if contain is passed in before passing down containType
@@ -29,12 +29,14 @@ function SplitContent(props: Props) {
 
   // Validation - Parent Renders - checks if children exist before rendering parents
   const renderLeftContent =
-    topButton || leftTexts || backgroundShapeURL || buttonsLabel || leftButtons || maskedImageURL || leftHeading;
+    topButton || leftTexts || backgroundShape || buttonsLabel || leftButtons || maskedImageURL || leftHeading;
   const renderRightContent = rightHeading || rightButtons || rightTexts || cards;
 
   // Animations - Scroll Progress variables - checks the scroll progress of the page and assigns its value in a variable
-  const { scrollYProgress } = useScroll();
-  const shapeRotation = useTransform(scrollYProgress, [0, 1], [180, 240]);
+  const sectionRef = useRef(null);
+  const rotationValues = backgroundShape?.rotation || [180, 220];
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', '132vh 100vw'] });
+  const shapeRotation = useTransform(scrollYProgress, [0, 1], rotationValues);
 
   return (
     <Section
@@ -43,9 +45,10 @@ function SplitContent(props: Props) {
       enableGutter
       paddingTop={56}
       paddingBottom={56}
+      ref={sectionRef}
     >
-      {backgroundShapeURL && (
-        <BackgroundShape src={backgroundShapeURL} style={{ rotateZ: shapeRotation }} loading="lazy" />
+      {backgroundShape && (
+        <BackgroundShape src={backgroundShape.url} style={{ rotateZ: shapeRotation }} loading="lazy" />
       )}
 
       {renderLeftContent && (

@@ -9,7 +9,10 @@ const leftContent: SplitContentProps['leftContent'] = {
     variant: 'tertiary',
     text: 'Get in touch',
   },
-  backgroundShapeURL: svgShape,
+  backgroundShape: {
+    url: svgShape,
+    rotation: [100, 140],
+  },
 };
 
 const textOne = (

@@ -9,13 +9,20 @@ type ButtonWithIdProps = { id: number } & ButtonProps;
 type TextWithIdProps = { id: number } & TextProps;
 type CardWithIdProps = { id: number } & CardProps;
 
+export type BackgroundShape = {
+  url: string;
+
+  // Start position, end position
+  rotation?: [number, number];
+};
+
 export type Props = {
   leftContent: {
     topButton?: ButtonProps;
     leftHeading?: HeadingProps;
     leftTexts?: TextWithIdProps[];
     maskedImageURL?: string;
-    backgroundShapeURL?: string;
+    backgroundShape?: BackgroundShape;
     buttonsLabel?: string;
     leftButtons?: ButtonWithIdProps[];
   };
