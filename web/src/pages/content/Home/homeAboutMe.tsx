@@ -32,6 +32,7 @@ const leftContent: SplitContentProps['leftContent'] = {
   maskedImageURL: profilePic,
   backgroundShape: {
     url: svgShape,
+    rotation: [160, 180],
   },
 };
 

@@ -34,7 +34,7 @@ function SplitContent(props: Props) {
 
   // Animations - Scroll Progress variables - checks the scroll progress of the page and assigns its value in a variable
   const sectionRef = useRef(null);
-  const rotationValues = backgroundShape?.rotation || [180, 220];
+  const rotationValues = backgroundShape?.rotation || [0, 20];
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', '132vh end'] });
   const shapeRotation = useTransform(scrollYProgress, [0, 1], rotationValues);
   const shapeRotationSpring = useSpring(shapeRotation, { stiffness: 10, damping: 10, mass: 1 });
