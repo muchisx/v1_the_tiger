@@ -1,10 +1,10 @@
-import Heading from '../components/shared/Heading/Heading';
-import ImageBanner from '../components/ImageBanner/ImageBanner';
 import Section from '../components/shared/Section/Section';
+import Heading from '../components/shared/Heading/Heading';
 import SplitContent from '../components/SplitContent/SplitContent';
+import ImageBanner from '../components/ImageBanner/ImageBanner';
 import LogoGrid from '../components/LogoGrid/LogoGrid';
 import {
-  HeroHeadingText,
+  HomeHeroHeadingText,
   homeCTA,
   homeAboutMe,
   heroImage,
@@ -18,7 +18,7 @@ function Home() {
   return (
     <main className="page page--home">
       <Section enableGutter>
-        <Heading text={HeroHeadingText} headingLevel="h1" fontSize="6.4vw" />
+        <Heading text={HomeHeroHeadingText} headingLevel="h1" fontSize="6.4vw" />
       </Section>
       <SplitContent
         leftContent={homeCTA.leftContent}

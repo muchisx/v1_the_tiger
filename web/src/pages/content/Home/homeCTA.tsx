@@ -51,7 +51,7 @@ const rightContent: SplitContentProps['rightContent'] = {
   ],
 };
 
-const homeCTA = {
+const homeCTA: SplitContentProps = {
   leftContent,
   rightContent,
   customStyles,
