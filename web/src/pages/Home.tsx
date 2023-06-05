@@ -25,29 +25,21 @@ function Home() {
         rightContent={homeCTA.rightContent}
         customStyles={homeCTA.customStyles}
         contain
-        containType="margin"
       />
       <ImageBanner src={heroImage} enableParallax />
-      <SplitContent
-        leftContent={homeAboutMe.leftContent}
-        rightContent={homeAboutMe.rightContent}
-        contain
-        containType="margin"
-      />
+      <SplitContent leftContent={homeAboutMe.leftContent} rightContent={homeAboutMe.rightContent} contain />
       <LogoGrid logoUrlWithIdList={homeLogoGrid.logoUrlWithIdList} title="PROUD TO WORK WITH" />
       <SplitContent
         leftContent={homeServices.leftContent}
         rightContent={homeServices.rightContent}
         customStyles={homeServices.customStyles}
-        contain
-        containType="padding"
+        contain="padding"
       />
       <SplitContent
         leftContent={homeContact.leftContent}
         rightContent={homeContact.rightContent}
         customStyles={homeContact.customStyles}
-        contain
-        containType="margin"
+        contain="padding"
       />
       <LogoGrid logoUrlWithIdList={homeLogoGridTwo.logoUrlWithIdList} title="TRUSTED BY" />
     </main>

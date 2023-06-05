@@ -40,7 +40,7 @@ const textOne = (
   <>
     I&#39;m glad you&#39;re here! <br />
     My name is Miguel Ángel, and as a dedicated and imaginative freelance Web Developer, my goal is to develop projects
-    that I can take pride in. I am a member Shopify Partners Program, adept at in React Development, and I excel at
+    that I can take pride in. I am a member Shopify Partners Program, adept in React Development, and I excel at
     creating digital services that include stunning user interfaces and reliable code.
   </>
 );

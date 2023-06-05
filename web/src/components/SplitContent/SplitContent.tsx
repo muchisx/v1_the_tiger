@@ -20,12 +20,9 @@ import {
 import { Props } from './SplitContent.types';
 
 function SplitContent(props: Props) {
-  const { leftContent, rightContent, customStyles, contain, containType } = props;
+  const { leftContent, rightContent, customStyles, contain } = props;
   const { topButton, leftTexts, backgroundShape, buttonsLabel, leftButtons, maskedImageURL, leftHeading } = leftContent;
   const { rightHeading, rightButtons, rightTexts, cards } = rightContent;
-
-  // Validation - Section Props - checks if contain is passed in before passing down containType
-  const containProps = contain ? { contain, containType } : { contain };
 
   // Validation - Parent Renders - checks if children exist before rendering parents
   const renderLeftContent =
@@ -42,7 +39,7 @@ function SplitContent(props: Props) {
   return (
     <Section
       customStyles={SectionCSS.concat(customStyles)}
-      {...containProps}
+      contain={contain}
       enableGutter
       paddingTop={56}
       paddingBottom={56}

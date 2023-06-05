@@ -1,23 +1,14 @@
 import styled, { type FlattenSimpleInterpolation, css } from 'styled-components';
 
-export type ConditionalProps =
-  | {
-      contain: true;
-      containType: 'padding' | 'margin';
-    }
-  | {
-      contain?: false;
-      containType?: never;
-    };
-
 export type Props = {
+  contain?: true | 'padding' | 'margin';
   enableGutter?: boolean;
   customStyles?: FlattenSimpleInterpolation;
   paddingTop?: number;
   paddingBottom?: number;
   marginTop?: number;
   marginBottom?: number;
-} & ConditionalProps;
+};
 
 const Section = styled.section<Props>`
   padding-inline: ${(props) => (props.enableGutter ? 'var(--gutter)' : 'unset')};
@@ -29,7 +20,7 @@ const Section = styled.section<Props>`
   // TODO: Find a way to better write this without needing a nested ternary operator, && seems not to work
   ${(props) =>
     props.contain
-      ? props.containType === 'padding'
+      ? props.contain === 'padding'
         ? css`
             padding-inline: calc(50% + var(--gutter) - var(--section-max-width) / 2);
           `

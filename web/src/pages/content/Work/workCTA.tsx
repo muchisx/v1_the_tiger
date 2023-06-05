@@ -5,9 +5,9 @@ import svgShape from '../../../assets/svgs/abstract-8.svg';
 // TODO - change the text
 const textRight = (
   <>
-    My projects showcases the exceptional work that I have delivered. Have a look into my portfolio, highlighting the
-    diverse range of projects for various industries. Most of my works are white labeled which means I can only share
-    here a few.
+    I take pride in presenting my projects that exemplify the outstanding work I have accomplished. Explore my portfolio
+    to discover a wide array of projects spanning across different industries. Due to confidentiality, only a limited
+    selection can be shared here.
   </>
 );
 
