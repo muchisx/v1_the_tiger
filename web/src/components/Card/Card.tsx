@@ -1,23 +1,58 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import Heading from '../shared/Heading/Heading';
-import { CardStyled, HeaderIconWrap, CardHeader, TagsContainer, CardBody } from './Card.styles';
+import {
+  CardStyled,
+  CardBgImg,
+  CardLinkWrap,
+  HeaderIconWrap,
+  CardHeader,
+  TagsContainer,
+  CardBody,
+  CardFooter,
+  bgImgScaleMotion,
+} from './Card.styles';
 import Tag from '../shared/Tag/Tag';
 import type { Props } from './Card.types';
 import Text from '../shared/Text/Text';
+import Button from '../shared/Button/Button';
 
 function Card(props: Props) {
-  const { HeaderIcon, headerHeading, headerTags, bodyText, className, customStyles } = props;
+  const {
+    backgroundImg,
+    cardLinkWrap = { to: '', newTab: false, rel: 'noopener noreferrer' },
+    HeaderIcon,
+    headerHeading,
+    headerTags,
+    bodyText,
+    footerButton,
+    className,
+    customStyles,
+  } = props;
+
+  const { to } = cardLinkWrap;
+  const target = cardLinkWrap?.newTab ? '_blank' : '_self';
+  const relValue = cardLinkWrap?.newTab ? cardLinkWrap.rel : undefined;
 
   // Check if any of the children exist before rendering it's parent
   const renderCardHeader = HeaderIcon || headerHeading || headerTags;
   const renderCardBody = bodyText;
+  const renderCardFooter = footerButton;
 
-  if (!renderCardHeader && !renderCardBody) {
+  if (!renderCardHeader && !renderCardBody && !renderCardFooter && !backgroundImg) {
     return null;
   }
 
   return (
-    <CardStyled className={className} customStyles={customStyles}>
+    <CardStyled className={className} customStyles={customStyles} whileHover="hover">
+      {backgroundImg && (
+        // TODO: make this use the ImageResponsive component instead,
+        // maybe pass it as a styled() in the component styles
+        // but need to figure out how to pass original props down
+        <CardBgImg src={backgroundImg} variants={bgImgScaleMotion} transition={{ duration: 0.3 }} loading="lazy" />
+      )}
+
+      {cardLinkWrap.to && <CardLinkWrap to={to} rel={relValue} target={target} />}
+
       {renderCardHeader && (
         <CardHeader>
           {HeaderIcon && (
@@ -40,6 +75,11 @@ function Card(props: Props) {
         </CardHeader>
       )}
       {renderCardBody && <CardBody>{bodyText && <Text {...bodyText} />}</CardBody>}
+      {renderCardFooter && (
+        <CardFooter>
+          <Button {...footerButton} />
+        </CardFooter>
+      )}
     </CardStyled>
   );
 }

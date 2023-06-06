@@ -1,5 +1,19 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { CardContainerProps } from './Card.types';
+
+// Styled Components
+
+export const CardFooter = styled.div`
+  display: flex;
+  gap: 12px;
+  width: fit-content;
+  margin-top: auto;
+
+  margin-left: auto;
+`;
 
 export const CardBody = styled.div`
   display: flex;
@@ -48,14 +62,44 @@ export const CardHeader = styled.header`
   }
 `;
 
-export const CardStyled = styled.article<CardContainerProps>`
+export const CardBgImg = styled(motion.img)`
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+`;
+
+export const CardLinkWrap = styled(Link)`
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+`;
+
+export const CardStyled = styled(motion.article)<CardContainerProps>`
+  --border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding: 24px;
-  border-radius: 10px;
+  position: relative;
+  border-radius: var(--border-radius);
   background-color: var(--neutral-color);
   border: 1px solid var(--neutral-color-secondary);
 
+  overflow: hidden;
+  isolation: isolate;
+
   ${(props) => props.customStyles}
 `;
+
+// Animation Variants - Framer Motion
+
+export const bgImgScaleMotion: Variants = {
+  hover: {
+    scale: 1.1,
+  },
+};
