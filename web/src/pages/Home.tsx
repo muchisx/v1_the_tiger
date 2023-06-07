@@ -10,8 +10,8 @@ import {
   heroImage,
   homeLogoGrid,
   homeServices,
-  homeContact,
   homeLogoGridTwo,
+  homeContact,
 } from './content/Home';
 
 function Home() {
@@ -39,7 +39,7 @@ function Home() {
         leftContent={homeContact.leftContent}
         rightContent={homeContact.rightContent}
         customStyles={homeContact.customStyles}
-        contain="padding"
+        contain
       />
       <LogoGrid logoUrlWithIdList={homeLogoGridTwo.logoUrlWithIdList} title="TRUSTED BY" />
     </main>
