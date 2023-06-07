@@ -11,7 +11,7 @@ function CardGrid(props: Props) {
   const { fontSize, headingLevel, fontWeight } = subheadingFont ?? {};
 
   return (
-    <Section enableGutter contain={contain} customStyles={customStyles}>
+    <Section enableGutter contain={contain} customStyles={customStyles} paddingBottom={56} paddingTop={56}>
       <CardGridStyled>
         {cardCells.length > 0 &&
           cardCells.map((cellProps) => (
