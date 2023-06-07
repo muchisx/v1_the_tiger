@@ -3,7 +3,19 @@ import { SpanStyled, ButtonStyled, Container, IconWrap, LinkStyled } from './But
 import type { Props } from './Button.types';
 
 function Button(props: Props) {
-  const { role, to, text, variant, Icon, action, className, newTab, rel = 'noopener noreferrer' } = props;
+  const {
+    role,
+    to,
+    text,
+    variant,
+    Icon,
+    IconSize = 16,
+    IconWrapPadding,
+    action,
+    className,
+    newTab,
+    rel = 'noopener noreferrer',
+  } = props;
 
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const isHoveredRef = useRef<boolean>(false);
@@ -27,7 +39,7 @@ function Button(props: Props) {
       {text && <SpanStyled layout>{text}</SpanStyled>}
       {Icon && (
         <IconWrap layout>
-          <Icon size={16} />
+          <Icon size={IconSize} />
         </IconWrap>
       )}
     </>
@@ -44,6 +56,7 @@ function Button(props: Props) {
       variant={variant}
       text={text}
       Icon={Icon}
+      IconWrapPadding={IconWrapPadding}
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
       whileHover={hoverAnimation(Icon, text)}

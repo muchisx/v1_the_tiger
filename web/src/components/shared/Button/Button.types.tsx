@@ -12,11 +12,16 @@ type CommonProps = {
   // TODO - Make Icon prop also accept CustomIcon component
   Icon?: StyledIcon;
 };
-type ConditionalProps =
+
+type RoleConditionalProps =
   | { role: 'button'; to?: never; newTab?: never; rel?: never; action: () => void }
   | { role: 'link'; to: string; newTab?: boolean; rel?: string; action?: never };
 
-export type Props = CommonProps & ConditionalProps;
+type IconConditionalProps =
+  | { Icon: StyledIcon; IconSize?: number; IconWrapPadding?: string }
+  | { Icon?: never; IconSize?: never; IconWrapPadding?: never };
+
+export type Props = CommonProps & RoleConditionalProps & IconConditionalProps;
 
 // Styled Components
 export type ContainerProps = {
@@ -24,4 +29,5 @@ export type ContainerProps = {
   variant: Props['variant'];
   text?: Props['text'];
   isHovered: boolean;
+  IconWrapPadding?: Props['IconWrapPadding'];
 };

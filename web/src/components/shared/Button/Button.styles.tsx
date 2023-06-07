@@ -29,6 +29,7 @@ export const Container = styled(motion.div)<ContainerProps>`
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    padding: ${(props) => props.IconWrapPadding};
     color: var(--btn-color-${(props) => (props.text ? `icon-${props.variant}` : `text-${props.variant}`)});
     ${(props) =>
       props.text &&
