@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import type { Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import type { Variants } from 'framer-motion';
 import { CardContainerProps } from './Card.types';
 
 // Styled Components
@@ -98,7 +98,7 @@ export const CardStyled = styled(motion.article)<CardContainerProps>`
 
 // Animation Variants - Framer Motion
 
-export const bgImgScaleMotion: Variants = {
+export const bgImgMotionMedium: Variants = {
   hover: {
     scale: 1.1,
   },
