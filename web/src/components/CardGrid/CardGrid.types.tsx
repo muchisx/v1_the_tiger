@@ -1,3 +1,4 @@
+import { type FlattenSimpleInterpolation } from 'styled-components';
 import type { Props as SectionProps } from '../shared/Section/Section';
 import type { Props as CardProps } from '../Card/Card.types';
 import type { Props as ButtonProps } from '../shared/Button/Button.types';
@@ -12,10 +13,11 @@ type CardCell = {
 
 export type Props = {
   contain?: SectionProps['contain'];
+  customStyles?: FlattenSimpleInterpolation;
   cardCells: CardCell[];
   subheadingFont?: {
-    size?: HeadingProps['fontWeight'];
-    weight?: HeadingProps['fontWeight'];
+    fontSize?: HeadingProps['fontSize'];
+    fontWeight?: HeadingProps['fontWeight'];
     headingLevel?: HeadingProps['headingLevel'];
   };
 };
