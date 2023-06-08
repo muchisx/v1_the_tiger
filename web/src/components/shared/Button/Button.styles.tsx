@@ -21,7 +21,7 @@ export const Container = styled(motion.div)<ContainerProps>`
   transition: padding 200ms ease-in-out;
 
   &:hover {
-    ${(props) => props.text && props.Icon && 'padding: .2rem 1.4rem .2rem .2rem '};
+    ${(props) => props.isHovered && props.text && props.Icon && 'padding: .2rem 1.4rem .2rem .2rem '};
   }
 
   & ${IconWrap} {
