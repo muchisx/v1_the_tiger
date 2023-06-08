@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import type { Variants } from 'framer-motion';
+import { useMediaQueryContext } from '../../context/MediaQueryContext';
 import Heading from '../shared/Heading/Heading';
 import {
   CardStyled,
@@ -16,7 +17,6 @@ import Tag from '../shared/Tag/Tag';
 import type { Props } from './Card.types';
 import Text from '../shared/Text/Text';
 import Button from '../shared/Button/Button';
-import { useIsMedium } from '../../hooks';
 
 function Card(props: Props) {
   const {
@@ -40,12 +40,8 @@ function Card(props: Props) {
 
   // 2️⃣ Animation Variants - @Framer Motion
   // -------------------------- --------------------------
-  // TODO: Do not use these hooks in every component
-  // TODO: Move to a global state and react to changes
-  // ! If we use this hook in every component it will trigger
-  // ! a state change for each component using it
-  const IsMedium = useIsMedium();
-  const bgImgMotion: Variants = IsMedium ? bgImgMotionMedium : {};
+  const { isMedium } = useMediaQueryContext();
+  const bgImgMotion: Variants = isMedium ? bgImgMotionMedium : {};
   // -------------------------- --------------------------
 
   // 3️⃣ Render Validations

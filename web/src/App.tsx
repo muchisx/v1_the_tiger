@@ -12,10 +12,11 @@ import Footer from './components/Footer/Footer';
 import Services from './pages/Services';
 import WebDev from './pages/WebDev';
 import Shopify from './pages/Shopify';
+import MediaQueryProvider from './context/MediaQueryContext';
 
 function App() {
   return (
-    <>
+    <MediaQueryProvider>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -29,7 +30,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-    </>
+    </MediaQueryProvider>
   );
 }
 
