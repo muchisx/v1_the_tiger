@@ -24,10 +24,17 @@ function SplitContent(props: Props) {
   const { topButton, leftTexts, backgroundShape, buttonsLabel, leftButtons, maskedImageURL, leftHeading } = leftContent;
   const { rightHeading, rightButtons, rightTexts, cards } = rightContent;
 
-  // Validation - Parent Renders - checks if children exist before rendering parents
+  // 1️⃣ Render Validations
+  // -------------------------- --------------------------
+  // Check if any of the children exist before rendering it's parent
   const renderLeftContent =
     topButton || leftTexts || backgroundShape || buttonsLabel || leftButtons || maskedImageURL || leftHeading;
   const renderRightContent = rightHeading || rightButtons || rightTexts || cards;
+
+  if (!renderLeftContent && !renderRightContent) {
+    throw new Error('SplitContent: top-level children must exist');
+  }
+  // -------------------------- --------------------------
 
   // Animations - Scroll Progress variables - checks the scroll progress of the page and assigns its value in a variable
   const sectionRef = useRef(null);
