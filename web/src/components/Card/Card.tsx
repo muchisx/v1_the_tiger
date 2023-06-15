@@ -1,7 +1,15 @@
 /* eslint-disable react/jsx-props-no-spreading */
+// Types
 import type { Variants } from 'framer-motion';
+import type { Props } from './Card.types';
+// Context
 import { useMediaQueryContext } from '../../context/MediaQueryContext';
+// Components
 import Heading from '../shared/Heading/Heading';
+import Text from '../shared/Text/Text';
+import Tag from '../shared/Tag/Tag';
+import Button from '../shared/Button/Button';
+// Styled Components
 import {
   CardStyled,
   CardBgImg,
@@ -13,10 +21,6 @@ import {
   CardFooter,
   bgImgMotionMedium,
 } from './Card.styles';
-import Tag from '../shared/Tag/Tag';
-import type { Props } from './Card.types';
-import Text from '../shared/Text/Text';
-import Button from '../shared/Button/Button';
 
 function Card(props: Props) {
   const {

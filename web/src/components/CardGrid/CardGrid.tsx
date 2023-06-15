@@ -1,9 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
+// Types
 import type { Props } from './CardGrid.types';
+// Components
 import Section from '../shared/Section/Section';
 import Card from '../Card/Card';
 import Heading from '../shared/Heading/Heading';
 import Button from '../shared/Button/Button';
+// Styled Components
 import { CardGridStyled, CardGridCell, CardGridCellBottom } from './CardGrid.styles';
 
 function CardGrid(props: Props) {

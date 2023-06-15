@@ -1,6 +1,9 @@
+// Dependencies
 import { ArrowUpRight } from '@styled-icons/fluentui-system-filled';
-import { NavStyled, NavItemsList, SubNav, SubNavItemsList, SubNavSocialsList } from './Nav.styles';
+// Components
 import NavItem from '../NavItem/NavItem';
+// Styled Components
+import { NavStyled, NavItemsList, SubNav, SubNavItemsList, SubNavSocialsList } from './Nav.styles';
 
 const navItems = [
   <NavItem text="HOME" key="HOME" to="/" Icon={ArrowUpRight} />,

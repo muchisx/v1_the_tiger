@@ -1,11 +1,14 @@
+// Dependencies
 import { useEffect, useState } from 'react';
-import { ArrowRight, Navigation, LineHorizontal1, Mail } from '@styled-icons/fluentui-system-filled';
 import { useLocation } from 'react-router-dom';
-import HeaderStyled from './Header.styles';
-import Logo from '../shared/Logo/Logo';
+import { ArrowRight, Navigation, LineHorizontal1, Mail } from '@styled-icons/fluentui-system-filled';
+// Components
 import Nav from '../Nav/Nav';
-import BodyOverlay from '../shared/BodyOverlay/BodyOverlay';
+import Logo from '../shared/Logo/Logo';
 import Button from '../shared/Button/Button';
+import BodyOverlay from '../shared/BodyOverlay/BodyOverlay';
+// Styled Components
+import HeaderStyled from './Header.styles';
 
 function Header() {
   const [showNavigation, setShowNavigation] = useState(false);

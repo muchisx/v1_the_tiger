@@ -1,4 +1,6 @@
+// Dependencies
 import styled from 'styled-components';
+// Types
 import type { Variant } from '../Button/Button.types';
 
 export type Props = {

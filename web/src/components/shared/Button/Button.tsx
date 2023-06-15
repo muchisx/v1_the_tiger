@@ -1,8 +1,12 @@
+// Dependencies
 import { useRef, useState } from 'react';
+// Types
 import type { TargetAndTransition } from 'framer-motion';
-import { SpanStyled, ButtonStyled, Container, IconWrap, LinkStyled } from './Button.styles';
 import type { Props } from './Button.types';
+// Context
 import { useMediaQueryContext } from '../../../context/MediaQueryContext';
+// Styled Components
+import { SpanStyled, ButtonStyled, Container, IconWrap, LinkStyled } from './Button.styles';
 
 function Button(props: Props) {
   const {

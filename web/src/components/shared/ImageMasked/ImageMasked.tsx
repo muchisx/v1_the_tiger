@@ -1,4 +1,6 @@
+// Types
 import { type FlattenSimpleInterpolation } from 'styled-components';
+// Styled Components
 import { Image, ImageMask } from './ImageMasked.styles';
 
 export type Props = {

@@ -1,5 +1,7 @@
-import { ContainerLink, LetterSpan, WordWrap } from './Logo.styles';
+// Types
 import type { Props } from './Logo.types';
+// Styled Components
+import { ContainerLink, LetterSpan, WordWrap } from './Logo.styles';
 
 function Logo(props: Props) {
   const { isUppercase } = props;

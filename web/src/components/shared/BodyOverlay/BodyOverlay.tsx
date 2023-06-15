@@ -1,5 +1,7 @@
+// Styled Components
 import BodyOverlayStyled from './BodyOverlay.styles';
 
+// Types
 type Props = {
   onClickAction?: () => void;
 };

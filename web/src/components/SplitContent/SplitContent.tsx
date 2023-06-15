@@ -1,13 +1,18 @@
 /* eslint-disable react/jsx-props-no-spreading */
+// Dependencies
 import { useRef } from 'react';
 import { useScroll, useSpring, useTransform } from 'framer-motion';
 import { css } from 'styled-components';
+// Types
+import { Props } from './SplitContent.types';
+// Components
 import Button from '../shared/Button/Button';
 import Section from '../shared/Section/Section';
 import ImageMasked from '../shared/ImageMasked/ImageMasked';
 import Text from '../shared/Text/Text';
 import Card from '../Card/Card';
 import Heading from '../shared/Heading/Heading';
+// Styled Components
 import {
   SectionCSS,
   BackgroundShape,
@@ -17,7 +22,6 @@ import {
   SubSection,
   CardsContainer,
 } from './SplitContent.styles';
-import { Props } from './SplitContent.types';
 
 function SplitContent(props: Props) {
   const { leftContent, rightContent, customStyles, contain } = props;

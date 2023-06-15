@@ -1,4 +1,6 @@
+// Types
 import { type StyledIcon } from '@styled-icons/styled-icon';
+// Styled Components
 import { NavLinkStyled, NavItemStyled, NavLinkSpan } from './NavItem.styles';
 
 type Props = {

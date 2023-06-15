@@ -1,5 +1,6 @@
+// Dependencies
 import styled, { type FlattenSimpleInterpolation, css } from 'styled-components';
-
+// Types
 export type Props = {
   contain?: true | 'padding' | 'margin';
   enableGutter?: boolean;

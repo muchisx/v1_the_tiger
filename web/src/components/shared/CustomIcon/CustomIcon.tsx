@@ -1,11 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
+// Dependencies
 import { StyledIconBase } from '@styled-icons/styled-icon';
+// Types
 import type { Props } from './CustomIcon.types';
 
-// This uses the type of the icon from @svgr/core
-// Icon must be called in this way
-// import { ReactComponent as customName } from './icon-location.svg';
-// and passed as prop to this component as svgrIcon
+// * This uses the type of the icon from @svgr/core
+// * Icon must be called in this way:
+// ? import { ReactComponent as customName } from './icon-location.svg';
+// * and passed to this component as the svgrIcon prop.
 
 function CustomIcon(props: Props) {
   const { size = 24, className, svgrIcon } = props;

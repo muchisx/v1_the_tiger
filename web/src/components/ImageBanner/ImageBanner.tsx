@@ -1,10 +1,14 @@
+// Dependencies
 import { useRef } from 'react';
 import { useScroll, useTransform } from 'framer-motion';
 // import { useSpring } from 'framer-motion';
-import ImageResponsive from '../shared/ImageResponsive/ImageResponsive';
+// Components
 import Section from '../shared/Section/Section';
+import ImageResponsive from '../shared/ImageResponsive/ImageResponsive';
+// Styled Components
 import { ParallaxContainer, sectionCSS } from './ImageBanner.styles';
 
+// Types
 type Props = {
   src: string;
   enableParallax?: boolean;

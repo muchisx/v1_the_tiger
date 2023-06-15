@@ -1,5 +1,7 @@
+// Styled Components
 import { Image, ImageContainer } from './ImageResponsive.styles';
 
+// Types
 export type Props = {
   height: string;
   width: string;

@@ -1,6 +1,9 @@
+// Styles
 import './styles/global-variables.css';
 import './styles/App.css';
+// Dependencies
 import { Route, Routes } from 'react-router-dom';
+// Pages
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
@@ -12,6 +15,7 @@ import Footer from './components/Footer/Footer';
 import Services from './pages/Services';
 import WebDev from './pages/WebDev';
 import Shopify from './pages/Shopify';
+// Contexts
 import MediaQueryProvider from './context/MediaQueryContext';
 
 function App() {
@@ -19,7 +23,7 @@ function App() {
     <MediaQueryProvider>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route index path="/" element={<Home />} />
         <Route path="/playground" element={<Playground />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />

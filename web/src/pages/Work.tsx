@@ -1,7 +1,9 @@
+// Components
 import Section from '../components/shared/Section/Section';
 import Heading from '../components/shared/Heading/Heading';
 import SplitContent from '../components/SplitContent/SplitContent';
 import CardGrid from '../components/CardGrid/CardGrid';
+// Content
 import { WorkHeroHeadingText, workCTA, workJobCards, workContact } from './content/Work';
 
 function Work() {

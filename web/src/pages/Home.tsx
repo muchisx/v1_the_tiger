@@ -1,8 +1,10 @@
+// Components
 import Section from '../components/shared/Section/Section';
 import Heading from '../components/shared/Heading/Heading';
 import SplitContent from '../components/SplitContent/SplitContent';
 import ImageBanner from '../components/ImageBanner/ImageBanner';
 import LogoGrid from '../components/LogoGrid/LogoGrid';
+// Content
 import {
   HomeHeroHeadingText,
   homeCTA,
