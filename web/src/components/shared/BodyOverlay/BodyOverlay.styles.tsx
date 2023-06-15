@@ -1,11 +1,19 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import HeaderStyled from '../../Header/Header.styles';
 
 export const BodyLock = createGlobalStyle`
-    body {
-      overflow-y: hidden;
-  @media only screen and (min-width: 769px) {
+  body {
+    overflow-y: hidden;
+    @media only screen and (min-width: 769px) {
       // Regain the scrollbar space on large screens so the content doesn't shift
       padding-right: var(--scrollbar-size);
+    }
+  }
+
+  ${HeaderStyled} {
+    @media only screen and (min-width: 769px) {
+      // Regain the scrollbar space on large screens so the content doesn't shift
+     margin-right: var(--scrollbar-size);
     }
   }
 `;
