@@ -1,5 +1,5 @@
 // Styled Components
-import BodyOverlayStyled from './BodyOverlay.styles';
+import { BodyOverlayStyled, BodyLock } from './BodyOverlay.styles';
 
 // Types
 type Props = {
@@ -8,7 +8,11 @@ type Props = {
 
 function BodyOverlay(props: Props) {
   const { onClickAction } = props;
-  return <BodyOverlayStyled onClick={onClickAction} />;
+  return (
+    <BodyOverlayStyled onClick={onClickAction}>
+      <BodyLock />
+    </BodyOverlayStyled>
+  );
 }
 
 export default BodyOverlay;

@@ -1,6 +1,16 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
-const BodyOverlayStyled = styled.div`
+export const BodyLock = createGlobalStyle`
+    body {
+      overflow-y: hidden;
+  @media only screen and (min-width: 769px) {
+      // Regain the scrollbar space on large screens so the content doesn't shift
+      padding-right: var(--scrollbar-size);
+    }
+  }
+`;
+
+export const BodyOverlayStyled = styled.div`
   position: fixed;
   inset: 0;
   z-index: -1;
