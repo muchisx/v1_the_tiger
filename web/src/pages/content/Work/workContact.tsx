@@ -6,6 +6,7 @@ import { BackgroundShape } from '../../../components/SplitContent/SplitContent.s
 
 const customStyles = css`
   background-color: var(--body-bg-color-secondary);
+  z-index: -1;
 
   ${BackgroundShape} {
     opacity: 0.2;
