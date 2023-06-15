@@ -5,13 +5,17 @@ import svgShape from '../../../assets/svgs/abstract-8.svg';
 import { BackgroundShape } from '../../../components/SplitContent/SplitContent.styles';
 
 const customStyles = css`
-  background-color: var(--body-bg-color-secondary);
-  z-index: -1;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-color: var(--body-bg-color-secondary);
+  }
 
   ${BackgroundShape} {
     opacity: 0.2;
     filter: brightness(10);
-    z-index: 0;
     top: unset;
     bottom: -16%;
 
