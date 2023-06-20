@@ -7,12 +7,8 @@ import Section from '../shared/Section/Section';
 import ImageResponsive from '../shared/ImageResponsive/ImageResponsive';
 // Styled Components
 import { ParallaxContainer, sectionCSS } from './ImageBanner.styles';
-
 // Types
-type Props = {
-  src: string;
-  enableParallax?: boolean;
-};
+import type { Props } from './imageBanner.types';
 
 function ImageBanner(props: Props) {
   const { src, enableParallax } = props;
