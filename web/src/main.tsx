@@ -11,6 +11,7 @@ import Work from './pages/Work';
 import Services from './pages/Services';
 import WebDev from './pages/WebDev';
 import Shopify from './pages/Shopify';
+import Job from './pages/Job';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -21,7 +22,10 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           <Route path="playground" element={<Playground />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
-          <Route path="work" element={<Work />} />
+          <Route path="work">
+            <Route index element={<Work />} />
+            <Route path=":jobId" element={<Job />} />
+          </Route>
           <Route path="services" element={<Services />} />
           <Route path="web-dev" element={<WebDev />} />
           <Route path="shopify" element={<Shopify />} />

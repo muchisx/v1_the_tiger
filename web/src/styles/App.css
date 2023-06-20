@@ -194,3 +194,7 @@ button {
     padding-top: 120px;
   }
 }
+
+.page--job {
+  padding-top: 0;
+}
