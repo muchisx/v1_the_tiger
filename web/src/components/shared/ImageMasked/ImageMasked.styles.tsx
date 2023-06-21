@@ -15,8 +15,8 @@ export const Image = styled.img`
 
 export const ImageMask = styled.div<ImageMaskProps>`
   border-radius: 50%;
-  width: ${(props) => props.$width}px;
-  height: ${(props) => props.$height}px;
+  width: ${(props) => props.$width};
+  height: ${(props) => props.$height};
   overflow: hidden;
   box-shadow: 2px 2px 0rem 0px rgb(25 25 25 / 72%);
   ${(props) => props.css}

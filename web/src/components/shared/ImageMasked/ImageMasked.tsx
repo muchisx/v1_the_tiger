@@ -1,11 +1,12 @@
 // Types
 import { type FlattenSimpleInterpolation } from 'styled-components';
+import type { Height, Width } from '../../../types/css.types';
 // Styled Components
 import { Image, ImageMask } from './ImageMasked.styles';
 
 export type Props = {
-  width: number;
-  height: number;
+  width: Width;
+  height: Height;
   src: string;
   css?: FlattenSimpleInterpolation;
 };
