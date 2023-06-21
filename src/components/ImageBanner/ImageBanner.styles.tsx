@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 // Types
 import type { ContainerProps } from './imageBanner.types';
+import { Height } from '../../types/css.types';
 
 export const ParallaxContainer = styled(motion.div)`
   height: 100%;
@@ -10,7 +11,7 @@ export const ParallaxContainer = styled(motion.div)`
 export const ImageBannerContainer = styled.div<ContainerProps>`
   width: 100%;
 
-  --height: ${(props) => props.$height || '560px'};
+  --height: ${(props): Height => props.$height || '560px'};
   height: var(--height);
 
   @media only screen and (max-width: 768px) {

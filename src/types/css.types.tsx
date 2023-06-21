@@ -187,6 +187,46 @@ export type NamedColor =
   | 'yellow'
   | 'yellowgreen';
 
+// Functions
+export type CSSFunctionName =
+  | 'moz-image-rect'
+  | 'abs'
+  | 'acos'
+  | 'asin'
+  | 'atan'
+  | 'atan2'
+  | 'attr'
+  | 'calc'
+  | 'clamp'
+  | 'cos'
+  | 'counter'
+  | 'cross-fade'
+  | 'element'
+  | 'env'
+  | 'exp'
+  | 'fit-content'
+  | 'hypot'
+  | 'log'
+  | 'max'
+  | 'min'
+  | 'minmax'
+  | 'mod'
+  | 'path'
+  | 'pow'
+  | 'ray'
+  | 'rem'
+  | 'repeat'
+  | 'round'
+  | 'sign'
+  | 'sin'
+  | 'sqrt'
+  | 'symbols'
+  | 'tan'
+  | 'url'
+  | 'var';
+
+export type CSSFunction = `${CSSFunctionName}(${string})`;
+
 // Lenghts
 export type GlobalLenght =
   | '-moz-fit-content'
@@ -201,22 +241,8 @@ export type GlobalLenght =
   | 'min-content'
   | 'min-intrinsic';
 
-export type LenghtWithUnit = `${number}${Unit}`;
-export type GeneralLenght = LenghtWithUnit | GlobalLenght | Global;
+export type NumberWithUnit = `${number}${Unit}` | 0;
+export type GeneralLenght = NumberWithUnit | GlobalLenght | CSSFunction | Global;
 
-export type GeneralLenghtWithFunctions = GeneralLenght | TwoParamLenghtFunction | FunctionClamp;
-
-export type Height = GeneralLenghtWithFunctions;
-export type Width = GeneralLenghtWithFunctions;
-
-// Functions
-export type TwoParamLenghtFunctionName = 'max' | 'min' | 'minmax';
-export type TwoParamLenghtFunction = `${TwoParamLenghtFunctionName}(${GeneralLenght},${GeneralLenght})`;
-
-// TODO: Find a fix for this, since it makes the IDE infinetly load
-// export type ThreeParamLenghtFunctionName = 'clamp';
-// export type ThreeParamLenghtFunction =
-//   `${ThreeParamLenghtFunctionName}(${GeneralLenght},${GeneralLenght},${GeneralLenght})`;
-
-// FIX: This is a temporary fix for the above, just accepting a string inside the clamp;
-export type FunctionClamp = `clamp(${string})`;
+export type Height = GeneralLenght;
+export type Width = GeneralLenght;
