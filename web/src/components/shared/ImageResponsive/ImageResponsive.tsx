@@ -2,9 +2,11 @@
 import { Image, ImageContainer } from './ImageResponsive.styles';
 
 // Types
+import type { Width, Height } from '../../../types/css.types';
+
 export type Props = {
-  height: string;
-  width: string;
+  height: Height;
+  width: Width;
   src: string;
   fit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
   padding?: string;
