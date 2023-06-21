@@ -77,7 +77,7 @@ function SplitContent(props: Props) {
             </ButtonsContainer>
           )}
 
-          {maskedImageURL && <ImageMasked height={144} width={144} src={maskedImageURL} css={ImageMaskedCSS} />}
+          {maskedImageURL && <ImageMasked height="144px" width="144px" src={maskedImageURL} css={ImageMaskedCSS} />}
         </SubSection>
       )}
 
