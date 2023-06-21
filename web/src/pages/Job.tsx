@@ -25,7 +25,7 @@ function Job() {
 
   return (
     <main className="page page--job">
-      <ImageBanner src={heroBannerImage} enableParallax />
+      <ImageBanner src={heroBannerImage} enableParallax height="100dvh" />
       <h1>{jobId}</h1>
     </main>
   );

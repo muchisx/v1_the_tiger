@@ -38,7 +38,7 @@ const workJobCards: CardGridProps = {
       card: {
         backgroundImg: testImg,
         cardLinkWrap: {
-          to: '/work/test',
+          to: '/work/diamond-mattress',
         },
         footerButton: { ...footerButtonCommon, to: '/' },
       },
