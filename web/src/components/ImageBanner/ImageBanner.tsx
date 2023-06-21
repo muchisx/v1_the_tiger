@@ -6,12 +6,12 @@ import { useScroll, useTransform } from 'framer-motion';
 import Section from '../shared/Section/Section';
 import ImageResponsive from '../shared/ImageResponsive/ImageResponsive';
 // Styled Components
-import { ParallaxContainer, sectionCSS } from './ImageBanner.styles';
+import { ImageBannerContainer, sectionCSS, ParallaxContainer } from './ImageBanner.styles';
 // Types
 import type { Props } from './imageBanner.types';
 
 function ImageBanner(props: Props) {
-  const { src, enableParallax } = props;
+  const { src, height, enableParallax, imgOverlayColor } = props;
 
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', '140vh end'] });
@@ -24,9 +24,11 @@ function ImageBanner(props: Props) {
 
   return (
     <Section ref={sectionRef} customStyles={sectionCSS}>
-      <ParallaxContainer style={{ y: parallaxController }}>
-        <ImageResponsive width="100%" height="100%" src={src} />
-      </ParallaxContainer>
+      <ImageBannerContainer $height={height} $imgOverlayColor={imgOverlayColor}>
+        <ParallaxContainer style={{ y: parallaxController }}>
+          <ImageResponsive width="100%" height="100%" src={src} />
+        </ParallaxContainer>
+      </ImageBannerContainer>
     </Section>
   );
 }
