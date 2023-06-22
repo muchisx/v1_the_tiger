@@ -187,6 +187,18 @@ export type NamedColor =
   | 'yellow'
   | 'yellowgreen';
 
+export type CSSHexColor = `#${string}`;
+
+export type CSSColorFunction =
+  | `hsl(${number},${number}%,${number}%)`
+  | `hsla(${number},${number}%,${number}%,${number})`
+  | `hwb(${number},${number}%,${number}`
+  | `hsl(${number},${number}%,${number}%)`
+  | `rgb(${number},${number},${number})`
+  | `rgba(${number},${number},${number},${number})`;
+
+export type CSSColor = NamedColor | CSSHexColor | CSSColorFunction | 'currentColor' | Global;
+
 // Functions
 export type CSSFunctionName =
   | 'moz-image-rect'
