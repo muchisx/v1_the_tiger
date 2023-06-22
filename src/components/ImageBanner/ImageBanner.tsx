@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 // Dependencies
 import { useRef } from 'react';
 import { useScroll, useTransform } from 'framer-motion';
@@ -23,17 +22,22 @@ import type { Props } from './imageBanner.types';
 function ImageBanner(props: Props) {
   const { customStyles, src, height, enableParallax, imgOverlayColor, heading, bottomContent } = props;
 
+  // 1️⃣ Parallax animation handlers
+  // -------------------------- --------------------------
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', '140vh end'] });
   const yRange = useTransform(scrollYProgress, [0, 1], ['0%', '-10%']);
-
-  // TODO: Fix useSpring not working for parallax spring
-  // const y = useSpring(yRange, { stiffness: 400, damping: 90 });
-
+  // TODO: --------------------Fix useSpring not working for parallax spring
+  // --------------------------const y = useSpring(yRange, { stiffness: 400, damping: 90 });
   const parallaxController = enableParallax ? yRange : undefined;
+  // -------------------------- --------------------------
 
+  // 2️⃣ Render Validations
+  // -------------------------- --------------------------
+  // Check if any of the children exist before rendering it's parent
   const renderContentBottom = bottomContent;
   const renderContent = renderContentBottom || heading;
+  // -------------------------- --------------------------
 
   return (
     <Section ref={sectionRef} customStyles={sectionCSS.concat(customStyles)}>
