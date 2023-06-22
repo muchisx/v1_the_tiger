@@ -5,6 +5,7 @@
   --accent-color: #ff0004;
   --neutral-color: #e7e7e7;
   --neutral-color-secondary: #bebebe;
+  --neutral-color-tertiary: #909090;
 
   --body-bg-color: #FFFFFF;
   --body-bg-color-secondary: #1d1f21;
@@ -17,8 +18,10 @@
   /* --- Text colors */
   --text-primary: #1d1f21;
   --text-secondary: #909090;
+  --text-tertiary: #FFFFFF;
   --body-text-primary: var(--text-primary);
-  --body-text-complementary: var(--text-secondary);
+  --body-text-secondary: var(--text-secondary);
+  --body-text-tertiary: var(--text-tertiary);
   /* -highlights */
   --text-highlight-primary: #909090;
   --text-highlight-secondary: var(--accent-color);
