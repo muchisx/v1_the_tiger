@@ -6,11 +6,11 @@ import type { Job } from './job.types';
 const data: Job[] = [
   {
     jobId: 'diamond-mattress',
-    jobTitle: 'Diamond Mattress',
+    jobTitle: 'DIAMOND MATTRESS',
     jobSerial: '01',
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
-    jobYear: 2022,
+    jobYear: '2022',
     heroBannerImage: diamondBanner,
   },
 ];

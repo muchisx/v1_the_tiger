@@ -3,9 +3,9 @@ import type { Props as ImageBannerProps } from '../../../components/ImageBanner/
 export type Job = {
   jobId: string;
   jobTitle: string;
-  jobSerial: number | string;
+  jobSerial: string;
   jobRole: string;
   jobAllies?: string;
-  jobYear: number;
+  jobYear: string;
   heroBannerImage: ImageBannerProps['src'];
 };
