@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 // Types
 import type { Props } from './CardGrid.types';
 // Components

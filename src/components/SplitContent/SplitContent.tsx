@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 // Dependencies
 import { useRef } from 'react';
 import { useScroll, useSpring, useTransform } from 'framer-motion';

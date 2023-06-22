@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 // Dependencies
 import { StyledIconBase } from '@styled-icons/styled-icon';
 // Types

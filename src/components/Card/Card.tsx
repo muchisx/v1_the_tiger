@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 // Types
 import type { Variants } from 'framer-motion';
 import type { Props } from './Card.types';
