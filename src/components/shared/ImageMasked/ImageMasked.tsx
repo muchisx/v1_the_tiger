@@ -8,13 +8,13 @@ export type Props = {
   width: Width;
   height: Height;
   src: string;
-  css?: FlattenSimpleInterpolation;
+  customStyles?: FlattenSimpleInterpolation;
 };
 
 function ImageMasked(props: Props) {
-  const { width, height, src, css } = props;
+  const { width, height, src, customStyles } = props;
   return (
-    <ImageMask $width={width} $height={height} css={css}>
+    <ImageMask $width={width} $height={height} customStyles={customStyles}>
       <Image src={src} />
     </ImageMask>
   );

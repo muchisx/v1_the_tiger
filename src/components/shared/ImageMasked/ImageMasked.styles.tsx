@@ -4,7 +4,7 @@ import { type Props } from './ImageMasked';
 type ImageMaskProps = {
   $width: Props['width'];
   $height: Props['height'];
-  css?: Props['css'];
+  customStyles?: Props['customStyles'];
 };
 
 export const Image = styled.img`
@@ -19,5 +19,5 @@ export const ImageMask = styled.div<ImageMaskProps>`
   height: ${(props) => props.$height};
   overflow: hidden;
   box-shadow: 2px 2px 0rem 0px rgb(25 25 25 / 72%);
-  ${(props) => props.css}
+  ${(props) => props.customStyles}
 `;
