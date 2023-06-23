@@ -22,6 +22,17 @@ import {
   CardsContainer,
 } from './SplitContent.styles';
 
+type ChildrenProps = { children: ReactNode };
+
+function SplitContentCustomFirst({ children }: ChildrenProps) {
+  // eslint-disable-next-line react/jsx-no-useless-fragment
+  return <>{children}</>;
+}
+function SplitContentCustomSecond({ children }: ChildrenProps) {
+  // eslint-disable-next-line react/jsx-no-useless-fragment
+  return <>{children}</>;
+}
+
 function SplitContent(props: Props) {
   const { leftContent, rightContent, customStyles, contain, children } = props;
   const { topButton, leftTexts, backgroundShape, buttonsLabel, leftButtons, maskedImageURL, leftHeading } =
@@ -32,11 +43,10 @@ function SplitContent(props: Props) {
   // This uses the custom exported components in the bottom of the file to make it work
   // Any other use of children will be ignored if not used with these components
   // -------------------------- --------------------------
-
-  const result = Children.toArray(children);
-
-  const firstCustomChild = result.find((child) => child.type.name === 'SplitContentCustomFirst');
-  const secondCustomChild = result.find((child) => child.type.name === 'SplitContentCustomSecond');
+  const firstCustomChild = Children.map(children, (child) => (child?.type === SplitContentCustomFirst ? child : null));
+  const secondCustomChild = Children.map(children, (child) =>
+    child?.type === SplitContentCustomSecond ? child : null
+  );
 
   // if (Array.isArray(children)) {
   //   firstCustomChild = children.find((child) => child.type.name === 'SplitContentCustomFirst');
@@ -146,14 +156,5 @@ function SplitContent(props: Props) {
   );
 }
 
+export { SplitContentCustomFirst, SplitContentCustomSecond };
 export default SplitContent;
-
-type ChildrenProps = { children: ReactNode };
-export function SplitContentCustomFirst({ children }: ChildrenProps) {
-  // eslint-disable-next-line react/jsx-no-useless-fragment
-  return <>{children}</>;
-}
-export function SplitContentCustomSecond({ children }: ChildrenProps) {
-  // eslint-disable-next-line react/jsx-no-useless-fragment
-  return <>{children}</>;
-}
