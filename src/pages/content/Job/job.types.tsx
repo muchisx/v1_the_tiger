@@ -8,4 +8,5 @@ export type Job = {
   jobAllies?: string;
   jobYear: string;
   heroBannerImage: ImageBannerProps['src'];
+  jobFeaturedPhrase: string;
 };
