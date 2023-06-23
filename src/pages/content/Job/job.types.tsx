@@ -9,4 +9,5 @@ export type Job = {
   jobYear: string;
   heroBannerImage: ImageBannerProps['src'];
   jobFeaturedPhrase: string;
+  jobAdditionalInfo: string;
 };

@@ -1,9 +1,9 @@
 // Dependencies
-import { useRef, Children, type ReactNode } from 'react';
+import { useRef, Children } from 'react';
 import { useScroll, useSpring, useTransform } from 'framer-motion';
 import { css } from 'styled-components';
 // Types
-import { Props } from './SplitContent.types';
+import { Props, SplitContentCustomProps } from './SplitContent.types';
 // Components
 import Button from '../shared/Button/Button';
 import Section from '../shared/Section/Section';
@@ -22,17 +22,6 @@ import {
   CardsContainer,
 } from './SplitContent.styles';
 
-type ChildrenProps = { children: ReactNode };
-
-function SplitContentCustomFirst({ children }: ChildrenProps) {
-  // eslint-disable-next-line react/jsx-no-useless-fragment
-  return <>{children}</>;
-}
-function SplitContentCustomSecond({ children }: ChildrenProps) {
-  // eslint-disable-next-line react/jsx-no-useless-fragment
-  return <>{children}</>;
-}
-
 function SplitContent(props: Props) {
   const { leftContent, rightContent, customStyles, contain, children } = props;
   const { topButton, leftTexts, backgroundShape, buttonsLabel, leftButtons, maskedImageURL, leftHeading } =
@@ -40,22 +29,14 @@ function SplitContent(props: Props) {
   const { rightHeading, rightButtons, rightTexts, cards } = rightContent || {};
 
   // 1️⃣ Filtering of {children} because one goes in the left and another in the right
-  // This uses the custom exported components in the bottom of the file to make it work
+  // This uses the custom exported component in the bottom of the file to make it work
   // Any other use of children will be ignored if not used with these components
   // -------------------------- --------------------------
-  const firstCustomChild = Children.map(children, (child) => (child?.type === SplitContentCustomFirst ? child : null));
-  const secondCustomChild = Children.map(children, (child) =>
-    child?.type === SplitContentCustomSecond ? child : null
-  );
-
-  // if (Array.isArray(children)) {
-  //   firstCustomChild = children.find((child) => child.type.name === 'SplitContentCustomFirst');
-  //   secondCustomChild = children.find((child) => child.type.name === 'SplitContentCustomSecond');
-  // } else {
-  //   firstCustomChild = children?.type.name === 'SplitContentCustomFirst' && children;
-  //   secondCustomChild = children?.type.name === 'SplitContentCustomSecond' && children;
-  // }
-
+  // TODO : Make this trully only accept the custom component,
+  // TODO : So far it takes any component aslong as it has a 'location' prop
+  // TODO : with a value that matches the check below.
+  const leftCustomChild = Children.map(children, (child) => (child?.props.location === 'first' ? child : null))?.[0];
+  const rightCustomChild = Children.map(children, (child) => (child?.props.location === 'second' ? child : null))?.[0];
   // -------------------------- --------------------------
 
   // 2️⃣ Render Validations
@@ -69,8 +50,8 @@ function SplitContent(props: Props) {
     leftButtons ||
     maskedImageURL ||
     leftHeading ||
-    firstCustomChild;
-  const renderRightContent = rightHeading || rightButtons || rightTexts || cards || secondCustomChild;
+    leftCustomChild;
+  const renderRightContent = rightHeading || rightButtons || rightTexts || cards || rightCustomChild;
 
   if (!renderLeftContent && !renderRightContent) {
     throw new Error('SplitContent: top-level children must exist');
@@ -102,7 +83,7 @@ function SplitContent(props: Props) {
           {topButton && <Button {...topButton} />}
           {leftHeading && <Heading {...leftHeading} />}
 
-          {firstCustomChild && firstCustomChild}
+          {leftCustomChild && leftCustomChild}
 
           {leftTexts?.length && leftTexts.map((textProps) => <Text key={textProps.id} {...textProps} />)}
 
@@ -125,7 +106,7 @@ function SplitContent(props: Props) {
         <SubSection className="split-content__second">
           {rightHeading && <Heading {...rightHeading} />}
 
-          {secondCustomChild && secondCustomChild}
+          {rightCustomChild && rightCustomChild}
 
           {rightTexts?.length && rightTexts.map((textProps) => <Text key={textProps.id} {...textProps} />)}
 
@@ -156,5 +137,9 @@ function SplitContent(props: Props) {
   );
 }
 
-export { SplitContentCustomFirst, SplitContentCustomSecond };
+function SplitContentCustom({ children }: SplitContentCustomProps) {
+  // eslint-disable-next-line react/jsx-no-useless-fragment
+  return <>{children}</>;
+}
+export { SplitContentCustom };
 export default SplitContent;

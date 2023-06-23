@@ -1,3 +1,4 @@
+import { type ReactNode } from 'react';
 import { type FlattenSimpleInterpolation } from 'styled-components';
 import { type Props as ButtonProps } from '../shared/Button/Button.types';
 import { type Props as TextProps } from '../shared/Text/Text.types';
@@ -39,4 +40,9 @@ export type Props = {
 
 export type SubSectionProps = {
   maskedImageURL?: Props['leftContent']['maskedImageURL'];
+};
+
+export type SplitContentCustomProps = {
+  children: ReactNode;
+  location: 'first' | 'second';
 };

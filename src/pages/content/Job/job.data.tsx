@@ -15,6 +15,8 @@ const data: Job[] = [
     heroBannerImage: diamondBanner,
     jobFeaturedPhrase:
       'I successfully built custom and customizable components for their Shopify Store, including upsell features directly on the product page. This implementation led to increased conversion rates and enhanced overall performance.',
+    jobAdditionalInfo:
+      'I have researched their target audience and competitors and designed a website that was best suited for them. The client was pleased with the experience and agreed to go to the development team and have it built.',
   },
 ];
 
