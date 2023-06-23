@@ -1,5 +1,5 @@
 // Dependencies
-import { useRef, type ReactNode } from 'react';
+import { useRef, Children, type ReactNode } from 'react';
 import { useScroll, useSpring, useTransform } from 'framer-motion';
 import { css } from 'styled-components';
 // Types
@@ -32,15 +32,20 @@ function SplitContent(props: Props) {
   // This uses the custom exported components in the bottom of the file to make it work
   // Any other use of children will be ignored if not used with these components
   // -------------------------- --------------------------
-  let firstCustomChild;
-  let secondCustomChild;
-  if (Array.isArray(children)) {
-    firstCustomChild = children.find((child) => child.type.name === 'SplitContentCustomFirst');
-    secondCustomChild = children.find((child) => child.type.name === 'SplitContentCustomSecond');
-  } else {
-    firstCustomChild = children?.type.name === 'SplitContentCustomFirst' && children;
-    secondCustomChild = children?.type.name === 'SplitContentCustomSecond' && children;
-  }
+
+  const result = Children.toArray(children);
+
+  const firstCustomChild = result.find((child) => child.type.name === 'SplitContentCustomFirst');
+  const secondCustomChild = result.find((child) => child.type.name === 'SplitContentCustomSecond');
+
+  // if (Array.isArray(children)) {
+  //   firstCustomChild = children.find((child) => child.type.name === 'SplitContentCustomFirst');
+  //   secondCustomChild = children.find((child) => child.type.name === 'SplitContentCustomSecond');
+  // } else {
+  //   firstCustomChild = children?.type.name === 'SplitContentCustomFirst' && children;
+  //   secondCustomChild = children?.type.name === 'SplitContentCustomSecond' && children;
+  // }
+
   // -------------------------- --------------------------
 
   // 2️⃣ Render Validations
