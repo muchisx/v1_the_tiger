@@ -14,7 +14,7 @@ import type { Props as ImageBannerProps } from '../components/ImageBanner/imageB
 import type { Props as SplitContentProps } from '../components/SplitContent/SplitContent.types';
 // Content
 import data from './content/Job/job.data';
-import arrowDownRight from '../assets/svgs/arrow-down-right.svg';
+import arrowDownRight from '../assets/svgs/arrow_down-right.svg';
 
 function Job() {
   const { jobId } = useParams();
