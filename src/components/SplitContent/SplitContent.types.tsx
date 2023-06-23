@@ -32,6 +32,7 @@ export type Props = {
     rightButtons?: ButtonWithIdProps[];
     cards?: CardWithIdProps[];
   };
+  children?: JSX.Element | JSX.Element[];
   customStyles?: FlattenSimpleInterpolation;
   contain?: SectionProps['contain'];
 };

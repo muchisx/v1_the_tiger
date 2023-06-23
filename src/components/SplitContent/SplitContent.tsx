@@ -1,5 +1,5 @@
 // Dependencies
-import { useRef } from 'react';
+import { useRef, type ReactNode } from 'react';
 import { useScroll, useSpring, useTransform } from 'framer-motion';
 import { css } from 'styled-components';
 // Types
@@ -23,16 +23,39 @@ import {
 } from './SplitContent.styles';
 
 function SplitContent(props: Props) {
-  const { leftContent, rightContent, customStyles, contain } = props;
-  const { topButton, leftTexts, backgroundShape, buttonsLabel, leftButtons, maskedImageURL, leftHeading } = leftContent;
-  const { rightHeading, rightButtons, rightTexts, cards } = rightContent;
+  const { leftContent, rightContent, customStyles, contain, children } = props;
+  const { topButton, leftTexts, backgroundShape, buttonsLabel, leftButtons, maskedImageURL, leftHeading } =
+    leftContent || {};
+  const { rightHeading, rightButtons, rightTexts, cards } = rightContent || {};
 
-  // 1️⃣ Render Validations
+  // 1️⃣ Filtering of {children} because one goes in the left and another in the right
+  // This uses the custom exported components in the bottom of the file to make it work
+  // Any other use of children will be ignored if not used with these components
+  // -------------------------- --------------------------
+  let firstCustomChild;
+  let secondCustomChild;
+  if (Array.isArray(children)) {
+    firstCustomChild = children.find((child) => child.type.name === 'SplitContentCustomFirst');
+    secondCustomChild = children.find((child) => child.type.name === 'SplitContentCustomSecond');
+  } else {
+    firstCustomChild = children?.type.name === 'SplitContentCustomFirst' && children;
+    secondCustomChild = children?.type.name === 'SplitContentCustomSecond' && children;
+  }
+  // -------------------------- --------------------------
+
+  // 2️⃣ Render Validations
   // -------------------------- --------------------------
   // Check if any of the children exist before rendering it's parent
   const renderLeftContent =
-    topButton || leftTexts || backgroundShape || buttonsLabel || leftButtons || maskedImageURL || leftHeading;
-  const renderRightContent = rightHeading || rightButtons || rightTexts || cards;
+    topButton ||
+    leftTexts ||
+    backgroundShape ||
+    buttonsLabel ||
+    leftButtons ||
+    maskedImageURL ||
+    leftHeading ||
+    firstCustomChild;
+  const renderRightContent = rightHeading || rightButtons || rightTexts || cards || secondCustomChild;
 
   if (!renderLeftContent && !renderRightContent) {
     throw new Error('SplitContent: top-level children must exist');
@@ -62,8 +85,9 @@ function SplitContent(props: Props) {
       {renderLeftContent && (
         <SubSection className="split-content__first" {...leftContent}>
           {topButton && <Button {...topButton} />}
-
           {leftHeading && <Heading {...leftHeading} />}
+
+          {firstCustomChild && firstCustomChild}
 
           {leftTexts?.length && leftTexts.map((textProps) => <Text key={textProps.id} {...textProps} />)}
 
@@ -76,13 +100,17 @@ function SplitContent(props: Props) {
             </ButtonsContainer>
           )}
 
-          {maskedImageURL && <ImageMasked height="144px" width="144px" src={maskedImageURL} css={ImageMaskedCSS} />}
+          {maskedImageURL && (
+            <ImageMasked height="144px" width="144px" src={maskedImageURL} customStyles={ImageMaskedCSS} />
+          )}
         </SubSection>
       )}
 
       {renderRightContent && (
         <SubSection className="split-content__second">
           {rightHeading && <Heading {...rightHeading} />}
+
+          {secondCustomChild && secondCustomChild}
 
           {rightTexts?.length && rightTexts.map((textProps) => <Text key={textProps.id} {...textProps} />)}
 
@@ -114,3 +142,13 @@ function SplitContent(props: Props) {
 }
 
 export default SplitContent;
+
+type ChildrenProps = { children: ReactNode };
+export function SplitContentCustomFirst({ children }: ChildrenProps) {
+  // eslint-disable-next-line react/jsx-no-useless-fragment
+  return <>{children}</>;
+}
+export function SplitContentCustomSecond({ children }: ChildrenProps) {
+  // eslint-disable-next-line react/jsx-no-useless-fragment
+  return <>{children}</>;
+}
