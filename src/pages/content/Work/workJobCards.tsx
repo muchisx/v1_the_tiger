@@ -2,7 +2,8 @@ import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 import { css } from 'styled-components';
 import type { Props as CardGridProps } from '../../../components/CardGrid/CardGrid.types';
 import { CardFooter } from '../../../components/Card/Card.styles';
-import testImg from '../../../assets/images/hero-banner-1.jpg';
+import data from '../Job/job.data';
+import type { Job } from '../Job/job.types';
 
 const customStyles: CardGridProps['customStyles'] = css`
   @media only screen and (max-width: 768px) {
@@ -30,70 +31,24 @@ const CardCellButtonCommon: CardGridProps['cardCells'][0]['button'] = {
   to: '/',
 };
 
+const generateWorkJobCardsProps = (job: Job): CardGridProps['cardCells'][0] => {
+  return {
+    id: job.id,
+    card: {
+      backgroundImg: job.heroBannerImage,
+      cardLinkWrap: {
+        to: `/work/${job.jobId}`,
+      },
+      footerButton: { ...footerButtonCommon, to: `/work/${job.jobId}` },
+    },
+    subheading: job.jobTitle,
+    button: { ...CardCellButtonCommon, to: `/work/${job.jobId}` },
+  };
+};
+
 const workJobCards: CardGridProps = {
   customStyles,
-  cardCells: [
-    {
-      id: 1,
-      card: {
-        backgroundImg: testImg,
-        cardLinkWrap: {
-          to: '/work/diamond-mattress',
-        },
-        footerButton: { ...footerButtonCommon, to: '/' },
-      },
-      subheading: 'REAL STATE WEBSITE',
-      button: { ...CardCellButtonCommon, to: '/' },
-    },
-    {
-      id: 2,
-      card: {
-        backgroundImg: testImg,
-        cardLinkWrap: {
-          to: '/work/test',
-        },
-        footerButton: { ...footerButtonCommon, to: '/' },
-      },
-      subheading: 'REAL STATE WEBSITE',
-      button: { ...CardCellButtonCommon, to: '/' },
-    },
-    {
-      id: 3,
-      card: {
-        backgroundImg: testImg,
-        cardLinkWrap: {
-          to: '/work/test',
-        },
-        footerButton: { ...footerButtonCommon, to: '/' },
-      },
-      subheading: 'REAL STATE WEBSITE',
-      button: { ...CardCellButtonCommon, to: '/' },
-    },
-    {
-      id: 4,
-      card: {
-        backgroundImg: testImg,
-        cardLinkWrap: {
-          to: '/work/test',
-        },
-        footerButton: { ...footerButtonCommon, to: '/' },
-      },
-      subheading: 'REAL STATE WEBSITE',
-      button: { ...CardCellButtonCommon, to: '/' },
-    },
-    {
-      id: 5,
-      card: {
-        backgroundImg: testImg,
-        cardLinkWrap: {
-          to: '/work/test',
-        },
-        footerButton: { ...footerButtonCommon, to: '/' },
-      },
-      subheading: 'REAL STATE WEBSITE',
-      button: { ...CardCellButtonCommon, to: '/' },
-    },
-  ],
+  cardCells: data.map((job) => generateWorkJobCardsProps(job)),
 };
 
 export default workJobCards;

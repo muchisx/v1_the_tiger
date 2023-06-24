@@ -1,6 +1,7 @@
 import type { Props as ImageBannerProps } from '../../../components/ImageBanner/imageBanner.types';
 
 export type Job = {
+  id: number;
   jobId: string;
   jobTitle: string;
   jobSerial: string;
