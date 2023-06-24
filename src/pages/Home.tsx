@@ -13,8 +13,10 @@ import {
   homeLogoGrid,
   homeServices,
   homeLogoGridTwo,
-  homeContact,
 } from './content/Home';
+import sharedContact from './content/shared/sharedContact';
+
+const homeContact = sharedContact('primary');
 
 function Home() {
   return (

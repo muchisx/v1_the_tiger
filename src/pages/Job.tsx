@@ -15,6 +15,9 @@ import type { Props as SplitContentProps } from '../components/SplitContent/Spli
 // Content
 import data from './content/Job/job.data';
 import arrowDownRight from '../assets/svgs/arrow_down-right.svg';
+import sharedContact from './content/shared/sharedContact';
+
+const jobContact = sharedContact('secondary');
 
 function Job() {
   const { jobId } = useParams();
@@ -87,6 +90,12 @@ function Job() {
           />
         </SplitContentCustom>
       </SplitContent>
+      <SplitContent
+        leftContent={jobContact.leftContent}
+        rightContent={jobContact.rightContent}
+        customStyles={jobContact.customStyles}
+        contain="padding"
+      />
     </main>
   );
 }
