@@ -71,10 +71,4 @@ export const sectionCSS = css`
     height: 110%;
     object-position: center;
   }
-
-  @media only screen and (max-width: 768px) {
-    img {
-      object-position: 90%;
-    }
-  }
 `;

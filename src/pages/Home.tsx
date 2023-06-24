@@ -9,7 +9,7 @@ import {
   HomeHeroHeadingText,
   homeCTA,
   homeAboutMe,
-  heroImage,
+  homeImageBanner,
   homeLogoGrid,
   homeServices,
   homeLogoGridTwo,
@@ -30,7 +30,7 @@ function Home() {
         customStyles={homeCTA.customStyles}
         contain
       />
-      <ImageBanner src={heroImage} enableParallax />
+      <ImageBanner src={homeImageBanner.src} enableParallax customStyles={homeImageBanner.customStyles} />
       <SplitContent leftContent={homeAboutMe.leftContent} rightContent={homeAboutMe.rightContent} contain />
       <LogoGrid logoUrlWithIdList={homeLogoGrid.logoUrlWithIdList} title="PROUD TO WORK WITH" />
       <SplitContent
