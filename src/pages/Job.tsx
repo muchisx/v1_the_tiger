@@ -16,6 +16,8 @@ import type { Props as SplitContentProps } from '../components/SplitContent/Spli
 import data from './content/Job/job.data';
 import arrowDownRight from '../assets/svgs/arrow_down-right.svg';
 import sharedContact from './content/shared/sharedContact';
+import CardGrid from '../components/CardGrid/CardGrid';
+import jobMoreJobs from './content/Job/jobMoreJobs';
 
 const jobContact = sharedContact('secondary');
 
@@ -95,6 +97,13 @@ function Job() {
         rightContent={jobContact.rightContent}
         customStyles={jobContact.customStyles}
         contain="padding"
+      />
+      <CardGrid
+        contain
+        cardCells={jobMoreJobs.cardCells}
+        customStyles={jobMoreJobs.customStyles}
+        gridTemplateColumns={{ md: 'repeat(3, 1fr)' }}
+        gridAutoRows={{ md: '36vh' }}
       />
     </main>
   );
