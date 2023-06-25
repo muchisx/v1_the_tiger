@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import type { Variants } from 'framer-motion';
 import { CardContainerProps } from './Card.types';
+import getMediaQueryValue from '../../utils/getMediaQueryValue';
 
 // Styled Components
 
@@ -52,7 +53,7 @@ export const CardHeader = styled.header`
     grid-area: 1 / 1 / 3 / 2;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: ${getMediaQueryValue('sm')}) {
     & ${HeaderIconWrap} {
       grid-area: 1 / 1 / 2 / 2;
     }
