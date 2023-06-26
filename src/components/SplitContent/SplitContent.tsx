@@ -70,8 +70,8 @@ function SplitContent(props: Props) {
       customStyles={SectionCSS.concat(customStyles)}
       contain={contain}
       enableGutter
-      paddingTop={56}
-      paddingBottom={56}
+      paddingTop={40}
+      paddingBottom={40}
       ref={sectionRef}
     >
       {backgroundShape && (

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getMediaQueryValue } from '../../utils';
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -15,23 +16,24 @@ const HeaderStyled = styled.header`
 
   & .logo {
     margin-right: auto;
-    @media only screen and (max-width: 375px) {
-      font-size: 22px;
+    @media only screen and (min-width: ${getMediaQueryValue('xxsm')}) {
+      font-size: 28px;
     }
   }
   & .header-nav-toggle {
     z-index: 100;
   }
-  .header_m-contact {
+  .header_contact {
     display: none;
   }
 
-  @media only screen and (max-width: 400px) {
+  // Custom MediaQuery Value used here for fine-tuning
+  @media only screen and (min-width: 400px) {
     .header_contact {
-      display: none;
+      display: block;
     }
     .header_m-contact {
-      display: block;
+      display: none;
     }
   }
 `;

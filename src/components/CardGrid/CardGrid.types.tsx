@@ -21,8 +21,8 @@ export type Props = {
   contain?: SectionProps['contain'];
   customStyles?: FlattenSimpleInterpolation;
   cardCells: CardCell[];
-  gridTemplateColumns?: MediaQueryWithCSS;
-  gridAutoRows?: MediaQueryWithCSS;
+  gridTemplateColumns?: MediaQueryWithCSS<string>;
+  gridAutoRows?: MediaQueryWithCSS<string>;
   subheadingFont?: {
     fontSize?: HeadingProps['fontSize'];
     fontWeight?: HeadingProps['fontWeight'];

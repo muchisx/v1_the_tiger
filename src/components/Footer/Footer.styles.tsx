@@ -1,4 +1,9 @@
 import styled, { css } from 'styled-components';
+import { getMediaQueryValue } from '../../utils';
+import { LogoStyled } from '../shared/Logo/Logo.styles';
+
+// TODO: Rewrite styles to do Mobile-First
+// TODO: and use styled-components reference instead of classes
 
 export const FooterMenuItem = styled.li`
   list-style: none;
@@ -22,16 +27,14 @@ export const FooterMenu = styled.ul`
 export const FooterBlock = styled.div``;
 export const sectionCSS = css`
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 0.25fr 0.7fr 0.5fr;
   justify-content: space-between;
-  gap: 8px;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
 
-  @media only screen and (max-width: 768px) {
-    grid-column-gap: 1rem;
-    grid-row-gap: 2rem;
-    grid-template-columns: 1fr;
-    grid-auto-columns: 1fr;
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    grid-template-columns: 0.25fr 0.7fr 0.5fr;
+    gap: 8px;
   }
 `;
 export const FooterStyled = styled.footer`
@@ -40,6 +43,10 @@ export const FooterStyled = styled.footer`
 
   ${FooterBlock}, ${FooterMenu} {
     display: flex;
+  }
+
+  ${LogoStyled} {
+    font-size: 2.8rem;
   }
 
   .footer__menus {

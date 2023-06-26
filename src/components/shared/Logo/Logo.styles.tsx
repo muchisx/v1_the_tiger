@@ -10,11 +10,11 @@ export const WordWrap = styled.div<WordWrapProps>`
   text-transform: ${(props) => (props.isUppercase ? 'uppercase' : 'none')};
   color: var(--logo-${(props) => (props.index === 0 ? 'primary' : 'secondary')});
 `;
-export const ContainerLink = styled(Link)`
+export const LogoStyled = styled(Link)`
   display: flex;
   padding: 2px;
   gap: 8px;
   font-family: var(--heading-family);
-  font-size: 28px;
+  font-size: 22px;
   text-decoration: none;
 `;

@@ -1,5 +1,8 @@
+// Dependencies
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+// Utils
+import { getMediaQueryValue } from '../../utils';
 
 export const SubNavSocialsList = styled.ul`
   display: grid;
@@ -19,17 +22,19 @@ export const SubNavItemsList = styled.ul`
 
 export const SubNav = styled.div`
   display: flex;
+  flex-direction: column;
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
 
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    flex-direction: row;
   }
 `;
 
 export const NavItemsList = styled.ul`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   flex-grow: 1;
   min-height: 20rem;
@@ -37,8 +42,8 @@ export const NavItemsList = styled.ul`
   background-color: white;
   border-radius: 8px;
 
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    flex-direction: row;
   }
 `;
 

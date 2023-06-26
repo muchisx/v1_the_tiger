@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { CardStyled } from '../Card/Card.styles';
 import type { CardGridStyledProps } from './CardGrid.types';
-import getCSSFromMediaQuery from '../../utils/getCSSFromMediaQuery';
+import { getCSSFromMediaQuery, getMediaQueryValue } from '../../utils';
 
 export const CardGridCellBottom = styled.div`
   display: flex;
@@ -18,21 +18,21 @@ export const CardGridCell = styled.div`
 
 export const CardGridStyled = styled.div<CardGridStyledProps>`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 50vh;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 28vh;
   column-gap: 6rem;
   row-gap: 4rem;
 
-  @media only screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 28vh;
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 50vh;
   }
 
   ${(props) =>
     props.$gridTemplateColumns &&
     getCSSFromMediaQuery(props.$gridTemplateColumns, 'grid-template-columns').map((item) => item)}
 
-  ${(props) => props.$gridAutoRows && getCSSFromMediaQuery(props.$gridAutoRows, 'grid-auto-rows').map((item) => item)}
+  ${(props) => props.$gridAutoRows && getCSSFromMediaQuery(props.$gridAutoRows, 'grid-auto-rows')}
 
   ${CardStyled} {
     flex-grow: 1;

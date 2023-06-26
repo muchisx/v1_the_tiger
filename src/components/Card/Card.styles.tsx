@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import type { Variants } from 'framer-motion';
 import { CardContainerProps } from './Card.types';
-import getMediaQueryValue from '../../utils/getMediaQueryValue';
+import { getMediaQueryValue } from '../../utils';
 
 // Styled Components
 
@@ -50,15 +50,19 @@ export const CardHeader = styled.header`
   }
 
   & ${HeaderIconWrap} {
-    grid-area: 1 / 1 / 3 / 2;
+    grid-area: 1 / 1 / 2 / 2;
   }
 
-  @media only screen and (max-width: ${getMediaQueryValue('sm')}) {
+  ${TagsContainer} {
+    grid-area: 2 / 1 / -1 / -1;
+  }
+
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
     & ${HeaderIconWrap} {
-      grid-area: 1 / 1 / 2 / 2;
+      grid-area: 1 / 1 / 3 / 2;
     }
     ${TagsContainer} {
-      grid-area: 2 / 1 / -1 / -1;
+      grid-area: initial;
     }
   }
 `;

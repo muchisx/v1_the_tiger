@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 import Text from '../shared/Text/Text';
 import type { SubSectionProps } from './SplitContent.types';
+// Utils
+import { getMediaQueryValue } from '../../utils';
 
 export const ImageMaskedCSS = css`
   position: absolute;
@@ -36,8 +38,9 @@ export const SubSection = styled.div<SubSectionProps>`
     props.maskedImageURL &&
     css`
       ${ButtonsContainer} {
-        @media only screen and (max-width: 768px) {
-          max-width: 50%;
+        max-width: 50%;
+        @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+          max-width: none;
         }
       }
     `}
@@ -47,30 +50,36 @@ export const BackgroundShape = styled(motion.img)`
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 100%;
   opacity: 0.1;
   z-index: -1;
   transform: rotate(180deg);
 
-  @media only screen and (max-width: 768px) {
-    width: 100%;
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    width: 50%;
   }
 `;
 
 export const SectionCSS = css`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 6rem;
+  gap: 2.4rem;
   position: relative;
+  overflow: hidden;
 
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
-    gap: 2.4rem;
-    padding-block: 40px;
-    overflow: hidden;
+  .split-content__first ${ButtonsContainer} {
+    margin-top: 4rem;
+  }
+
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    flex-direction: row;
+    gap: 6rem;
+    padding-block: 56px;
+    overflow: visible;
 
     .split-content__first ${ButtonsContainer} {
-      margin-top: 4rem;
+      margin-top: auto;
     }
   }
 

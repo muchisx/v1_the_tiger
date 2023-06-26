@@ -1,5 +1,8 @@
+// Dependencies
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+// Utils
+import { getMediaQueryValue } from '../../utils';
 
 export const NavLinkSpan = styled.span`
   width: 100%;
@@ -11,17 +14,17 @@ export const NavLinkSpan = styled.span`
 
 export const NavLinkStyled = styled(NavLink)`
   height: 100%;
-  padding: 24px;
+  padding: 20px 24px;
   flex-grow: 1;
   display: flex;
   align-items: flex-end;
   text-decoration: none;
+  font-size: 2rem;
   color: var(--text-primary);
-  font-size: 2.4rem;
 
-  @media only screen and (max-width: 768px) {
-    font-size: 2rem;
-    padding: 20px 24px;
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    font-size: 2.4rem;
+    padding: 24px;
   }
   text-transform: uppercase;
 `;
