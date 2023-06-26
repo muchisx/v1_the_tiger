@@ -1,6 +1,7 @@
 # Todo List
 
 - [x] only use useMediaQuery state globally to improve performance and grab it from context.
+- [ ] Add footer privacy, terms and copyright
 - [ ] Create webp version of all image assets and create optimized fallbacks for browsers that don't support webp.
 - [ ] Pass Section paddingTop and Bottom a standard number declared elsewhere to have similar distancing across all sections
 - [ ] Fix BackgroundShape in Split content to no be direct child of Section, but instead be contained within the content
