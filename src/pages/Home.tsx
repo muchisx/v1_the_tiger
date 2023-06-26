@@ -30,7 +30,12 @@ function Home() {
         customStyles={homeCTA.customStyles}
         contain
       />
-      <ImageBanner src={homeImageBanner.src} enableParallax customStyles={homeImageBanner.customStyles} />
+      <ImageBanner
+        src={homeImageBanner.src}
+        enableParallax
+        customStyles={homeImageBanner.customStyles}
+        minHeight={{ md: '560px' }}
+      />
       <SplitContent leftContent={homeAboutMe.leftContent} rightContent={homeAboutMe.rightContent} contain />
       <LogoGrid logoUrlWithIdList={homeLogoGrid.logoUrlWithIdList} title="PROUD TO WORK WITH" />
       <SplitContent

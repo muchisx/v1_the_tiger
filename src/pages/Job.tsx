@@ -74,7 +74,7 @@ function Job() {
         customStyles={customImageBannerStyles}
         src={heroBannerImage}
         enableParallax
-        height="100lvh"
+        minHeight={{ all: '100svh' }}
         imgOverlayColor="rgba(0,0,0,0.36)"
         bottomContent={heroBannerBottom}
         heading={{ text: jobTitle, headingLevel: 'h1', fontSize: 'clamp(3rem, 6vw, 14rem)' }}
