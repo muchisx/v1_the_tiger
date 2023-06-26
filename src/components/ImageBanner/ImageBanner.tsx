@@ -20,7 +20,7 @@ import {
 import type { Props } from './imageBanner.types';
 
 function ImageBanner(props: Props) {
-  const { customStyles, src, height, enableParallax, imgOverlayColor, heading, bottomContent } = props;
+  const { customStyles, src, minHeight, enableParallax, imgOverlayColor, heading, bottomContent } = props;
 
   // 1️⃣ Parallax animation handlers
   // -------------------------- --------------------------
@@ -41,7 +41,7 @@ function ImageBanner(props: Props) {
 
   return (
     <Section ref={sectionRef} customStyles={sectionCSS.concat(customStyles)}>
-      <ImageBannerContainer $height={height} $imgOverlayColor={imgOverlayColor}>
+      <ImageBannerContainer $minHeight={minHeight} $imgOverlayColor={imgOverlayColor}>
         <ParallaxContainer style={{ y: parallaxController }}>
           <ImageResponsive width="100%" height="100%" src={src} />
         </ParallaxContainer>

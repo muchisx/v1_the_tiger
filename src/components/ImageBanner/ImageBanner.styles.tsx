@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 // Types
 import type { ContainerProps } from './imageBanner.types';
-import { Height } from '../../types/css.types';
+// Utils
+import { getCSSFromMediaQuery } from '../../utils';
 
 export const ParallaxContainer = styled(motion.div)`
   height: 100%;
@@ -38,8 +39,8 @@ export const ContentContainer = styled.div`
 `;
 
 export const ImageBannerContainer = styled.div<ContainerProps>`
-  --height: ${(props): Height => props.$height || '560px'};
-  height: var(--height);
+  height: 0;
+  min-height: 324px;
   width: 100%;
 
   ${(props) =>
@@ -57,9 +58,7 @@ export const ImageBannerContainer = styled.div<ContainerProps>`
       }
     `}
 
-  @media only screen and (max-width: 768px) {
-    height: calc(var(--height) * 0.68);
-  }
+  ${(props) => props.$minHeight && getCSSFromMediaQuery(props.$minHeight, 'min-height').map((item) => item)}
 `;
 
 export const sectionCSS = css`

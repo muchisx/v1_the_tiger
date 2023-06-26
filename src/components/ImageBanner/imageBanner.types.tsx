@@ -1,6 +1,7 @@
 import { type FlattenSimpleInterpolation } from 'styled-components';
 import type { Height, CSSColor } from '../../types/css.types';
 import type { Props as HeadingProps } from '../shared/Heading/Heading.types';
+import type { MediaQueryWithCSS } from '../../types/media.types';
 
 type BottomContent = {
   title: string;
@@ -11,7 +12,7 @@ export type Props = {
   customStyles?: FlattenSimpleInterpolation;
 
   src: string;
-  height?: Height;
+  minHeight?: MediaQueryWithCSS<Height>;
   imgOverlayColor?: CSSColor;
   enableParallax?: boolean;
 
@@ -20,6 +21,6 @@ export type Props = {
 };
 
 export type ContainerProps = {
-  $height?: Props['height'];
+  $minHeight?: Props['minHeight'];
   $imgOverlayColor?: Props['imgOverlayColor'];
 };
