@@ -7,6 +7,9 @@ const getMediaQueryValue = (MediaQueryKey: MediaQueryKey): string => {
     case 'all':
       value = '0px';
       break;
+    case 'xxsm':
+      value = '376px';
+      break;
     case 'xsm':
       value = '426px';
       break;

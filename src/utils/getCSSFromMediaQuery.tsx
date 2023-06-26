@@ -3,13 +3,13 @@ import type { MediaQueryWithCSS } from '../types/media.types';
 import getMediaQueryValue from './getMediaQueryValue';
 import getTypedEntries from './getTypedEntries';
 
-const getCSSFromMediaQuery = (MediaQueryWithCSS: MediaQueryWithCSS, property: string) => {
+const getCSSFromMediaQuery = <T,>(MediaQueryWithCSS: MediaQueryWithCSS<T>, property: string) => {
   // Follow the order so the rules override following a mobile-first approach
   // This also ensures the rules are in the correct order even if the wrong order is given via props.
-  // TODO: Have a general provider for all of query keys and manually use this 'order' variable,
+  // TODO: Have a general provider for all of query keys and not manually use this 'order' variable,
   // TODO:  maybe styled-components theme?
 
-  const order = ['all', 'xsm', 'sm', 'md', 'lg', 'xl', 'xxl'];
+  const order = ['all', 'xxsm', 'xsm', 'sm', 'md', 'lg', 'xl', 'xxl'];
   const mediaWithCSSEntries = getTypedEntries(MediaQueryWithCSS).sort(([keyA], [keyB]) => {
     return order.indexOf(keyA) - order.indexOf(keyB);
   });
