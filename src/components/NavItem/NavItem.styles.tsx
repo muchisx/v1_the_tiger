@@ -22,6 +22,12 @@ export const NavLinkStyled = styled(NavLink)`
   font-size: 2rem;
   color: var(--text-primary);
 
+  &.active {
+    pointer-events: none;
+    color: var(--navlink-text-active);
+    background-color: var(--navlink-bg-active);
+  }
+
   @media only screen and (min-width: ${getMediaQueryValue('md')}) {
     font-size: 2.4rem;
     padding: 24px;

@@ -23,6 +23,9 @@ const HeaderStyled = styled.header`
   & .header-nav-toggle {
     z-index: 100;
   }
+  & .header-nav-toggle.--open {
+    mix-blend-mode: difference;
+  }
   .header_contact {
     display: none;
   }

@@ -39,7 +39,7 @@ function Header() {
           variant="primary"
           Icon={LineHorizontal1}
           action={toggleNavigation}
-          className="header-nav-toggle"
+          className="header-nav-toggle --open"
         />
       ) : (
         <Button
