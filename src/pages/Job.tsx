@@ -18,6 +18,7 @@ import arrowDownRight from '../assets/svgs/arrow_down-right.svg';
 import sharedContact from './content/shared/sharedContact';
 import CardGrid from '../components/CardGrid/CardGrid';
 import jobMoreJobs from './content/Job/jobMoreJobs';
+import TabbedContent from '../components/TabbedContent/TabbedContent';
 
 const jobContact = sharedContact('secondary');
 
@@ -92,6 +93,7 @@ function Job() {
           />
         </SplitContentCustom>
       </SplitContent>
+      <TabbedContent />
       <SplitContent
         leftContent={jobContact.leftContent}
         rightContent={jobContact.rightContent}
