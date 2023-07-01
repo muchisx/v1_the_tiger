@@ -100,10 +100,21 @@ body {
 
 body {
   min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100svh;
   color: var(--body-text-primary);
   font-family: var(--text-family);
   background-color: var(--body-bg-color);
+}
+
+/* TODO: Move this into a styled-components global declaration */
+/* TODO: And use the mediaquery globla variables to access 'md' size */
+/* This is here to make sure in desktop we always have a scrollbar */
+/* This is to avoid content shift while changing to routes that wouldn't have a scroll bar */
+@media only screen and (min-width: 769px) {
+  body {
+    min-height: 101vh;
+    min-height: 101svh;
+  }
 }
 
 #root {
