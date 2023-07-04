@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getMediaQueryValue } from '../utils';
 
 function useMediaQuery(query: string) {
   const [matches, setMatches] = useState(false);
@@ -23,10 +24,11 @@ function useMediaQuery(query: string) {
   return matches;
 }
 
-export const useIsXSmall = () => useMediaQuery('(min-width: 426px)');
-export const useIsSmall = () => useMediaQuery('(min-width: 600px)');
-export const useIsMedium = () => useMediaQuery('(min-width: 768px)');
-export const useIsLarge = () => useMediaQuery('(min-width: 1024px)');
-export const useIsXLarge = () => useMediaQuery('(min-width: 1280px)');
-export const useIsXXLarge = () => useMediaQuery('(min-width: 1536px)');
+export const useIsXXSmall = () => useMediaQuery(`(min-width: ${getMediaQueryValue('xxsm')})`);
+export const useIsXSmall = () => useMediaQuery(`(min-width: ${getMediaQueryValue('xsm')})`);
+export const useIsSmall = () => useMediaQuery(`(min-width: ${getMediaQueryValue('sm')})`);
+export const useIsMedium = () => useMediaQuery(`(min-width: ${getMediaQueryValue('md')})`);
+export const useIsLarge = () => useMediaQuery(`(min-width: ${getMediaQueryValue('lg')})`);
+export const useIsXLarge = () => useMediaQuery(`(min-width: ${getMediaQueryValue('xl')})`);
+export const useIsXXLarge = () => useMediaQuery(`(min-widths: ${getMediaQueryValue('xxl')})`);
 export default useMediaQuery;

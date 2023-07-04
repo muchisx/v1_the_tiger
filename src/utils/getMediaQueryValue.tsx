@@ -1,36 +1,26 @@
-import type { MediaQueryKey } from '../types/media.types';
+import type { MediaQueryKey, MediaQueryKeyAndValue } from '../types/media.types';
+
+// * This should be the only source of mediaQuery data throughout the app
+export const mediaQueries: MediaQueryKeyAndValue = {
+  all: '0px',
+  xxsm: '376px',
+  xsm: '426px',
+  sm: '601px',
+  md: '769px',
+  lg: '1025px',
+  xl: '1281px',
+  xxl: '1537px',
+};
 
 const getMediaQueryValue = (MediaQueryKey: MediaQueryKey): string => {
   let value;
 
-  switch (MediaQueryKey) {
-    case 'all':
-      value = '0px';
-      break;
-    case 'xxsm':
-      value = '376px';
-      break;
-    case 'xsm':
-      value = '426px';
-      break;
-    case 'sm':
-      value = '601px';
-      break;
-    case 'md':
-      value = '769px';
-      break;
-    case 'lg':
-      value = '1025px';
-      break;
-    case 'xl':
-      value = '1281px';
-      break;
-    case 'xxl':
-      value = '1537px';
-      break;
-    default:
-      value = '0px';
+  if (MediaQueryKey in mediaQueries) {
+    value = mediaQueries[MediaQueryKey];
+  } else {
+    throw new Error('Media Query Key is not valid');
   }
+
   return value;
 };
 
