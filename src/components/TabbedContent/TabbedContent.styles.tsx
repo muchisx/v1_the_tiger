@@ -28,17 +28,18 @@ export const Media = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 
   @media only screen and (min-width: ${getMediaQueryValue('md')}) {
     flex-direction: row;
+    gap: 40px;
   }
 `;
 
 export const TabbedContentStyled = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 28px;
 
   @media only screen and (min-width: ${getMediaQueryValue('md')}) {
     gap: 60px;

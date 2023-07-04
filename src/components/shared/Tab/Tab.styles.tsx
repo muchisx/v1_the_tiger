@@ -39,6 +39,7 @@ export const TabStyled = styled.li<TabStyledProps>`
   font-size: 2.4rem;
   text-transform: uppercase;
   list-style: none;
+  user-select: none;
   box-shadow: -1px 1px 0 var(--neutral-color-quaternary);
 
   ${(props) =>
@@ -47,7 +48,9 @@ export const TabStyled = styled.li<TabStyledProps>`
       color: var(--text-tertiary);
       background-color: var(--body-bg-color-secondary);
       ${TabAnchor} {
-        pointer-events: none;
+        @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+          pointer-events: none;
+        }
       }
     `}
 
