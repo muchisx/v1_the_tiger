@@ -1,5 +1,5 @@
 // Styled Components
-import { Image, ImageContainer } from './ImageResponsive.styles';
+import { Image, ImageResponsiveStyled } from './ImageResponsive.styles';
 
 // Types
 import type { Width, Height } from '../../../types/css.types';
@@ -17,9 +17,9 @@ function ImageResponsive(props: Props) {
   const { height, width, fit = 'cover', padding, src, loading = 'lazy' } = props;
 
   return (
-    <ImageContainer $height={height} $width={width} $padding={padding}>
+    <ImageResponsiveStyled $height={height} $width={width} $padding={padding}>
       <Image fit={fit} src={src} loading={loading} />
-    </ImageContainer>
+    </ImageResponsiveStyled>
   );
 }
 

@@ -1,21 +1,24 @@
-import styled from 'styled-components';
-
-type TabStyledProps = {
-  isActive?: Props['isActive'];
-};
-
-export type Props = {
-  children: React.ReactNode;
-  isActive?: boolean;
-};
-
-export const TabStyled = styled.li<TabStyledProps>`
-  box-shadow: 1px -1px 0 var(--neutral-color-quaternary);
-`;
+// Dependencies
+import { ChevronUpDown } from '@styled-icons/fluentui-system-filled';
+// Styled Components
+import { TabAnchor, TabStyled } from './Tab.styles';
+// Types
+import type { Props } from './Tab.types';
 
 function Tab(props: Props) {
-  const { children, isActive } = props;
-  return <TabStyled isActive={isActive}>{children}</TabStyled>;
+  const { children, isActive, isShown } = props;
+
+  const id = children.replace(' ', '').toLowerCase();
+  const href = `#${id}`;
+
+  return (
+    <TabStyled isActive={isActive} isShown={isShown}>
+      <TabAnchor href={href} role="tab">
+        {children}
+        {isActive && <ChevronUpDown />}
+      </TabAnchor>
+    </TabStyled>
+  );
 }
 
 export default Tab;

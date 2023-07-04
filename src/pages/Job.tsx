@@ -7,6 +7,7 @@ import Heading from '../components/shared/Heading/Heading';
 import Section from '../components/shared/Section/Section';
 import SplitContent, { SplitContentCustom } from '../components/SplitContent/SplitContent';
 import ImageResponsive from '../components/shared/ImageResponsive/ImageResponsive';
+import TabbedContent from '../components/TabbedContent/TabbedContent';
 // Styled Components
 import customImageBannerStyles from './content/Job/job.styles';
 // Types
@@ -18,7 +19,7 @@ import arrowDownRight from '../assets/svgs/arrow_down-right.svg';
 import sharedContact from './content/shared/sharedContact';
 import CardGrid from '../components/CardGrid/CardGrid';
 import jobMoreJobs from './content/Job/jobMoreJobs';
-import TabbedContent from '../components/TabbedContent/TabbedContent';
+import jobFeaturedTasks from './content/Job/jobFeaturedTasks';
 
 const jobContact = sharedContact('secondary');
 
@@ -93,7 +94,7 @@ function Job() {
           />
         </SplitContentCustom>
       </SplitContent>
-      <TabbedContent />
+      <TabbedContent tabbedContent={jobFeaturedTasks.tabbedContent} contain={jobFeaturedTasks.contain} />
       <SplitContent
         leftContent={jobContact.leftContent}
         rightContent={jobContact.rightContent}

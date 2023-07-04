@@ -17,7 +17,7 @@ export const Image = styled.img<ImageProps>`
   object-fit: ${(props) => props.fit};
 `;
 
-export const ImageContainer = styled.div<ImageContainerProps>`
+export const ImageResponsiveStyled = styled.div<ImageContainerProps>`
   height: ${(props) => props.$height};
   width: ${(props) => props.$width};
   padding: ${(props) => props.$padding};

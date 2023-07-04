@@ -1,6 +1,7 @@
 import { Props as SectionProps } from '../shared/Section/Section';
 
 export type Content = {
+  id: string | number;
   title: string;
   description: string;
   mediaType: 'image' | 'video';

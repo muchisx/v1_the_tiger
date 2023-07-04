@@ -1,24 +1,27 @@
+// Dependencies
 import styled from 'styled-components';
-import Tab, { type Props as TabProps } from '../Tab/Tab';
+// Utils
+import { getMediaQueryValue } from '../../../utils';
 
 type Props = {
-  tabs: (TabProps & { id: string })[];
+  children: React.ReactNode;
 };
 
 export const TabsStyled = styled.ul`
   display: flex;
+  flex-direction: column;
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  outline: 1px solid var(--neutral-color-quaternary);
+
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    flex-direction: row;
+  }
 `;
 
-function Tabs({ tabs }: Props) {
-  return (
-    <TabsStyled>
-      {tabs.map((tab) => (
-        <Tab isActive={tab.isActive} key={tab.id}>
-          {tab.children}
-        </Tab>
-      ))}
-    </TabsStyled>
-  );
+function Tabs({ children }: Props) {
+  return <TabsStyled>{children}</TabsStyled>;
 }
 
 export default Tabs;
