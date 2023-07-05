@@ -1,7 +1,7 @@
 import { Props as SectionProps } from '../shared/Section/Section';
+import { type KeyId } from '../../types/general.types';
 
-export type Content = {
-  id: string | number;
+export type Content = KeyId & {
   title: string;
   description: string;
   mediaType: 'image' | 'video';

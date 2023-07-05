@@ -1,4 +1,5 @@
 import { type StyledIcon } from '@styled-icons/styled-icon';
+import { ButtonHTMLAttributes } from 'react';
 
 type Role = 'button' | 'link';
 export type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
@@ -21,7 +22,7 @@ type IconConditionalProps =
   | { Icon: StyledIcon; IconSize?: number; IconWrapPadding?: string }
   | { Icon?: never; IconSize?: never; IconWrapPadding?: never };
 
-export type Props = CommonProps & RoleConditionalProps & IconConditionalProps;
+export type Props = CommonProps & RoleConditionalProps & IconConditionalProps & ButtonHTMLAttributes<HTMLButtonElement>;
 
 // Styled Components
 export type ContainerProps = {

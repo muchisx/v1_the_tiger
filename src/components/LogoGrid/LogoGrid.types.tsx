@@ -1,12 +1,12 @@
 import { type FlattenSimpleInterpolation } from 'styled-components';
+import type { KeyId } from '../../types/general.types';
 
-type LogoUrlWithId = {
-  id: number;
+export type LogoUrlWithKeyId = KeyId & {
   url: string;
 };
 
 export type Props = {
   title?: string;
-  logoUrlWithIdList: LogoUrlWithId[];
+  logoUrls: LogoUrlWithKeyId[];
   customStyles?: FlattenSimpleInterpolation;
 };

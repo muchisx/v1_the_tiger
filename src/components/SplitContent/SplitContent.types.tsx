@@ -5,10 +5,11 @@ import { type Props as TextProps } from '../shared/Text/Text.types';
 import { type Props as HeadingProps } from '../shared/Heading/Heading.types';
 import { type Props as SectionProps } from '../shared/Section/Section';
 import type { Props as CardProps } from '../Card/Card.types';
+import type { KeyId } from '../../types/general.types';
 
-type ButtonWithIdProps = { id: number } & ButtonProps;
-type TextWithIdProps = { id: number } & TextProps;
-type CardWithIdProps = { id: number } & CardProps;
+type ButtonWithKeyIdProps = KeyId & ButtonProps;
+type TextWithKeyIdProps = KeyId & TextProps;
+type CardWithKeyIdProps = KeyId & CardProps;
 
 export type BackgroundShape = {
   url: string;
@@ -21,17 +22,17 @@ export type Props = {
   leftContent: {
     topButton?: ButtonProps;
     leftHeading?: HeadingProps;
-    leftTexts?: TextWithIdProps[];
+    leftTexts?: TextWithKeyIdProps[];
     maskedImageURL?: string;
     backgroundShape?: BackgroundShape;
     buttonsLabel?: string;
-    leftButtons?: ButtonWithIdProps[];
+    leftButtons?: ButtonWithKeyIdProps[];
   };
   rightContent: {
     rightHeading?: HeadingProps;
-    rightTexts?: TextWithIdProps[];
-    rightButtons?: ButtonWithIdProps[];
-    cards?: CardWithIdProps[];
+    rightTexts?: TextWithKeyIdProps[];
+    rightButtons?: ButtonWithKeyIdProps[];
+    cards?: CardWithKeyIdProps[];
   };
   children?: JSX.Element | JSX.Element[];
   customStyles?: FlattenSimpleInterpolation;

@@ -16,6 +16,8 @@ import diamondMattress from '../../../assets/images/companies/diamondmattress.pn
 import freshVictor from '../../../assets/images/companies/freshvictor-smaller.png';
 import safkanHealth from '../../../assets/images/companies/safkanhealth.png';
 import veme from '../../../assets/svgs/companies/veme.svg';
+// Types
+import { type Props as LogoGridProps } from '../../../components/LogoGrid/LogoGrid.types';
 
 const logoUrlList = [
   bigLittleBar,
@@ -38,13 +40,13 @@ const logoUrlList = [
   veme,
 ];
 
-const logoUrlWithIdList = logoUrlList.map((logoUrl, index) => ({
-  id: index,
+const logoUrls: LogoGridProps['logoUrls'] = logoUrlList.map((logoUrl, index) => ({
+  keyId: index,
   url: logoUrl,
 }));
 
 const homeLogoGridTwo = {
-  logoUrlWithIdList,
+  logoUrls,
 };
 
 export default homeLogoGridTwo;

@@ -85,13 +85,13 @@ function SplitContent(props: Props) {
 
           {leftCustomChild && leftCustomChild}
 
-          {leftTexts?.length && leftTexts.map((textProps) => <Text key={textProps.id} {...textProps} />)}
+          {leftTexts?.length && leftTexts.map((textProps) => <Text key={textProps.keyId} {...textProps} />)}
 
           {leftButtons?.length && (
             <ButtonsContainer>
               {buttonsLabel && <ButtonsHeading>{buttonsLabel}</ButtonsHeading>}
               {leftButtons.map((buttonProps) => (
-                <Button key={buttonProps.id} {...buttonProps} />
+                <Button key={buttonProps.keyId} {...buttonProps} />
               ))}
             </ButtonsContainer>
           )}
@@ -108,13 +108,13 @@ function SplitContent(props: Props) {
 
           {rightCustomChild && rightCustomChild}
 
-          {rightTexts?.length && rightTexts.map((textProps) => <Text key={textProps.id} {...textProps} />)}
+          {rightTexts?.length && rightTexts.map((textProps) => <Text key={textProps.keyId} {...textProps} />)}
 
           {cards?.length && (
             <CardsContainer>
               {cards.map((cardProps, index) => (
                 <Card
-                  key={cardProps.id}
+                  key={cardProps.keyId}
                   {...cardProps}
                   customStyles={css`
                     --order: ${index + 1};
@@ -127,7 +127,7 @@ function SplitContent(props: Props) {
           {rightButtons?.length && (
             <ButtonsContainer>
               {rightButtons.map((buttonProps) => (
-                <Button key={buttonProps.id} {...buttonProps} />
+                <Button key={buttonProps.keyId} {...buttonProps} />
               ))}
             </ButtonsContainer>
           )}

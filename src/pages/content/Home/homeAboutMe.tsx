@@ -13,7 +13,7 @@ const leftContent: SplitContentProps['leftContent'] = {
   buttonsLabel: 'Socials',
   leftButtons: [
     {
-      id: 1,
+      keyId: 1,
       role: 'link',
       to: 'https://www.linkedin.com/in/miguelangelpro/',
       text: 'LinkedIn',
@@ -21,7 +21,7 @@ const leftContent: SplitContentProps['leftContent'] = {
       newTab: true,
     },
     {
-      id: 2,
+      keyId: 2,
       role: 'link',
       to: 'https://github.com/muchisx',
       text: 'GitHub',
@@ -56,18 +56,18 @@ const textTwo = (
 const rightContent: SplitContentProps['rightContent'] = {
   rightTexts: [
     {
-      id: 1,
+      keyId: 1,
       children: textOne,
       fontWeight: 500,
     },
     {
-      id: 2,
+      keyId: 2,
       children: textTwo,
     },
   ],
   rightButtons: [
     {
-      id: 1,
+      keyId: 1,
       text: 'Get the full story',
       role: 'link',
       to: '/about',

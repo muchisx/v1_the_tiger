@@ -57,7 +57,7 @@ function Button(props: Props) {
   // 4️⃣ Animation handler for when there's only one child (Text or Icon), but not both
   // -------------------------- --------------------------
   const singleChildAnimation = (runCondition: boolean, buttonIcon?: Props['Icon'], buttonText?: Props['text']) => {
-    // Only run the animation if the media query is above Medium
+    // Only run the animation if me meet the runCondition
     if (!runCondition) return {};
 
     // TODO: Standarize the color of the background shadow via variables

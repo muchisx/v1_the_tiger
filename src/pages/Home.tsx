@@ -37,7 +37,7 @@ function Home() {
         minHeight={{ md: '560px' }}
       />
       <SplitContent leftContent={homeAboutMe.leftContent} rightContent={homeAboutMe.rightContent} contain />
-      <LogoGrid logoUrlWithIdList={homeLogoGrid.logoUrlWithIdList} title="PROUD TO WORK WITH" />
+      <LogoGrid logoUrls={homeLogoGrid.logoUrls} title="PROUD TO WORK WITH" />
       <SplitContent
         leftContent={homeServices.leftContent}
         rightContent={homeServices.rightContent}
@@ -50,7 +50,7 @@ function Home() {
         customStyles={homeContact.customStyles}
         contain
       />
-      <LogoGrid logoUrlWithIdList={homeLogoGridTwo.logoUrlWithIdList} title="TRUSTED BY" />
+      <LogoGrid logoUrls={homeLogoGridTwo.logoUrls} title="TRUSTED BY" />
     </main>
   );
 }

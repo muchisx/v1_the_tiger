@@ -4,6 +4,8 @@ import reactLogoBW from '../../../assets/svgs/react-logo-bw.svg';
 import typescriptLogoBW from '../../../assets/svgs/typescript-logo-neutral.svg';
 import liquidLogo from '../../../assets/svgs/loquid-logo.svg';
 import webflowLogo from '../../../assets/svgs/webflow-logo.svg';
+// Types
+import { type Props as LogoGridProps } from '../../../components/LogoGrid/LogoGrid.types';
 
 const logoUrlList = [
   reactLogoBW,
@@ -14,13 +16,13 @@ const logoUrlList = [
   shopifyPartnerSecondary,
 ];
 
-const logoUrlWithIdList = logoUrlList.map((logoUrl, index) => ({
-  id: index,
+const logoUrls: LogoGridProps['logoUrls'] = logoUrlList.map((logoUrl, index) => ({
+  keyId: index,
   url: logoUrl,
 }));
 
 const homeLogoGrid = {
-  logoUrlWithIdList,
+  logoUrls,
 };
 
 export default homeLogoGrid;

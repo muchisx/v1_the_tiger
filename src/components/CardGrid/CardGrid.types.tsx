@@ -4,9 +4,9 @@ import type { Props as CardProps } from '../Card/Card.types';
 import type { Props as ButtonProps } from '../shared/Button/Button.types';
 import type { Props as HeadingProps } from '../shared/Heading/Heading.types';
 import type { MediaQueryWithCSS } from '../../types/media.types';
+import { type KeyId } from '../../types/general.types';
 
-type CardCell = {
-  id: number;
+type CardCell = KeyId & {
   card: CardProps;
   subheading: HeadingProps['text'];
   button?: ButtonProps;

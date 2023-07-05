@@ -4,11 +4,11 @@ import { type Props as CustomIconProps } from '../shared/CustomIcon/CustomIcon.t
 import type { Props as TagProps } from '../shared/Tag/Tag';
 import type { Props as TextProps } from '../shared/Text/Text.types';
 import type { Props as ButtonProps } from '../shared/Button/Button.types';
+import { type KeyId } from '../../types/general.types';
 
-type CardTagWithId = {
-  id: string | number;
+type CardTagWithKeyId = KeyId & {
   variant: TagProps['variant'];
-  text: TagProps['children'];
+  children: TagProps['children'];
 };
 
 export type CardContainerProps = {
@@ -26,7 +26,7 @@ export type Props = {
   };
   HeaderIcon?: StyledIcon | CustomIconProps['svgrIcon'];
   headerHeading?: string;
-  headerTags?: CardTagWithId[];
+  headerTags?: CardTagWithKeyId[];
   bodyText?: TextProps;
   footerButton?: ButtonProps;
 };
