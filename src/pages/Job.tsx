@@ -64,7 +64,7 @@ function Job() {
   const jobAdditionalInfoContent: SplitContentProps['rightContent'] = {
     rightTexts: [
       {
-        keyId: 1,
+        $keyId: 1,
         children: jobAdditionalInfo,
       },
     ],

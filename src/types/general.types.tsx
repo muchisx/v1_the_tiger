@@ -1,1 +1,1 @@
-export type KeyId = { keyId: string | number };
+export type KeyId = { $keyId: string | number };

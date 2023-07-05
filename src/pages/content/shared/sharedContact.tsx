@@ -78,7 +78,7 @@ const commonRightTextOne = (
 
 const commonRightButtons: SplitContentProps['rightContent']['rightButtons'] = [
   {
-    keyId: 1,
+    $keyId: 1,
     text: 'Contact',
     role: 'link',
     to: '/contact',
@@ -97,7 +97,7 @@ const sharedContact = (variant: ContactVariant = 'primary') => {
     rightHeading: commonRightHeading(),
     rightTexts: [
       {
-        keyId: 1,
+        $keyId: 1,
         children: commonRightTextOne,
       },
     ],

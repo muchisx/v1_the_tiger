@@ -1,12 +1,12 @@
 // Dependencies
 import { useRef, useState } from 'react';
-// Types
-import type { TargetAndTransition } from 'framer-motion';
-import type { Props } from './Button.types';
-// Context
-import { useMediaQueryContext } from '../../../context/MediaQueryContext';
+import { type TargetAndTransition } from 'framer-motion';
 // Styled Components
 import { SpanStyled, ButtonStyled, Container, IconWrap, LinkStyled } from './Button.styles';
+// Context
+import { useMediaQueryContext } from '../../../context/MediaQueryContext';
+// Types
+import type { Props } from './Button.types';
 
 function Button(props: Props) {
   const {
@@ -21,6 +21,7 @@ function Button(props: Props) {
     className,
     newTab,
     rel = 'noopener noreferrer',
+    ...attrs
   } = props;
 
   // 1️⃣ Target and Rel setters for when button is a 'link'
@@ -96,9 +97,9 @@ function Button(props: Props) {
       isHovered={isHovered}
     >
       {role === 'button' ? (
-        <ButtonStyled>{buttonContent}</ButtonStyled>
+        <ButtonStyled {...attrs}>{buttonContent}</ButtonStyled>
       ) : (
-        <LinkStyled to={to ?? ''} target={target} rel={relValue}>
+        <LinkStyled to={to ?? ''} target={target} rel={relValue} {...attrs}>
           {buttonContent}
         </LinkStyled>
       )}

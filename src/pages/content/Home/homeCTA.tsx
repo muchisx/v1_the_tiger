@@ -1,9 +1,10 @@
 import { css } from 'styled-components';
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 import type { Props as SplitContentProps } from '../../../components/SplitContent/SplitContent.types';
+import { getMediaQueryValue } from '../../../utils';
 
 const customStyles = css`
-  @media only screen and (min-wkeyidth: 768px) {
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
     .split-content__first p:first-of-type {
       text-transform: uppercase;
     }
@@ -24,7 +25,7 @@ const textRight = (
 const leftContent: SplitContentProps['leftContent'] = {
   leftTexts: [
     {
-      keyId: 1,
+      $keyId: 1,
       fontWeight: 500,
       children: textLeft,
     },
@@ -34,13 +35,13 @@ const leftContent: SplitContentProps['leftContent'] = {
 const rightContent: SplitContentProps['rightContent'] = {
   rightTexts: [
     {
-      keyId: 1,
+      $keyId: 1,
       children: textRight,
     },
   ],
   rightButtons: [
     {
-      keyId: 1,
+      $keyId: 1,
       role: 'link',
       newTab: true,
       Icon: ArrowRight,

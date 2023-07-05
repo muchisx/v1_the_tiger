@@ -66,7 +66,7 @@ const leftContent: SplitContentProps['leftContent'] = {
   },
   leftButtons: [
     {
-      keyId: 1,
+      $keyId: 1,
       role: 'link',
       to: '/services',
       text: 'Read more',
@@ -74,7 +74,7 @@ const leftContent: SplitContentProps['leftContent'] = {
       Icon: ArrowRight,
     },
     {
-      keyId: 2,
+      $keyId: 2,
       role: 'link',
       to: '/contact',
       text: 'Contact',
@@ -84,7 +84,7 @@ const leftContent: SplitContentProps['leftContent'] = {
   ],
   leftTexts: [
     {
-      keyId: 1,
+      $keyId: 1,
       children: leftText,
       className: 'highlight-quaternary',
     },
@@ -94,22 +94,22 @@ const leftContent: SplitContentProps['leftContent'] = {
 const rightContent: SplitContentProps['rightContent'] = {
   cards: [
     {
-      keyId: 1,
+      $keyId: 1,
       headerHeading: 'SHOPIFY DEVELOPMENT',
       HeaderIcon: ShoppingBag,
       headerTags: [
         {
-          keyId: 1,
+          $keyId: 1,
           children: 'Shopify',
           variant: 'primary',
         },
         {
-          keyId: 2,
+          $keyId: 2,
           children: 'Development',
           variant: 'tertiary',
         },
         {
-          keyId: 3,
+          $keyId: 3,
           children: 'Custom',
           variant: 'quaternary',
         },
@@ -120,22 +120,22 @@ const rightContent: SplitContentProps['rightContent'] = {
       },
     },
     {
-      keyId: 2,
+      $keyId: 2,
       headerHeading: 'REACT DEVELOPMENT',
       HeaderIcon: Molecule,
       headerTags: [
         {
-          keyId: 1,
+          $keyId: 1,
           children: 'React',
           variant: 'primary',
         },
         {
-          keyId: 2,
+          $keyId: 2,
           children: 'Development',
           variant: 'tertiary',
         },
         {
-          keyId: 3,
+          $keyId: 3,
           children: 'Custom',
           variant: 'quaternary',
         },
@@ -146,22 +146,22 @@ const rightContent: SplitContentProps['rightContent'] = {
       },
     },
     {
-      keyId: 3,
+      $keyId: 3,
       headerHeading: 'HELPING STARTUPS',
       HeaderIcon: Rocket,
       headerTags: [
         {
-          keyId: 1,
+          $keyId: 1,
           children: 'Audit',
           variant: 'primary',
         },
         {
-          keyId: 2,
+          $keyId: 2,
           children: 'Identity',
           variant: 'tertiary',
         },
         {
-          keyId: 3,
+          $keyId: 3,
           children: 'Development',
           variant: 'quaternary',
         },
@@ -172,22 +172,22 @@ const rightContent: SplitContentProps['rightContent'] = {
       },
     },
     {
-      keyId: 4,
+      $keyId: 4,
       headerHeading: 'FREE WEBSITE REVIEW',
       HeaderIcon: Eye,
       headerTags: [
         {
-          keyId: 1,
+          $keyId: 1,
           children: 'Issues',
           variant: 'primary',
         },
         {
-          keyId: 2,
+          $keyId: 2,
           children: 'Evaluations',
           variant: 'tertiary',
         },
         {
-          keyId: 3,
+          $keyId: 3,
           children: 'Solutions',
           variant: 'quaternary',
         },

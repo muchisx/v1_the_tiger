@@ -14,7 +14,7 @@ function LogoGrid(props: Props) {
       {title && <Heading text={title} fontWeight={400} fontSize="1.6rem" className="logo-grid__heading" />}
       <Grid>
         {logoUrls.map((logo) => (
-          <GridItem key={logo.keyId}>
+          <GridItem key={logo.$keyId}>
             <ImageResponsive src={logo.url} height="100%" width="max(116px, 68%)" fit="contain" />
           </GridItem>
         ))}

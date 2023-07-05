@@ -83,7 +83,7 @@ function Card(props: Props) {
           {headerTags && (
             <TagsContainer>
               {headerTags.map((tag) => (
-                <Tag variant={tag.variant} key={tag.keyId}>
+                <Tag variant={tag.variant} key={tag.$keyId}>
                   {tag.children}
                 </Tag>
               ))}

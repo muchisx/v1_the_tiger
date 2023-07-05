@@ -41,7 +41,7 @@ const logoUrlList = [
 ];
 
 const logoUrls: LogoGridProps['logoUrls'] = logoUrlList.map((logoUrl, index) => ({
-  keyId: index,
+  $keyId: index,
   url: logoUrl,
 }));
 

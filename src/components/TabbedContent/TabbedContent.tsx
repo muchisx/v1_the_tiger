@@ -17,15 +17,15 @@ import placeholderImg from '../../assets/images/hero-banner-1.jpg';
 
 function TabbedContent(props: Props) {
   const { tabbedContent, contain, customStyles } = props;
-  const [activeTab, setActiveTab] = useState<ContentProps['keyId']>('');
+  const [activeTab, setActiveTab] = useState<ContentProps['$keyId']>('');
   const [showTabs, setShowTabs] = useState<boolean>(false);
 
   useEffect(() => {
-    setActiveTab(tabbedContent[0].keyId);
+    setActiveTab(tabbedContent[0].$keyId);
   }, [tabbedContent]);
 
   const isMedium = useIsMedium();
-  const handleTabClick = (keyId: ContentProps['keyId']) => {
+  const handleTabClick = (keyId: ContentProps['$keyId']) => {
     if (isMedium || showTabs) {
       setActiveTab(keyId);
       setShowTabs(false);
@@ -40,9 +40,9 @@ function TabbedContent(props: Props) {
         <Tabs>
           {tabbedContent.map((item) => (
             <Tab
-              isActive={activeTab === item.keyId}
-              key={item.keyId}
-              onClick={() => handleTabClick(item.keyId)}
+              isActive={activeTab === item.$keyId}
+              key={item.$keyId}
+              onClick={() => handleTabClick(item.$keyId)}
               isShown={showTabs}
             >
               {item.title}
@@ -52,8 +52,8 @@ function TabbedContent(props: Props) {
 
         {tabbedContent.map(
           (item) =>
-            activeTab === item.keyId && (
-              <Content key={item.keyId}>
+            activeTab === item.$keyId && (
+              <Content key={item.$keyId}>
                 <Media>
                   <ImageResponsive src={placeholderImg} height="auto" width="100%" />
                 </Media>
