@@ -21,7 +21,6 @@ function Button(props: Props) {
     className,
     newTab,
     rel = 'noopener noreferrer',
-    ...attrs
   } = props;
 
   // 1️⃣ Target and Rel setters for when button is a 'link'
@@ -97,9 +96,9 @@ function Button(props: Props) {
       isHovered={isHovered}
     >
       {role === 'button' ? (
-        <ButtonStyled {...attrs}>{buttonContent}</ButtonStyled>
+        <ButtonStyled>{buttonContent}</ButtonStyled>
       ) : (
-        <LinkStyled to={to ?? ''} target={target} rel={relValue} {...attrs}>
+        <LinkStyled to={to ?? ''} target={target} rel={relValue}>
           {buttonContent}
         </LinkStyled>
       )}
