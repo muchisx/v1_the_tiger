@@ -1,19 +1,19 @@
 // Dependencies
 import { useState, useEffect } from 'react';
+import { WindowNew } from '@styled-icons/fluentui-system-filled';
 // Components
 import ImageResponsive from '../shared/ImageResponsive/ImageResponsive';
 import Section from '../shared/Section/Section';
 import Text from '../shared/Text/Text';
 import Tabs from '../shared/Tabs/Tabs';
 import Tab from '../shared/Tab/Tab';
+import Button from '../shared/Button/Button';
 // Styled Components
 import { TabbedContentStyled, Content, Media, Description } from './TabbedContent.styles';
 // Utils
 import { useIsMedium } from '../../hooks';
 // Types
 import type { Props, Content as ContentProps } from './TabbedContent.types';
-
-import placeholderImg from '../../assets/images/hero-banner-1.jpg';
 
 function TabbedContent(props: Props) {
   const { tabbedContent, contain, customStyles } = props;
@@ -55,13 +55,21 @@ function TabbedContent(props: Props) {
             activeTab === item.$keyId && (
               <Content key={item.$keyId}>
                 <Media>
-                  <ImageResponsive src={placeholderImg} height="auto" width="100%" />
+                  <ImageResponsive src={item.mediaSource} height="auto" width="100%" />
                 </Media>
                 <Description>
                   <Text fontSize="2.4rem" fontWeight={500}>
                     {item.title}
                   </Text>
                   <Text>{item.description}</Text>
+                  <Button
+                    text="Expand media"
+                    role="link"
+                    to={item.mediaSource}
+                    newTab
+                    variant="quaternary"
+                    Icon={WindowNew}
+                  />
                 </Description>
               </Content>
             )

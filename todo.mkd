@@ -13,6 +13,7 @@
   - [x] Menu Lists
   - [ ] Footer Newsletter
 - [ ] Contact Form
+- [ ] Try this for all shared components https://www.youtube.com/watch?v=eXRlVpw1SIQ&ab_channel=Joshtriedcoding
 - [ ] Customize via props:
   - [ ] Add customStyles prop to all section components
   - [x] SplitContent Background shape rotation vs scroll
