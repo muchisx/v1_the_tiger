@@ -7,7 +7,7 @@ export const ButtonStyled = styled(motion.button)``;
 export const LinkStyled = styled(motion(Link))``;
 export const SpanStyled = styled(motion.span)``;
 export const IconWrap = styled(motion.div)``;
-export const Container = styled(motion.div)<ContainerProps>`
+export const ButtonContainerStyled = styled(motion.div)<ContainerProps>`
   flex-shrink: 0;
   width: fit-content;
   height: fit-content;
@@ -63,6 +63,9 @@ export const Container = styled(motion.div)<ContainerProps>`
   }
 
   & ${SpanStyled} {
-    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
   }
 `;

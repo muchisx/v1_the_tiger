@@ -2,7 +2,7 @@
 import { useRef, useState } from 'react';
 import { type TargetAndTransition } from 'framer-motion';
 // Styled Components
-import { SpanStyled, ButtonStyled, Container, IconWrap, LinkStyled } from './Button.styles';
+import { SpanStyled, ButtonStyled, ButtonContainerStyled, IconWrap, LinkStyled } from './Button.styles';
 // Context
 import { useMediaQueryContext } from '../../../context/MediaQueryContext';
 // Types
@@ -82,7 +82,7 @@ function Button(props: Props) {
   // -------------------------- --------------------------
 
   return (
-    <Container
+    <ButtonContainerStyled
       variant={variant}
       text={text}
       Icon={Icon}
@@ -102,7 +102,7 @@ function Button(props: Props) {
           {buttonContent}
         </LinkStyled>
       )}
-    </Container>
+    </ButtonContainerStyled>
   );
 }
 
