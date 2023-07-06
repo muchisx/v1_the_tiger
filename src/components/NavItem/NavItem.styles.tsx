@@ -28,6 +28,10 @@ export const NavLinkStyled = styled(NavLink)`
     background-color: var(--navlink-bg-active);
   }
 
+  &:not(.active):hover {
+    background-color: var(--neutral-color-secondary);
+  }
+
   @media only screen and (min-width: ${getMediaQueryValue('md')}) {
     font-size: 2.4rem;
     padding: 24px;
@@ -46,10 +50,6 @@ export const NavItemStyled = styled.li`
     - always be able to have the "border" showing regardless of the direction
     - prevent the the double border when border or outlines overlap  */
   box-shadow: 1px -1px 0 var(--neutral-color-quaternary);
-
-  &:hover {
-    background-color: rgba(209, 209, 209, 0.36);
-  }
 
   & ${NavLinkStyled} svg {
     flex-shrink: 0;
