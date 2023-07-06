@@ -2,6 +2,7 @@
 import type { Props as TabbedContentProps } from '../../../components/TabbedContent/TabbedContent.types';
 
 import placeholderImage from '../../../assets/images/hero-banner-1.jpg';
+import testVideo from '../../../assets/videos/test.mp4';
 
 const jobFeaturedTasks: TabbedContentProps = {
   contain: 'margin',
@@ -11,8 +12,8 @@ const jobFeaturedTasks: TabbedContentProps = {
       title: 'AWESOME FEATURE',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-      mediaType: 'image',
-      mediaSource: placeholderImage,
+      mediaType: 'video',
+      mediaSource: testVideo,
     },
     {
       $keyId: 2,

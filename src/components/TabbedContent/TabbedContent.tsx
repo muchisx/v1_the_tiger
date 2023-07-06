@@ -55,7 +55,13 @@ function TabbedContent(props: Props) {
             activeTab === item.$keyId && (
               <Content key={item.$keyId}>
                 <Media>
-                  <ImageResponsive src={item.mediaSource} height="auto" width="100%" />
+                  {item.mediaType === 'image' ? (
+                    <ImageResponsive src={item.mediaSource} height="auto" width="100%" />
+                  ) : (
+                    <video controls muted autoPlay playsInline loop>
+                      <source src={item.mediaSource} />
+                    </video>
+                  )}
                 </Media>
                 <Description>
                   <Text fontSize="2.4rem" fontWeight={500}>
