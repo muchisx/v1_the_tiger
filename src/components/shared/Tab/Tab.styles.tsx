@@ -43,16 +43,21 @@ export const TabStyled = styled.li<TabStyledProps>`
   box-shadow: -1px 1px 0 var(--neutral-color-quaternary);
 
   ${(props) =>
-    props.isActive &&
-    css`
-      color: var(--text-tertiary);
-      background-color: var(--body-bg-color-secondary);
-      ${TabAnchor} {
-        @media only screen and (min-width: ${getMediaQueryValue('md')}) {
-          pointer-events: none;
-        }
-      }
-    `}
+    props.isActive
+      ? css`
+          color: var(--text-tertiary);
+          background-color: var(--body-bg-color-secondary);
+          ${TabAnchor} {
+            @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+              pointer-events: none;
+            }
+          }
+        `
+      : css`
+          &:hover {
+            background-color: var(--neutral-color-secondary);
+          }
+        `}
 
   // In mobile they will be hidden by default
   ${(props) =>
