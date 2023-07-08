@@ -56,7 +56,7 @@
   /* -quaternary */
   --btn-color-bg-quaternary: transparent;
   --btn-color-text-quaternary: #747474;
-  --btn-color-border-quaternary: var(--neutral-color-secondary);
+  --btn-color-border-quaternary: var(--neutral-color-quaternary);
   --btn-color-icon-quaternary: var(--btn-color-text-quaternary);
   --btn-color-icon-bg-quaternary: var(--btn-color-bg-quaternary);
 
