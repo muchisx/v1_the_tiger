@@ -19,15 +19,14 @@ export type Props = {
 
 function VideoResponsive(props: Props) {
   const { height, width, fit = 'cover', padding, $src, ...attrs } = props;
+  const sources = Array.isArray($src) ? $src : [$src];
 
   return (
     <VideoResponsiveStyled $height={height} $width={width} $padding={padding}>
       <Video fit={fit} {...attrs}>
-        {Array.isArray($src) ? (
-          $src.map((item) => <source src={item.srcURL} type={item.srcType} key={item.srcURL} />)
-        ) : (
-          <source src={$src.srcURL} type={$src.srcType} />
-        )}
+        {sources.map((item) => (
+          <source src={item.srcURL} type={item.srcType} key={item.srcURL} />
+        ))}
       </Video>
     </VideoResponsiveStyled>
   );
