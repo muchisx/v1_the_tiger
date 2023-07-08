@@ -9,7 +9,7 @@ import SplitContent, { SplitContentCustom } from '../components/SplitContent/Spl
 import ImageResponsive from '../components/shared/ImageResponsive/ImageResponsive';
 import TabbedContent from '../components/TabbedContent/TabbedContent';
 // Styled Components
-import customImageBannerStyles from './content/Job/job.styles';
+import { customImageBannerStyles, additionalInfoCSS } from './content/Job/job.styles';
 // Types
 import type { Props as ImageBannerProps } from '../components/ImageBanner/imageBanner.types';
 import type { Props as SplitContentProps } from '../components/SplitContent/SplitContent.types';
@@ -84,7 +84,12 @@ function Job() {
       <Section contain="margin" enableGutter marginTop={100}>
         <Heading className="uppercase" text={jobFeaturedPhrase} fontSize="clamp(24px, 3.2vw, 46px)" />
       </Section>
-      <SplitContent leftContent={{}} rightContent={jobAdditionalInfoContent} contain="margin">
+      <SplitContent
+        leftContent={{}}
+        rightContent={jobAdditionalInfoContent}
+        contain="margin"
+        customStyles={additionalInfoCSS}
+      >
         <SplitContentCustom location="first">
           <ImageResponsive
             src={arrowDownRight}

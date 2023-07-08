@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { WindowNew } from '@styled-icons/fluentui-system-filled';
 // Components
 import ImageResponsive from '../shared/ImageResponsive/ImageResponsive';
+import VideoResponsive from '../shared/VideoResponsive/VideoResponsive';
 import Section from '../shared/Section/Section';
 import Text from '../shared/Text/Text';
 import Tabs from '../shared/Tabs/Tabs';
@@ -58,9 +59,17 @@ function TabbedContent(props: Props) {
                   {item.mediaType === 'image' ? (
                     <ImageResponsive src={item.mediaSource} height="auto" width="100%" />
                   ) : (
-                    <video controls muted autoPlay playsInline loop>
-                      <source src={item.mediaSource} />
-                    </video>
+                    <VideoResponsive
+                      height="auto"
+                      width="100%"
+                      controls
+                      muted
+                      autoPlay
+                      playsInline
+                      loop
+                      preload="metadata"
+                      $src={{ srcType: 'video/mp4', srcURL: item.mediaSource }}
+                    />
                   )}
                 </Media>
                 <Description>
