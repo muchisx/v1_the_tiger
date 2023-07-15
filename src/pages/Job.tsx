@@ -19,7 +19,6 @@ import arrowDownRight from '../assets/svgs/arrow_down-right.svg';
 import sharedContact from './content/shared/sharedContact';
 import CardGrid from '../components/CardGrid/CardGrid';
 import jobMoreJobs from './content/Job/jobMoreJobs';
-import jobFeaturedTasks from './content/Job/jobFeaturedTasks';
 
 const jobContact = sharedContact('secondary');
 
@@ -39,8 +38,17 @@ function Job() {
     return null;
   }
 
-  const { jobRole, jobSerial, jobTitle, jobYear, jobAllies, heroBannerImage, jobFeaturedPhrase, jobAdditionalInfo } =
-    jobData;
+  const {
+    jobRole,
+    jobSerial,
+    jobTitle,
+    jobYear,
+    jobAllies,
+    heroBannerImage,
+    jobFeaturedPhrase,
+    jobAdditionalInfo,
+    jobFeaturedTasks,
+  } = jobData;
 
   const heroBannerBottom: ImageBannerProps['bottomContent'] = [
     {
