@@ -1,6 +1,7 @@
 # Todo List
 
 - [x] only use useMediaQuery state globally to improve performance and grab it from context.
+- [ ] use UUID package for all $keyId throught the app
 - [ ] Remove styled icons fluent-regular if its not needed, as I am using just fluent-filled icons.
 - [ ] Add footer privacy, terms and copyright
 - [ ] Create webp version of all image assets and create optimized fallbacks for browsers that don't support webp.
@@ -28,7 +29,7 @@
   - [ ] Reveal pages animation
   - [ ] Nav reveal animation
 - [ ] Embed calendly form instead of linking out of my porfolio
-- [ ] Change types of css values from 'string' to a more complex type that accepts `${number}${unit}` with template literals.
+- [x] Change types of css values from 'string' to a more complex type that accepts `${number}${unit}` with template literals.
 - [ ] Use theme instead of variables in css and use this breakpoint system inspired in Tailwind and MiUI
   ```javascript
   {

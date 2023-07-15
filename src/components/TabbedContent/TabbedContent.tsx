@@ -13,6 +13,8 @@ import Button from '../shared/Button/Button';
 import { TabbedContentStyled, Content, Media, Description } from './TabbedContent.styles';
 // Utils
 import { useIsMedium } from '../../hooks';
+// Media
+import poster from '../../assets/images/video-poster.jpg';
 // Types
 import type { Props, Content as ContentProps } from './TabbedContent.types';
 
@@ -54,7 +56,7 @@ function TabbedContent(props: Props) {
         {tabbedContent.map(
           (item) =>
             activeTab === item.$keyId && (
-              <Content key={item.$keyId}>
+              <Content key={item.mediaSource}>
                 <Media>
                   {item.mediaIs === 'image' ? (
                     <ImageResponsive src={item.mediaSource} height="auto" width="100%" />
@@ -68,6 +70,7 @@ function TabbedContent(props: Props) {
                       playsInline
                       loop
                       preload="metadata"
+                      poster={poster}
                       $src={{ srcType: item.mediaType, srcURL: item.mediaSource }}
                     />
                   )}
