@@ -3,10 +3,11 @@ import { VideoHTMLAttributes } from 'react';
 import { Video, VideoResponsiveStyled } from './VideoResponsive.styles';
 // Types
 import type { Width, Height } from '../../../types/css.types';
+import { VideoType } from '../../../types/media.types';
 
 type Source = {
   srcURL: string;
-  srcType: 'video/mp4' | 'video/webm' | 'video/ogg';
+  srcType: VideoType;
 };
 
 export type Props = {

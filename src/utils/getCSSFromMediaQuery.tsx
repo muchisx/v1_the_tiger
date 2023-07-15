@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import type { MediaQueryWithCSS } from '../types/media.types';
+import type { MediaQueryWithCSS } from '../types/mediaQuery.types';
 import getMediaQueryValue, { mediaQueries } from './getMediaQueryValue';
 import getTypedEntries from './getTypedEntries';
 

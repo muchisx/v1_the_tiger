@@ -12,7 +12,8 @@ const jobFeaturedTasks: TabbedContentProps = {
       title: 'AWESOME FEATURE',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-      mediaType: 'video',
+      mediaIs: 'video',
+      mediaType: 'video/mp4',
       mediaSource: testVideo,
     },
     {
@@ -20,14 +21,16 @@ const jobFeaturedTasks: TabbedContentProps = {
       title: 'ANOTHER FEATURE',
       description:
         'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-      mediaType: 'image',
+      mediaIs: 'image',
+      mediaType: 'image/jpeg',
       mediaSource: placeholderImage,
     },
     {
       $keyId: 3,
       title: 'FEATURE NAME',
       description: 'Lorem ipsum dolor,quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-      mediaType: 'image',
+      mediaIs: 'image',
+      mediaType: 'image/jpeg',
       mediaSource: placeholderImage,
     },
   ],

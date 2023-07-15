@@ -56,7 +56,7 @@ function TabbedContent(props: Props) {
             activeTab === item.$keyId && (
               <Content key={item.$keyId}>
                 <Media>
-                  {item.mediaType === 'image' ? (
+                  {item.mediaIs === 'image' ? (
                     <ImageResponsive src={item.mediaSource} height="auto" width="100%" />
                   ) : (
                     <VideoResponsive
@@ -68,7 +68,7 @@ function TabbedContent(props: Props) {
                       playsInline
                       loop
                       preload="metadata"
-                      $src={{ srcType: 'video/mp4', srcURL: item.mediaSource }}
+                      $src={{ srcType: item.mediaType, srcURL: item.mediaSource }}
                     />
                   )}
                 </Media>

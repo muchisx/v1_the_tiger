@@ -1,4 +1,4 @@
-import type { MediaQueryKey, MediaQueryKeyAndValue } from '../types/media.types';
+import type { MediaQueryKey, MediaQueryKeyAndValue } from '../types/mediaQuery.types';
 
 // * This should be the only source of mediaQuery data throughout the app
 export const mediaQueries: MediaQueryKeyAndValue = {
