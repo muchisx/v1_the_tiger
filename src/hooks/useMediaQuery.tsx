@@ -30,5 +30,5 @@ export const useIsSmall = () => useMediaQuery(`(min-width: ${getMediaQueryValue(
 export const useIsMedium = () => useMediaQuery(`(min-width: ${getMediaQueryValue('md')})`);
 export const useIsLarge = () => useMediaQuery(`(min-width: ${getMediaQueryValue('lg')})`);
 export const useIsXLarge = () => useMediaQuery(`(min-width: ${getMediaQueryValue('xl')})`);
-export const useIsXXLarge = () => useMediaQuery(`(min-widths: ${getMediaQueryValue('xxl')})`);
+export const useIsXXLarge = () => useMediaQuery(`(min-width: ${getMediaQueryValue('xxl')})`);
 export default useMediaQuery;
