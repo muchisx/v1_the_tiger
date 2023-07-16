@@ -10,7 +10,7 @@ import k9Banner from '../../../assets/images/companies/k9-arsenal/featured-image
 import freshVictorBanner from '../../../assets/images/companies/fresh-victor/featured-image3.jpg';
 import responsibleBanner from '../../../assets/images/companies/responsible/featured-image.png';
 import safkanBanner from '../../../assets/images/companies/safkan-ottoset/featured-image2.jpg';
-import placeholderImage from '../../../assets/images/hero-banner-1.jpg';
+import placeholderImage from '../../../assets/images/video-poster.jpg';
 import testVideo from '../../../assets/videos/test.mp4';
 // Types
 import type { Job } from './job.types';

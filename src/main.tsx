@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
@@ -13,25 +13,32 @@ import WebDev from './pages/WebDev';
 import Shopify from './pages/Shopify';
 import Job from './pages/Job';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    Component: App,
+    children: [
+      { index: true, Component: Home },
+      { path: 'playground', Component: Playground },
+      { path: 'contact', Component: Contact },
+      { path: 'about', Component: About },
+      {
+        path: 'work',
+        children: [
+          { index: true, Component: Work },
+          { path: ':jobId', Component: Job },
+        ],
+      },
+      { path: 'services', Component: Services },
+      { path: 'web-dev', Component: WebDev },
+      { path: 'shopify', Component: Shopify },
+      { path: '*', Component: NotFound },
+    ],
+  },
+]);
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
-          <Route path="playground" element={<Playground />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="about" element={<About />} />
-          <Route path="work">
-            <Route index element={<Work />} />
-            <Route path=":jobId" element={<Job />} />
-          </Route>
-          <Route path="services" element={<Services />} />
-          <Route path="web-dev" element={<WebDev />} />
-          <Route path="shopify" element={<Shopify />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
