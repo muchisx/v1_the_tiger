@@ -14,6 +14,7 @@ export const TabAnchor = styled.a`
 
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 
   svg {
     flex-shrink: 0;

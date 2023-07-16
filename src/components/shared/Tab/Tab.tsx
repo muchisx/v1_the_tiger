@@ -6,14 +6,11 @@ import { TabAnchor, TabStyled } from './Tab.styles';
 import type { Props } from './Tab.types';
 
 function Tab(props: Props) {
-  const { children, isActive, isShown, onClick } = props;
-
-  const id = children.replace(' ', '').toLowerCase();
-  const href = `#${id}`;
+  const { children, isActive, isShown, ...attrs } = props;
 
   return (
-    <TabStyled isActive={isActive} isShown={isShown} onClick={onClick}>
-      <TabAnchor href={href} role="tab" draggable={false}>
+    <TabStyled isActive={isActive} isShown={isShown}>
+      <TabAnchor role="tab" draggable={false} {...attrs}>
         {children}
         {isActive && <ChevronUpDown />}
       </TabAnchor>

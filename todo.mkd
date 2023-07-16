@@ -23,6 +23,7 @@
 - [ ] Input and Select Field with "\<label>"
 - [ ] Blockquote with "\<blockquote>" or "\<q>" and "\<cite>"
 - [ ] Add loading state before images and fonts load
+- [ ] Look into lazy loading react router routes with route.lazy
 - [ ] Animations
   - [ ] Add animation for route change
   - [ ] Logo hover animation
