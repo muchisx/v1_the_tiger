@@ -18,7 +18,7 @@ function NavItem(props: Props) {
 
   return (
     <NavItemStyled className="nav-item">
-      <NavLinkStyled to={to} target={target} rel={relValue}>
+      <NavLinkStyled to={to} target={target} rel={relValue} end>
         <NavLinkSpan>
           {text}
           {Icon && <Icon size={24} />}
