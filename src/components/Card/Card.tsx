@@ -62,10 +62,15 @@ function Card(props: Props) {
   return (
     <CardStyled className={className} customStyles={customStyles} whileHover="hover">
       {backgroundImg && (
-        // TODO: make this use the ImageResponsive component instead,
-        // maybe pass it as a styled() in the component styles
-        // but need to figure out how to pass original props down
-        <CardBgImg src={backgroundImg} variants={bgImgMotion} transition={{ duration: 0.4 }} loading="lazy" />
+        <CardBgImg
+          src={backgroundImg}
+          variants={bgImgMotion}
+          transition={{ duration: 0.4 }}
+          loading="lazy"
+          width="100%"
+          height="100%"
+          refTarget="container"
+        />
       )}
 
       {cardLinkWrap.to && <CardLinkWrap to={to} rel={relValue} target={target} />}

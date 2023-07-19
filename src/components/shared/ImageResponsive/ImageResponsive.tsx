@@ -1,26 +1,31 @@
+// Dependencies
+import { forwardRef } from 'react';
 // Styled Components
 import { Image, ImageResponsiveStyled } from './ImageResponsive.styles';
-
 // Types
-import type { Width, Height } from '../../../types/css.types';
+import type { Props } from './ImageResponsive.types';
 
-export type Props = {
-  height: Height;
-  width: Width;
-  src: string;
-  fit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
-  padding?: string;
-  loading?: 'eager' | 'lazy';
-};
+const ImageResponsive = forwardRef<HTMLDivElement | HTMLImageElement, Props>((props: Props, ref) => {
+  const { height, width, fit = 'cover', padding, src, loading = 'lazy', refTarget = 'container', ...attrs } = props;
 
-function ImageResponsive(props: Props) {
-  const { height, width, fit = 'cover', padding, src, loading = 'lazy' } = props;
+  // Dynamically attatch ref target depending on the usage,
+  // This allows libraries like framer-motion to target the correct element for animating
+  const imageRef = refTarget === 'image' ? ref : undefined;
+  const containerRef = refTarget === 'container' ? ref : undefined;
 
   return (
-    <ImageResponsiveStyled $height={height} $width={width} $padding={padding}>
-      <Image fit={fit} src={src} loading={loading} />
+    <ImageResponsiveStyled
+      {...attrs}
+      $height={height}
+      $width={width}
+      $padding={padding}
+      ref={containerRef as React.ForwardedRef<HTMLDivElement>}
+    >
+      <Image fit={fit} src={src} loading={loading} ref={imageRef as React.ForwardedRef<HTMLImageElement>} {...attrs} />
     </ImageResponsiveStyled>
   );
-}
+});
+
+ImageResponsive.displayName = 'ImageResponsive';
 
 export default ImageResponsive;

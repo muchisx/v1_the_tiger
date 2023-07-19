@@ -13,9 +13,9 @@ type Source = {
 export type Props = {
   height: Height;
   width: Width;
+  padding?: string;
   $src: Source | Source[];
   fit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
-  padding?: string;
 } & VideoHTMLAttributes<HTMLVideoElement>;
 
 function VideoResponsive(props: Props) {

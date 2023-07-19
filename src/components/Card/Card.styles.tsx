@@ -1,11 +1,14 @@
+// Dependencies
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import type { Variants } from 'framer-motion';
-import { CardContainerProps } from './Card.types';
+// Components
+import ImageResponsive from '../shared/ImageResponsive/ImageResponsive';
+// Utils
 import { getMediaQueryValue } from '../../utils';
-
-// Styled Components
+// Types
+import { CardContainerProps } from './Card.types';
 
 export const CardFooter = styled.div`
   display: flex;
@@ -67,12 +70,9 @@ export const CardHeader = styled.header`
   }
 `;
 
-export const CardBgImg = styled(motion.img)`
+export const CardBgImg = styled(motion(ImageResponsive))`
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   z-index: -2;
 `;
 
