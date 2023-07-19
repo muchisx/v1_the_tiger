@@ -1,6 +1,9 @@
+// Dependencies
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
-import type { Props as SplitContentProps } from '../../../components/SplitContent/SplitContent.types';
-import svgShape from '../../../assets/svgs/abstract-8.svg';
+// Assets
+import svgShape from '@assets/svgs/abstract-8.svg';
+// Types
+import type { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
 
 // TODO - change the text
 const textRight = (

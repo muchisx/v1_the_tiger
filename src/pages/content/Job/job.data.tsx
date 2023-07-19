@@ -5,13 +5,22 @@ import qdFeaturedTask1 from '../../../assets/videos/companies/quality-door/featu
 import qdFeaturedTask2 from '../../../assets/videos/companies/quality-door/featured-task-2.mp4';
 import qdFeaturedTask3 from '../../../assets/videos/companies/quality-door/featured-task-3.mp4';
 import qdFeaturedTask4 from '../../../assets/videos/companies/quality-door/featured-task-4.mp4';
-import diamondBanner from '../../../assets/images/companies/diamond-mattress/featured-image2.jpg';
-import k9Banner from '../../../assets/images/companies/k9-arsenal/featured-image.jpg';
 import freshVictorBanner from '../../../assets/images/companies/fresh-victor/featured-image3.jpg';
+import fvFeaturedTask1 from '../../../assets/videos/companies/fresh-victor/featured-task-1.mp4';
+import fvFeaturedTask2 from '../../../assets/videos/companies/fresh-victor/featured-task-2.mp4';
+import fvFeaturedTask3 from '../../../assets/videos/companies/fresh-victor/featured-task-3.mp4';
 import responsibleBanner from '../../../assets/images/companies/responsible/featured-image.png';
-import safkanBanner from '../../../assets/images/companies/safkan-ottoset/featured-image2.jpg';
-import placeholderImage from '../../../assets/images/video-poster.jpg';
-import testVideo from '../../../assets/videos/test.mp4';
+import resFeaturedTask1 from '../../../assets/videos/companies/responsible/featured-task-1.mp4';
+import resFeaturedTask2 from '../../../assets/videos/companies/responsible/featured-task-2.mp4';
+import resFeaturedTask3 from '../../../assets/videos/companies/responsible/featured-task-3.mp4';
+import resFeaturedTask4 from '../../../assets/videos/companies/responsible/featured-task-4.mp4';
+import k9Banner from '../../../assets/images/companies/k9-arsenal/featured-image.jpg';
+import k9FeaturedTask1 from '../../../assets/videos/companies/k9-arsenal/featured-task-1.mp4';
+import k9FeaturedTask2 from '../../../assets/videos/companies/k9-arsenal/featured-task-2.mp4';
+import diamondBanner from '../../../assets/images/companies/diamond-mattress/featured-image2.jpg';
+import diamondFeaturedTask1 from '../../../assets/videos/companies/diamond-mattress/featured-task-1.mp4';
+import diamondFeaturedTask2 from '../../../assets/videos/companies/diamond-mattress/featured-task-2.mp4';
+
 // Types
 import type { Job } from './job.types';
 
@@ -94,24 +103,24 @@ const data: Job[] = [
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
           mediaIs: 'video',
           mediaType: 'video/mp4',
-          mediaSource: testVideo,
+          mediaSource: fvFeaturedTask1,
         },
         {
           $keyId: 2,
           title: 'ANOTHER FEATURE',
           description:
             'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-          mediaIs: 'image',
-          mediaType: 'image/jpeg',
-          mediaSource: placeholderImage,
+          mediaIs: 'video',
+          mediaType: 'video/mp4',
+          mediaSource: fvFeaturedTask2,
         },
         {
           $keyId: 3,
           title: 'FEATURE NAME',
           description: 'Lorem ipsum dolor,quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-          mediaIs: 'image',
-          mediaType: 'image/jpeg',
-          mediaSource: placeholderImage,
+          mediaIs: 'video',
+          mediaType: 'video/mp4',
+          mediaSource: fvFeaturedTask3,
         },
       ],
     },
@@ -139,24 +148,32 @@ const data: Job[] = [
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
           mediaIs: 'video',
           mediaType: 'video/mp4',
-          mediaSource: testVideo,
+          mediaSource: resFeaturedTask1,
         },
         {
           $keyId: 2,
           title: 'ANOTHER FEATURE',
           description:
             'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-          mediaIs: 'image',
-          mediaType: 'image/jpeg',
-          mediaSource: placeholderImage,
+          mediaIs: 'video',
+          mediaType: 'video/mp4',
+          mediaSource: resFeaturedTask2,
         },
         {
           $keyId: 3,
           title: 'FEATURE NAME',
           description: 'Lorem ipsum dolor,quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-          mediaIs: 'image',
-          mediaType: 'image/jpeg',
-          mediaSource: placeholderImage,
+          mediaIs: 'video',
+          mediaType: 'video/mp4',
+          mediaSource: resFeaturedTask3,
+        },
+        {
+          $keyId: 4,
+          title: 'FEATURE NAME',
+          description: 'Lorem ipsum dolor,quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
+          mediaIs: 'video',
+          mediaType: 'video/mp4',
+          mediaSource: resFeaturedTask4,
         },
       ],
     },
@@ -184,75 +201,22 @@ const data: Job[] = [
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
           mediaIs: 'video',
           mediaType: 'video/mp4',
-          mediaSource: testVideo,
+          mediaSource: k9FeaturedTask1,
         },
         {
           $keyId: 2,
           title: 'ANOTHER FEATURE',
           description:
             'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-          mediaIs: 'image',
-          mediaType: 'image/jpeg',
-          mediaSource: placeholderImage,
-        },
-        {
-          $keyId: 3,
-          title: 'FEATURE NAME',
-          description: 'Lorem ipsum dolor,quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-          mediaIs: 'image',
-          mediaType: 'image/jpeg',
-          mediaSource: placeholderImage,
+          mediaIs: 'video',
+          mediaType: 'video/mp4',
+          mediaSource: k9FeaturedTask2,
         },
       ],
     },
   },
   {
     id: 5,
-    jobId: 'safkan-ottoset',
-    jobTitle: 'Safkan Ottoset',
-    jobSerial: '05',
-    jobRole: 'Shopify Developer',
-    jobAllies: 'ColoredByte - Designers',
-    jobYear: '2022',
-    heroBannerImage: safkanBanner,
-    jobFeaturedPhrase:
-      'Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset',
-    jobAdditionalInfo:
-      'Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset Safkan ottoset',
-    jobFeaturedTasks: {
-      contain: 'margin',
-      tabbedContent: [
-        {
-          $keyId: 1,
-          title: 'AWESOME FEATURE',
-          description:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-          mediaIs: 'video',
-          mediaType: 'video/mp4',
-          mediaSource: testVideo,
-        },
-        {
-          $keyId: 2,
-          title: 'ANOTHER FEATURE',
-          description:
-            'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-          mediaIs: 'image',
-          mediaType: 'image/jpeg',
-          mediaSource: placeholderImage,
-        },
-        {
-          $keyId: 3,
-          title: 'FEATURE NAME',
-          description: 'Lorem ipsum dolor,quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-          mediaIs: 'image',
-          mediaType: 'image/jpeg',
-          mediaSource: placeholderImage,
-        },
-      ],
-    },
-  },
-  {
-    id: 6,
     jobId: 'diamond-mattress',
     jobTitle: 'Diamond mattress',
     jobSerial: '06',
@@ -274,24 +238,16 @@ const data: Job[] = [
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
           mediaIs: 'video',
           mediaType: 'video/mp4',
-          mediaSource: testVideo,
+          mediaSource: diamondFeaturedTask1,
         },
         {
           $keyId: 2,
           title: 'ANOTHER FEATURE',
           description:
             'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-          mediaIs: 'image',
-          mediaType: 'image/jpeg',
-          mediaSource: placeholderImage,
-        },
-        {
-          $keyId: 3,
-          title: 'FEATURE NAME',
-          description: 'Lorem ipsum dolor,quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
-          mediaIs: 'image',
-          mediaType: 'image/jpeg',
-          mediaSource: placeholderImage,
+          mediaIs: 'video',
+          mediaType: 'video/mp4',
+          mediaSource: diamondFeaturedTask2,
         },
       ],
     },
