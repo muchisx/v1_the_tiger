@@ -10,7 +10,18 @@ import type { Width, Height } from '../../../types/css.types';
 //   srcType: ImageType;
 // };
 
-type ConditionnalProps =
+export type ImageProps = {
+  fit: Props['fit'];
+  position: Props['position'];
+};
+
+export type ImageContainerProps = {
+  $height: Props['height'];
+  $width: Props['width'];
+  $padding?: Props['padding'];
+};
+
+type ConditionnalRefProps =
   | ({ refTarget?: 'container' } & HtmlHTMLAttributes<HTMLDivElement>)
   | ({ refTarget?: 'image' } & ImgHTMLAttributes<HTMLImageElement>);
 
@@ -21,4 +32,6 @@ export type Props = {
   src: string;
   fit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
   loading?: 'eager' | 'lazy';
-} & ConditionnalProps;
+  // This allows autocomplete while allowing any string aswell
+  position?: 'bottom' | 'center' | 'left' | 'right' | 'top' | Record<never, never>;
+} & ConditionnalRefProps;

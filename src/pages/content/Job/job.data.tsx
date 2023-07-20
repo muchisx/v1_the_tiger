@@ -1,25 +1,25 @@
 /* eslint-disable max-len */
 // Media
-import qdBanner from '../../../assets/images/companies/quality-door/featured-image.jpg';
-import qdFeaturedTask1 from '../../../assets/videos/companies/quality-door/featured-task-1.mp4';
-import qdFeaturedTask2 from '../../../assets/videos/companies/quality-door/featured-task-2.mp4';
-import qdFeaturedTask3 from '../../../assets/videos/companies/quality-door/featured-task-3.mp4';
-import qdFeaturedTask4 from '../../../assets/videos/companies/quality-door/featured-task-4.mp4';
-import freshVictorBanner from '../../../assets/images/companies/fresh-victor/featured-image3.jpg';
-import fvFeaturedTask1 from '../../../assets/videos/companies/fresh-victor/featured-task-1.mp4';
-import fvFeaturedTask2 from '../../../assets/videos/companies/fresh-victor/featured-task-2.mp4';
-import fvFeaturedTask3 from '../../../assets/videos/companies/fresh-victor/featured-task-3.mp4';
-import responsibleBanner from '../../../assets/images/companies/responsible/featured-image.png';
-import resFeaturedTask1 from '../../../assets/videos/companies/responsible/featured-task-1.mp4';
-import resFeaturedTask2 from '../../../assets/videos/companies/responsible/featured-task-2.mp4';
-import resFeaturedTask3 from '../../../assets/videos/companies/responsible/featured-task-3.mp4';
-import resFeaturedTask4 from '../../../assets/videos/companies/responsible/featured-task-4.mp4';
-import k9Banner from '../../../assets/images/companies/k9-arsenal/featured-image.jpg';
-import k9FeaturedTask1 from '../../../assets/videos/companies/k9-arsenal/featured-task-1.mp4';
-import k9FeaturedTask2 from '../../../assets/videos/companies/k9-arsenal/featured-task-2.mp4';
-import diamondBanner from '../../../assets/images/companies/diamond-mattress/featured-image2.jpg';
-import diamondFeaturedTask1 from '../../../assets/videos/companies/diamond-mattress/featured-task-1.mp4';
-import diamondFeaturedTask2 from '../../../assets/videos/companies/diamond-mattress/featured-task-2.mp4';
+import qdBanner from '@/assets/images/companies/quality-door/featured-image.jpg';
+import qdFeaturedTask1 from '@/assets/videos/companies/quality-door/featured-task-1.mp4';
+import qdFeaturedTask2 from '@/assets/videos/companies/quality-door/featured-task-2.mp4';
+import qdFeaturedTask3 from '@/assets/videos/companies/quality-door/featured-task-3.mp4';
+import qdFeaturedTask4 from '@/assets/videos/companies/quality-door/featured-task-4.mp4';
+import freshVictorBanner from '@/assets/images/companies/fresh-victor/featured-image3.jpg';
+import fvFeaturedTask1 from '@/assets/videos/companies/fresh-victor/featured-task-1.mp4';
+import fvFeaturedTask2 from '@/assets/videos/companies/fresh-victor/featured-task-2.mp4';
+import fvFeaturedTask3 from '@/assets/videos/companies/fresh-victor/featured-task-3.mp4';
+import responsibleBanner from '@/assets/images/companies/responsible/featured-image.png';
+import resFeaturedTask1 from '@/assets/videos/companies/responsible/featured-task-1.mp4';
+import resFeaturedTask2 from '@/assets/videos/companies/responsible/featured-task-2.mp4';
+import resFeaturedTask3 from '@/assets/videos/companies/responsible/featured-task-3.mp4';
+import resFeaturedTask4 from '@/assets/videos/companies/responsible/featured-task-4.mp4';
+import k9Banner from '@/assets/images/companies/k9-arsenal/featured-image.jpg';
+import k9FeaturedTask1 from '@/assets/videos/companies/k9-arsenal/featured-task-1.mp4';
+import k9FeaturedTask2 from '@/assets/videos/companies/k9-arsenal/featured-task-2.mp4';
+import diamondBanner from '@/assets/images/companies/diamond-mattress/featured-image2.jpg';
+import diamondFeaturedTask1 from '@/assets/videos/companies/diamond-mattress/featured-task-1.mp4';
+import diamondFeaturedTask2 from '@/assets/videos/companies/diamond-mattress/featured-task-2.mp4';
 
 // Types
 import type { Job } from './job.types';
@@ -33,6 +33,10 @@ const data: Job[] = [
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
+    thumbnailImage: {
+      src: qdBanner,
+      position: 'center 30%',
+    },
     heroBannerImage: qdBanner,
     jobFeaturedPhrase:
       "Embarking on the challenge of enhancing Quality Door's development was a remarkable challenge. I skillfully developed two redesigned homepages that breathed new life into the brand, while seamlessly incorporating new sections and features throughout the entire store.",
@@ -88,6 +92,9 @@ const data: Job[] = [
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
+    thumbnailImage: {
+      src: freshVictorBanner,
+    },
     heroBannerImage: freshVictorBanner,
     jobFeaturedPhrase:
       'fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor.',
@@ -133,6 +140,10 @@ const data: Job[] = [
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
+    thumbnailImage: {
+      src: responsibleBanner,
+      position: 'center top',
+    },
     heroBannerImage: responsibleBanner,
     jobFeaturedPhrase:
       'responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible.',
@@ -186,6 +197,9 @@ const data: Job[] = [
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2023',
+    thumbnailImage: {
+      src: k9Banner,
+    },
     heroBannerImage: k9Banner,
     jobFeaturedPhrase:
       'k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal.',
@@ -223,6 +237,10 @@ const data: Job[] = [
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
+    thumbnailImage: {
+      src: diamondBanner,
+      position: 'center 80%',
+    },
     heroBannerImage: diamondBanner,
     jobFeaturedPhrase:
       'I successfully built custom and customizable components for their Shopify Store, including upsell features directly on the product page. This implementation led to increased conversion rates and enhanced overall performance.',

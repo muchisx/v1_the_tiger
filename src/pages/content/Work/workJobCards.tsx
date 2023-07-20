@@ -46,7 +46,11 @@ const generateWorkJobCardsProps = (job: Job): CardGridProps['cardCells'][0] => {
   return {
     $keyId: job.id,
     card: {
-      backgroundImg: job.heroBannerImage,
+      backgroundImg: {
+        src: job.thumbnailImage?.src as string,
+        loading: job.thumbnailImage?.loading,
+        position: job.thumbnailImage?.position,
+      },
       cardLinkWrap: {
         to: `/work/${job.jobId}`,
       },

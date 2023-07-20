@@ -63,13 +63,14 @@ function Card(props: Props) {
     <CardStyled className={className} customStyles={customStyles} whileHover="hover">
       {backgroundImg && (
         <CardBgImg
-          src={backgroundImg}
-          variants={bgImgMotion}
-          transition={{ duration: 0.4 }}
-          loading="lazy"
+          src={backgroundImg.src}
+          loading={backgroundImg.loading}
+          position={backgroundImg.position}
           width="100%"
           height="100%"
           refTarget="container"
+          variants={bgImgMotion}
+          transition={{ duration: 0.4 }}
         />
       )}
 
