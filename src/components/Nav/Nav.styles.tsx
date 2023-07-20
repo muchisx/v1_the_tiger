@@ -1,8 +1,17 @@
 // Dependencies
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+// Components
+import Logo from '../shared/Logo/Logo';
 // Utils
 import { getMediaQueryValue } from '../../utils';
+
+export const LogoStyled = styled(Logo)`
+  padding: 20px 24px;
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    display: none;
+  }
+`;
 
 export const SubNavSocialsList = styled.ul`
   display: grid;

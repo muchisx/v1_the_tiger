@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { getMediaQueryValue } from '../../utils';
-import { LogoStyled } from '../shared/Logo/Logo.styles';
 
 // TODO: Rewrite styles to do Mobile-First
 // TODO: and use styled-components reference instead of classes
@@ -43,10 +42,6 @@ export const FooterStyled = styled.footer`
 
   ${FooterBlock}, ${FooterMenu} {
     display: flex;
-  }
-
-  ${LogoStyled} {
-    font-size: 2.8rem;
   }
 
   .footer__menus {

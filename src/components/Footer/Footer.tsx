@@ -13,9 +13,8 @@ function Footer() {
     <FooterStyled>
       <Section contain enableGutter customStyles={sectionCSS}>
         <FooterBlock className="footer__logo">
-          <Logo isUppercase />
+          <Logo isUppercase fontSize="2.8rem" />
         </FooterBlock>
-
         <FooterBlock className="footer__menus">
           <FooterMenu>
             <FooterMenuItem>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getMediaQueryValue } from '../../utils';
+import { WordWrap } from '../shared/Logo/Logo.styles';
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -14,10 +14,13 @@ const HeaderStyled = styled.header`
   isolation: isolate;
   z-index: 10;
 
-  & .logo {
+  & > .logo {
     margin-right: auto;
-    @media only screen and (min-width: ${getMediaQueryValue('xxsm')}) {
-      font-size: 28px;
+    // Custom MediaQuery Value used here for fine-tuning
+    @media only screen and (min-width: 400px) {
+      ${WordWrap} {
+        font-size: 28px;
+      }
     }
   }
   & .header-nav-toggle {
