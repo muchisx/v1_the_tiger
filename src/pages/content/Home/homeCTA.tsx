@@ -25,7 +25,7 @@ const textRight = (
 const leftContent: SplitContentProps['leftContent'] = {
   leftTexts: [
     {
-      $keyId: 1,
+      $keyId: crypto.randomUUID(),
       fontWeight: 500,
       children: textLeft,
     },
@@ -35,13 +35,13 @@ const leftContent: SplitContentProps['leftContent'] = {
 const rightContent: SplitContentProps['rightContent'] = {
   rightTexts: [
     {
-      $keyId: 1,
+      $keyId: crypto.randomUUID(),
       children: textRight,
     },
   ],
   rightButtons: [
     {
-      $keyId: 1,
+      $keyId: crypto.randomUUID(),
       role: 'link',
       newTab: true,
       Icon: ArrowRight,

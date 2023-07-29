@@ -25,13 +25,13 @@ const leftContent: SplitContentProps['leftContent'] = {
 const rightContent: SplitContentProps['rightContent'] = {
   rightTexts: [
     {
-      $keyId: 1,
+      $keyId: crypto.randomUUID(),
       children: textRight,
     },
   ],
   rightButtons: [
     {
-      $keyId: 1,
+      $keyId: crypto.randomUUID(),
       role: 'link',
       newTab: true,
       Icon: ArrowRight,
@@ -40,7 +40,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       to: 'https://calendly.com/miguel-angel-creator/free-meeting',
     },
     {
-      $keyId: 2,
+      $keyId: crypto.randomUUID(),
       role: 'link',
       Icon: ArrowRight,
       variant: 'secondary',

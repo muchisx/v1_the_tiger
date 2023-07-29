@@ -72,7 +72,7 @@ function Job() {
   const jobAdditionalInfoContent: SplitContentProps['rightContent'] = {
     rightTexts: [
       {
-        $keyId: 1,
+        $keyId: crypto.randomUUID(),
         children: jobAdditionalInfo,
       },
     ],

@@ -13,7 +13,7 @@ const leftContent: SplitContentProps['leftContent'] = {
   buttonsLabel: 'Socials',
   leftButtons: [
     {
-      $keyId: 1,
+      $keyId: crypto.randomUUID(),
       role: 'link',
       to: 'https://www.linkedin.com/in/miguelangelpro/',
       text: 'LinkedIn',
@@ -21,7 +21,7 @@ const leftContent: SplitContentProps['leftContent'] = {
       newTab: true,
     },
     {
-      $keyId: 2,
+      $keyId: crypto.randomUUID(),
       role: 'link',
       to: 'https://github.com/muchisx',
       text: 'GitHub',
@@ -56,18 +56,18 @@ const textTwo = (
 const rightContent: SplitContentProps['rightContent'] = {
   rightTexts: [
     {
-      $keyId: 1,
+      $keyId: crypto.randomUUID(),
       children: textOne,
       fontWeight: 500,
     },
     {
-      $keyId: 2,
+      $keyId: crypto.randomUUID(),
       children: textTwo,
     },
   ],
   rightButtons: [
     {
-      $keyId: 1,
+      $keyId: crypto.randomUUID(),
       text: 'Get the full story',
       role: 'link',
       to: '/about',

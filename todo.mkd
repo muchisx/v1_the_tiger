@@ -1,7 +1,8 @@
 # Todo List
 
 - [x] only use useMediaQuery state globally to improve performance and grab it from context.
-- [ ] use UUID package for all $keyId throught the app
+- [x] use crypto.randomUUID() for all $keyId throught the app
+- [ ] create more import aliases and update all imports
 - [ ] Remove styled icons fluent-regular if its not needed, as I am using just fluent-filled icons.
 - [ ] Add footer privacy, terms and copyright
 - [ ] Create webp version of all image assets and create optimized fallbacks for browsers that don't support webp.

@@ -40,8 +40,8 @@ const logoUrlList = [
   veme,
 ];
 
-const logoUrls: LogoGridProps['logoUrls'] = logoUrlList.map((logoUrl, index) => ({
-  $keyId: index,
+const logoUrls: LogoGridProps['logoUrls'] = logoUrlList.map((logoUrl) => ({
+  $keyId: crypto.randomUUID(),
   url: logoUrl,
 }));
 

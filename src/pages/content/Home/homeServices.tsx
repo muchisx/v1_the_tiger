@@ -66,7 +66,7 @@ const leftContent: SplitContentProps['leftContent'] = {
   },
   leftButtons: [
     {
-      $keyId: 1,
+      $keyId: crypto.randomUUID(),
       role: 'link',
       to: '/services',
       text: 'Read more',
@@ -74,7 +74,7 @@ const leftContent: SplitContentProps['leftContent'] = {
       Icon: ArrowRight,
     },
     {
-      $keyId: 2,
+      $keyId: crypto.randomUUID(),
       role: 'link',
       to: '/contact',
       text: 'Contact',
@@ -84,7 +84,7 @@ const leftContent: SplitContentProps['leftContent'] = {
   ],
   leftTexts: [
     {
-      $keyId: 1,
+      $keyId: crypto.randomUUID(),
       children: leftText,
       className: 'highlight-quaternary',
     },
@@ -94,22 +94,22 @@ const leftContent: SplitContentProps['leftContent'] = {
 const rightContent: SplitContentProps['rightContent'] = {
   cards: [
     {
-      $keyId: 1,
+      $keyId: crypto.randomUUID(),
       headerHeading: 'SHOPIFY DEVELOPMENT',
       HeaderIcon: ShoppingBag,
       headerTags: [
         {
-          $keyId: 1,
+          $keyId: crypto.randomUUID(),
           children: 'Shopify',
           variant: 'primary',
         },
         {
-          $keyId: 2,
+          $keyId: crypto.randomUUID(),
           children: 'Development',
           variant: 'tertiary',
         },
         {
-          $keyId: 3,
+          $keyId: crypto.randomUUID(),
           children: 'Custom',
           variant: 'quaternary',
         },
@@ -120,22 +120,22 @@ const rightContent: SplitContentProps['rightContent'] = {
       },
     },
     {
-      $keyId: 2,
+      $keyId: crypto.randomUUID(),
       headerHeading: 'REACT DEVELOPMENT',
       HeaderIcon: Molecule,
       headerTags: [
         {
-          $keyId: 1,
+          $keyId: crypto.randomUUID(),
           children: 'React',
           variant: 'primary',
         },
         {
-          $keyId: 2,
+          $keyId: crypto.randomUUID(),
           children: 'Development',
           variant: 'tertiary',
         },
         {
-          $keyId: 3,
+          $keyId: crypto.randomUUID(),
           children: 'Custom',
           variant: 'quaternary',
         },
@@ -146,22 +146,22 @@ const rightContent: SplitContentProps['rightContent'] = {
       },
     },
     {
-      $keyId: 3,
+      $keyId: crypto.randomUUID(),
       headerHeading: 'HELPING STARTUPS',
       HeaderIcon: Rocket,
       headerTags: [
         {
-          $keyId: 1,
+          $keyId: crypto.randomUUID(),
           children: 'Audit',
           variant: 'primary',
         },
         {
-          $keyId: 2,
+          $keyId: crypto.randomUUID(),
           children: 'Identity',
           variant: 'tertiary',
         },
         {
-          $keyId: 3,
+          $keyId: crypto.randomUUID(),
           children: 'Development',
           variant: 'quaternary',
         },
@@ -172,22 +172,22 @@ const rightContent: SplitContentProps['rightContent'] = {
       },
     },
     {
-      $keyId: 4,
+      $keyId: crypto.randomUUID(),
       headerHeading: 'FREE WEBSITE REVIEW',
       HeaderIcon: Eye,
       headerTags: [
         {
-          $keyId: 1,
+          $keyId: crypto.randomUUID(),
           children: 'Issues',
           variant: 'primary',
         },
         {
-          $keyId: 2,
+          $keyId: crypto.randomUUID(),
           children: 'Evaluations',
           variant: 'tertiary',
         },
         {
-          $keyId: 3,
+          $keyId: crypto.randomUUID(),
           children: 'Solutions',
           variant: 'quaternary',
         },

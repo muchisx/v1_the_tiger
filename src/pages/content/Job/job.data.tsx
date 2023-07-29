@@ -46,7 +46,7 @@ const data: Job[] = [
       contain: 'margin',
       tabbedContent: [
         {
-          $keyId: 1,
+          $keyId: crypto.randomUUID(),
           title: 'Full Homepage',
           description:
             "Entrusted with the development of a redesign of an entire homepage, I successfully accomplished this formidable challenge while meticulously upholding clean and robust code. I skillfully crafted reusable sections that not only enhance the overall user experience but also align seamlessly with the client's preferred design system.",
@@ -55,7 +55,7 @@ const data: Job[] = [
           mediaSource: qdFeaturedTask1,
         },
         {
-          $keyId: 2,
+          $keyId: crypto.randomUUID(),
           title: 'Sargent Door',
           description:
             'Sargent Door is an alternate site from the same project, I was also entrusted with the development of the redesign of this website. Whilst a little similar, it also entailed creating new sections and features that enhanced user-experience.',
@@ -64,7 +64,7 @@ const data: Job[] = [
           mediaSource: qdFeaturedTask2,
         },
         {
-          $keyId: 3,
+          $keyId: crypto.randomUUID(),
           title: 'New Search',
           description:
             'Recreated the Search component and added new functionality to it, like linking to related categories (collections) and the posibility of adding found items to the cart directly.',
@@ -73,7 +73,7 @@ const data: Job[] = [
           mediaSource: qdFeaturedTask3,
         },
         {
-          $keyId: 4,
+          $keyId: crypto.randomUUID(),
           title: 'Featured Section',
           description:
             'Collection Categories. This is a showcase of my favorite new section that I created. It allows to group multiple sections within drawers and feature its products.',
@@ -104,7 +104,7 @@ const data: Job[] = [
       contain: 'margin',
       tabbedContent: [
         {
-          $keyId: 1,
+          $keyId: crypto.randomUUID(),
           title: 'AWESOME FEATURE',
           description:
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
@@ -113,7 +113,7 @@ const data: Job[] = [
           mediaSource: fvFeaturedTask1,
         },
         {
-          $keyId: 2,
+          $keyId: crypto.randomUUID(),
           title: 'ANOTHER FEATURE',
           description:
             'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
@@ -122,7 +122,7 @@ const data: Job[] = [
           mediaSource: fvFeaturedTask2,
         },
         {
-          $keyId: 3,
+          $keyId: crypto.randomUUID(),
           title: 'FEATURE NAME',
           description: 'Lorem ipsum dolor,quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
           mediaIs: 'video',
@@ -153,7 +153,7 @@ const data: Job[] = [
       contain: 'margin',
       tabbedContent: [
         {
-          $keyId: 1,
+          $keyId: crypto.randomUUID(),
           title: 'AWESOME FEATURE',
           description:
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
@@ -162,7 +162,7 @@ const data: Job[] = [
           mediaSource: resFeaturedTask1,
         },
         {
-          $keyId: 2,
+          $keyId: crypto.randomUUID(),
           title: 'ANOTHER FEATURE',
           description:
             'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
@@ -171,7 +171,7 @@ const data: Job[] = [
           mediaSource: resFeaturedTask2,
         },
         {
-          $keyId: 3,
+          $keyId: crypto.randomUUID(),
           title: 'FEATURE NAME',
           description: 'Lorem ipsum dolor,quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
           mediaIs: 'video',
@@ -179,7 +179,7 @@ const data: Job[] = [
           mediaSource: resFeaturedTask3,
         },
         {
-          $keyId: 4,
+          $keyId: crypto.randomUUID(),
           title: 'FEATURE NAME',
           description: 'Lorem ipsum dolor,quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
           mediaIs: 'video',
@@ -209,7 +209,7 @@ const data: Job[] = [
       contain: 'margin',
       tabbedContent: [
         {
-          $keyId: 1,
+          $keyId: crypto.randomUUID(),
           title: 'AWESOME FEATURE',
           description:
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
@@ -218,7 +218,7 @@ const data: Job[] = [
           mediaSource: k9FeaturedTask1,
         },
         {
-          $keyId: 2,
+          $keyId: crypto.randomUUID(),
           title: 'ANOTHER FEATURE',
           description:
             'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
@@ -250,7 +250,7 @@ const data: Job[] = [
       contain: 'margin',
       tabbedContent: [
         {
-          $keyId: 1,
+          $keyId: crypto.randomUUID(),
           title: 'AWESOME FEATURE',
           description:
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
@@ -259,7 +259,7 @@ const data: Job[] = [
           mediaSource: diamondFeaturedTask1,
         },
         {
-          $keyId: 2,
+          $keyId: crypto.randomUUID(),
           title: 'ANOTHER FEATURE',
           description:
             'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
