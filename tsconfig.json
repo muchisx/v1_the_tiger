@@ -19,8 +19,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"]
+      "@content/*": ["src/pages/content/*"]
     }
   },
   "include": ["src", ".eslintrc.cjs", "vite.config.ts"],

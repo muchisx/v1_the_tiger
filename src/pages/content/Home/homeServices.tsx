@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { ArrowRight, ShoppingBag, Molecule, Rocket, Eye } from '@styled-icons/fluentui-system-filled';
+import { ArrowRight, ShoppingBag, Molecule, Rocket, Eye, Building } from '@styled-icons/fluentui-system-filled';
 import { css } from 'styled-components';
 import { Props as SplitContentProps } from '../../../components/SplitContent/SplitContent.types';
 import { CardStyled } from '../../../components/Card/Card.styles';
@@ -169,6 +169,33 @@ const rightContent: SplitContentProps['rightContent'] = {
       bodyText: {
         children:
           "Starting up a business comes with its fair share of challenges, but your website should not be one of them. That's where I come in. I provide thorough website audits and top-notch Web Development services, empowering startups to conquer their online goals",
+      },
+    },
+    {
+      $keyId: crypto.randomUUID(),
+      headerHeading: 'BACKING EST. BUSINESS',
+      HeaderIcon: Building,
+      headerTags: [
+        {
+          $keyId: crypto.randomUUID(),
+          children: 'Audit',
+          variant: 'primary',
+        },
+        {
+          $keyId: crypto.randomUUID(),
+          children: 'Identity',
+          variant: 'tertiary',
+        },
+        {
+          $keyId: crypto.randomUUID(),
+          children: 'Development',
+          variant: 'quaternary',
+        },
+      ],
+      bodyText: {
+        // TODO: Must change this phrase to my own, make it shorter too to accomodate max-width page cards
+        children:
+          "Established businesses recognise the significance of an impressive online presence to thrive in today's market. To support your journey towards digital success, I offer a suite of specialised services like Web dev, Shopify development, and website audits. Together, we can unlock your business's full potential and secure a prominent position in the digital realm.",
       },
     },
     {

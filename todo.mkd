@@ -32,6 +32,7 @@
   - [ ] Nav reveal animation
 - [ ] Embed calendly form instead of linking out of my porfolio
 - [x] Change types of css values from 'string' to a more complex type that accepts `${number}${unit}` with template literals.
+- [ ] Verify all uses of components with empty/partial props (even while typescript erros) to verify is being well protected for production.
 - [ ] Use theme instead of variables in css and use this breakpoint system inspired in Tailwind and MiUI
   ```javascript
   {

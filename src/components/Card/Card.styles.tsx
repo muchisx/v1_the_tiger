@@ -26,12 +26,20 @@ export const CardBody = styled.div`
 `;
 
 export const HeaderIconWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 8rem;
   height: 8rem;
   border-radius: 10px;
   background-color: #1d1f21;
   color: white;
   padding: 12px;
+
+  svg {
+    width: 84%;
+    height: 84%;
+  }
 `;
 
 export const TagsContainer = styled.div`

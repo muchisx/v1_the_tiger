@@ -1,11 +1,11 @@
 // Components
-import Section from '../components/shared/Section/Section';
-import Heading from '../components/shared/Heading/Heading';
-import SplitContent from '../components/SplitContent/SplitContent';
-import CardGrid from '../components/CardGrid/CardGrid';
+import Section from '@components/shared/Section/Section';
+import Heading from '@components/shared/Heading/Heading';
+import SplitContent from '@components/SplitContent/SplitContent';
+import CardGrid from '@components/CardGrid/CardGrid';
 // Content
-import { WorkHeroHeadingText, workCTA, workJobCards } from './content/Work';
-import sharedContact from './content/shared/sharedContact';
+import { WorkHeroHeadingText, workCTA, workJobCards } from '@content/Work';
+import sharedContact from '@content/shared/sharedContact';
 
 const workContact = sharedContact('secondary');
 
