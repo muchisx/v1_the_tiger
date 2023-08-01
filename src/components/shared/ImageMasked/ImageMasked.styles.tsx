@@ -1,4 +1,6 @@
+// Dependencies
 import styled from 'styled-components';
+// Types
 import { type Props } from './ImageMasked';
 
 type ImageMaskProps = {

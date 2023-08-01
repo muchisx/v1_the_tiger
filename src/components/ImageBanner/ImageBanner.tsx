@@ -3,18 +3,18 @@ import { useRef } from 'react';
 import { useScroll, useTransform } from 'framer-motion';
 // import { useSpring } from 'framer-motion';
 // Components
-import Section from '../shared/Section/Section';
-import Heading from '../shared/Heading/Heading';
-import Text from '../shared/Text/Text';
-import ImageResponsive from '../shared/ImageResponsive/ImageResponsive';
+import Text from '@components/shared/Text/Text';
+import Heading from '@components/shared/Heading/Heading';
+import Section from '@components/shared/Section/Section';
+import ImageResponsive from '@components/shared/ImageResponsive/ImageResponsive';
 // Styled Components
 import {
-  ImageBannerContainer,
-  ContentContainer,
-  ContentBottom,
-  BottomDetails,
   sectionCSS,
+  BottomDetails,
+  ContentBottom,
+  ContentContainer,
   ParallaxContainer,
+  ImageBannerContainer,
 } from './ImageBanner.styles';
 // Types
 import type { Props } from './imageBanner.types';

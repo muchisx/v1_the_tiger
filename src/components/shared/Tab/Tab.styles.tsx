@@ -1,8 +1,9 @@
 // Dependencies
 import styled, { css } from 'styled-components';
-import type { TabStyledProps } from './Tab.types';
 // Utils
-import { getMediaQueryValue } from '../../../utils';
+import { getMediaQueryValue } from '@utils';
+// Types
+import type { TabStyledProps } from './Tab.types';
 
 export const TabAnchor = styled.a`
   display: flex;

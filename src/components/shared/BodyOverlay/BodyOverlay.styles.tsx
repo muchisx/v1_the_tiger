@@ -1,6 +1,9 @@
+// Dependencies
 import styled, { createGlobalStyle } from 'styled-components';
-import HeaderStyled from '../../Header/Header.styles';
-import { getMediaQueryValue } from '../../../utils';
+// Components
+import HeaderStyled from '@components/Header/Header.styles';
+// Utils
+import { getMediaQueryValue } from '@utils';
 
 export const BodyLock = createGlobalStyle`
   body {

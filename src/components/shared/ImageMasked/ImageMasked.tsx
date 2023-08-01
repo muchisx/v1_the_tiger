@@ -1,8 +1,9 @@
-// Types
+// Dependencies
 import { type FlattenSimpleInterpolation } from 'styled-components';
-import type { Height, Width } from '../../../types/css.types';
 // Styled Components
 import { Image, ImageMask } from './ImageMasked.styles';
+// Types
+import type { Height, Width } from '@/types/css.types';
 
 export type Props = {
   width: Width;

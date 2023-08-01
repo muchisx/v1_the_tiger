@@ -2,19 +2,19 @@
 import { useState, useEffect } from 'react';
 import { WindowNew } from '@styled-icons/fluentui-system-filled';
 // Components
-import ImageResponsive from '../shared/ImageResponsive/ImageResponsive';
-import VideoResponsive from '../shared/VideoResponsive/VideoResponsive';
-import Section from '../shared/Section/Section';
-import Text from '../shared/Text/Text';
-import Tabs from '../shared/Tabs/Tabs';
-import Tab from '../shared/Tab/Tab';
-import Button from '../shared/Button/Button';
+import Tab from '@components/shared/Tab/Tab';
+import Text from '@components/shared/Text/Text';
+import Tabs from '@components/shared/Tabs/Tabs';
+import Button from '@components/shared/Button/Button';
+import Section from '@components/shared/Section/Section';
+import ImageResponsive from '@components/shared/ImageResponsive/ImageResponsive';
+import VideoResponsive from '@components/shared/VideoResponsive/VideoResponsive';
+// Utils
+import { useIsMedium } from '@hooks';
+// Media
+import poster from '@assets/images/video-poster.jpg';
 // Styled Components
 import { TabbedContentStyled, Content, Media, Description } from './TabbedContent.styles';
-// Utils
-import { useIsMedium } from '../../hooks';
-// Media
-import poster from '../../assets/images/video-poster.jpg';
 // Types
 import type { Props, Content as ContentProps } from './TabbedContent.types';
 
@@ -43,10 +43,10 @@ function TabbedContent(props: Props) {
         <Tabs>
           {tabbedContent.map((item) => (
             <Tab
-              isActive={activeTab === item.$keyId}
               key={item.$keyId}
-              onClick={() => handleTabClick(item.$keyId)}
               isShown={showTabs}
+              isActive={activeTab === item.$keyId}
+              onClick={() => handleTabClick(item.$keyId)}
             >
               {item.title}
             </Tab>
@@ -62,15 +62,15 @@ function TabbedContent(props: Props) {
                     <ImageResponsive src={item.mediaSource} height="auto" width="100%" />
                   ) : (
                     <VideoResponsive
-                      height="auto"
-                      width="100%"
-                      controls
+                      loop
                       muted
+                      controls
                       autoPlay
                       playsInline
-                      loop
-                      preload="metadata"
+                      width="100%"
+                      height="auto"
                       poster={poster}
+                      preload="metadata"
                       $src={{ srcType: item.mediaType, srcURL: item.mediaSource }}
                     />
                   )}
@@ -81,12 +81,12 @@ function TabbedContent(props: Props) {
                   </Text>
                   <Text>{item.description}</Text>
                   <Button
-                    text="Expand media"
-                    role="link"
-                    to={item.mediaSource}
                     newTab
-                    variant="quaternary"
+                    role="link"
                     Icon={WindowNew}
+                    text="Expand media"
+                    variant="quaternary"
+                    to={item.mediaSource}
                   />
                 </Description>
               </Content>

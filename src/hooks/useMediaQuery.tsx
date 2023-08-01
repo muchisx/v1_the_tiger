@@ -1,5 +1,7 @@
+// Dependencies
 import { useState, useEffect } from 'react';
-import { getMediaQueryValue } from '../utils';
+// Utils
+import { getMediaQueryValue } from '@utils';
 
 function useMediaQuery(query: string) {
   const [matches, setMatches] = useState(false);

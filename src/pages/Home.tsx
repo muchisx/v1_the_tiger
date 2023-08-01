@@ -1,18 +1,18 @@
 // Components
-import Section from '../components/shared/Section/Section';
-import Heading from '../components/shared/Heading/Heading';
-import SplitContent from '../components/SplitContent/SplitContent';
-import ImageBanner from '../components/ImageBanner/ImageBanner';
-import LogoGrid from '../components/LogoGrid/LogoGrid';
+import LogoGrid from '@components/LogoGrid/LogoGrid';
+import Heading from '@components/shared/Heading/Heading';
+import Section from '@components/shared/Section/Section';
+import ImageBanner from '@components/ImageBanner/ImageBanner';
+import SplitContent from '@components/SplitContent/SplitContent';
 // Content
 import {
-  HomeHeroHeadingText,
   homeCTA,
   homeAboutMe,
-  homeImageBanner,
   homeLogoGrid,
   homeServices,
   homeLogoGridTwo,
+  homeImageBanner,
+  HomeHeroHeadingText,
 } from './content/Home';
 import sharedContact from './content/shared/sharedContact';
 
@@ -25,30 +25,30 @@ function Home() {
         <Heading text={HomeHeroHeadingText} headingLevel="h1" fontSize="6.4vw" />
       </Section>
       <SplitContent
+        contain
         leftContent={homeCTA.leftContent}
         rightContent={homeCTA.rightContent}
         customStyles={homeCTA.customStyles}
-        contain
       />
       <ImageBanner
-        src={homeImageBanner.src}
         enableParallax
-        customStyles={homeImageBanner.customStyles}
+        src={homeImageBanner.src}
         minHeight={{ md: '560px' }}
+        customStyles={homeImageBanner.customStyles}
       />
       <SplitContent leftContent={homeAboutMe.leftContent} rightContent={homeAboutMe.rightContent} contain />
       <LogoGrid logoUrls={homeLogoGrid.logoUrls} title="PROUD TO WORK WITH" />
       <SplitContent
+        contain="padding"
         leftContent={homeServices.leftContent}
         rightContent={homeServices.rightContent}
         customStyles={homeServices.customStyles}
-        contain="padding"
       />
       <SplitContent
+        contain
         leftContent={homeContact.leftContent}
         rightContent={homeContact.rightContent}
         customStyles={homeContact.customStyles}
-        contain
       />
       <LogoGrid logoUrls={homeLogoGridTwo.logoUrls} title="TRUSTED BY" />
     </main>

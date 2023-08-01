@@ -1,4 +1,6 @@
+// Dependencies
 import styled from 'styled-components';
+// Types
 import type { HeadingProps } from './Heading.types';
 
 const HeadingStyled = styled.span<HeadingProps>`

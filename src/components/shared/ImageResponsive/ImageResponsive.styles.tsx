@@ -1,4 +1,6 @@
+// Dependencies
 import styled from 'styled-components';
+// Types
 import type { ImageContainerProps, ImageProps } from './ImageResponsive.types';
 
 export const Image = styled.img<ImageProps>`

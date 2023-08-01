@@ -1,16 +1,15 @@
 // Dependencies
+import { css } from 'styled-components';
 import { useRef, Children } from 'react';
 import { useScroll, useSpring, useTransform } from 'framer-motion';
-import { css } from 'styled-components';
-// Types
-import { Props, SplitContentCustomProps } from './SplitContent.types';
 // Components
-import Button from '../shared/Button/Button';
-import Section from '../shared/Section/Section';
-import ImageMasked from '../shared/ImageMasked/ImageMasked';
-import Text from '../shared/Text/Text';
-import Card from '../Card/Card';
-import Heading from '../shared/Heading/Heading';
+import Card from '@components/Card/Card';
+import Tag from '@components/shared/Tag/Tag';
+import Text from '@components/shared/Text/Text';
+import Button from '@components/shared/Button/Button';
+import Heading from '@components/shared/Heading/Heading';
+import Section from '@components/shared/Section/Section';
+import ImageMasked from '@components/shared/ImageMasked/ImageMasked';
 // Styled Components
 import {
   SectionCSS,
@@ -21,10 +20,12 @@ import {
   SubSection,
   CardsContainer,
 } from './SplitContent.styles';
+// Types
+import { Props, SplitContentCustomProps } from './SplitContent.types';
 
 function SplitContent(props: Props) {
   const { leftContent, rightContent, customStyles, contain, children } = props;
-  const { topButton, leftTexts, backgroundShape, buttonsLabel, leftButtons, maskedImageURL, leftHeading } =
+  const { topTag, leftTexts, backgroundShape, buttonsLabel, leftButtons, maskedImageURL, leftHeading } =
     leftContent || {};
   const { rightHeading, rightButtons, rightTexts, cards } = rightContent || {};
 
@@ -43,7 +44,7 @@ function SplitContent(props: Props) {
   // -------------------------- --------------------------
   // Check if any of the children exist before rendering it's parent
   const renderLeftContent =
-    topButton ||
+    topTag ||
     leftTexts ||
     backgroundShape ||
     buttonsLabel ||
@@ -80,7 +81,7 @@ function SplitContent(props: Props) {
 
       {renderLeftContent && (
         <SubSection className="split-content__first" {...leftContent}>
-          {topButton && <Button {...topButton} />}
+          {topTag && <Tag {...topTag} />}
           {leftHeading && <Heading {...leftHeading} />}
 
           {leftCustomChild && leftCustomChild}

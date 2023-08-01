@@ -1,7 +1,10 @@
+// Dependencies
 import { css } from 'styled-components';
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
-import type { Props as SplitContentProps } from '../../../components/SplitContent/SplitContent.types';
-import { getMediaQueryValue } from '../../../utils';
+// Utils
+import { getMediaQueryValue } from '@utils';
+// Types
+import type { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
 
 const customStyles = css`
   @media only screen and (min-width: ${getMediaQueryValue('md')}) {
@@ -25,9 +28,9 @@ const textRight = (
 const leftContent: SplitContentProps['leftContent'] = {
   leftTexts: [
     {
-      $keyId: crypto.randomUUID(),
       fontWeight: 500,
       children: textLeft,
+      $keyId: crypto.randomUUID(),
     },
   ],
 };
@@ -35,17 +38,17 @@ const leftContent: SplitContentProps['leftContent'] = {
 const rightContent: SplitContentProps['rightContent'] = {
   rightTexts: [
     {
-      $keyId: crypto.randomUUID(),
       children: textRight,
+      $keyId: crypto.randomUUID(),
     },
   ],
   rightButtons: [
     {
-      $keyId: crypto.randomUUID(),
-      role: 'link',
       newTab: true,
+      role: 'link',
       Icon: ArrowRight,
       variant: 'primary',
+      $keyId: crypto.randomUUID(),
       text: 'Reserve a free meeting',
       to: 'https://calendly.com/miguel-angel-creator/free-meeting',
     },

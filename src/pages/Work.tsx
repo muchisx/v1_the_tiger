@@ -18,10 +18,10 @@ function Work() {
       <SplitContent contain leftContent={workCTA.leftContent} rightContent={workCTA.rightContent} />
       <CardGrid cardCells={workJobCards.cardCells} contain customStyles={workJobCards.customStyles} />
       <SplitContent
+        contain="padding"
         leftContent={workContact.leftContent}
         rightContent={workContact.rightContent}
         customStyles={workContact.customStyles}
-        contain="padding"
       />
     </main>
   );

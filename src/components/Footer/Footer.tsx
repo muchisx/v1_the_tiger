@@ -2,9 +2,9 @@
 import { Link } from 'react-router-dom';
 import { Chat } from '@styled-icons/fluentui-system-filled';
 // Components
-import Button from '../shared/Button/Button';
-import Logo from '../shared/Logo/Logo';
-import Section from '../shared/Section/Section';
+import Logo from '@components/shared/Logo/Logo';
+import Button from '@components/shared/Button/Button';
+import Section from '@components/shared/Section/Section';
 // Styled Components
 import { FooterStyled, FooterBlock, FooterMenuItem, sectionCSS, FooterMenu } from './Footer.styles';
 

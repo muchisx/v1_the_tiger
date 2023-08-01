@@ -1,8 +1,8 @@
 // Components
-import Section from '../shared/Section/Section';
-import Card from '../Card/Card';
-import Heading from '../shared/Heading/Heading';
-import Button from '../shared/Button/Button';
+import Card from '@components/Card/Card';
+import Button from '@components/shared/Button/Button';
+import Heading from '@components/shared/Heading/Heading';
+import Section from '@components/shared/Section/Section';
 // Styled Components
 import { CardGridStyled, CardGridCell, CardGridCellBottom } from './CardGrid.styles';
 // Types

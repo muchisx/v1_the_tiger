@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import type { Variants } from 'framer-motion';
 // Components
-import ImageResponsive from '../shared/ImageResponsive/ImageResponsive';
+import ImageResponsive from '@components/shared/ImageResponsive/ImageResponsive';
 // Utils
-import { getMediaQueryValue } from '../../utils';
+import { getMediaQueryValue } from '@utils';
 // Types
 import { CardContainerProps } from './Card.types';
 

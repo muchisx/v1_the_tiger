@@ -1,17 +1,19 @@
+// Dependencies
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+// Pages
+import Job from '@pages/Job';
+import Home from '@pages/Home';
+import Work from '@pages/Work';
+import About from '@pages/About';
+import WebDev from '@pages/WebDev';
+import Contact from '@pages/Contact';
+import Shopify from '@pages/Shopify';
+import Services from '@pages/Services';
+import NotFound from '@pages/NotFound';
+import Playground from '@pages/Playground';
 import App from './App';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
-import Playground from './pages/Playground';
-import About from './pages/About';
-import Work from './pages/Work';
-import Services from './pages/Services';
-import WebDev from './pages/WebDev';
-import Shopify from './pages/Shopify';
-import Job from './pages/Job';
 
 const router = createBrowserRouter([
   {

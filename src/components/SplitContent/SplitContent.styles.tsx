@@ -1,9 +1,12 @@
+// Dependencies
 import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
-import Text from '../shared/Text/Text';
-import type { SubSectionProps } from './SplitContent.types';
+// Components
+import Text from '@components/shared/Text/Text';
 // Utils
-import { getMediaQueryValue } from '../../utils';
+import { getMediaQueryValue } from '@utils';
+// Types
+import type { SubSectionProps } from './SplitContent.types';
 
 export const ImageMaskedCSS = css`
   position: absolute;

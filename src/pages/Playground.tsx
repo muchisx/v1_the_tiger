@@ -1,6 +1,6 @@
 import { Tent } from '@styled-icons/fluentui-system-filled';
-import Button from '../components/shared/Button/Button';
-import ComponentIsolator from '../components/ComponentIsolator/ComponentIsolator';
+import Button from '@components/shared/Button/Button';
+import ComponentIsolator from '@components/ComponentIsolator/ComponentIsolator';
 
 function Playground() {
   return (

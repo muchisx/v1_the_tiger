@@ -1,7 +1,7 @@
 // Dependencies
 import { ImgHTMLAttributes, HtmlHTMLAttributes } from 'react';
 // Types
-import type { Width, Height } from '../../../types/css.types';
+import type { Width, Height } from '@/types/css.types';
 
 // TODO: Finish this so we can source multiple types of images like webp and have jpeg as fallback
 // import type { ImageType } from '@/types/media.types';

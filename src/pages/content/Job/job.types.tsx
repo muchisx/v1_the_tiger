@@ -1,3 +1,4 @@
+// Types
 import type { Props as ImageBannerProps } from '@/components/ImageBanner/imageBanner.types';
 import type { Props as TabbedContentProps } from '@/components/TabbedContent/TabbedContent.types';
 import type { Props as CardProps } from '@/components/Card/Card.types';

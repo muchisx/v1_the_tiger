@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 // Utils
-import { getMediaQueryValue } from '../../utils';
+import { getMediaQueryValue } from '@utils';
 
 export const NavLinkSpan = styled.span`
   width: 100%;

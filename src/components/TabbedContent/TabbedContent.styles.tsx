@@ -1,9 +1,9 @@
 // Dependencies
 import styled from 'styled-components';
 // Utils
-import { getMediaQueryValue } from '../../utils';
+import { getMediaQueryValue } from '@utils';
 // Styled Components
-import { ButtonContainerStyled } from '../shared/Button/Button.styles';
+import { ButtonContainerStyled } from '@components/shared/Button/Button.styles';
 
 export const Description = styled.div`
   display: flex;

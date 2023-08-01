@@ -1,11 +1,15 @@
+// Dependencies
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 import { css } from 'styled-components';
-import type { Props as CardGridProps } from '../../../components/CardGrid/CardGrid.types';
-import { CardFooter, CardStyled } from '../../../components/Card/Card.styles';
-import data from '../Job/job.data';
-import type { Job } from '../Job/job.types';
-import HeadingStyled from '../../../components/shared/Heading/Heading.styles';
-import { CardGridCellBottom } from '../../../components/CardGrid/CardGrid.styles';
+// Content
+import data from '@content/Job/job.data';
+// Styled Components
+import HeadingStyled from '@components/shared/Heading/Heading.styles';
+import { CardFooter, CardStyled } from '@components/Card/Card.styles';
+import { CardGridCellBottom } from '@components/CardGrid/CardGrid.styles';
+// Types
+import type { Job } from '@content/Job/job.types';
+import type { Props as CardGridProps } from '@components/CardGrid/CardGrid.types';
 
 const customStyles: CardGridProps['customStyles'] = css`
   ${CardStyled} {

@@ -1,5 +1,6 @@
+// Dependencies
 import { createContext, useMemo, ReactNode, useContext } from 'react';
-import { useIsSmall, useIsXSmall, useIsMedium, useIsLarge, useIsXLarge, useIsXXLarge } from '../hooks';
+import { useIsSmall, useIsXSmall, useIsMedium, useIsLarge, useIsXLarge, useIsXXLarge } from '@hooks';
 
 type MediaQueryContextType = {
   isXSmall: boolean;

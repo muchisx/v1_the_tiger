@@ -2,9 +2,9 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 // Components
-import Logo from '../shared/Logo/Logo';
+import Logo from '@components/shared/Logo/Logo';
 // Utils
-import { getMediaQueryValue } from '../../utils';
+import { getMediaQueryValue } from '@utils';
 
 export const LogoStyled = styled(Logo)`
   padding: 20px 24px;

@@ -7,13 +7,13 @@ import type { Props } from './ImageResponsive.types';
 
 const ImageResponsive = forwardRef<HTMLDivElement | HTMLImageElement, Props>((props: Props, ref) => {
   const {
-    height,
-    width,
-    fit = 'cover',
-    position = 'center',
-    padding,
     src,
+    width,
+    height,
+    padding,
+    fit = 'cover',
     loading = 'lazy',
+    position = 'center',
     refTarget = 'container',
     ...attrs
   } = props;
@@ -28,17 +28,17 @@ const ImageResponsive = forwardRef<HTMLDivElement | HTMLImageElement, Props>((pr
 
   return (
     <ImageResponsiveStyled
-      {...containerAttributes}
-      $height={height}
       $width={width}
+      $height={height}
       $padding={padding}
       ref={containerRef as React.ForwardedRef<HTMLDivElement>}
+      {...containerAttributes}
     >
       <Image
-        position={position}
         fit={fit}
         src={src}
         loading={loading}
+        position={position}
         ref={imageRef as React.ForwardedRef<HTMLImageElement>}
         {...imageAttributes}
       />

@@ -4,10 +4,10 @@ import './styles/App.css';
 // Dependencies
 import { Outlet, ScrollRestoration } from 'react-router-dom';
 // Components
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import Header from '@components/Header/Header';
+import Footer from '@components/Footer/Footer';
 // Contexts
-import MediaQueryProvider from './context/MediaQueryContext';
+import MediaQueryProvider from '@context/MediaQueryContext';
 
 function App() {
   return (

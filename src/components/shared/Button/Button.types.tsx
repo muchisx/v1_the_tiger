@@ -1,3 +1,4 @@
+// Dependencies
 import { type StyledIcon } from '@styled-icons/styled-icon';
 
 type Role = 'button' | 'link';

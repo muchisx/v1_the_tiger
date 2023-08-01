@@ -1,10 +1,10 @@
 // Dependencies
 import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
+// Utils
+import { getCSSFromMediaQuery } from '@utils';
 // Types
 import type { ContainerProps } from './imageBanner.types';
-// Utils
-import { getCSSFromMediaQuery } from '../../utils';
 
 export const ParallaxContainer = styled(motion.div)`
   height: 100%;

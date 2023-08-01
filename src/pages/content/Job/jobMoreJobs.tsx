@@ -1,11 +1,15 @@
+// Dependencies
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 import { css } from 'styled-components';
-import type { Props as CardGridProps } from '@/components/CardGrid/CardGrid.types';
-import { CardFooter, CardStyled } from '@/components/Card/Card.styles';
+// Content
 import data from './job.data';
-import type { Job } from './job.types';
+// Styles Components
+import { CardFooter, CardStyled } from '@/components/Card/Card.styles';
 import HeadingStyled from '@/components/shared/Heading/Heading.styles';
 import { CardGridCellBottom } from '@/components/CardGrid/CardGrid.styles';
+// Types
+import type { Job } from './job.types';
+import type { Props as CardGridProps } from '@/components/CardGrid/CardGrid.types';
 
 const customStyles: CardGridProps['customStyles'] = css`
   ${CardStyled} {
@@ -26,17 +30,17 @@ const customStyles: CardGridProps['customStyles'] = css`
 
 const footerButtonCommon: CardGridProps['cardCells'][0]['card']['footerButton'] = {
   role: 'link',
+  IconSize: 20,
   Icon: ArrowRight,
   variant: 'secondary',
-  IconSize: 20,
   IconWrapPadding: '.6rem',
   // overwritting later 👇🏻
   to: '/',
 };
 
 const CardCellButtonCommon: CardGridProps['cardCells'][0]['button'] = {
-  role: 'link',
   text: 'View',
+  role: 'link',
   variant: 'quaternary',
   // overwritting later 👇🏻
   to: '/',

@@ -1,3 +1,4 @@
+// Dependencies
 import styled from 'styled-components';
 
 const ComponentIsolatorStyled = styled.main`

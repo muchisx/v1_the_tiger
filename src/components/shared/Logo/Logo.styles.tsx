@@ -1,5 +1,7 @@
+// Dependencies
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+// Types
 import type { WordWrapProps } from './Logo.types';
 
 export const LetterSpan = styled.span`

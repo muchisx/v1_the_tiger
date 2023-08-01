@@ -1,25 +1,25 @@
 // Dependencies
 import { useRef, useState } from 'react';
 import { type TargetAndTransition } from 'framer-motion';
+// Context
+import { useMediaQueryContext } from '@context/MediaQueryContext';
 // Styled Components
 import { SpanStyled, ButtonStyled, ButtonContainerStyled, IconWrap, LinkStyled } from './Button.styles';
-// Context
-import { useMediaQueryContext } from '../../../context/MediaQueryContext';
 // Types
 import type { Props } from './Button.types';
 
 function Button(props: Props) {
   const {
-    role,
     to,
-    text,
-    variant,
     Icon,
+    role,
+    text,
+    action,
+    newTab,
+    variant,
+    className,
     IconSize = 16,
     IconWrapPadding,
-    action,
-    className,
-    newTab,
     rel = 'noopener noreferrer',
   } = props;
 
@@ -83,17 +83,17 @@ function Button(props: Props) {
 
   return (
     <ButtonContainerStyled
-      variant={variant}
       text={text}
       Icon={Icon}
+      onClick={action}
+      variant={variant}
+      className={className}
+      isHovered={isHovered}
       IconWrapPadding={IconWrapPadding}
+      transition={{ ease: 'easeInOut', duration: 0.2 }}
       onMouseEnter={() => handleTextAndIconHover(isMedium)}
       onMouseLeave={() => handleTextAndIconHover(isMedium)}
       whileHover={singleChildAnimation(isMedium, Icon, text)}
-      transition={{ ease: 'easeInOut', duration: 0.2 }}
-      onClick={action}
-      className={className}
-      isHovered={isHovered}
     >
       {role === 'button' ? (
         <ButtonStyled>{buttonContent}</ButtonStyled>

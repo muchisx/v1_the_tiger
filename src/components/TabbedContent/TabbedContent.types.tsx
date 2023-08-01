@@ -1,6 +1,7 @@
-import { Props as SectionProps } from '../shared/Section/Section';
-import { type KeyId } from '../../types/general.types';
-import type { VideoType, ImageType } from '../../types/media.types';
+// Types
+import { Props as SectionProps } from '@components/shared/Section/Section';
+import { type KeyId } from '@/types/general.types';
+import type { VideoType, ImageType } from '@/types/media.types';
 
 export type ConditionalContent =
   | { mediaIs: 'image'; mediaType: ImageType }

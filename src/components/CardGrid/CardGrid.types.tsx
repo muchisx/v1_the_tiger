@@ -1,10 +1,12 @@
+// Dependencies
 import { type FlattenSimpleInterpolation } from 'styled-components';
-import type { Props as SectionProps } from '../shared/Section/Section';
-import type { Props as CardProps } from '../Card/Card.types';
-import type { Props as ButtonProps } from '../shared/Button/Button.types';
-import type { Props as HeadingProps } from '../shared/Heading/Heading.types';
-import type { MediaQueryWithCSS } from '../../types/mediaQuery.types';
-import { type KeyId } from '../../types/general.types';
+// Types
+import type { Props as CardProps } from '@components/Card/Card.types';
+import type { Props as SectionProps } from '@components/shared/Section/Section';
+import type { Props as ButtonProps } from '@components/shared/Button/Button.types';
+import type { Props as HeadingProps } from '@components/shared/Heading/Heading.types';
+import { type KeyId } from '@/types/general.types';
+import type { MediaQueryWithCSS } from '@/types/mediaQuery.types';
 
 type CardCell = KeyId & {
   card: CardProps;

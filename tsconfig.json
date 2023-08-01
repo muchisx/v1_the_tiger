@@ -21,7 +21,15 @@
       "@/*": ["src/*"],
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
-      "@content/*": ["src/pages/content/*"]
+      "@context": ["src/context"],
+      "@context/*": ["src/context/*"],
+      "@hooks": ["src/hooks"],
+      "@hooks/*": ["src/hooks/*"],
+      "@pages/*": ["src/pages/*"],
+      "@content/*": ["src/pages/content/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils": ["src/utils"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["src", ".eslintrc.cjs", "vite.config.ts"],

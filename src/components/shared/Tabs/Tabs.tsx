@@ -1,7 +1,7 @@
 // Dependencies
 import styled from 'styled-components';
 // Utils
-import { getMediaQueryValue } from '../../../utils';
+import { getMediaQueryValue } from '@utils';
 
 type Props = {
   children: React.ReactNode;

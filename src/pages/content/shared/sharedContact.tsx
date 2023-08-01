@@ -1,9 +1,13 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
+// Dependencies
 import { css } from 'styled-components';
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
-import { Props as SplitContentProps } from '../../../components/SplitContent/SplitContent.types';
-import svgShape from '../../../assets/svgs/abstract-8.svg';
-import { BackgroundShape } from '../../../components/SplitContent/SplitContent.styles';
+// Assets
+import svgShape from '@assets/svgs/abstract-8.svg';
+// Styled Components
+import { BackgroundShape } from '@components/SplitContent/SplitContent.styles';
+// Types
+import { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
 
 type ContactVariant = 'primary' | 'secondary';
 
@@ -44,11 +48,9 @@ const secondaryCustomStyles = css`
   }
 `;
 
-const commonLeftTopButton: SplitContentProps['leftContent']['topButton'] = {
-  role: 'link',
-  to: '/contact',
+const commonLeftTopTag: SplitContentProps['leftContent']['topTag'] = {
   variant: 'tertiary',
-  text: 'Get in touch',
+  children: 'Get in touch',
 };
 
 const commonLeftBgShape: SplitContentProps['leftContent']['backgroundShape'] = {
@@ -90,7 +92,7 @@ const commonRightButtons: SplitContentProps['rightContent']['rightButtons'] = [
 const sharedContact = (variant: ContactVariant = 'primary') => {
   let customStyles;
   const leftContent: SplitContentProps['leftContent'] = {
-    topButton: commonLeftTopButton,
+    topTag: commonLeftTopTag,
     backgroundShape: commonLeftBgShape,
   };
   const rightContent: SplitContentProps['rightContent'] = {

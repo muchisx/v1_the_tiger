@@ -1,7 +1,7 @@
 // Dependencies
 import styled from 'styled-components';
 // Types
-import type { Variant } from '../Button/Button.types';
+import type { Variant } from '@components/shared/Button/Button.types';
 
 export type Props = {
   variant: Variant;

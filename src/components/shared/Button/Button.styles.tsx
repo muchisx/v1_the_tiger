@@ -1,6 +1,8 @@
+// Dependencies
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+// Types
 import type { ContainerProps } from './Button.types';
 
 export const ButtonStyled = styled(motion.button)``;

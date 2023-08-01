@@ -1,7 +1,7 @@
-// Types
-import type { Props } from './Logo.types';
 // Styled Components
 import { LogoStyled, LetterSpan, WordWrap } from './Logo.styles';
+// Types
+import type { Props } from './Logo.types';
 
 function Logo(props: Props) {
   const { isUppercase, className, fontSize } = props;

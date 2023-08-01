@@ -1,7 +1,9 @@
+// Dependencies
 import { type FlattenSimpleInterpolation } from 'styled-components';
-import type { Height, CSSColor } from '../../types/css.types';
-import type { Props as HeadingProps } from '../shared/Heading/Heading.types';
-import type { MediaQueryWithCSS } from '../../types/mediaQuery.types';
+// Types
+import type { Props as HeadingProps } from '@components/shared/Heading/Heading.types';
+import type { Height, CSSColor } from '@/types/css.types';
+import type { MediaQueryWithCSS } from '@/types/mediaQuery.types';
 
 type BottomContent = {
   title: string;

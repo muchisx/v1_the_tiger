@@ -54,11 +54,9 @@ const leftHeading = (
 );
 
 const leftContent: SplitContentProps['leftContent'] = {
-  topButton: {
-    role: 'link',
-    to: '/services',
+  topTag: {
     variant: 'secondary',
-    text: 'Services',
+    children: 'Services',
   },
   leftHeading: {
     text: leftHeading,

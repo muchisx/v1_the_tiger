@@ -1,7 +1,7 @@
 // Dependencies
 import { ArrowUpRight } from '@styled-icons/fluentui-system-filled';
 // Components
-import NavItem from '../NavItem/NavItem';
+import NavItem from '@components/NavItem/NavItem';
 // Styled Components
 import { NavStyled, NavItemsList, SubNav, SubNavItemsList, SubNavSocialsList, LogoStyled } from './Nav.styles';
 

@@ -1,5 +1,7 @@
+// Dependencies
 import styled from 'styled-components';
-import { WordWrap } from '../shared/Logo/Logo.styles';
+// Components
+import { WordWrap } from '@components/shared/Logo/Logo.styles';
 
 const HeaderStyled = styled.header`
   display: flex;

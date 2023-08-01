@@ -1,4 +1,6 @@
+// Dependencies
 import styled from 'styled-components';
+// Types
 import type { TextProps } from './Text.types';
 
 const TextStyled = styled.p<TextProps>`

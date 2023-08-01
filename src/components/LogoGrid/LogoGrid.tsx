@@ -1,11 +1,11 @@
-// Types
-import type { Props } from './LogoGrid.types';
 // Componets
-import Section from '../shared/Section/Section';
-import Heading from '../shared/Heading/Heading';
-import ImageResponsive from '../shared/ImageResponsive/ImageResponsive';
+import Heading from '@components/shared/Heading/Heading';
+import Section from '@components/shared/Section/Section';
+import ImageResponsive from '@components/shared/ImageResponsive/ImageResponsive';
 // Styled Components
 import { Grid, GridItem, sectionCSS } from './LogoGrid.styles';
+// Types
+import type { Props } from './LogoGrid.types';
 
 function LogoGrid(props: Props) {
   const { customStyles, logoUrls, title } = props;

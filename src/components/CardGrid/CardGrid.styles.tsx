@@ -1,7 +1,11 @@
+// Dependencies
 import styled from 'styled-components';
-import { CardStyled } from '../Card/Card.styles';
+// Components
+import { CardStyled } from '@components/Card/Card.styles';
+// Utils
+import { getCSSFromMediaQuery, getMediaQueryValue } from '@utils';
+// Types
 import type { CardGridStyledProps } from './CardGrid.types';
-import { getCSSFromMediaQuery, getMediaQueryValue } from '../../utils';
 
 export const CardGridCellBottom = styled.div`
   display: flex;

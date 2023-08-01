@@ -1,37 +1,38 @@
-// Types
+// Dependencies
 import type { Variants } from 'framer-motion';
-import type { Props } from './Card.types';
 // Context
-import { useMediaQueryContext } from '../../context/MediaQueryContext';
+import { useMediaQueryContext } from '@context/MediaQueryContext';
 // Components
-import Heading from '../shared/Heading/Heading';
-import Text from '../shared/Text/Text';
-import Tag from '../shared/Tag/Tag';
-import Button from '../shared/Button/Button';
+import Tag from '@components/shared/Tag/Tag';
+import Text from '@components/shared/Text/Text';
+import Button from '@components/shared/Button/Button';
+import Heading from '@components/shared/Heading/Heading';
 // Styled Components
 import {
-  CardStyled,
-  CardBgImg,
-  CardLinkWrap,
-  HeaderIconWrap,
-  CardHeader,
-  TagsContainer,
   CardBody,
+  CardBgImg,
+  CardStyled,
+  CardHeader,
   CardFooter,
+  CardLinkWrap,
+  TagsContainer,
+  HeaderIconWrap,
   bgImgMotionMedium,
 } from './Card.styles';
+// Types
+import type { Props } from './Card.types';
 
 function Card(props: Props) {
   const {
+    bodyText,
+    className,
+    HeaderIcon,
+    headerTags,
+    customStyles,
+    footerButton,
+    headerHeading,
     backgroundImg,
     cardLinkWrap = { to: '', newTab: false, rel: 'noopener noreferrer' },
-    HeaderIcon,
-    headerHeading,
-    headerTags,
-    bodyText,
-    footerButton,
-    className,
-    customStyles,
   } = props;
 
   // 1️⃣ To, Target and Rel setters for the CardLinkWrap component
@@ -63,14 +64,14 @@ function Card(props: Props) {
     <CardStyled className={className} customStyles={customStyles} whileHover="hover">
       {backgroundImg && (
         <CardBgImg
-          src={backgroundImg.src}
-          loading={backgroundImg.loading}
-          position={backgroundImg.position}
           width="100%"
           height="100%"
           refTarget="container"
           variants={bgImgMotion}
+          src={backgroundImg.src}
           transition={{ duration: 0.4 }}
+          loading={backgroundImg.loading}
+          position={backgroundImg.position}
         />
       )}
 

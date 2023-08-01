@@ -1,32 +1,33 @@
+// Dependencies
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
-import { Props as SplitContentProps } from '../../../components/SplitContent/SplitContent.types';
-import profilePic from '../../../assets/images/profile-pic.jpeg';
-import svgShape from '../../../assets/svgs/abstract-1.svg';
+// Assets
+import svgShape from '@assets/svgs/abstract-1.svg';
+import profilePic from '@assets/images/profile-pic.jpeg';
+// Types
+import { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
 
 const leftContent: SplitContentProps['leftContent'] = {
-  topButton: {
-    role: 'link',
-    to: '/about',
+  topTag: {
     variant: 'tertiary',
-    text: 'About Me',
+    children: 'About Me',
   },
   buttonsLabel: 'Socials',
   leftButtons: [
     {
-      $keyId: crypto.randomUUID(),
       role: 'link',
-      to: 'https://www.linkedin.com/in/miguelangelpro/',
+      newTab: true,
       text: 'LinkedIn',
       variant: 'quaternary',
-      newTab: true,
+      $keyId: crypto.randomUUID(),
+      to: 'https://www.linkedin.com/in/miguelangelpro/',
     },
     {
-      $keyId: crypto.randomUUID(),
       role: 'link',
-      to: 'https://github.com/muchisx',
+      newTab: true,
       text: 'GitHub',
       variant: 'quaternary',
-      newTab: true,
+      $keyId: crypto.randomUUID(),
+      to: 'https://github.com/muchisx',
     },
   ],
   maskedImageURL: profilePic,
@@ -56,23 +57,23 @@ const textTwo = (
 const rightContent: SplitContentProps['rightContent'] = {
   rightTexts: [
     {
-      $keyId: crypto.randomUUID(),
-      children: textOne,
       fontWeight: 500,
+      children: textOne,
+      $keyId: crypto.randomUUID(),
     },
     {
-      $keyId: crypto.randomUUID(),
       children: textTwo,
+      $keyId: crypto.randomUUID(),
     },
   ],
   rightButtons: [
     {
-      $keyId: crypto.randomUUID(),
-      text: 'Get the full story',
-      role: 'link',
       to: '/about',
-      variant: 'secondary',
+      role: 'link',
       Icon: ArrowRight,
+      variant: 'secondary',
+      text: 'Get the full story',
+      $keyId: crypto.randomUUID(),
     },
   ],
 };

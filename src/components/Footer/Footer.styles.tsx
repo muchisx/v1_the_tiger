@@ -1,7 +1,9 @@
+// Dependencies
 import styled, { css } from 'styled-components';
-import { getMediaQueryValue } from '../../utils';
+// Utils
+import { getMediaQueryValue } from '@utils';
 
-// TODO: Rewrite styles to do Mobile-First
+// TODO: Rewrite styles to do Mobile-First <- this is done i think?
 // TODO: and use styled-components reference instead of classes
 
 export const FooterMenuItem = styled.li`
