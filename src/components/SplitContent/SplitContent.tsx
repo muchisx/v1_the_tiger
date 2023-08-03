@@ -86,9 +86,9 @@ function SplitContent(props: Props) {
 
           {leftCustomChild && leftCustomChild}
 
-          {leftTexts?.length && leftTexts.map((textProps) => <Text key={textProps.$keyId} {...textProps} />)}
+          {!!leftTexts?.length && leftTexts.map((textProps) => <Text key={textProps.$keyId} {...textProps} />)}
 
-          {leftButtons?.length && (
+          {!!leftButtons?.length && (
             <ButtonsContainer>
               {buttonsLabel && <ButtonsHeading>{buttonsLabel}</ButtonsHeading>}
               {leftButtons.map((buttonProps) => (
@@ -109,9 +109,9 @@ function SplitContent(props: Props) {
 
           {rightCustomChild && rightCustomChild}
 
-          {rightTexts?.length && rightTexts.map((textProps) => <Text key={textProps.$keyId} {...textProps} />)}
+          {!!rightTexts?.length && rightTexts.map((textProps) => <Text key={textProps.$keyId} {...textProps} />)}
 
-          {cards?.length && (
+          {!!cards?.length && (
             <CardsContainer>
               {cards.map((cardProps, index) => (
                 <Card
@@ -125,7 +125,7 @@ function SplitContent(props: Props) {
             </CardsContainer>
           )}
 
-          {rightButtons?.length && (
+          {!!rightButtons?.length && (
             <ButtonsContainer>
               {rightButtons.map((buttonProps) => (
                 <Button key={buttonProps.$keyId} {...buttonProps} />

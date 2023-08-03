@@ -15,7 +15,7 @@ function CardGrid(props: Props) {
   return (
     <Section enableGutter contain={contain} customStyles={customStyles} paddingBottom={56} paddingTop={56}>
       <CardGridStyled $gridTemplateColumns={gridTemplateColumns} $gridAutoRows={gridAutoRows}>
-        {cardCells.length > 0 &&
+        {!!cardCells.length &&
           cardCells.map((cellProps) => (
             <CardGridCell key={cellProps.$keyId}>
               <Card {...cellProps.card} />
