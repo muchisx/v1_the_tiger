@@ -48,7 +48,7 @@ const CardCellButtonCommon: CardGridProps['cardCells'][0]['button'] = {
 
 const generateJobCardsProps = (job: Job): CardGridProps['cardCells'][0] => {
   return {
-    $keyId: job.id,
+    $keyId: job.$keyId,
     card: {
       backgroundImg: {
         src: job.heroBannerImage,

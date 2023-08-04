@@ -32,6 +32,12 @@ export const CardsContainer = styled.div`
   position: relative;
 `;
 
+export const TextsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
+
 export const SubSection = styled.div<SubSectionProps>`
   display: flex;
   flex-direction: column;

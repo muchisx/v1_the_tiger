@@ -26,7 +26,7 @@ import type { Job } from './job.types';
 
 const data: Job[] = [
   {
-    id: 1,
+    $keyId: crypto.randomUUID(),
     jobId: 'quality-door',
     jobTitle: 'Quality Door',
     jobSerial: '01',
@@ -85,7 +85,7 @@ const data: Job[] = [
     },
   },
   {
-    id: 2,
+    $keyId: crypto.randomUUID(),
     jobId: 'fresh-victor',
     jobTitle: 'Fresh Victor',
     jobSerial: '02',
@@ -133,7 +133,7 @@ const data: Job[] = [
     },
   },
   {
-    id: 3,
+    $keyId: crypto.randomUUID(),
     jobId: 'responsible',
     jobTitle: 'Responsible',
     jobSerial: '03',
@@ -190,7 +190,7 @@ const data: Job[] = [
     },
   },
   {
-    id: 4,
+    $keyId: crypto.randomUUID(),
     jobId: 'k9-arsenal',
     jobTitle: 'K9 Arsenal',
     jobSerial: '04',
@@ -230,7 +230,7 @@ const data: Job[] = [
     },
   },
   {
-    id: 5,
+    $keyId: crypto.randomUUID(),
     jobId: 'diamond-mattress',
     jobTitle: 'Diamond mattress',
     jobSerial: '06',

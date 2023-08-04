@@ -13,12 +13,13 @@ import ImageMasked from '@components/shared/ImageMasked/ImageMasked';
 // Styled Components
 import {
   SectionCSS,
-  BackgroundShape,
-  ButtonsContainer,
+  SubSection,
   ButtonsHeading,
   ImageMaskedCSS,
-  SubSection,
+  TextsContainer,
   CardsContainer,
+  BackgroundShape,
+  ButtonsContainer,
 } from './SplitContent.styles';
 // Types
 import { Props, SplitContentCustomProps } from './SplitContent.types';
@@ -86,7 +87,13 @@ function SplitContent(props: Props) {
 
           {leftCustomChild && leftCustomChild}
 
-          {!!leftTexts?.length && leftTexts.map((textProps) => <Text key={textProps.$keyId} {...textProps} />)}
+          {!!leftTexts?.length && (
+            <TextsContainer>
+              {leftTexts.map((textProps) => (
+                <Text key={textProps.$keyId} {...textProps} />
+              ))}
+            </TextsContainer>
+          )}
 
           {!!leftButtons?.length && (
             <ButtonsContainer>
@@ -109,7 +116,13 @@ function SplitContent(props: Props) {
 
           {rightCustomChild && rightCustomChild}
 
-          {!!rightTexts?.length && rightTexts.map((textProps) => <Text key={textProps.$keyId} {...textProps} />)}
+          {!!rightTexts?.length && (
+            <TextsContainer>
+              {rightTexts.map((textProps) => (
+                <Text key={textProps.$keyId} {...textProps} />
+              ))}
+            </TextsContainer>
+          )}
 
           {!!cards?.length && (
             <CardsContainer>

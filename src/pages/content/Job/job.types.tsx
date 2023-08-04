@@ -2,9 +2,9 @@
 import type { Props as ImageBannerProps } from '@/components/ImageBanner/imageBanner.types';
 import type { Props as TabbedContentProps } from '@/components/TabbedContent/TabbedContent.types';
 import type { Props as CardProps } from '@/components/Card/Card.types';
+import type { KeyId } from '@/types/general.types';
 
-export type Job = {
-  id: number;
+export type Job = KeyId & {
   jobId: string;
   jobTitle: string;
   jobSerial: string;

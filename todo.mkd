@@ -2,7 +2,8 @@
 
 - [x] only use useMediaQuery state globally to improve performance and grab it from context.
 - [x] use crypto.randomUUID() for all $keyId throught the app
-- [ ] create more import aliases and update all imports
+- [ ] rework Button comp so the clickable/actionnable area is not misleading with the padding of the top-wrapper, basically, make the entire button action on click, not just the center
+- [x] create more import aliases and update all imports
 - [ ] Remove styled icons fluent-regular if its not needed, as I am using just fluent-filled icons.
 - [ ] Add footer privacy, terms and copyright
 - [ ] Create webp version of all image assets and create optimized fallbacks for browsers that don't support webp.
