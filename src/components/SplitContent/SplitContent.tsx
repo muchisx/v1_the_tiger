@@ -114,8 +114,6 @@ function SplitContent(props: Props) {
         <SubSection className="split-content__second">
           {rightHeading && <Heading {...rightHeading} />}
 
-          {rightCustomChild && rightCustomChild}
-
           {!!rightTexts?.length && (
             <TextsContainer>
               {rightTexts.map((textProps) => (
@@ -145,6 +143,8 @@ function SplitContent(props: Props) {
               ))}
             </ButtonsContainer>
           )}
+
+          {rightCustomChild && rightCustomChild}
         </SubSection>
       )}
     </Section>

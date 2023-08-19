@@ -1,7 +1,7 @@
 // Components
 import Section from '@components/shared/Section/Section';
 import Heading from '@components/shared/Heading/Heading';
-import SplitContent from '@components/SplitContent/SplitContent';
+import SplitContent, { SplitContentCustom } from '@components/SplitContent/SplitContent';
 import ImageBanner from '@components/ImageBanner/ImageBanner';
 // Styled Components
 import serviceCustomCSS from '@content/Services/services.styles';
@@ -13,6 +13,7 @@ import { ServicesHeroHeadingText, servicesCTA } from '@content/Services';
 import sharedContact from '@content/shared/sharedContact';
 // Data
 import data from '@content/Services/services.data';
+import Accordion from '@components/shared/Accordion/Accordion';
 
 // TODO - Create tertiary variant of this with light greyish background
 const servicesContact = sharedContact('primary');
@@ -42,7 +43,11 @@ function Services() {
             rightTexts: service.texts,
             rightButtons: service.links,
           }}
-        />
+        >
+          <SplitContentCustom location="second">
+            <Accordion />
+          </SplitContentCustom>
+        </SplitContent>
       ))}
       <SplitContent
         leftContent={servicesContact.leftContent}

@@ -9,7 +9,7 @@ function Nav() {
   return (
     <NavStyled>
       <NavItemsList>
-        <LogoStyled isUppercase fontSize="16px" />
+        <LogoStyled isUppercase fontSize="2rem" />
         <NavItem text="HOME" key="HOME" to="/" Icon={ArrowUpRight} />
         <NavItem text="WORK" key="WORK" to="/work" Icon={ArrowUpRight} />
         <NavItem text="SERVICES" key="SERVICES" to="/services" Icon={ArrowUpRight} />
