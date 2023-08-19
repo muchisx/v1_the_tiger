@@ -22,7 +22,9 @@ function Services() {
   return (
     <main className="page page--services">
       <Section enableGutter>
-        <Heading text={ServicesHeroHeadingText} headingLevel="h1" fontSize="4vw" />
+        <Heading headingLevel="h1" fontSize="4vw">
+          {ServicesHeroHeadingText}
+        </Heading>
       </Section>
       <SplitContent contain leftContent={servicesCTA.leftContent} rightContent={servicesCTA.rightContent} />
       <ImageBanner src={placeholderImageBanner} minHeight={{ all: '360px', md: '96svh' }} enableParallax />
@@ -35,7 +37,7 @@ function Services() {
           leftContent={{
             topTag: { children: `${index + 1}   /   ${data.length}`, variant: 'tertiary' },
             leftHeading: {
-              text: service.heading.text,
+              children: service.heading.children,
               fontSize: '4.8rem',
             },
           }}

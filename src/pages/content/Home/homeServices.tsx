@@ -59,7 +59,7 @@ const leftContent: SplitContentProps['leftContent'] = {
     children: 'Services',
   },
   leftHeading: {
-    text: leftHeading,
+    children: leftHeading,
     fontSize: '4.8rem',
   },
   leftButtons: [

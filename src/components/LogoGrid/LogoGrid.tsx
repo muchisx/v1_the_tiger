@@ -11,7 +11,11 @@ function LogoGrid(props: Props) {
   const { customStyles, logoUrls, title } = props;
   return (
     <Section customStyles={sectionCSS.concat(customStyles)} contain enableGutter marginTop={32} marginBottom={32}>
-      {title && <Heading text={title} fontWeight={400} fontSize="1.6rem" className="logo-grid__heading" />}
+      {title && (
+        <Heading fontWeight={400} fontSize="1.6rem" className="logo-grid__heading">
+          {title}
+        </Heading>
+      )}
       <Grid>
         {logoUrls.map((logo) => (
           <GridItem key={logo.$keyId}>

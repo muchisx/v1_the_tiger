@@ -1,7 +1,7 @@
 type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 export type Props = {
-  text: string | JSX.Element;
+  children: React.ReactNode;
   fontWeight?: number;
   fontSize?: string;
   headingLevel?: HeadingLevel;

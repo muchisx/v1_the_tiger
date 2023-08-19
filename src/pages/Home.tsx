@@ -22,7 +22,9 @@ function Home() {
   return (
     <main className="page page--home">
       <Section enableGutter>
-        <Heading text={HomeHeroHeadingText} headingLevel="h1" fontSize="6.4vw" />
+        <Heading headingLevel="h1" fontSize="6.4vw">
+          {HomeHeroHeadingText}
+        </Heading>
       </Section>
       <SplitContent
         contain

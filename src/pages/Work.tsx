@@ -13,7 +13,9 @@ function Work() {
   return (
     <main className="page page--work">
       <Section enableGutter>
-        <Heading text={WorkHeroHeadingText} headingLevel="h1" fontSize="4vw" />
+        <Heading headingLevel="h1" fontSize="4vw">
+          {WorkHeroHeadingText}
+        </Heading>
       </Section>
       <SplitContent contain leftContent={workCTA.leftContent} rightContent={workCTA.rightContent} />
       <CardGrid cardCells={workJobCards.cardCells} contain customStyles={workJobCards.customStyles} />

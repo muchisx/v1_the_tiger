@@ -20,12 +20,9 @@ function CardGrid(props: Props) {
             <CardGridCell key={cellProps.$keyId}>
               <Card {...cellProps.card} />
               <CardGridCellBottom>
-                <Heading
-                  text={cellProps.subheading}
-                  fontSize={fontSize}
-                  headingLevel={headingLevel}
-                  fontWeight={fontWeight}
-                />
+                <Heading fontSize={fontSize} headingLevel={headingLevel} fontWeight={fontWeight}>
+                  {cellProps.subheading}
+                </Heading>
                 {cellProps.button && <Button {...cellProps.button} />}
               </CardGridCellBottom>
             </CardGridCell>

@@ -60,7 +60,7 @@ const commonLeftBgShape: SplitContentProps['leftContent']['backgroundShape'] = {
 
 const commonRightHeading = (highlightTwo = '') => {
   return {
-    text: (
+    children: (
       <>
         <span className="highlight-primary">GOT AN IDEA?</span>
         <br />

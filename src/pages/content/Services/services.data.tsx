@@ -17,7 +17,7 @@ const data: Service[] = [
   {
     $keyId: crypto.randomUUID(),
     heading: {
-      text: 'SHOPIFY DEVELOPMENT',
+      children: 'SHOPIFY DEVELOPMENT',
     },
     texts: [
       {

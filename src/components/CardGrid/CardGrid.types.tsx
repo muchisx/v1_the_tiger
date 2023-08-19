@@ -10,7 +10,7 @@ import type { MediaQueryWithCSS } from '@/types/mediaQuery.types';
 
 type CardCell = KeyId & {
   card: CardProps;
-  subheading: HeadingProps['text'];
+  subheading: HeadingProps['children'];
   button?: ButtonProps;
 };
 
