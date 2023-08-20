@@ -5,6 +5,7 @@ import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 import { getMediaQueryValue } from '@utils';
 // Types
 import type { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
+import backgroundshape from '@assets/svgs/abstract-1.svg';
 
 const customStyles = css`
   @media only screen and (min-width: ${getMediaQueryValue('md')}) {
@@ -14,9 +15,9 @@ const customStyles = css`
   }
 `;
 
-const textLeft = (
-  <>Skilled web developer capitalizing on the potential of coding to accomplish your creative aspirations.</>
-);
+// const textLeft = (
+//   <>Skilled web developer capitalizing on the potential of coding to accomplish your creative aspirations.</>
+// );
 
 const textRight = (
   <>
@@ -25,14 +26,19 @@ const textRight = (
   </>
 );
 
+// const leftContent: SplitContentProps['leftContent'] = {
+//   leftTexts: [
+//     {
+//       fontWeight: 500,
+//       children: textLeft,
+//       $keyId: crypto.randomUUID(),
+//     },
+//   ],
+// };
 const leftContent: SplitContentProps['leftContent'] = {
-  leftTexts: [
-    {
-      fontWeight: 500,
-      children: textLeft,
-      $keyId: crypto.randomUUID(),
-    },
-  ],
+  backgroundShape: {
+    url: backgroundshape,
+  },
 };
 
 const rightContent: SplitContentProps['rightContent'] = {
