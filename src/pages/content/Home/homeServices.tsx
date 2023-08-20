@@ -60,7 +60,9 @@ const leftContent: SplitContentProps['leftContent'] = {
   },
   leftHeading: {
     children: leftHeading,
-    fontSize: '4.8rem',
+    fontSize: {
+      all: '4.8rem',
+    },
   },
   leftButtons: [
     {

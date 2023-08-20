@@ -12,7 +12,7 @@ function LogoGrid(props: Props) {
   return (
     <Section customStyles={sectionCSS.concat(customStyles)} contain enableGutter marginTop={32} marginBottom={32}>
       {title && (
-        <Heading fontWeight={400} fontSize="1.6rem" className="logo-grid__heading">
+        <Heading fontWeight={400} fontSize={{ all: '1.6rem' }} className="logo-grid__heading">
           {title}
         </Heading>
       )}

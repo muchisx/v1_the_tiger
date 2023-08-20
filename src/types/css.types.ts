@@ -258,3 +258,18 @@ export type GeneralLenght = NumberWithUnit | GlobalLenght | CSSFunction | Global
 
 export type Height = GeneralLenght;
 export type Width = GeneralLenght;
+
+// Fonts
+export type AbsoluteFontSize =
+  | 'xx-small'
+  | 'x-small'
+  | 'small'
+  | 'medium'
+  | 'large'
+  | 'x-large'
+  | 'xx-large'
+  | 'xxx-large';
+
+export type RelativeFontSize = 'smaller' | 'larger';
+
+export type FontSize = AbsoluteFontSize | RelativeFontSize | NumberWithUnit | CSSFunction | Global;

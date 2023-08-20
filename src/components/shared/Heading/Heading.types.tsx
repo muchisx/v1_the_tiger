@@ -1,11 +1,14 @@
+import type { MediaQueryWithCSS } from '@/types/mediaQuery.types';
+import type { FontSize } from '@/types/css.types';
+
 type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 export type Props = {
-  children: React.ReactNode;
-  fontWeight?: number;
-  fontSize?: string;
-  headingLevel?: HeadingLevel;
   className?: string;
+  fontWeight?: number;
+  children: React.ReactNode;
+  headingLevel?: HeadingLevel;
+  fontSize?: MediaQueryWithCSS<FontSize>;
 };
 
 // Styled Components

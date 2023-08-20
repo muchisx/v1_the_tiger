@@ -87,10 +87,10 @@ function Job() {
         bottomContent={heroBannerBottom}
         imgOverlayColor="rgba(0,0,0,0.36)"
         customStyles={customImageBannerStyles}
-        heading={{ children: jobTitle, headingLevel: 'h1', fontSize: 'clamp(3rem, 6vw, 14rem)' }}
+        heading={{ children: jobTitle, headingLevel: 'h1', fontSize: { all: 'clamp(3rem, 6vw, 14rem)' } }}
       />
       <Section contain="margin" enableGutter marginTop={100}>
-        <Heading className="uppercase" fontSize="clamp(24px, 3.2vw, 46px)">
+        <Heading className="uppercase" fontSize={{ all: 'clamp(24px, 3.2vw, 46px)' }}>
           {jobFeaturedPhrase}
         </Heading>
       </Section>

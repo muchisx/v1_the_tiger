@@ -13,7 +13,7 @@ function Work() {
   return (
     <main className="page page--work">
       <Section enableGutter>
-        <Heading headingLevel="h1" fontSize="4vw">
+        <Heading headingLevel="h1" fontSize={{ all: '4vw' }}>
           {WorkHeroHeadingText}
         </Heading>
       </Section>

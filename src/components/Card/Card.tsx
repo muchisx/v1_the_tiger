@@ -85,7 +85,7 @@ function Card(props: Props) {
             </HeaderIconWrap>
           )}
           {headerHeading && (
-            <Heading className="card__heading" headingLevel="h3" fontSize="2.4rem">
+            <Heading className="card__heading" headingLevel="h3" fontSize={{ all: '2.4rem' }}>
               {headerHeading}
             </Heading>
           )}

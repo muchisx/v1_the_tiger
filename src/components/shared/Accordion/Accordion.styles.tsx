@@ -2,13 +2,35 @@ import styled from 'styled-components';
 import type { Variants } from 'framer-motion';
 import { motion } from 'framer-motion';
 import TextStyled from '../Text/Text.styles';
+import HeadingStyled from '../Heading/Heading.styles';
+
+export const QuestionIcon = styled.span`
+  --icon-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size);
+  height: var(--icon-size);
+`;
 
 export const QuestionButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding-block: var(--block-padding);
+  padding-block: var(--global-padding);
   cursor: pointer;
   background-color: transparent;
+
+  ${HeadingStyled} {
+    transition: color 0.2s ease-in-out;
+  }
+  :hover {
+    ${HeadingStyled} {
+      color: var(--neutral-color-quaternary);
+    }
+  }
 `;
 
 export const QuestionContainer = styled(motion.dt)`
@@ -20,18 +42,19 @@ export const AnswerContainer = styled(motion.dd)`
   overflow: hidden;
 
   ${TextStyled} {
-    padding-bottom: var(--block-padding);
+    padding-bottom: var(--global-padding);
   }
 `;
 
 export const AccordionItemContainer = styled(motion.div)`
-  --block-padding: 16px;
+  --global-padding: 16px;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid grey;
+  /* padding-inline: var(--global-padding); */
+  border-top: 1px solid var(--neutral-color-quaternary);
 
   :last-child {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--neutral-color-quaternary);
   }
 `;
 

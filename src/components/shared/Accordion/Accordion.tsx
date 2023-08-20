@@ -1,7 +1,13 @@
-import * as React from 'react';
+// Dependencies
 import { useState } from 'react';
+import { ChevronUpDown } from '@styled-icons/fluentui-system-filled';
 import { AnimatePresence } from 'framer-motion';
+// Components
+import Text from '../Text/Text';
+import Heading from '../Heading/Heading';
+// Styled Components
 import {
+  QuestionIcon,
   AccordionList,
   QuestionButton,
   AnswerContainer,
@@ -9,9 +15,10 @@ import {
   AccordionItemContainer,
   AccordionItemMotionVariants,
 } from './Accordion.styles';
-import Text from '../Text/Text';
+// Types
+import type { AccordionItem as AccordionItemProps, Props } from './Accordion.types';
 
-function AccordionItem(props) {
+function AccordionItem(props: AccordionItemProps) {
   const { question, answer } = props;
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -20,7 +27,15 @@ function AccordionItem(props) {
   return (
     <AccordionItemContainer>
       <QuestionContainer initial={false}>
-        <QuestionButton onClick={() => setIsExpanded((previsExpanded) => !previsExpanded)}>Question +</QuestionButton>
+        <QuestionButton onClick={() => setIsExpanded((previsExpanded) => !previsExpanded)}>
+          <Heading fontSize={{ all: '2rem', md: '2.4rem' }} className="uppercase" headingLevel="h4">
+            {question}
+          </Heading>
+
+          <QuestionIcon>
+            <ChevronUpDown />
+          </QuestionIcon>
+        </QuestionButton>
       </QuestionContainer>
       <AnimatePresence initial={false}>
         {isExpanded && (
@@ -31,11 +46,7 @@ function AccordionItem(props) {
             variants={AccordionItemMotionVariants}
             transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
-            <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, id debitis, suscipit laboriosam esse
-              tempore excepturi ad inventore cum, totam quas. Maiores illum minima eligendi modi quae recusandae
-              molestiae pariatur.
-            </Text>
+            <Text>{answer}</Text>
           </AnswerContainer>
         )}
       </AnimatePresence>
@@ -43,12 +54,14 @@ function AccordionItem(props) {
   );
 }
 
-function Accordion(props) {
+function Accordion(props: Props) {
+  const { accordionItems } = props;
+
   return (
     <AccordionList>
-      <AccordionItem />
-      <AccordionItem />
-      <AccordionItem />
+      {accordionItems.map((item) => (
+        <AccordionItem key={item.$keyId} $keyId={item.$keyId} answer={item.answer} question={item.question} />
+      ))}
     </AccordionList>
   );
 }

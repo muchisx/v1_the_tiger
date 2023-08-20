@@ -8,6 +8,7 @@ import svgShape from '@assets/svgs/abstract-8.svg';
 import { BackgroundShape } from '@components/SplitContent/SplitContent.styles';
 // Types
 import { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
+import type { Props as HeadingProps } from '@/components/shared/Heading/Heading.types';
 
 type ContactVariant = 'primary' | 'secondary';
 
@@ -58,7 +59,7 @@ const commonLeftBgShape: SplitContentProps['leftContent']['backgroundShape'] = {
   rotation: [100, 140],
 };
 
-const commonRightHeading = (highlightTwo = '') => {
+const commonRightHeading = (highlightTwo = ''): HeadingProps => {
   return {
     children: (
       <>
@@ -67,7 +68,9 @@ const commonRightHeading = (highlightTwo = '') => {
         <span className={highlightTwo}>LET&#39;S WORK TOGETHER!</span>
       </>
     ),
-    fontSize: '4.8rem',
+    fontSize: {
+      all: '4.8rem',
+    },
   };
 };
 

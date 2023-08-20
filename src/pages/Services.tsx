@@ -1,10 +1,11 @@
 // Components
-import Section from '@components/shared/Section/Section';
+import Divider from '@components/Divider/Divider';
 import Heading from '@components/shared/Heading/Heading';
-import SplitContent, { SplitContentCustom } from '@components/SplitContent/SplitContent';
+import Section from '@components/shared/Section/Section';
 import ImageBanner from '@components/ImageBanner/ImageBanner';
+import SplitContent, { SplitContentCustom } from '@components/SplitContent/SplitContent';
 // Styled Components
-import serviceCustomCSS from '@content/Services/services.styles';
+import { serviceCustomCSS, serviceDividerCustomCSS } from '@content/Services/services.styles';
 // Assets
 // TODO - Change this image to the actual one
 import placeholderImageBanner from '@assets/images/hero-banner-1.jpg';
@@ -22,23 +23,24 @@ function Services() {
   return (
     <main className="page page--services">
       <Section enableGutter>
-        <Heading headingLevel="h1" fontSize="4vw">
+        <Heading headingLevel="h1" fontSize={{ all: '4vw' }}>
           {ServicesHeroHeadingText}
         </Heading>
       </Section>
       <SplitContent contain leftContent={servicesCTA.leftContent} rightContent={servicesCTA.rightContent} />
       <ImageBanner src={placeholderImageBanner} minHeight={{ all: '360px', md: '96svh' }} enableParallax />
 
+      <Divider customStyles={serviceDividerCustomCSS} paddingBottom={60} />
       {data.map((service, index) => (
         <SplitContent
           customStyles={serviceCustomCSS}
-          contain="margin"
+          contain="padding"
           key={service.$keyId}
           leftContent={{
-            topTag: { children: `${index + 1}   /   ${data.length}`, variant: 'tertiary' },
+            topTag: { children: `${index + 1}  /  ${data.length}`, variant: 'tertiary' },
             leftHeading: {
               children: service.heading.children,
-              fontSize: '4.8rem',
+              fontSize: { all: '3.8rem', md: '4.8rem' },
             },
           }}
           rightContent={{
@@ -47,10 +49,12 @@ function Services() {
           }}
         >
           <SplitContentCustom location="second">
-            <Accordion />
+            <Accordion accordionItems={service.features} />
           </SplitContentCustom>
         </SplitContent>
       ))}
+      <Divider customStyles={serviceDividerCustomCSS} paddingBottom={116} />
+
       <SplitContent
         leftContent={servicesContact.leftContent}
         rightContent={servicesContact.rightContent}
