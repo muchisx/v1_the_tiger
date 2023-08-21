@@ -10,7 +10,7 @@ import { BackgroundShape } from '@components/SplitContent/SplitContent.styles';
 import { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
 import type { Props as HeadingProps } from '@/components/shared/Heading/Heading.types';
 
-type ContactVariant = 'primary' | 'secondary';
+type ContactVariant = 'primary' | 'secondary' | 'tertiary';
 
 const primaryCustomStyles = css`
   ${BackgroundShape} {
@@ -49,6 +49,30 @@ const secondaryCustomStyles = css`
   }
 `;
 
+const tertiaryCustomStyles = css`
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-color: var(--body-bg-color-tertiary);
+  }
+
+  ${BackgroundShape} {
+    top: unset;
+    bottom: -16%;
+    z-index: unset;
+
+    @media only screen and (min-width: 769px) {
+      left: 10%;
+      width: min(36%, 560px);
+    }
+    @media only screen and (max-width: 768px) {
+      left: 24%;
+    }
+  }
+`;
+
 const commonLeftTopTag: SplitContentProps['leftContent']['topTag'] = {
   variant: 'tertiary',
   children: 'Get in touch',
@@ -69,7 +93,8 @@ const commonRightHeading = (highlightTwo = ''): HeadingProps => {
       </>
     ),
     fontSize: {
-      all: '4.8rem',
+      all: '3.8rem',
+      md: '4.8rem',
     },
   };
 };
@@ -118,6 +143,9 @@ const sharedContact = (variant: ContactVariant = 'primary') => {
       rightContent.rightHeading = commonRightHeading('highlight-quaternary');
       rightContent.rightTexts![0].className = 'highlight-quaternary';
       rightContent.rightButtons![0].variant = 'secondary';
+      break;
+    case 'tertiary':
+      customStyles = tertiaryCustomStyles;
       break;
 
     default:
