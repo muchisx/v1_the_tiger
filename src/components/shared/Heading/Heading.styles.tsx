@@ -6,7 +6,7 @@ import { getCSSFromMediaQuery } from '@utils';
 import type { HeadingProps } from './Heading.types';
 
 const HeadingStyled = styled.span<HeadingProps>`
-  line-height: 1;
+  line-height: 1.15;
   font-weight: ${(props) => props.$fontWeight};
   ${(props) => props.$fontSize && getCSSFromMediaQuery(props.$fontSize, 'font-size').map((item) => item)};
 `;
