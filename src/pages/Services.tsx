@@ -1,8 +1,10 @@
 // Components
 import Divider from '@components/Divider/Divider';
+import CardGrid from '@components/CardGrid/CardGrid';
 import Heading from '@components/shared/Heading/Heading';
 import Section from '@components/shared/Section/Section';
 import ImageBanner from '@components/ImageBanner/ImageBanner';
+import Accordion from '@components/shared/Accordion/Accordion';
 import SplitContent, { SplitContentCustom } from '@components/SplitContent/SplitContent';
 // Styled Components
 import { serviceCustomCSS, serviceDividerCustomCSS } from '@content/Services/services.styles';
@@ -10,14 +12,16 @@ import { serviceCustomCSS, serviceDividerCustomCSS } from '@content/Services/ser
 // TODO - Change this image to the actual one
 import placeholderImageBanner from '@assets/images/hero-banner-1.jpg';
 // Content
-import { ServicesHeroHeadingText, servicesCTA } from '@content/Services';
 import sharedContact from '@content/shared/sharedContact';
+import servicesWork from '@content/Services/servicesWork';
+import servicesJobs from '@content/Services/servicesJobs';
+import { ServicesHeroHeadingText, servicesCTA } from '@content/Services';
 // Data
-import data from '@content/Services/services.data';
-import Accordion from '@components/shared/Accordion/Accordion';
+import servicesData from '@content/Services/services.data';
+import data from '@content/Job/job.data';
 
-// TODO - Create tertiary variant of this with light greyish background
-const servicesContact = sharedContact('primary');
+const servicesContact = sharedContact('secondary');
+const servicesJobsData = servicesJobs(data);
 
 function Services() {
   return (
@@ -31,13 +35,13 @@ function Services() {
       <ImageBanner src={placeholderImageBanner} minHeight={{ all: '360px', md: '96svh' }} enableParallax />
 
       <Divider customStyles={serviceDividerCustomCSS} paddingBottom={60} />
-      {data.map((service, index) => (
+      {servicesData.map((service, index) => (
         <SplitContent
-          customStyles={serviceCustomCSS}
           contain="padding"
           key={service.$keyId}
+          customStyles={serviceCustomCSS}
           leftContent={{
-            topTag: { children: `${index + 1}  /  ${data.length}`, variant: 'tertiary' },
+            topTag: { children: `${index + 1}  /  ${servicesData.length}`, variant: 'tertiary' },
             leftHeading: {
               children: service.heading.children,
               fontSize: { all: '3.8rem', md: '4.8rem' },
@@ -56,10 +60,25 @@ function Services() {
       <Divider customStyles={serviceDividerCustomCSS} paddingBottom={116} />
 
       <SplitContent
+        contain="padding"
+        leftContent={servicesWork.leftContent}
+        rightContent={servicesWork.rightContent}
+        customStyles={servicesWork.customStyles}
+      />
+
+      <CardGrid
+        contain="padding"
+        cardCells={servicesJobsData.cardCells}
+        customStyles={servicesJobsData.customStyles}
+        gridTemplateColumns={{ md: 'repeat(3, 1fr)' }}
+        footerButton={servicesJobsData.footerButton}
+      />
+
+      <SplitContent
+        contain="padding"
         leftContent={servicesContact.leftContent}
         rightContent={servicesContact.rightContent}
         customStyles={servicesContact.customStyles}
-        contain="padding"
       />
     </main>
   );

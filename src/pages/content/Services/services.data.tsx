@@ -13,7 +13,7 @@ const contactLink: ButtonProps = {
   Icon: ArrowRight,
 };
 
-const data: Service[] = [
+const servicesData: Service[] = [
   {
     $keyId: crypto.randomUUID(),
     heading: {
@@ -120,6 +120,59 @@ const data: Service[] = [
       },
     ],
   },
+  {
+    $keyId: crypto.randomUUID(),
+    heading: {
+      children: 'REACT DEVELOPMENT',
+    },
+    texts: [
+      {
+        $keyId: crypto.randomUUID(),
+        fontWeight: 500,
+        children:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto blanditiis labore ipsa incidunt delectus veritatis quasi accusamus non? Quasi rem voluptates minima tempora doloremque. Ullam corrupti est soluta. Quas, temporibus?',
+      },
+      {
+        $keyId: crypto.randomUUID(),
+        children:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, assumenda et! Fugit itaque beatae quos dolore ex est dignissimos necessitatibus numquam rem, culpa architecto labore. Aspernatur molestiae sequi ipsam similique!',
+      },
+    ],
+    links: [
+      {
+        $keyId: crypto.randomUUID(),
+        ...contactLink,
+      },
+      {
+        $keyId: crypto.randomUUID(),
+        to: '/shopify',
+        role: 'link',
+        variant: 'secondary',
+        Icon: ArrowRight,
+        text: 'Learn more',
+      },
+    ],
+    features: [
+      {
+        $keyId: crypto.randomUUID(),
+        question: 'QUESTION QST',
+        answer:
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+      },
+      {
+        $keyId: crypto.randomUUID(),
+        question: 'QUESTION QST',
+        answer:
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+      },
+      {
+        $keyId: crypto.randomUUID(),
+        question: 'QUESTION QST',
+        answer:
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+      },
+    ],
+  },
 ];
 
-export default data;
+export default servicesData;
