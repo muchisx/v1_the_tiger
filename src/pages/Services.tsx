@@ -68,10 +68,11 @@ function Services() {
 
       <CardGrid
         contain="padding"
+        gridAutoRows={{ md: '36vh' }}
         cardCells={servicesJobsData.cardCells}
         customStyles={servicesJobsData.customStyles}
-        gridTemplateColumns={{ md: 'repeat(3, 1fr)' }}
         footerButton={servicesJobsData.footerButton}
+        gridTemplateColumns={{ md: 'repeat(3, 1fr)' }}
       />
 
       <SplitContent
