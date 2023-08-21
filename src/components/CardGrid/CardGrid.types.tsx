@@ -30,4 +30,5 @@ export type Props = {
     fontWeight?: HeadingProps['fontWeight'];
     headingLevel?: HeadingProps['headingLevel'];
   };
+  footerButton?: ButtonProps;
 };

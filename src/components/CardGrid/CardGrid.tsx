@@ -4,12 +4,12 @@ import Button from '@components/shared/Button/Button';
 import Heading from '@components/shared/Heading/Heading';
 import Section from '@components/shared/Section/Section';
 // Styled Components
-import { CardGridStyled, CardGridCell, CardGridCellBottom } from './CardGrid.styles';
+import { CardGridStyled, CardGridCell, CardGridCellBottom, CardGridFooter } from './CardGrid.styles';
 // Types
 import type { Props } from './CardGrid.types';
 
 function CardGrid(props: Props) {
-  const { contain, cardCells, customStyles, subheadingFont, gridTemplateColumns, gridAutoRows } = props;
+  const { contain, cardCells, customStyles, subheadingFont, gridTemplateColumns, gridAutoRows, footerButton } = props;
   const { fontSize, headingLevel, fontWeight } = subheadingFont ?? {};
 
   return (
@@ -28,6 +28,12 @@ function CardGrid(props: Props) {
             </CardGridCell>
           ))}
       </CardGridStyled>
+
+      {footerButton && (
+        <CardGridFooter>
+          <Button {...footerButton} />
+        </CardGridFooter>
+      )}
     </Section>
   );
 }

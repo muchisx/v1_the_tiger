@@ -20,6 +20,13 @@ export const CardGridCell = styled.div`
   gap: 20px;
 `;
 
+export const CardGridFooter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+`;
+
 export const CardGridStyled = styled.div<CardGridStyledProps>`
   display: grid;
   grid-template-columns: 1fr;
