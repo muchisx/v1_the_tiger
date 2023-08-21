@@ -48,7 +48,7 @@ const leftText = (
 const leftHeading = (
   <>
     <span className="highlight-quaternary">WAYS I </span>
-    <br className="xsm-hidden" />
+
     <span className="highlight-primary">CAN HELP</span>
   </>
 );
@@ -61,7 +61,8 @@ const leftContent: SplitContentProps['leftContent'] = {
   leftHeading: {
     children: leftHeading,
     fontSize: {
-      all: '4.8rem',
+      all: '3.8rem',
+      md: '4.8rem',
     },
   },
   leftButtons: [
