@@ -46,7 +46,7 @@ const SpanFour = styled.span`
 `;
 
 // TODO - CREATE A TOTALLY NEW PHRASE
-const servicesHeroHeadingText = (
+const aboutHeroHeadingText = (
   <>
     <SpanOne className="highlight-primary">Lorem ipsum dolor </SpanOne>
     <SpanTwo>sit amet </SpanTwo>
@@ -55,4 +55,4 @@ const servicesHeroHeadingText = (
   </>
 );
 
-export default servicesHeroHeadingText;
+export default aboutHeroHeadingText;
