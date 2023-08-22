@@ -12,11 +12,14 @@ import type { Props as HeadingProps } from '@/components/shared/Heading/Heading.
 
 type ContactVariant = 'primary' | 'secondary' | 'tertiary';
 
-const primaryCustomStyles = css`
+const commonStyles = css`
   ${BackgroundShape} {
+    top: unset;
+    bottom: -16%;
+
     @media only screen and (min-width: 769px) {
       left: 10%;
-      width: 40%;
+      width: min(36%, 560px);
     }
     @media only screen and (max-width: 768px) {
       left: 24%;
@@ -24,7 +27,13 @@ const primaryCustomStyles = css`
   }
 `;
 
+const primaryCustomStyles = css`
+  ${commonStyles}
+`;
+
 const secondaryCustomStyles = css`
+  ${commonStyles}
+
   &::before {
     content: '';
     position: absolute;
@@ -36,20 +45,12 @@ const secondaryCustomStyles = css`
   ${BackgroundShape} {
     opacity: 0.2;
     filter: brightness(10);
-    top: unset;
-    bottom: -16%;
-
-    @media only screen and (min-width: 769px) {
-      left: 10%;
-      width: min(36%, 560px);
-    }
-    @media only screen and (max-width: 768px) {
-      left: 24%;
-    }
   }
 `;
 
 const tertiaryCustomStyles = css`
+  ${commonStyles}
+
   &::before {
     content: '';
     position: absolute;
@@ -59,17 +60,7 @@ const tertiaryCustomStyles = css`
   }
 
   ${BackgroundShape} {
-    top: unset;
-    bottom: -16%;
     z-index: unset;
-
-    @media only screen and (min-width: 769px) {
-      left: 10%;
-      width: min(36%, 560px);
-    }
-    @media only screen and (max-width: 768px) {
-      left: 24%;
-    }
   }
 `;
 

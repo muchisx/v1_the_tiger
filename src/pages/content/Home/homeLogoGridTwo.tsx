@@ -1,3 +1,6 @@
+// Dependencies
+import { css } from 'styled-components';
+// Assets
 import bigLittleBar from '@assets/svgs/companies/biglittlebar/logo.svg';
 import pinky from '@assets/svgs/companies/pinky/logo.svg';
 import qualityDoor from '@assets/images/companies/quality-door/logo.png';
@@ -18,6 +21,11 @@ import safkanHealth from '@assets/images/companies/safkan-ottoset/logo.png';
 import veme from '@assets/svgs/companies/veme/logo.svg';
 // Types
 import { type Props as LogoGridProps } from '@components/LogoGrid/LogoGrid.types';
+
+const customStyles = css`
+  gap: 32px;
+  margin-top: 88px;
+`;
 
 const logoUrlList = [
   bigLittleBar,
@@ -45,7 +53,8 @@ const logoUrls: LogoGridProps['logoUrls'] = logoUrlList.map((logoUrl) => ({
   url: logoUrl,
 }));
 
-const homeLogoGridTwo = {
+const homeLogoGridTwo: LogoGridProps = {
+  customStyles,
   logoUrls,
 };
 

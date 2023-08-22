@@ -46,13 +46,14 @@ function Home() {
         rightContent={homeServices.rightContent}
         customStyles={homeServices.customStyles}
       />
+
+      <LogoGrid logoUrls={homeLogoGridTwo.logoUrls} title="TRUSTED BY" customStyles={homeLogoGridTwo.customStyles} />
       <SplitContent
         contain
         leftContent={homeContact.leftContent}
         rightContent={homeContact.rightContent}
         customStyles={homeContact.customStyles}
       />
-      <LogoGrid logoUrls={homeLogoGridTwo.logoUrls} title="TRUSTED BY" />
     </main>
   );
 }
