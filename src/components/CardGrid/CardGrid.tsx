@@ -16,17 +16,24 @@ function CardGrid(props: Props) {
     <Section enableGutter contain={contain} customStyles={customStyles} paddingBottom={56} paddingTop={56}>
       <CardGridStyled $gridTemplateColumns={gridTemplateColumns} $gridAutoRows={gridAutoRows}>
         {!!cardCells.length &&
-          cardCells.map((cellProps) => (
-            <CardGridCell key={cellProps.$keyId}>
-              <Card {...cellProps.card} />
-              <CardGridCellBottom>
-                <Heading fontSize={fontSize} headingLevel={headingLevel} fontWeight={fontWeight}>
-                  {cellProps.subheading}
-                </Heading>
-                {cellProps.button && <Button {...cellProps.button} />}
-              </CardGridCellBottom>
-            </CardGridCell>
-          ))}
+          cardCells.map((cell) => {
+            const renderCardGridCellBottom = cell.subheading || cell.button;
+
+            return (
+              <CardGridCell key={cell.$keyId}>
+                <Card {...cell.card} />
+
+                {renderCardGridCellBottom && (
+                  <CardGridCellBottom>
+                    <Heading fontSize={fontSize} headingLevel={headingLevel} fontWeight={fontWeight}>
+                      {cell.subheading}
+                    </Heading>
+                    {cell.button && <Button {...cell.button} />}
+                  </CardGridCellBottom>
+                )}
+              </CardGridCell>
+            );
+          })}
       </CardGridStyled>
 
       {footerButton && (
