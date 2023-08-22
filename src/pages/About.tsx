@@ -1,4 +1,5 @@
 // Components
+import CardGrid from '@components/CardGrid/CardGrid';
 import Heading from '@components/shared/Heading/Heading';
 import Section from '@components/shared/Section/Section';
 import ImageBanner from '@components/ImageBanner/ImageBanner';
@@ -10,6 +11,10 @@ import placeholderImageBanner from '@assets/images/hero-banner-1.jpg';
 import aboutCTA from '@content/About/aboutCTA';
 import aboutDescription from '@content/About/aboutDescription';
 import aboutHeroHeadingText from '@content/About/aboutHeroHeadingText';
+import sharedContact from '@content/shared/sharedContact';
+import aboutPortraits from '@content/About/aboutPortraits';
+
+const aboutContact = sharedContact('primary');
 
 function About() {
   return (
@@ -28,6 +33,20 @@ function About() {
         leftContent={aboutDescription.leftContent}
         rightContent={aboutDescription.rightContent}
         customStyles={aboutDescription.customStyles}
+      />
+
+      <CardGrid
+        contain="margin"
+        cardCells={aboutPortraits.cardCells}
+        gridTemplateColumns={{ md: '1.25fr .75fr;' }}
+        gridAutoRows={{ all: '50vh', md: '64h' }}
+      />
+
+      <SplitContent
+        contain="margin"
+        leftContent={aboutContact.leftContent}
+        rightContent={aboutContact.rightContent}
+        customStyles={aboutContact.customStyles}
       />
     </main>
   );
