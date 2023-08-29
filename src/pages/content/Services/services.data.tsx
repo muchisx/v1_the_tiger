@@ -24,12 +24,12 @@ const servicesData: Service[] = [
         $keyId: crypto.randomUUID(),
         fontWeight: 500,
         children:
-          "Your website is the face of your online business, and it needs to perform just as well as it looks. That's why I specialise in creating scalable and customer-focused websites that are tailored to meet the specific needs of your business. My bespoke web designs are designed with both your business model and target audience in mind, ensuring that your website is not only attractive but also functional and effective.",
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
       },
       {
         $keyId: crypto.randomUUID(),
         children:
-          "Whether you're a small start-up or a large enterprise, I have the expertise and experience to create a website that meets your unique needs and exceeds your expectations. My approach to web design prioritises both the user experience and the success of your business, ensuring that your website is optimised to drive engagement, conversion, and growth.",
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
       },
     ],
     links: [

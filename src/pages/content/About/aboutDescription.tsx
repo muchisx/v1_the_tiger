@@ -64,13 +64,12 @@ const aboutDescription: SplitContentProps = {
         $keyId: crypto.randomUUID(),
         children: (
           <>
-            I am not just about creating visually stunning websites – I am about creating digital experiences that
-            leaves a lasting first impression. I am a young digital designer who takes work seriously, but I also
-            believe that work should be fun. That&rsquo;s why I inject a little bit of humor into every project I do.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt
+            animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.,
             <br />
-            <br />I believe that laughter and creativity go hand-in-hand, and that mindset helps me push boundaries and
-            deliver truly exceptional designs. I also believe that no two businesses are alike, and therefore, no two
-            websites should look too similar to each other.
+            <br />
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt
+            animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.
           </>
         ),
       },
@@ -78,18 +77,17 @@ const aboutDescription: SplitContentProps = {
         $keyId: crypto.randomUUID(),
         children: (
           <>
-            That&rsquo;s why I take a customised approach to every project I work on. I get to know your brand&rsquo;s
-            personality and your business&rsquo;s unique needs before crafting a design that perfectly fits your vision.
-            Whether you&rsquo;re a startup or an established business, I&rsquo;ll create a website that captures the
-            essence of your brand and helps you stand out in the crowded digital landscape.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt
+            animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.
             <br />
             <br />
-            So, if you&rsquo;re looking for a web designer who takes your business seriously, but also having fun, I am
-            that person.{' '}
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt
+            animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.
+            <br />
             <Link to="https://calendly.com/miguel-angel-creator/free-meeting" target="_blank" rel="noopener noreferrer">
               Book a free strategy call
             </Link>{' '}
-            and let&rsquo;s talk about you business!
+            and let&rsquo;s talk about your ideas!
           </>
         ),
       },
