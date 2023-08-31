@@ -24,6 +24,7 @@ import type { Props } from './Card.types';
 
 function Card(props: Props) {
   const {
+    $styles,
     bodyText,
     className,
     HeaderIcon,
@@ -61,7 +62,13 @@ function Card(props: Props) {
   // -------------------------- --------------------------
 
   return (
-    <CardStyled className={className} customStyles={customStyles} whileHover="hover">
+    <CardStyled
+      className={className}
+      customStyles={customStyles}
+      whileHover="hover"
+      bgColor={$styles?.bgColor}
+      borderColor={$styles?.borderColor}
+    >
       {backgroundImg && (
         <CardBgImg
           width="100%"
@@ -78,7 +85,7 @@ function Card(props: Props) {
       {cardLinkWrap.to && <CardLinkWrap to={to} rel={relValue} target={target} />}
 
       {renderCardHeader && (
-        <CardHeader>
+        <CardHeader headerLayout={$styles?.headerLayout}>
           {HeaderIcon && (
             <HeaderIconWrap>
               <HeaderIcon />

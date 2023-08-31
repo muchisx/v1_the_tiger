@@ -1,5 +1,5 @@
 // Dependencies
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import type { Variants } from 'framer-motion';
@@ -8,14 +8,13 @@ import ImageResponsive from '@components/shared/ImageResponsive/ImageResponsive'
 // Utils
 import { getMediaQueryValue } from '@utils';
 // Types
-import { CardContainerProps } from './Card.types';
+import { CardContainerProps, CardHeaderProps } from './Card.types';
 
 export const CardFooter = styled.div`
   display: flex;
   gap: 12px;
   width: fit-content;
   margin-top: auto;
-
   margin-left: auto;
 `;
 
@@ -29,17 +28,9 @@ export const HeaderIconWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 8rem;
-  height: 8rem;
   border-radius: 10px;
   background-color: #1d1f21;
   color: white;
-  padding: 12px;
-
-  svg {
-    width: 84%;
-    height: 84%;
-  }
 `;
 
 export const TagsContainer = styled.div`
@@ -48,34 +39,65 @@ export const TagsContainer = styled.div`
   gap: 8px;
 `;
 
-export const CardHeader = styled.header`
-  display: grid;
-  grid-template-columns: auto 1fr;
+export const CardHeader = styled.header<CardHeaderProps>`
   grid-template-rows: auto auto;
-  column-gap: 2rem;
-  row-gap: 1.2rem;
+  display: grid;
 
   > * {
     // This fixes overflow issues
     min-width: 0;
   }
 
-  & ${HeaderIconWrap} {
-    grid-area: 1 / 1 / 2 / 2;
-  }
-
   ${TagsContainer} {
     grid-area: 2 / 1 / -1 / -1;
+    flex-wrap: wrap;
   }
 
-  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
-    & ${HeaderIconWrap} {
-      grid-area: 1 / 1 / 3 / 2;
+  ${(props) => {
+    switch (props.headerLayout) {
+      case 'compact':
+        return css`
+          grid-template-columns: 1fr auto;
+          column-gap: 1.6rem;
+          row-gap: 0.8rem;
+
+          ${HeaderIconWrap} {
+            grid-area: 1 / 2 / 3 / 2;
+            width: 4rem;
+            height: 4rem;
+            padding: 8px;
+          }
+        `;
+
+      default:
+        return css`
+          grid-template-columns: auto 1fr;
+          column-gap: 2rem;
+          row-gap: 1.2rem;
+
+          & ${HeaderIconWrap} {
+            grid-area: 1 / 1 / 2 / 2;
+            width: 8rem;
+            height: 8rem;
+            padding: 12px;
+
+            svg {
+              width: 84%;
+              height: 84%;
+            }
+          }
+
+          @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+            & ${HeaderIconWrap} {
+              grid-area: 1 / 1 / 3 / 2;
+            }
+            ${TagsContainer} {
+              grid-area: initial;
+            }
+          }
+        `;
     }
-    ${TagsContainer} {
-      grid-area: initial;
-    }
-  }
+  }}
 `;
 
 export const CardBgImg = styled(motion(ImageResponsive))`
@@ -100,8 +122,8 @@ export const CardStyled = styled(motion.article)<CardContainerProps>`
   padding: 24px;
   position: relative;
   border-radius: var(--border-radius);
-  background-color: var(--neutral-color);
-  border: 1px solid var(--neutral-color-secondary);
+  background-color: ${(props) => (props.bgColor ? props.bgColor : 'var(--neutral-color)')};
+  border: 1px solid ${(props) => (props.borderColor ? props.borderColor : 'var(--neutral-color-secondary)')};
 
   overflow: hidden;
   isolation: isolate;
