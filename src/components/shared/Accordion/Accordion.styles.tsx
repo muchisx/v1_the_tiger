@@ -50,7 +50,7 @@ export const AccordionItemContainer = styled(motion.div)`
   --global-padding: 16px;
   display: flex;
   flex-direction: column;
-  /* padding-inline: var(--global-padding); */
+
   border-top: 1px solid var(--neutral-color-quaternary);
 
   :last-child {

@@ -3,7 +3,8 @@ import CardGrid from '@components/CardGrid/CardGrid';
 import Heading from '@components/shared/Heading/Heading';
 import Section from '@components/shared/Section/Section';
 import ImageBanner from '@components/ImageBanner/ImageBanner';
-import SplitContent from '@components/SplitContent/SplitContent';
+import Accordion from '@components/shared/Accordion/Accordion';
+import SplitContent, { SplitContentCustom } from '@components/SplitContent/SplitContent';
 // Assets
 // TODO - Change this image to the actual one
 import placeholderImageBanner from '@assets/images/hero-banner-1.jpg';
@@ -14,6 +15,7 @@ import aboutHeroHeadingText from '@content/About/aboutHeroHeadingText';
 import sharedContact from '@content/shared/sharedContact';
 import aboutPortraits from '@content/About/aboutPortraits';
 import { aboutValuesCards, aboutValuesHeader } from './content/About/aboutValues';
+import aboutProcess, { aboutProcessItems } from './content/About/aboutProcess';
 
 const aboutContact = sharedContact('primary');
 
@@ -57,6 +59,12 @@ function About() {
         customStyles={aboutValuesCards.customStyles}
         gridTemplateColumns={{ sm: '1fr 1fr', md: '1fr 1fr 1fr', lg: '1fr 1fr 1fr 1fr' }}
       />
+
+      <SplitContent contain="margin" leftContent={aboutProcess.leftContent} rightContent={aboutProcess.rightContent}>
+        <SplitContentCustom location="second">
+          <Accordion accordionItems={aboutProcessItems} />
+        </SplitContentCustom>
+      </SplitContent>
 
       <SplitContent
         contain="margin"

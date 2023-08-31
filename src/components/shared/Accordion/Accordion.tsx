@@ -28,7 +28,7 @@ function AccordionItem(props: AccordionItemProps) {
     <AccordionItemContainer>
       <QuestionContainer initial={false}>
         <QuestionButton onClick={() => setIsExpanded((previsExpanded) => !previsExpanded)}>
-          <Heading fontSize={{ all: '2rem', md: '2.4rem' }} className="uppercase" headingLevel="h4">
+          <Heading fontSize={{ all: '2rem', md: '2.4rem' }} headingLevel="h4">
             {question}
           </Heading>
 
