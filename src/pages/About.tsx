@@ -13,6 +13,7 @@ import aboutDescription from '@content/About/aboutDescription';
 import aboutHeroHeadingText from '@content/About/aboutHeroHeadingText';
 import sharedContact from '@content/shared/sharedContact';
 import aboutPortraits from '@content/About/aboutPortraits';
+import { aboutValuesCards, aboutValuesHeader } from './content/About/aboutValues';
 
 const aboutContact = sharedContact('primary');
 
@@ -39,7 +40,22 @@ function About() {
         contain="margin"
         cardCells={aboutPortraits.cardCells}
         gridTemplateColumns={{ md: '1.25fr .75fr;' }}
-        gridAutoRows={{ all: '50vh', md: '64h' }}
+        gridAutoRows={{ all: '50vh', md: '64vh' }}
+      />
+
+      <SplitContent
+        contain="padding"
+        customStyles={aboutValuesHeader.customStyles}
+        leftContent={aboutValuesHeader.leftContent}
+        rightContent={aboutValuesHeader.rightContent}
+      />
+
+      <CardGrid
+        contain="padding"
+        gridAutoRows={{ all: 'auto' }}
+        cardCells={aboutValuesCards.cardCells}
+        customStyles={aboutValuesCards.customStyles}
+        gridTemplateColumns={{ sm: '1fr 1fr', md: '1fr 1fr 1fr', lg: '1fr 1fr 1fr 1fr' }}
       />
 
       <SplitContent
