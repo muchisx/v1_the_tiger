@@ -9,12 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@styled-icons/fluentui-system-filled": "^10.47.0",
-    "@styled-icons/fluentui-system-regular": "^10.47.0",
     "@styled-icons/styled-icon": "^10.7.0",
     "framer-motion": "^10.11.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.4",
     "react-router-dom": "^6.9.0",
     "styled-components": "^5.3.9",
     "vite-plugin-svgr": "^3.2.0"

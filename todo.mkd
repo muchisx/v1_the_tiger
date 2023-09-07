@@ -1,23 +1,25 @@
 # Todo List
 
 
+- [ ] Implement contact form with
+  - [ ] https://www.emailjs.com/docs
+  - [ ] https://www.react-hook-form.com/get-started
 - [ ] add height prop to divider component and fix services dividers
 - [x] only use useMediaQuery state globally to improve performance and grab it from context.
 - [x] use crypto.randomUUID() for all $keyId throught the app
 - [ ] rework Button comp so the clickable/actionnable area is not misleading with the padding of the top-wrapper, basically, make the entire button action on click, not just the center
 - [x] create more import aliases and update all imports
-- [ ] Remove styled icons fluent-regular if its not needed, as I am using just fluent-filled icons.
+- [x] Remove styled icons fluent-regular if its not needed, as I am using just fluent-filled icons.
 - [ ] Add footer privacy, terms and copyright
 - [ ] Create webp version of all image assets and create optimized fallbacks for browsers that don't support webp.
 - [ ] Pass Section paddingTop and Bottom a standard number declared elsewhere to have similar distancing across all sections
 - [ ] Fix BackgroundShape in Split content to no be direct child of Section, but instead be contained within the content
 - [ ] Refactor ImageMasked to use ImageResponsive as dependency 
-- [ ] Add Logo to Nav to make spacing for hamburger icon
+- [x] Add Logo to Nav to make spacing for hamburger icon
 - [x] Replace defaultProps for default Attributtes for optional props on all components
 - [x] Footer
   - [x] Menu Lists
   - [ ] Footer Newsletter
-- [ ] Contact Form
 - [ ] Try this for all shared components https://www.youtube.com/watch?v=eXRlVpw1SIQ&ab_channel=Joshtriedcoding
 - [ ] Customize via props:
   - [ ] Add customStyles prop to all section components
@@ -36,7 +38,7 @@
 - [ ] Embed calendly form instead of linking out of my porfolio
 - [x] Change types of css values from 'string' to a more complex type that accepts `${number}${unit}` with template literals.
 - [ ] Verify all uses of components with empty/partial props (even while typescript erros) to verify is being well protected for production.
-- [ ] Use theme instead of variables in css and use this breakpoint system inspired in Tailwind and MiUI
+- [x] Use theme instead of variables in css and use this breakpoint system inspired in Tailwind and MiUI (I did this with the getMediaQueryValue Util instead)
   ```javascript
   {
     'xsm': '426px',
