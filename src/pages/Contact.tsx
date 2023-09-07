@@ -30,7 +30,7 @@ function Contact() {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting, isSubmitSuccessful, isValid },
+    formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm<FormData>({
     defaultValues: {
       firstName: '',
@@ -90,6 +90,7 @@ function Contact() {
           <form onSubmit={handleSubmit((data) => submitForm(data))}>
             <InputText
               type="text"
+              placeholder="First Name"
               {...register('firstName', {
                 required: '🙂 Come on, tell me your name.',
                 minLength: {
@@ -104,11 +105,12 @@ function Contact() {
             />
             {errors.firstName && <p>{errors.firstName.message}</p>}
 
-            <InputText type="text" {...register('lastName', { minLength: 2 })} />
+            <InputText type="text" placeholder="Last Name" {...register('lastName', { minLength: 2 })} />
             {errors.lastName && <p>{errors.lastName.message}</p>}
 
             <InputText
               type="email"
+              placeholder="Email"
               {...register('email', {
                 minLength: {
                   value: 5,
@@ -138,11 +140,15 @@ function Contact() {
             />
             {errors.phone && <p>{errors.phone.message}</p>} */}
 
-            <textarea {...register('message', { required: '🤚🏻 Wait, wait, tell me how can I help first.' })} />
+            <textarea
+              placeholder="Write here..."
+              {...register('message', { required: '🤚🏻 Wait, wait, tell me how can I help first.' })}
+            />
             {errors.message && <p>{errors.message.message}</p>}
 
             <InputText
               type="text"
+              placeholder="Start typing..."
               {...register('referredBy', {
                 maxLength: {
                   value: 200,
