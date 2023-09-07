@@ -5,7 +5,7 @@ import ComponentIsolator from '@components/ComponentIsolator/ComponentIsolator';
 function Playground() {
   return (
     <ComponentIsolator>
-      <Button role="link" variant="primary" to="/" text="hey, i'm working on this" Icon={Tent} />
+      <Button buttonRole="link" variant="primary" to="/" text="hey, i'm working on this" Icon={Tent} />
     </ComponentIsolator>
   );
 }

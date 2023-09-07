@@ -12,7 +12,7 @@ function Button(props: Props) {
   const {
     to,
     Icon,
-    role,
+    buttonRole,
     text,
     action,
     newTab,
@@ -95,12 +95,12 @@ function Button(props: Props) {
       onMouseLeave={() => handleTextAndIconHover(isMedium)}
       whileHover={singleChildAnimation(isMedium, Icon, text)}
     >
-      {role === 'button' ? (
-        <ButtonStyled>{buttonContent}</ButtonStyled>
-      ) : (
+      {buttonRole === 'link' ? (
         <LinkStyled to={to ?? ''} target={target} rel={relValue}>
           {buttonContent}
         </LinkStyled>
+      ) : (
+        <ButtonStyled type={buttonRole}>{buttonContent}</ButtonStyled>
       )}
     </ButtonContainerStyled>
   );

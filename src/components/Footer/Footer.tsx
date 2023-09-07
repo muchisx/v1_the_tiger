@@ -69,10 +69,17 @@ function Footer() {
             <Button
               text="miguel.angel.creator@gmail.com"
               variant="quaternary"
-              role="link"
+              buttonRole="link"
               to="mailto:miguel.angel.creator@gmail.com?subject=Miguel!%20-%20Help%20me%20with:%20"
             />
-            <Button Icon={Chat} text="Telegram" variant="quaternary" role="link" to="https://t.me/muchisx" newTab />
+            <Button
+              Icon={Chat}
+              text="Telegram"
+              variant="quaternary"
+              buttonRole="link"
+              to="https://t.me/muchisx"
+              newTab
+            />
           </FooterMenu>
         </FooterBlock>
       </Section>

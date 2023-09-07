@@ -101,7 +101,7 @@ const commonRightButtons: SplitContentProps['rightContent']['rightButtons'] = [
   {
     $keyId: crypto.randomUUID(),
     text: 'Contact',
-    role: 'link',
+    buttonRole: 'link',
     to: '/contact',
     variant: 'primary',
     Icon: ArrowRight,

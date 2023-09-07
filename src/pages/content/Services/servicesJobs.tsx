@@ -28,7 +28,7 @@ const customStyles: CardGridProps['customStyles'] = css`
 `;
 
 const footerButtonCommon: CardGridProps['cardCells'][0]['card']['footerButton'] = {
-  role: 'link',
+  buttonRole: 'link',
   IconSize: 20,
   Icon: ArrowRight,
   variant: 'secondary',
@@ -39,7 +39,7 @@ const footerButtonCommon: CardGridProps['cardCells'][0]['card']['footerButton'] 
 
 const CardCellButtonCommon: CardGridProps['cardCells'][0]['button'] = {
   text: 'View',
-  role: 'link',
+  buttonRole: 'link',
   variant: 'quaternary',
   // overwritting later 👇🏻
   to: '/',
@@ -68,7 +68,13 @@ const servicesJobs = (jobData: Job[]): CardGridProps => {
   return {
     customStyles,
     cardCells: firstThreeJobs.map((job) => generateJobCardsProps(job)),
-    footerButton: { role: 'link', to: '/work', variant: 'primary', text: 'View all featured work', Icon: ArrowRight },
+    footerButton: {
+      buttonRole: 'link',
+      to: '/work',
+      variant: 'primary',
+      text: 'View all featured work',
+      Icon: ArrowRight,
+    },
   };
 };
 

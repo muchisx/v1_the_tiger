@@ -68,7 +68,7 @@ const leftContent: SplitContentProps['leftContent'] = {
   leftButtons: [
     {
       $keyId: crypto.randomUUID(),
-      role: 'link',
+      buttonRole: 'link',
       to: '/services',
       text: 'Read more',
       variant: 'secondary',
@@ -76,7 +76,7 @@ const leftContent: SplitContentProps['leftContent'] = {
     },
     {
       $keyId: crypto.randomUUID(),
-      role: 'link',
+      buttonRole: 'link',
       to: '/contact',
       text: 'Contact',
       variant: 'secondary',

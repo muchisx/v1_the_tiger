@@ -7,7 +7,7 @@ import type { Props as ButtonProps } from '@/components/shared/Button/Button.typ
 
 const contactLink: ButtonProps = {
   to: '/contact',
-  role: 'link',
+  buttonRole: 'link',
   variant: 'primary',
   text: 'Contact',
   Icon: ArrowRight,
@@ -40,7 +40,7 @@ const servicesData: Service[] = [
       {
         $keyId: crypto.randomUUID(),
         to: '/shopify',
-        role: 'link',
+        buttonRole: 'link',
         variant: 'secondary',
         Icon: ArrowRight,
         text: 'Learn more',
@@ -93,7 +93,7 @@ const servicesData: Service[] = [
       {
         $keyId: crypto.randomUUID(),
         to: '/shopify',
-        role: 'link',
+        buttonRole: 'link',
         variant: 'secondary',
         Icon: ArrowRight,
         text: 'Learn more',
@@ -146,7 +146,7 @@ const servicesData: Service[] = [
       {
         $keyId: crypto.randomUUID(),
         to: '/shopify',
-        role: 'link',
+        buttonRole: 'link',
         variant: 'secondary',
         Icon: ArrowRight,
         text: 'Learn more',

@@ -14,7 +14,7 @@ const leftContent: SplitContentProps['leftContent'] = {
   buttonsLabel: 'Socials',
   leftButtons: [
     {
-      role: 'link',
+      buttonRole: 'link',
       newTab: true,
       text: 'LinkedIn',
       variant: 'quaternary',
@@ -22,7 +22,7 @@ const leftContent: SplitContentProps['leftContent'] = {
       to: 'https://www.linkedin.com/in/miguelangelpro/',
     },
     {
-      role: 'link',
+      buttonRole: 'link',
       newTab: true,
       text: 'GitHub',
       variant: 'quaternary',
@@ -69,7 +69,7 @@ const rightContent: SplitContentProps['rightContent'] = {
   rightButtons: [
     {
       to: '/about',
-      role: 'link',
+      buttonRole: 'link',
       Icon: ArrowRight,
       variant: 'secondary',
       text: 'Get the full story',

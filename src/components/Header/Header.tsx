@@ -25,17 +25,17 @@ function Header() {
     <HeaderStyled>
       <Logo isUppercase />
       <Button
-        role="link"
+        buttonRole="link"
         variant="secondary"
         Icon={ArrowRight}
         text="Contact"
         to="/contact"
         className="header_contact"
       />
-      <Button role="link" variant="primary" Icon={Mail} to="/contact" className="header_m-contact" />
+      <Button buttonRole="link" variant="primary" Icon={Mail} to="/contact" className="header_m-contact" />
       {showNavigation ? (
         <Button
-          role="button"
+          buttonRole="button"
           variant="primary"
           Icon={LineHorizontal1}
           action={toggleNavigation}
@@ -43,7 +43,7 @@ function Header() {
         />
       ) : (
         <Button
-          role="button"
+          buttonRole="button"
           variant="secondary"
           Icon={Navigation}
           action={toggleNavigation}

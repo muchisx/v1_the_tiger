@@ -95,7 +95,7 @@ const aboutDescription: SplitContentProps = {
     rightButtons: [
       {
         $keyId: crypto.randomUUID(),
-        role: 'link',
+        buttonRole: 'link',
         to: '/work',
         text: 'Work',
         variant: 'primary',
@@ -103,7 +103,7 @@ const aboutDescription: SplitContentProps = {
       },
       {
         $keyId: crypto.randomUUID(),
-        role: 'link',
+        buttonRole: 'link',
         to: '/services',
         text: 'Services',
         variant: 'secondary',

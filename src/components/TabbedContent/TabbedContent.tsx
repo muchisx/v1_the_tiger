@@ -82,7 +82,7 @@ function TabbedContent(props: Props) {
                   <Text>{item.description}</Text>
                   <Button
                     newTab
-                    role="link"
+                    buttonRole="link"
                     Icon={WindowNew}
                     text="Expand media"
                     variant="quaternary"

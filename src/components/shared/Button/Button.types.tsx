@@ -1,12 +1,12 @@
 // Dependencies
 import { type StyledIcon } from '@styled-icons/styled-icon';
 
-type Role = 'button' | 'link';
+type ButtonRole = 'button' | 'link' | 'submit' | 'reset';
 export type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 type CommonProps = {
   // Common
   variant: Variant;
-  role: Role;
+  buttonRole: ButtonRole;
   className?: string;
   text?: string;
 
@@ -16,14 +16,21 @@ type CommonProps = {
 
 type RoleConditionalProps =
   | {
-      role: 'button';
+      buttonRole: 'button';
       to?: never;
       newTab?: never;
       rel?: never;
       action: () => void;
     }
   | {
-      role: 'link';
+      buttonRole: 'submit' | 'reset';
+      to?: never;
+      newTab?: never;
+      rel?: never;
+      action?: () => void;
+    }
+  | {
+      buttonRole: 'link';
       to: string;
       newTab?: boolean;
       rel?: string;

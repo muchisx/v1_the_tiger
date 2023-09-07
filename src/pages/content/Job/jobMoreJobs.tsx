@@ -29,7 +29,7 @@ const customStyles: CardGridProps['customStyles'] = css`
 `;
 
 const footerButtonCommon: CardGridProps['cardCells'][0]['card']['footerButton'] = {
-  role: 'link',
+  buttonRole: 'link',
   IconSize: 20,
   Icon: ArrowRight,
   variant: 'secondary',
@@ -40,7 +40,7 @@ const footerButtonCommon: CardGridProps['cardCells'][0]['card']['footerButton'] 
 
 const CardCellButtonCommon: CardGridProps['cardCells'][0]['button'] = {
   text: 'View',
-  role: 'link',
+  buttonRole: 'link',
   variant: 'quaternary',
   // overwritting later 👇🏻
   to: '/',

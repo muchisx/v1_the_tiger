@@ -51,7 +51,7 @@ const rightContent: SplitContentProps['rightContent'] = {
   rightButtons: [
     {
       newTab: true,
-      role: 'link',
+      buttonRole: 'link',
       Icon: ArrowRight,
       variant: 'primary',
       $keyId: crypto.randomUUID(),
