@@ -96,11 +96,13 @@ function Button(props: Props) {
       whileHover={singleChildAnimation(isMedium, Icon, text)}
     >
       {buttonRole === 'link' ? (
-        <LinkStyled to={to ?? ''} target={target} rel={relValue}>
+        <LinkStyled to={to ?? ''} target={target} rel={relValue} layout layoutRoot>
           {buttonContent}
         </LinkStyled>
       ) : (
-        <ButtonStyled type={buttonRole}>{buttonContent}</ButtonStyled>
+        <ButtonStyled type={buttonRole} layout layoutRoot>
+          {buttonContent}
+        </ButtonStyled>
       )}
     </ButtonContainerStyled>
   );
