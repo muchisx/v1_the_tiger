@@ -12,6 +12,7 @@ type CommonProps = {
 
   // TODO - Make Icon prop also accept CustomIcon component
   Icon?: StyledIcon;
+  isDisabled?: boolean;
 };
 
 type RoleConditionalProps =
@@ -45,9 +46,10 @@ export type Props = CommonProps & RoleConditionalProps & IconConditionalProps;
 
 // Styled Components
 export type ContainerProps = {
-  Icon?: Props['Icon'];
   variant: Props['variant'];
   text?: Props['text'];
-  isHovered: boolean;
+  Icon?: Props['Icon'];
+  isDisabled?: Props['isDisabled'];
   IconWrapPadding?: Props['IconWrapPadding'];
+  isHovered: boolean;
 };

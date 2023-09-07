@@ -12,12 +12,13 @@ function Button(props: Props) {
   const {
     to,
     Icon,
-    buttonRole,
     text,
     action,
     newTab,
     variant,
     className,
+    isDisabled,
+    buttonRole,
     IconSize = 16,
     IconWrapPadding,
     rel = 'noopener noreferrer',
@@ -89,6 +90,7 @@ function Button(props: Props) {
       variant={variant}
       className={className}
       isHovered={isHovered}
+      isDisabled={isDisabled}
       IconWrapPadding={IconWrapPadding}
       transition={{ ease: 'easeInOut', duration: 0.2 }}
       onMouseEnter={() => handleTextAndIconHover(isMedium)}

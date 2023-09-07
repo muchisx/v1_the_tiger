@@ -22,6 +22,15 @@ export const ButtonContainerStyled = styled(motion.div)<ContainerProps>`
   padding: ${(props) => (props.text ? (props.Icon ? '.2rem .2rem .2rem 1.4rem' : '.7rem 1.4rem') : '.6rem')};
   transition: padding 200ms ease-in-out;
 
+  ${(props) =>
+    props.isDisabled &&
+    css`
+      opacity: 0.4;
+      cursor: not-allowed;
+      pointer-events: none;
+      user-select: none;
+    `}
+
   &:hover {
     ${(props) => props.isHovered && props.text && props.Icon && 'padding: .2rem 1.4rem .2rem .2rem '};
   }
