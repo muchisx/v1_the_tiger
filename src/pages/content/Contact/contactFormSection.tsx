@@ -1,11 +1,12 @@
 // Dependencies
-import styled, { css } from 'styled-components';
+import { css } from 'styled-components';
 // Styled Components
 import { BackgroundShape } from '@components/SplitContent/SplitContent.styles';
 // Utils
 import { getMediaQueryValue } from '@utils';
 
-export const contactFormCustomStyles = css`
+const contactFormSectionCSS = css`
+  gap: 60px;
   @media only screen and (min-width: ${getMediaQueryValue('md')}) {
     isolation: isolate;
     background-color: var(--body-bg-color-tertiary);
@@ -40,7 +41,7 @@ export const contactFormCustomStyles = css`
   }
 
   .split-content__first {
-    padding-bottom: 40px;
+    padding-bottom: 48px;
     border-bottom: 1px solid var(--neutral-color);
 
     @media only screen and (min-width: ${getMediaQueryValue('md')}) {
@@ -72,39 +73,4 @@ export const contactFormCustomStyles = css`
   }
 `;
 
-export const SubmitContainer = styled.div`
-  display: flex;
-  padding-block: 1.6rem;
-  border-bottom: 1px solid var(--neutral-color);
-`;
-
-export const Form = styled.form`
-  --column-gap: 32px;
-  --row-gap: 16px;
-  display: flex;
-  column-gap: var(--column-gap);
-  row-gap: var(--row-gap);
-  flex-wrap: wrap;
-
-  input[name='firstName'],
-  input[name='lastName'] {
-    width: calc(50% - var(--column-gap) / 2);
-  }
-
-  input[name='email'],
-  textarea[name='message'],
-  input[name='referredBy'],
-  ${SubmitContainer} {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .form-heading {
-    width: 100%;
-    :not(:first-of-type) {
-      margin-top: 20px;
-    }
-  }
-`;
+export default contactFormSectionCSS;
