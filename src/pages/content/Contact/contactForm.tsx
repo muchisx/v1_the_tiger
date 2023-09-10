@@ -1,52 +1,74 @@
 // Dependencies
 import styled, { css } from 'styled-components';
-
+// Styled Components
+import { BackgroundShape } from '@components/SplitContent/SplitContent.styles';
 // Utils
 import { getMediaQueryValue } from '@utils';
 
 export const contactFormCustomStyles = css`
   @media only screen and (min-width: ${getMediaQueryValue('md')}) {
-    padding-bottom: 0;
+    isolation: isolate;
+    background-color: var(--body-bg-color-tertiary);
+
+    ::before {
+      content: '';
+      position: absolute;
+      width: 46vw;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: white;
+    }
+  }
+
+  ${BackgroundShape} {
+    top: 16%;
+    width: min(440px, 90%);
+    right: -32%;
+    left: unset;
+
+    @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+      top: unset;
+      width: min(640px, 46vw);
+      bottom: 6%;
+      left: 30vw;
+    }
+
+    @media only screen and (min-width: ${getMediaQueryValue('xxl')}) {
+      left: 36vw;
+    }
   }
 
   .split-content__first {
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--neutral-color);
+
     @media only screen and (min-width: ${getMediaQueryValue('md')}) {
       flex: 1 1 56%;
-      position: relative;
-
-      .contact-sticky {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        position: sticky;
-        top: 12%;
-        height: fit-content;
-      }
-      .contact-methods {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 24px;
-      }
+      border: unset;
     }
 
-    ::before {
-      --half-vw: calc(-100vw / 2);
-      content: '';
-      position: absolute;
-      inset: 0;
-      margin-left: calc(var(--half-vw) + 90%);
-      margin-top: -200px;
-      z-index: -2;
-      background-color: var(--body-bg-color-tertiary);
+    .contact-sticky {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: sticky;
+      top: 12%;
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
     }
   }
 
   .split-content__second {
-    flex: 1 1 44%;
-    padding-left: 60px;
-    position: relative;
-    isolation: isolate;
+    @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+      flex: 1 1 44%;
+      padding-left: 60px;
+    }
   }
 `;
 

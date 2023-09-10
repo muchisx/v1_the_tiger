@@ -1,9 +1,10 @@
 # Todo List
 
 
-- [ ] Implement contact form with
-  - [ ] https://www.emailjs.com/docs
-  - [ ] https://www.react-hook-form.com/get-started
+- [x] Implement contact form with
+  - [x] https://www.emailjs.com/docs
+  - [x] https://www.react-hook-form.com/get-started
+- [ ] Modify GetMediaqueryValue so instead returns the whole breakpoint rule (ex. returns => 'min-with: 768px', returns => 'max-with: 769px'). This way so I can use both min & max with different values
 - [ ] add height prop to divider component and fix services dividers
 - [x] only use useMediaQuery state globally to improve performance and grab it from context.
 - [x] use crypto.randomUUID() for all $keyId throught the app

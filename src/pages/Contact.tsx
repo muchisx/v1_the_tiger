@@ -13,6 +13,8 @@ import InputText from '@components/shared/InputText/InputText';
 import SplitContent, { SplitContentCustom } from '@components/SplitContent/SplitContent';
 // Styled Components
 import { Form, SubmitContainer, contactFormCustomStyles } from '@content/Contact/contactForm';
+// Assets
+import contactFormBgShape from '@assets/svgs/abstract-8.svg';
 // Types
 import type { FormData } from '@content/Contact/contactForm.types';
 
@@ -67,7 +69,16 @@ function Contact() {
 
   return (
     <main className="page page--contact">
-      <SplitContent contain="padding" leftContent={{}} rightContent={{}} customStyles={contactFormCustomStyles}>
+      <SplitContent
+        contain="padding"
+        leftContent={{
+          backgroundShape: {
+            url: contactFormBgShape,
+          },
+        }}
+        rightContent={{}}
+        customStyles={contactFormCustomStyles}
+      >
         <SplitContentCustom location="first">
           <div className="contact-sticky">
             <Heading fontSize={{ all: '3.8rem', md: '4.8rem' }}>
@@ -112,7 +123,7 @@ function Contact() {
 
         <SplitContentCustom location="second">
           <Form onSubmit={handleSubmit((data) => submitForm(data))}>
-            <Text className="form-heading" fontWeight={500} fontFamily="var(--heading-family)">
+            <Text className="form-heading" fontWeight={500} fontSize="2rem" fontFamily="var(--heading-family)">
               ABOUT YOU
             </Text>
 
@@ -180,7 +191,7 @@ function Contact() {
             />
             {errors.phone && <p>{errors.phone.message}</p>} */}
 
-            <Text className="form-heading" fontWeight={500} fontFamily="var(--heading-family)">
+            <Text className="form-heading" fontWeight={500} fontSize="2rem" fontFamily="var(--heading-family)">
               DESCRIBE YOUR PROJECT & NEEDS
             </Text>
 
@@ -196,7 +207,7 @@ function Contact() {
 
             {errors.message && <p>{errors.message.message}</p>}
 
-            <Text className="form-heading" fontWeight={500} fontFamily="var(--heading-family)">
+            <Text className="form-heading" fontWeight={500} fontSize="2rem" fontFamily="var(--heading-family)">
               HOW DID YOU LEARN ABOUT ME?
             </Text>
             <InputText

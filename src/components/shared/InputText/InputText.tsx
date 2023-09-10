@@ -14,6 +14,7 @@ type Props = {
 const InputStyled = styled.input`
   padding-block: 1.2rem;
   padding-inline: 0.4rem;
+  background-color: transparent;
   border-bottom: 1px solid var(--neutral-color-quaternary);
   transition: border 0.2s ease-in-out;
 
