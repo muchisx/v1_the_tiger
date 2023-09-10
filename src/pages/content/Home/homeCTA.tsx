@@ -1,6 +1,6 @@
 // Dependencies
 import { css } from 'styled-components';
-import { ArrowRight } from '@styled-icons/fluentui-system-filled';
+import { CalendarLtr } from '@styled-icons/fluentui-system-filled';
 // Utils
 import { getMediaQueryValue } from '@utils';
 // Types
@@ -52,7 +52,7 @@ const rightContent: SplitContentProps['rightContent'] = {
     {
       newTab: true,
       buttonRole: 'link',
-      Icon: ArrowRight,
+      Icon: CalendarLtr,
       variant: 'primary',
       $keyId: crypto.randomUUID(),
       text: 'Reserve a free meeting',

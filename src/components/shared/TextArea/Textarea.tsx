@@ -1,27 +1,34 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 // Dependencies
 import styled from 'styled-components';
-import { InputHTMLAttributes, forwardRef } from 'react';
+import { TextareaHTMLAttributes, forwardRef } from 'react';
 // Components
-import Label from '@components/shared/Label/Label';
-import ConditionalWrapper from '@components/shared/ConditionalContainer/ConditionalContainer';
+import Label from '../Label/Label';
+import ConditionalWrapper from '../ConditionalContainer/ConditionalContainer';
+// Types
+import type { Resize } from '@/types/css.types';
+
+type TextAreaElProps = {
+  $resize?: Props['resize'];
+};
 
 type Props = {
   label?: React.ReactNode;
-  type: 'text' | 'email' | 'password' | 'search' | 'tel' | 'url' | 'number';
-} & InputHTMLAttributes<HTMLInputElement>;
+  resize?: Resize;
+} & TextareaHTMLAttributes<HTMLTextAreaElement>;
 
-const InputStyled = styled.input`
+const TextAreaStyled = styled.textarea<TextAreaElProps>`
   padding-block: 1.2rem;
   padding-inline: 0.4rem;
   border-bottom: 1px solid var(--neutral-color-quaternary);
+  resize: ${(props) => props.$resize};
   transition: border 0.2s ease-in-out;
 
   ::placeholder {
     font-size: 1.4rem;
   }
 
-  :focus-visible {
+  :focus {
     outline: 0;
     border-bottom-color: var(--neutral-color-tertiary);
   }
@@ -31,20 +38,20 @@ function ConditionalLabel(children: JSX.Element) {
   return <Label>{children}</Label>;
 }
 
-const InputText = forwardRef<HTMLInputElement, Props>((props, ref) => {
-  const { label, type, ...attrs } = props;
+const TextArea = forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
+  const { label, resize, ...attrs } = props;
 
   // TODO: Find a way to avoid the fragment
   return (
     <ConditionalWrapper condition={label} wrapper={ConditionalLabel}>
       <>
-        <InputStyled type={type} ref={ref} {...attrs} />
+        <TextAreaStyled $resize={resize} ref={ref} {...attrs} />
         {label}
       </>
     </ConditionalWrapper>
   );
 });
 
-InputText.displayName = 'InputText';
+TextArea.displayName = 'TextArea';
 
-export default InputText;
+export default TextArea;

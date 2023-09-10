@@ -4,10 +4,17 @@ import { Props } from './Text.types';
 import TextStyled from './Text.styles';
 
 function Text(props: Props) {
-  const { tag = 'p', children, className, fontWeight = 400, fontSize = '1.6rem' } = props;
+  const {
+    children,
+    className,
+    tag = 'p',
+    fontWeight = 400,
+    fontSize = '1.6rem',
+    fontFamily = 'var(--text-family)',
+  } = props;
 
   return (
-    <TextStyled as={tag} className={className} $fontWeight={fontWeight} $fontSize={fontSize}>
+    <TextStyled as={tag} className={className} $fontFamily={fontFamily} $fontWeight={fontWeight} $fontSize={fontSize}>
       {children}
     </TextStyled>
   );

@@ -1,23 +1,20 @@
 // Dependencies
-import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
+import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import { CalendarLtr, Chat, Mail } from '@styled-icons/fluentui-system-filled';
 // Components
 import Text from '@components/shared/Text/Text';
 import Button from '@components/shared/Button/Button';
 import Heading from '@components/shared/Heading/Heading';
 import Checkbox from '@components/shared/Checkbox/Checkbox';
+import TextArea from '@components/shared/TextArea/Textarea';
 import InputText from '@components/shared/InputText/InputText';
 import SplitContent, { SplitContentCustom } from '@components/SplitContent/SplitContent';
-
-type FormData = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  // phone: string;
-  message: string;
-  referredBy: string;
-  agreePolicy: boolean;
-};
+// Styled Components
+import { Form, SubmitContainer, contactFormCustomStyles } from '@content/Contact/contactForm';
+// Types
+import type { FormData } from '@content/Contact/contactForm.types';
 
 // https://emailregex.com/index.html
 const EMAIL_REGEX =
@@ -29,7 +26,6 @@ function Contact() {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm<FormData>({
     defaultValues: {
@@ -46,7 +42,7 @@ function Contact() {
   // console.log(errors);
 
   const submitForm = async (data: FormData) => {
-    console.log(data);
+    // console.log(data);
 
     // Answer about exposing my public key
     // https://www.emailjs.com/docs/faq/is-it-okay-to-expose-my-public-key/
@@ -63,7 +59,7 @@ function Contact() {
         },
         'vSvfUoAjZmx5qhA9w'
       );
-      console.log(res);
+      // console.log(res);
     } catch (error) {
       // console.error(error);
     }
@@ -71,28 +67,61 @@ function Contact() {
 
   return (
     <main className="page page--contact">
-      <SplitContent leftContent={{}} rightContent={{}}>
+      <SplitContent contain="padding" leftContent={{}} rightContent={{}} customStyles={contactFormCustomStyles}>
         <SplitContentCustom location="first">
-          <Heading fontSize={{ all: '3.8rem', md: '4.8rem' }}>
-            <span className="highlight-primary">GOT AN IDEA?</span>
-            <br />
-            <span>LET&#39;S WORK TOGETHER!</span>
-          </Heading>
+          <div className="contact-sticky">
+            <Heading fontSize={{ all: '3.8rem', md: '4.8rem' }}>
+              <span className="highlight-primary">GOT AN IDEA?</span>
+              <br />
+              <span>LET&#39;S WORK TOGETHER!</span>
+            </Heading>
 
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, culpa maxime? Molestias nesciunt natus
-            excepturi odio impedit sapiente explicabo provident, itaque reiciendis atque, rem illum reprehenderit eum
-            amet soluta ipsa.
-          </Text>
+            <Text>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              <br />
+              excepturi odio impedit sapiente explicabo provident, itaque reiciendis
+            </Text>
+
+            <div className="contact-methods">
+              <Button
+                Icon={Chat}
+                text="Telegram"
+                variant="primary"
+                buttonRole="link"
+                to="https://t.me/muchisx"
+                newTab
+              />
+              <Button
+                text="Reserve a free meeting"
+                Icon={CalendarLtr}
+                variant="primary"
+                buttonRole="link"
+                to="https://calendly.com/miguel-angel-creator/free-meeting"
+                newTab
+              />
+              <Button
+                text="miguel.angel.creator@gmail.com"
+                Icon={Mail}
+                variant="primary"
+                buttonRole="link"
+                to="mailto:miguel.angel.creator@gmail.com?subject=Miguel!%20-%20Help%20me%20with:%20"
+              />
+            </div>
+          </div>
         </SplitContentCustom>
 
         <SplitContentCustom location="second">
-          <form onSubmit={handleSubmit((data) => submitForm(data))}>
+          <Form onSubmit={handleSubmit((data) => submitForm(data))}>
+            <Text className="form-heading" fontWeight={500} fontFamily="var(--heading-family)">
+              ABOUT YOU
+            </Text>
+
             <InputText
               type="text"
-              placeholder="First Name"
+              placeholder="* First Name"
               {...register('firstName', {
                 required: '🙂 Come on, tell me your name.',
+                disabled: isSubmitting || isSubmitSuccessful,
                 minLength: {
                   value: 2,
                   message: '🤔 Type atleast 2 characters',
@@ -105,13 +134,25 @@ function Contact() {
             />
             {errors.firstName && <p>{errors.firstName.message}</p>}
 
-            <InputText type="text" placeholder="Last Name" {...register('lastName', { minLength: 2 })} />
+            <InputText
+              type="text"
+              placeholder="Last Name"
+              {...register('lastName', {
+                disabled: isSubmitting || isSubmitSuccessful,
+                maxLength: {
+                  value: 30,
+                  message: '🫠 Use a shorter last name.',
+                },
+              })}
+            />
             {errors.lastName && <p>{errors.lastName.message}</p>}
 
             <InputText
               type="email"
-              placeholder="Email"
+              placeholder="* Email"
               {...register('email', {
+                required: '😉 I need you to fill this out so I can get back to you.',
+                disabled: isSubmitting || isSubmitSuccessful,
                 minLength: {
                   value: 5,
                   message: '🥸 An email has atleast 5 characters (a@b.c)',
@@ -120,7 +161,6 @@ function Contact() {
                   value: EMAIL_REGEX,
                   message: "🤔 This doesn't look like a valid email",
                 },
-                required: '😉 I need you to fill this out so I can get back to you.',
               })}
             />
             {errors.email && <p>{errors.email.message}</p>}
@@ -140,16 +180,30 @@ function Contact() {
             />
             {errors.phone && <p>{errors.phone.message}</p>} */}
 
-            <textarea
-              placeholder="Write here..."
-              {...register('message', { required: '🤚🏻 Wait, wait, tell me how can I help first.' })}
+            <Text className="form-heading" fontWeight={500} fontFamily="var(--heading-family)">
+              DESCRIBE YOUR PROJECT & NEEDS
+            </Text>
+
+            <TextArea
+              rows={4}
+              resize="vertical"
+              placeholder="* Write here..."
+              {...register('message', {
+                required: '🤚🏻 Wait, wait, tell me how can I help first.',
+                disabled: isSubmitting || isSubmitSuccessful,
+              })}
             />
+
             {errors.message && <p>{errors.message.message}</p>}
 
+            <Text className="form-heading" fontWeight={500} fontFamily="var(--heading-family)">
+              HOW DID YOU LEARN ABOUT ME?
+            </Text>
             <InputText
               type="text"
               placeholder="Start typing..."
               {...register('referredBy', {
+                disabled: isSubmitting || isSubmitSuccessful,
                 maxLength: {
                   value: 200,
                   message: '🤔 This is a bit too long, friend.',
@@ -158,24 +212,43 @@ function Contact() {
             />
             {errors.referredBy && <p>{errors.referredBy.message}</p>}
 
-            <Checkbox
-              {...register('agreePolicy', {
-                required: '🫱🏼‍🫲🏼 Your data is safe, but I need your permission.',
-              })}
-              label="Agree to the policy"
-              type="submit"
-            />
-            {errors.agreePolicy && <p>{errors.agreePolicy.message}</p>}
+            <SubmitContainer>
+              <Checkbox
+                label="I agree to the Privacy Policy*"
+                {...register('agreePolicy', {
+                  required: '🫱🏼‍🫲🏼 Your data is safe, but I need your permission.',
+                  disabled: isSubmitting || isSubmitSuccessful,
+                })}
+              />
+              {errors.agreePolicy && <p>{errors.agreePolicy.message}</p>}
 
-            <Button
-              buttonRole="submit"
-              variant="tertiary"
-              text="Send"
-              isDisabled={isSubmitting || isSubmitSuccessful}
-            />
+              <Button
+                text="Send"
+                variant="tertiary"
+                buttonRole="submit"
+                isDisabled={isSubmitting || isSubmitSuccessful}
+              />
+            </SubmitContainer>
+
+            <Text fontSize="1.4rem">
+              If you face issues with this form, please{' '}
+              <Link to="mailto:miguel.angel.creator@gmail.com?subject=Miguel!%20-%20Help%20me%20with:%20">
+                deliver an ordinary email
+              </Link>
+              {' or '}
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                to="https://calendly.com/miguel-angel-creator/free-meeting"
+              >
+                schedule a meeting
+              </Link>
+              .
+            </Text>
+
             <p>{`isSubmitting: ${isSubmitting}`}</p>
             <p>{`isSubmitSuccessful: ${isSubmitSuccessful}`}</p>
-          </form>
+          </Form>
         </SplitContentCustom>
       </SplitContent>
     </main>

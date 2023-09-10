@@ -273,3 +273,7 @@ export type AbsoluteFontSize =
 export type RelativeFontSize = 'smaller' | 'larger';
 
 export type FontSize = AbsoluteFontSize | RelativeFontSize | NumberWithUnit | CSSFunction | Global;
+
+// @Property Resize
+
+export type Resize = 'none' | 'both' | 'horizontal' | 'vertical' | 'block' | 'inline' | Global;

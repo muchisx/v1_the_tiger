@@ -1,5 +1,6 @@
 // Dependencies
 import { type ReactNode } from 'react';
+import type { AvailableCSSFontVar } from '@/types/general.types';
 
 export type Tag =
   | 'abbr'
@@ -32,6 +33,7 @@ export type Tag =
 export type TextProps = {
   $fontWeight?: Props['fontWeight'];
   $fontSize?: Props['fontSize'];
+  $fontFamily?: Props['fontFamily'];
 };
 export type Props = {
   children: ReactNode;
@@ -39,4 +41,5 @@ export type Props = {
   fontSize?: string;
   tag?: Tag;
   className?: string;
+  fontFamily?: AvailableCSSFontVar;
 };

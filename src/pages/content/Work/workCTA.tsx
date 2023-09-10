@@ -1,5 +1,5 @@
 // Dependencies
-import { ArrowRight } from '@styled-icons/fluentui-system-filled';
+import { ArrowRight, CalendarLtr } from '@styled-icons/fluentui-system-filled';
 // Assets
 import svgShape from '@assets/svgs/abstract-8.svg';
 // Types
@@ -34,7 +34,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       $keyId: crypto.randomUUID(),
       buttonRole: 'link',
       newTab: true,
-      Icon: ArrowRight,
+      Icon: CalendarLtr,
       variant: 'primary',
       text: 'Reserve a free meeting',
       to: 'https://calendly.com/miguel-angel-creator/free-meeting',

@@ -133,21 +133,38 @@ h6 {
   font-family: var(--heading-family);
 }
 
+a {
+  color: var(--accent-color);
+}
 
-button {
+button,
+input,
+textarea {
   border: none;
   padding: 0;
   color: inherit;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--body-bg-color-tertiary) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
 
-/*width*/
+/*Scrollbar container*/
 ::-webkit-scrollbar {
   width: var(--scrollbar-size);
   height: var(--scrollbar-size);
 }
 
-/*thumb*/
+/*Scroll bar thumb styles*/
 ::-webkit-scrollbar-thumb {
   background: var(--text-primary);
   border-width: 1px;
@@ -214,4 +231,8 @@ button {
 
 .page--job {
   padding-top: 0;
+}
+
+.page--contact {
+  padding-top: 80px;
 }
