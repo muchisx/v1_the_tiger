@@ -2,17 +2,19 @@
 import styled from 'styled-components';
 import { InputHTMLAttributes, forwardRef } from 'react';
 // Components
-import Label from '@components/shared/Label/Label';
-import ConditionalWrapper from '@components/shared/ConditionalContainer/ConditionalContainer';
+import Text from '@components/shared/Text/Text';
 
 /* eslint-disable jsx-a11y/label-has-associated-control */
 type Props = {
   label?: React.ReactNode;
+  isError?: boolean;
+  errorMessage?: string;
 } & InputHTMLAttributes<HTMLInputElement>;
 
-const CheckBoxLabel = styled(Label)`
+const LabelStyled = styled(Text)`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
 `;
 
@@ -20,21 +22,15 @@ const CheckBox = styled.input`
   cursor: pointer;
 `;
 
-function ConditionalLabel(children: JSX.Element) {
-  return <CheckBoxLabel>{children}</CheckBoxLabel>;
-}
-
 const Checkbox = forwardRef<HTMLInputElement, Props>((props, ref) => {
-  const { label, type, ...attrs } = props;
+  const { label, type, isError, errorMessage, ...attrs } = props;
 
-  // TODO: Find a way to avoid the fragment
   return (
-    <ConditionalWrapper condition={label} wrapper={ConditionalLabel}>
-      <>
-        <CheckBox type="checkbox" ref={ref} {...attrs} />
-        {label}
-      </>
-    </ConditionalWrapper>
+    <LabelStyled tag="label" className={`form-field__${attrs.name}`}>
+      <CheckBox type="checkbox" ref={ref} {...attrs} />
+      <Text>{label}</Text>
+      {isError && <Text fontSize="1.4rem">{errorMessage}</Text>}
+    </LabelStyled>
   );
 });
 

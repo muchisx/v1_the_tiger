@@ -28,7 +28,7 @@
   /* -highlights */
   --text-highlight-primary: #909090;
   --text-highlight-secondary: var(--accent-color);
-  --text-highlight-tertiary: var(--accent-color);
+  --text-highlight-tertiary: #414141;
   --text-highlight-quaternary: #FFFFFF;
 
   /* --- Logo colors */

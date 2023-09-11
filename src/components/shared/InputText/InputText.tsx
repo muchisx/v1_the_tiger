@@ -3,20 +3,28 @@
 import styled from 'styled-components';
 import { InputHTMLAttributes, forwardRef } from 'react';
 // Components
-import Label from '@components/shared/Label/Label';
-import ConditionalWrapper from '@components/shared/ConditionalContainer/ConditionalContainer';
+import Text from '@components/shared/Text/Text';
+
+type InputElProps = {
+  $isError?: Props['isError'];
+};
 
 type Props = {
   label?: React.ReactNode;
   type: 'text' | 'email' | 'password' | 'search' | 'tel' | 'url' | 'number';
+  isError?: boolean;
+  errorMessage?: string;
 } & InputHTMLAttributes<HTMLInputElement>;
 
-const InputStyled = styled.input`
+const InputStyled = styled.input<InputElProps>`
+  width: 100%;
   padding-block: 1.2rem;
   padding-inline: 0.4rem;
   background-color: transparent;
-  border-bottom: 1px solid var(--neutral-color-quaternary);
   transition: border 0.2s ease-in-out;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: ${(props) => (props.$isError ? 'var(--accent-color)' : 'var(--neutral-color-quaternary)')};
 
   ::placeholder {
     font-size: 1.4rem;
@@ -28,21 +36,21 @@ const InputStyled = styled.input`
   }
 `;
 
-function ConditionalLabel(children: JSX.Element) {
-  return <Label>{children}</Label>;
-}
+const LabelStyled = styled(Text)`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
 
 const InputText = forwardRef<HTMLInputElement, Props>((props, ref) => {
-  const { label, type, ...attrs } = props;
+  const { label, type, isError, errorMessage, ...attrs } = props;
 
-  // TODO: Find a way to avoid the fragment
   return (
-    <ConditionalWrapper condition={label} wrapper={ConditionalLabel}>
-      <>
-        <InputStyled type={type} ref={ref} {...attrs} />
-        {label}
-      </>
-    </ConditionalWrapper>
+    <LabelStyled tag="label" className={`form-field__${attrs.name}`}>
+      <Text>{label}</Text>
+      <InputStyled type={type} ref={ref} {...attrs} $isError={isError} />
+      {isError && <Text fontSize="1.4rem">{errorMessage}</Text>}
+    </LabelStyled>
   );
 });
 

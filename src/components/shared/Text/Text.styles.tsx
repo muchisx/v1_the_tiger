@@ -7,6 +7,7 @@ const TextStyled = styled.p<TextProps>`
   font-family: ${(props) => props.$fontFamily};
   font-size: ${(props) => props.$fontSize};
   font-weight: ${(props) => props.$fontWeight};
+  text-align: ${(props) => props.$textAlign};
 `;
 
 export default TextStyled;

@@ -271,9 +271,21 @@ export type AbsoluteFontSize =
   | 'xxx-large';
 
 export type RelativeFontSize = 'smaller' | 'larger';
-
 export type FontSize = AbsoluteFontSize | RelativeFontSize | NumberWithUnit | CSSFunction | Global;
 
-// @Property Resize
+// @Property text-align
+
+export type TextAlign =
+  | 'start'
+  | 'end'
+  | 'left'
+  | 'right'
+  | 'center'
+  | 'justify'
+  | 'justify-all'
+  | 'match-parent'
+  | Global;
+
+// @Property resize
 
 export type Resize = 'none' | 'both' | 'horizontal' | 'vertical' | 'block' | 'inline' | Global;

@@ -1,6 +1,34 @@
 // Dependencies
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { Checkmark } from '@styled-icons/fluentui-system-filled';
+// Components
+import Text from '@components/shared/Text/Text';
+// Utils
+import { getMediaQueryValue } from '@utils';
+
+export const SuccessText = styled(motion(Text))``;
+export const SuccessIcon = styled(motion(Checkmark))`
+  opacity: 0;
+  path {
+    stroke: var(--accent-color);
+  }
+`;
+
+export const SuccessContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  height: 100%;
+
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    height: fit-content;
+    position: sticky;
+    top: 320px;
+  }
+`;
 
 export const SubmitContainer = styled.div`
   display: flex;
@@ -12,7 +40,8 @@ export const FormOverlay = styled(motion.div)`
   position: absolute;
   inset: 0;
   margin: -20px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
+  z-index: 1;
 `;
 
 export const StyledForm = styled.form`
@@ -24,14 +53,17 @@ export const StyledForm = styled.form`
   flex-wrap: wrap;
   position: relative;
 
-  input[name='firstName'],
-  input[name='lastName'] {
+  .form-field__firstName,
+  .form-field__lastName {
     width: calc(50% - var(--column-gap) / 2);
   }
 
-  input[name='email'],
-  textarea[name='message'],
-  input[name='referredBy'],
+  .form-field__email,
+  .form-field__message,
+  .form-field__referredBy {
+    width: 100%;
+  }
+
   ${SubmitContainer} {
     display: flex;
     align-items: center;
@@ -41,8 +73,7 @@ export const StyledForm = styled.form`
 
   .form-heading {
     width: 100%;
-    :not(:first-of-type) {
-      margin-top: 20px;
-    }
+    margin-top: 20px;
+    color: var(--text-highlight-tertiary);
   }
 `;
