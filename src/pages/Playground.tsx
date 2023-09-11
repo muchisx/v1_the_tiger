@@ -4,9 +4,11 @@ import ComponentIsolator from '@components/ComponentIsolator/ComponentIsolator';
 
 function Playground() {
   return (
-    <ComponentIsolator>
-      <Button buttonRole="link" variant="primary" to="/" text="hey, i'm working on this" Icon={Tent} />
-    </ComponentIsolator>
+    <main className="page page--playground">
+      <ComponentIsolator>
+        <Button buttonRole="link" variant="primary" to="/" text="hey, i'm working on this" Icon={Tent} />
+      </ComponentIsolator>
+    </main>
   );
 }
 
