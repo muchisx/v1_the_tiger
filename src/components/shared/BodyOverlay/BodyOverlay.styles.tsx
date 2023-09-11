@@ -14,7 +14,9 @@ export const BodyLock = createGlobalStyle`
     }
   }
 
-  main {
+  main,
+  footer {
+    position: relative;
     ::after {
       content: '';
       position: absolute;
