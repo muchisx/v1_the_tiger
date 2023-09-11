@@ -9,6 +9,7 @@ const customStyles = css`
   --content-top-offset: 24%;
   position: relative;
   padding-block: 10rem;
+  margin-top: 100px;
   background-color: var(--body-bg-color-secondary);
 
   .split-content__first {

@@ -1,5 +1,5 @@
 import liquidLogo from '@assets/svgs/loquid-logo.svg';
-import webflowLogo from '@assets/svgs/webflow-logo.svg';
+import hydrogenLogo from '@assets/svgs/hydrogen-logo_simple.svg';
 import reactLogoBW from '@assets/svgs/react-logo-bw.svg';
 import shopifyPlusPrimary from '@assets/svgs/ShopifyPlus_Primary.svg';
 import typescriptLogoBW from '@assets/svgs/typescript-logo-neutral.svg';
@@ -10,7 +10,7 @@ import { type Props as LogoGridProps } from '@components/LogoGrid/LogoGrid.types
 const logoUrlList = [
   reactLogoBW,
   typescriptLogoBW,
-  webflowLogo,
+  hydrogenLogo,
   liquidLogo,
   shopifyPlusPrimary,
   shopifyPartnerSecondary,

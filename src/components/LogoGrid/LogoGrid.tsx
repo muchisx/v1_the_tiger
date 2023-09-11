@@ -10,7 +10,7 @@ import type { Props } from './LogoGrid.types';
 function LogoGrid(props: Props) {
   const { customStyles, logoUrls, title } = props;
   return (
-    <Section customStyles={sectionCSS.concat(customStyles)} contain enableGutter marginTop={32} marginBottom={32}>
+    <Section customStyles={sectionCSS.concat(customStyles)} contain enableGutter marginTop={40} marginBottom={40}>
       {title && (
         <Heading fontWeight={400} fontSize={{ all: '1.6rem' }} className="logo-grid__heading">
           {title}

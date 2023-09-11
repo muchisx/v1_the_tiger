@@ -38,7 +38,12 @@ function Home() {
         minHeight={{ md: '560px' }}
         customStyles={homeImageBanner.customStyles}
       />
-      <SplitContent leftContent={homeAboutMe.leftContent} rightContent={homeAboutMe.rightContent} contain />
+      <SplitContent
+        contain
+        leftContent={homeAboutMe.leftContent}
+        rightContent={homeAboutMe.rightContent}
+        customStyles={homeAboutMe.customStyles}
+      />
       <LogoGrid logoUrls={homeLogoGrid.logoUrls} title="PROUD TO WORK WITH" />
       <SplitContent
         contain="padding"
@@ -47,7 +52,7 @@ function Home() {
         customStyles={homeServices.customStyles}
       />
 
-      <LogoGrid logoUrls={homeLogoGridTwo.logoUrls} title="TRUSTED BY" customStyles={homeLogoGridTwo.customStyles} />
+      <LogoGrid logoUrls={homeLogoGridTwo.logoUrls} title="DEVELOPED FOR" customStyles={homeLogoGridTwo.customStyles} />
       <SplitContent
         contain
         leftContent={homeContact.leftContent}

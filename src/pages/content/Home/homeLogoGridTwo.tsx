@@ -23,7 +23,6 @@ import veme from '@assets/svgs/companies/veme/logo.svg';
 import { type Props as LogoGridProps } from '@components/LogoGrid/LogoGrid.types';
 
 const customStyles = css`
-  gap: 32px;
   margin-top: 88px;
 `;
 

@@ -1,6 +1,8 @@
 // Dependencies
 import { css } from 'styled-components';
 import { CalendarLtr } from '@styled-icons/fluentui-system-filled';
+// Styled Components
+import { BackgroundShape } from '@components/SplitContent/SplitContent.styles';
 // Utils
 import { getMediaQueryValue } from '@utils';
 // Types
@@ -8,10 +10,18 @@ import type { Props as SplitContentProps } from '@components/SplitContent/SplitC
 import backgroundshape from '@assets/svgs/abstract-1.svg';
 
 const customStyles = css`
-  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
-    .split-content__first p:first-of-type {
-      text-transform: uppercase;
+  ${BackgroundShape} {
+    @media only screen and (max-width: 768px) {
+      top: unset;
+      left: unset;
+      right: -44%;
+      bottom: -26%;
     }
+  }
+
+  @media only screen and (min-width: ${getMediaQueryValue('all')}) {
+    padding-top: 20px;
+    padding-bottom: 120px;
   }
 `;
 

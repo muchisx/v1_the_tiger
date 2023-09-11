@@ -1,10 +1,19 @@
 // Dependencies
+import { css } from 'styled-components';
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 // Assets
 import svgShape from '@assets/svgs/abstract-1.svg';
 import profilePic from '@assets/images/profile-pic.jpeg';
+// Utils
+import { getMediaQueryValue } from '@utils';
 // Types
 import { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
+
+const customStyles = css`
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    padding-top: 80px;
+  }
+`;
 
 const leftContent: SplitContentProps['leftContent'] = {
   topTag: {
@@ -39,7 +48,7 @@ const leftContent: SplitContentProps['leftContent'] = {
 
 const textOne = (
   <>
-    I&#39;m glad you&#39;re here! <br />
+    <span style={{ display: 'block', marginBottom: '0.6rem' }}>I&#39;m glad you&#39;re here!</span>
     My name is Miguel Ángel, and as a dedicated and imaginative freelance Web Developer, my goal is to develop projects
     that I can take pride in. I am a member Shopify Partners Program, adept in React Development, and I excel at
     creating digital services that include stunning user interfaces and reliable code.
@@ -58,6 +67,7 @@ const rightContent: SplitContentProps['rightContent'] = {
   rightTexts: [
     {
       fontWeight: 500,
+      fontSize: '1.8rem',
       children: textOne,
       $keyId: crypto.randomUUID(),
     },
@@ -78,7 +88,8 @@ const rightContent: SplitContentProps['rightContent'] = {
   ],
 };
 
-const homeAboutMe = {
+const homeAboutMe: SplitContentProps = {
+  customStyles,
   leftContent,
   rightContent,
 };

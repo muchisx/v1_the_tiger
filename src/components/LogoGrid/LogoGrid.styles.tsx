@@ -31,7 +31,7 @@ export const GridItem = styled.div`
 export const sectionCSS = css`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 32px;
 
   .logo-grid__heading {
     text-align: center;
