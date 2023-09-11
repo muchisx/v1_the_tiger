@@ -10,14 +10,15 @@ export type MediaQueryWithCSS<T> = {
 };
 
 export type MediaQueryKey = 'all' | 'xxsm' | 'xsm' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+export type MediaQueryValue = `${number}px`;
 
 export type MediaQueryKeyAndValue = {
-  all: string;
-  xxsm: string;
-  xsm: string;
-  sm: string;
-  md: string;
-  lg: string;
-  xl: string;
-  xxl: string;
+  all: MediaQueryValue;
+  xxsm: MediaQueryValue;
+  xsm: MediaQueryValue;
+  sm: MediaQueryValue;
+  md: MediaQueryValue;
+  lg: MediaQueryValue;
+  xl: MediaQueryValue;
+  xxl: MediaQueryValue;
 };
