@@ -118,7 +118,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       ],
       bodyText: {
         children:
-          'As the face of your business, your website demands equal dedication and investment in both its aesthetics and functionality. This is precisely why I prioritize the development of adaptable, customer-focused websites that align seamlessly with your business needs.',
+          'As the front of your business, your website demands equal dedication and investment in both its aesthetics and functionality. This is precisely why I prioritize the development of adaptable, customer-focused websites that align seamlessly with your business needs.',
       },
     },
     {
@@ -195,9 +195,8 @@ const rightContent: SplitContentProps['rightContent'] = {
         },
       ],
       bodyText: {
-        // TODO: Must change this phrase to my own, make it shorter too to accomodate max-width page cards
         children:
-          "Established businesses recognise the significance of an impressive online presence to thrive in today's market. To support your journey towards digital success, I offer a suite of specialised services like Web dev, Shopify development, and website audits. Together, we can unlock your business's full potential and secure a prominent position in the digital realm.",
+          'Solid online presence is essential for established businesses. My services - Web Development, Shopify and/or React knowledge, and website audits will empower your digital success.',
       },
     },
     {
@@ -223,7 +222,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       ],
       bodyText: {
         children:
-          'Is your website not meeting your expectations and failing to produce the desired results? Let me conduct a free website review for you, allowing you to identify areas for improvement and pave the way to online success.',
+          'Experiencing slow performance, a high bounce rate, or unsuccessful conversion strategies on your website? I offer a free website review that can help you identify areas for improvement and pave the way to online success.',
       },
     },
   ],

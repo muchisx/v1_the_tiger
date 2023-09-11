@@ -49,7 +49,7 @@ const leftContent: SplitContentProps['leftContent'] = {
 const textOne = (
   <>
     <span style={{ display: 'block', marginBottom: '0.6rem' }}>I&#39;m glad you&#39;re here!</span>
-    My name is Miguel Ángel, and as a dedicated and imaginative freelance Web Developer, my goal is to develop projects
+    My name is Miguel Ángel, and as a commited and imaginative freelance Web Developer, my goal is to develop projects
     that I can take pride in. I am a member Shopify Partners Program, adept in React Development, and I excel at
     creating digital services that include stunning user interfaces and reliable code.
   </>

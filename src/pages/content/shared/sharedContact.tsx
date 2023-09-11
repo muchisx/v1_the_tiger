@@ -92,8 +92,8 @@ const commonRightHeading = (highlightTwo = ''): HeadingProps => {
 
 const commonRightTextOne = (
   <>
-    Don&#39;t put your creativity on hold and let&#39;s build a professional web experience which will put you above
-    your competitors.
+    Reach out to me, and together, we&#39;ll craft a website that outshines the competition, leaving us proud of the
+    exceptional results we achieve.
   </>
 );
 

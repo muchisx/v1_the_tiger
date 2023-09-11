@@ -7,7 +7,7 @@ import { BackgroundShape } from '@components/SplitContent/SplitContent.styles';
 import { getMediaQueryValue } from '@utils';
 // Types
 import type { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
-import backgroundshape from '@assets/svgs/abstract-1.svg';
+import backgroundshape from '@assets/svgs/abstract-1-shape-1.svg';
 
 const customStyles = css`
   ${BackgroundShape} {
@@ -48,6 +48,7 @@ const textRight = (
 const leftContent: SplitContentProps['leftContent'] = {
   backgroundShape: {
     url: backgroundshape,
+    rotation: [20, 40],
   },
 };
 
