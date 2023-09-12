@@ -33,7 +33,7 @@ export const ContentContainer = styled.div`
   justify-content: space-between;
   position: absolute;
   inset: 0;
-  padding: 80px var(--gutter) 40px;
+  padding: 80px var(--gutter-contained) 40px;
 
   color: var(--body-text-tertiary);
 `;
