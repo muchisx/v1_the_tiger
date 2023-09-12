@@ -12,7 +12,7 @@ export type Props = {
 };
 
 const Section = styled.section<Props>`
-  padding-inline: ${(props) => (props.enableGutter ? 'var(--gutter)' : 'unset')};
+  padding-inline: ${(props) => (props.enableGutter ? 'var(--gutter-uncontained)' : 'unset')};
   padding-top: ${(props) => `${props.paddingTop}px`};
   padding-bottom: ${(props) => `${props.paddingBottom}px`};
   margin-top: ${(props) => `${props.marginTop}px`};
@@ -23,9 +23,10 @@ const Section = styled.section<Props>`
     props.contain
       ? props.contain === 'padding'
         ? css`
-            padding-inline: calc(50% + var(--gutter) - var(--section-max-width) / 2);
+            padding-inline: calc(50% + var(--gutter-contained) - var(--section-max-width) / 2);
           `
         : css`
+            padding-inline: var(--gutter-contained);
             max-width: var(--section-max-width);
             margin-inline: auto;
           `
