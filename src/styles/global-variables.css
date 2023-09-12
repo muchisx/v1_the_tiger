@@ -60,6 +60,12 @@
   --btn-color-border-quaternary: var(--neutral-color-quaternary);
   --btn-color-icon-quaternary: var(--btn-color-text-quaternary);
   --btn-color-icon-bg-quaternary: var(--btn-color-bg-quaternary);
+  /* -quinary */
+  --btn-color-bg-quinary: #fff;
+  --btn-color-text-quinary: var(--text-primary);
+  --btn-color-border-quinary: var(--btn-color-bg-quinary);
+  --btn-color-icon-quinary: var(--btn-color-bg-quinary);
+  --btn-color-icon-bg-quinary: var(--text-primary);
 
   /* <-----|    Fonts    |-----> */
 
@@ -68,7 +74,11 @@
   --heading-family: 'Satoshi', sans-serif;
 
   /* <-----|    Spacings    |-----> */
-  --gutter: max(20px, 4%);
+  --gutter: 20px;
+  --max-contained-gutter: 58px;
+  /* 👆🏻 This magic number is actually equals to 4% padding when the section reaches a max-width of 1440px, so update it if you change --section-max-width */
+  --gutter-contained: clamp(var(--gutter), 4%, var(--max-contained-gutter));
+  --gutter-uncontained: max(var(--gutter), 4%);
   --section-max-width: 1440px;
   --scrollbar-size: 8px;
 }

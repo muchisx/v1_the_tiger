@@ -2,7 +2,7 @@
 import { type StyledIcon } from '@styled-icons/styled-icon';
 
 type ButtonRole = 'button' | 'link' | 'submit' | 'reset';
-export type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
+export type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'quinary';
 type CommonProps = {
   // Common
   variant: Variant;
