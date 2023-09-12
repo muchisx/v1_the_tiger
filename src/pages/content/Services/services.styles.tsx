@@ -21,7 +21,7 @@ export const serviceCustomCSS = css`
       position: absolute;
       bottom: 0;
       width: 100%;
-      max-width: calc(var(--section-max-width) - var(--gutter) * 2);
+      max-width: calc(var(--section-max-width) - var(--gutter-contained) * 2);
       border-bottom: 1px solid var(--neutral-color-quaternary);
     }
   }
