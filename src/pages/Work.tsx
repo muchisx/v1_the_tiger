@@ -4,7 +4,7 @@ import Heading from '@components/shared/Heading/Heading';
 import SplitContent from '@components/SplitContent/SplitContent';
 import CardGrid from '@components/CardGrid/CardGrid';
 // Content
-import { WorkHeroHeadingText, workCTA, workJobCards } from '@content/Work';
+import { WorkHeroHeadingText, workCTA, workJobCards, workJobsHeading } from '@content/Work';
 import sharedContact from '@content/shared/sharedContact';
 
 const workContact = sharedContact('secondary');
@@ -17,8 +17,26 @@ function Work() {
           {WorkHeroHeadingText}
         </Heading>
       </Section>
-      <SplitContent contain leftContent={workCTA.leftContent} rightContent={workCTA.rightContent} />
-      <CardGrid cardCells={workJobCards.cardCells} contain customStyles={workJobCards.customStyles} />
+      <SplitContent
+        contain
+        leftContent={workCTA.leftContent}
+        rightContent={workCTA.rightContent}
+        customStyles={workCTA.customStyles}
+      />
+
+      <SplitContent
+        contain
+        leftContent={workJobsHeading.leftContent}
+        rightContent={workJobsHeading.rightContent}
+        customStyles={workJobsHeading.customStyles}
+      />
+
+      <CardGrid
+        cardCells={workJobCards.cardCells}
+        contain
+        customStyles={workJobCards.customStyles}
+        subheadingFont={workJobCards.subheadingFont}
+      />
       <SplitContent
         contain="padding"
         leftContent={workContact.leftContent}

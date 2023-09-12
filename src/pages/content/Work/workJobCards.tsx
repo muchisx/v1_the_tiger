@@ -31,7 +31,7 @@ const customStyles: CardGridProps['customStyles'] = css`
 const footerButtonCommon: CardGridProps['cardCells'][0]['card']['footerButton'] = {
   buttonRole: 'link',
   Icon: ArrowRight,
-  variant: 'secondary',
+  variant: 'quinary',
   IconSize: 20,
   IconWrapPadding: '.6rem',
   // overwritting later 👇🏻
@@ -68,6 +68,12 @@ const generateWorkJobCardsProps = (job: Job): CardGridProps['cardCells'][0] => {
 const workJobCards: CardGridProps = {
   customStyles,
   cardCells: data.map((job) => generateWorkJobCardsProps(job)),
+  subheadingFont: {
+    headingLevel: 'h3',
+    fontSize: {
+      all: '2.4rem',
+    },
+  },
 };
 
 export default workJobCards;
