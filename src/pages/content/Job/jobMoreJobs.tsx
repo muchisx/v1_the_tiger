@@ -32,7 +32,7 @@ const footerButtonCommon: CardGridProps['cardCells'][0]['card']['footerButton'] 
   buttonRole: 'link',
   IconSize: 20,
   Icon: ArrowRight,
-  variant: 'secondary',
+  variant: 'quinary',
   IconWrapPadding: '.6rem',
   // overwritting later 👇🏻
   to: '/',
