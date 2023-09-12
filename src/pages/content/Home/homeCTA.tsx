@@ -10,6 +10,11 @@ import type { Props as SplitContentProps } from '@components/SplitContent/SplitC
 import backgroundshape from '@assets/svgs/abstract-1-shape-1.svg';
 
 const customStyles = css`
+  @media only screen and (min-width: ${getMediaQueryValue('all')}) {
+    padding-top: 20px;
+    padding-bottom: 120px;
+  }
+
   ${BackgroundShape} {
     @media only screen and (max-width: 768px) {
       top: unset;
@@ -17,11 +22,6 @@ const customStyles = css`
       right: -44%;
       bottom: -26%;
     }
-  }
-
-  @media only screen and (min-width: ${getMediaQueryValue('all')}) {
-    padding-top: 20px;
-    padding-bottom: 120px;
   }
 `;
 
