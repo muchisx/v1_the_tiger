@@ -119,7 +119,7 @@ function Job() {
       <CardGrid
         contain
         gridAutoRows={{ md: '36vh' }}
-        cardCells={jobMoreJobs.cardCells}
+        cardCells={jobMoreJobs.cardCells(jobData)}
         customStyles={jobMoreJobs.customStyles}
         gridTemplateColumns={{ md: 'repeat(3, 1fr)' }}
       />

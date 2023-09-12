@@ -1,15 +1,17 @@
 // Dependencies
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 import { css } from 'styled-components';
+// Styles Components
+import { CardFooter, CardStyled } from '@components/Card/Card.styles';
+import HeadingStyled from '@components/shared/Heading/Heading.styles';
+import { CardGridCellBottom } from '@components/CardGrid/CardGrid.styles';
+// Utils
+import shuffleArray from '@utils/shuffleArray';
+// Types
+import type { Props as CardGridProps } from '@components/CardGrid/CardGrid.types';
+import type { Job } from './job.types';
 // Content
 import data from './job.data';
-// Styles Components
-import { CardFooter, CardStyled } from '@/components/Card/Card.styles';
-import HeadingStyled from '@/components/shared/Heading/Heading.styles';
-import { CardGridCellBottom } from '@/components/CardGrid/CardGrid.styles';
-// Types
-import type { Job } from './job.types';
-import type { Props as CardGridProps } from '@/components/CardGrid/CardGrid.types';
 
 const customStyles: CardGridProps['customStyles'] = css`
   ${CardStyled} {
@@ -63,11 +65,14 @@ const generateJobCardsProps = (job: Job): CardGridProps['cardCells'][0] => {
   };
 };
 
-const firstThreeJobs = data.slice(0, 3);
-
-const jobMoreJobs: CardGridProps = {
+const jobMoreJobs = {
   customStyles,
-  cardCells: firstThreeJobs.map((job) => generateJobCardsProps(job)),
+  cardCells: (currentJob: Job) => {
+    const jobsWithoutCurrentJob = data.filter((job) => job.$keyId !== currentJob.$keyId);
+    const shuffledJobs = shuffleArray(jobsWithoutCurrentJob).slice(0, 3);
+
+    return shuffledJobs.map((job) => generateJobCardsProps(job));
+  },
 };
 
 export default jobMoreJobs;
