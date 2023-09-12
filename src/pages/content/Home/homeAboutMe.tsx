@@ -57,7 +57,7 @@ const textOne = (
 
 const textTwo = (
   <>
-    Driven by passion for technology and a focus on Shopify and React development, I craft stunning digital experiences
+    Driven by passion for technology and a focus on Shopify and React development, I craft reliable digital experiences
     that deliver real-world value for my clients and their end-users. I place a strong emphasis on collaboration,
     partnering closely with clients to create custom solutions that perfectly meet their needs and exceed their goals.
   </>

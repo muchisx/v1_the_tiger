@@ -66,7 +66,7 @@ const tertiaryCustomStyles = css`
 
 const commonLeftTopTag: SplitContentProps['leftContent']['topTag'] = {
   variant: 'tertiary',
-  children: 'Get in touch',
+  children: 'Let us chat',
 };
 
 const commonLeftBgShape: SplitContentProps['leftContent']['backgroundShape'] = {

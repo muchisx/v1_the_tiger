@@ -41,8 +41,7 @@ const customStyles = css`
 const leftText = (
   <>
     My expertise lies in providing reliable web development services and expert Shopify assistance to businesses of all
-    sizes. I strive to empower businesses in establishing a strong online presence and effectively engaging their target
-    audience.
+    sizes. I strive to empower businesses in establishing strong online services and effectively scale.
   </>
 );
 
@@ -159,7 +158,7 @@ const rightContent: SplitContentProps['rightContent'] = {
         },
         {
           $keyId: crypto.randomUUID(),
-          children: 'Identity',
+          children: 'Reach',
           variant: 'tertiary',
         },
         {
@@ -180,17 +179,17 @@ const rightContent: SplitContentProps['rightContent'] = {
       headerTags: [
         {
           $keyId: crypto.randomUUID(),
-          children: 'Audit',
+          children: 'Optimization',
           variant: 'primary',
         },
         {
           $keyId: crypto.randomUUID(),
-          children: 'Identity',
+          children: 'Features',
           variant: 'tertiary',
         },
         {
           $keyId: crypto.randomUUID(),
-          children: 'Development',
+          children: 'Audit',
           variant: 'quaternary',
         },
       ],
@@ -206,23 +205,23 @@ const rightContent: SplitContentProps['rightContent'] = {
       headerTags: [
         {
           $keyId: crypto.randomUUID(),
-          children: 'Issues',
+          children: 'UX - Accesibility',
           variant: 'primary',
         },
         {
           $keyId: crypto.randomUUID(),
-          children: 'Evaluations',
+          children: 'Performance',
           variant: 'tertiary',
         },
         {
           $keyId: crypto.randomUUID(),
-          children: 'Solutions',
+          children: 'Bugs',
           variant: 'quaternary',
         },
       ],
       bodyText: {
         children:
-          'Experiencing slow performance, a high bounce rate, or unsuccessful conversion strategies on your website? I offer a free website review that can help you identify areas for improvement and pave the way to online success.',
+          'Experiencing slow performance, a high bounce rate, or unsuccessful conversion strategies on your website? I offer a free website review that can help you identify areas for improvement that will bring you closer to your goals.',
       },
     },
   ],
