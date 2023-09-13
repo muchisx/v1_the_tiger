@@ -7,6 +7,7 @@
 - [ ] Modify getMediaqueryValue so instead returns the whole breakpoint rule (ex. returns => 'min-with: 768px', returns => 'max-with: 769px'). This way so I can use both min & max with different values
   - [ ] After, turn all of the style-props into mediaquery-based props { all: ..., xxsm: ...} so they work with the getCSSFromMediaQuery
 - [ ] Standarize all abstract SVGs to have the same viewbox
+- [ ] Fix ScrollRestoration in nested pages not smooth
 - [ ] Make exhaustive list of all URLs of websites i worked in, and add a section in the bottom of Work that says
   - [ ] List all non-confidential projects
     - [ ] this should be an accordion that has a list of urls in it

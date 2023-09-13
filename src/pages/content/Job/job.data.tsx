@@ -39,7 +39,7 @@ const data: Job[] = [
     },
     heroBannerImage: qdBanner,
     jobFeaturedPhrase:
-      "Embarking on the challenge of enhancing Quality Door's development was a remarkable challenge. I skillfully developed two redesigned homepages that breathed new life into the brand, while seamlessly incorporating new sections and features throughout the entire store.",
+      "Embarking on the challenge of enhancing Quality Door's stores was a remarkable feat. I skillfully developed two redesigned homepages that breathed new life into the brand, while seamlessly incorporating new sections and features throughout the entire store.",
     jobAdditionalInfo:
       'For over 35 years, QDH has been committed to the deliver of "Quality" products at competitive prices with great customer service. This steadfast dedication to service and dependability has shaped everything they do.',
     jobFeaturedTasks: {
@@ -97,34 +97,35 @@ const data: Job[] = [
     },
     heroBannerImage: freshVictorBanner,
     jobFeaturedPhrase:
-      'fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor.',
+      "Fresh Victor's project achieved immediate success. This innovative US-based start-up had a clear goal, and my development services brought them closer to achieving it.",
     jobAdditionalInfo:
-      'fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor fresh victor.',
+      "With Fresh Victor's premium, cold-pressed juice mixers, you are the victor! Get out from behind the bar and back to the party. This is how you make fast, delicious craft cocktails and amazing mocktails -- Every. Single. Time. Just mix with your favorite spirit or non-alcoholic beverage, stir and sip. With their clean-label, fresh-ingredients mixers, you'll serve up beautiful, great tasting and surprisingly healthy drinks that your friends will be talking about for weeks.",
     jobFeaturedTasks: {
       contain: 'margin',
       tabbedContent: [
         {
           $keyId: crypto.randomUUID(),
-          title: 'AWESOME FEATURE',
+          title: 'Product Page',
           description:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
+            'Implemented several enhancements to the Product Page (PDP) to enhance accessibility and usability. These included the addition of Upsell sections, which significantly boosted conversion rates, and the incorporation of customizable dynamic payment buttons.',
           mediaIs: 'video',
           mediaType: 'video/mp4',
           mediaSource: fvFeaturedTask1,
         },
         {
           $keyId: crypto.randomUUID(),
-          title: 'ANOTHER FEATURE',
+          title: 'Video Section',
           description:
-            'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
+            "Developed a fully native Video Section within a theme initially lacking video support. Additionally, I implemented comprehensive Admin Controls to enable seamless customization of the section's appearance and functionality on both Desktop and Mobile platforms. This allowed my client to seamlessly integrate the section with their existing design system.",
           mediaIs: 'video',
           mediaType: 'video/mp4',
           mediaSource: fvFeaturedTask2,
         },
         {
           $keyId: crypto.randomUUID(),
-          title: 'FEATURE NAME',
-          description: 'Lorem ipsum dolor,quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
+          title: 'Homepage',
+          description:
+            'I provided several feature updates to the Homepage, introducing extensive controls for customizing the appearance of various sections. This greatly facilitated achieving the precise style they desired.',
           mediaIs: 'video',
           mediaType: 'video/mp4',
           mediaSource: fvFeaturedTask3,
@@ -146,42 +147,44 @@ const data: Job[] = [
     },
     heroBannerImage: responsibleBanner,
     jobFeaturedPhrase:
-      'responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible.',
+      'I was immediately drawn to this project due to its alignment with environmental values. Together, we implemented remarkable site-wide features that guided users and drove sales growth.',
     jobAdditionalInfo:
-      'responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible responsible.',
+      "RESPONSIBLE is the new brand-approved recommerce platform for streetwear. With a price-promise, quality guarantee and Buy back offered across all of their garments, it's never been so easy, affordable and sustainable to keep your look fresh.",
     jobFeaturedTasks: {
       contain: 'margin',
       tabbedContent: [
         {
           $keyId: crypto.randomUUID(),
-          title: 'AWESOME FEATURE',
+          title: 'Homepage',
           description:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
+            "RESPONSIBLE's goal homepage featured custom elements unsupported by their Shopify Theme. Through our close collaboration, we successfully implemented these features promptly, giving the homepage the fresh look they desired.",
           mediaIs: 'video',
           mediaType: 'video/mp4',
           mediaSource: resFeaturedTask1,
         },
         {
           $keyId: crypto.randomUUID(),
-          title: 'ANOTHER FEATURE',
+          title: 'Infinite Collection',
           description:
-            'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
+            "The RESPONSIBLE team admired the infinite collections found on platforms like Amazon and other websites, and they sought to integrate this feature into their Shopify Theme. I stepped in and successfully recreated this functionality while preserving the external apps' features, such as the wishlist app showcased in the video.",
           mediaIs: 'video',
           mediaType: 'video/mp4',
           mediaSource: resFeaturedTask2,
         },
         {
           $keyId: crypto.randomUUID(),
-          title: 'FEATURE NAME',
-          description: 'Lorem ipsum dolor,quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
+          title: 'Mobile Nav',
+          description:
+            'I successfully developed a completely customized Mobile Navigation from a provided design, featuring nested and subnested menus, additional root links, and display for various supported payment types.',
           mediaIs: 'video',
           mediaType: 'video/mp4',
           mediaSource: resFeaturedTask3,
         },
         {
           $keyId: crypto.randomUUID(),
-          title: 'FEATURE NAME',
-          description: 'Lorem ipsum dolor,quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
+          title: 'Product Page',
+          description:
+            'RESPONSIBLE managed different types of prices depending on different internal factors, I was tasked then to develop, based on a design, a connection in which we could display those prices and trigger them when those factors were met.',
           mediaIs: 'video',
           mediaType: 'video/mp4',
           mediaSource: resFeaturedTask4,
