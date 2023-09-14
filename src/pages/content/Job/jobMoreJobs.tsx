@@ -73,6 +73,13 @@ const jobMoreJobs = {
 
     return shuffledJobs.map((job) => generateJobCardsProps(job));
   },
+  footerButton: {
+    buttonRole: 'link',
+    to: '/work',
+    variant: 'primary',
+    text: 'View all featured work',
+    Icon: ArrowRight,
+  } as CardGridProps['footerButton'],
 };
 
 export default jobMoreJobs;

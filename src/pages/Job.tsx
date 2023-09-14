@@ -122,6 +122,7 @@ function Job() {
         cardCells={jobMoreJobs.cardCells(jobData)}
         customStyles={jobMoreJobs.customStyles}
         gridTemplateColumns={{ md: 'repeat(3, 1fr)' }}
+        footerButton={jobMoreJobs.footerButton}
       />
     </main>
   );

@@ -10,7 +10,7 @@
 - [ ] Fix ScrollRestoration in nested pages not smooth
 - [ ] Make exhaustive list of all URLs of websites i worked in, and add a section in the bottom of Work that says
   - [ ] List all non-confidential projects
-    - [ ] this should be an accordion that has a list of urls in it
+    - [ ] this should be an accordion that has a LogoGrid with all of the websites I worked in (with url on click)
 - [ ] add height prop to divider component and fix services dividers
 - [x] only use useMediaQuery state globally to improve performance and grab it from context.
 - [x] use crypto.randomUUID() for all $keyId throught the app

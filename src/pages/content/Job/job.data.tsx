@@ -205,26 +205,26 @@ const data: Job[] = [
     },
     heroBannerImage: k9Banner,
     jobFeaturedPhrase:
-      'k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal.',
+      'In this project, I was able to help an upcoming start-up setup the logic for their most important product in the Front-End and Back-End of Shopify.',
     jobAdditionalInfo:
-      'k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal k9 arsenal.',
+      "At K9 Arsenal, they're passionate about providing the highest quality equipment for trainers, decoys, handlers and their k9's.",
     jobFeaturedTasks: {
       contain: 'margin',
       tabbedContent: [
         {
           $keyId: crypto.randomUUID(),
-          title: 'AWESOME FEATURE',
+          title: 'Custom Product',
           description:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
+            'I effectively created a custom Product Page experience featuring multiple custom fields and functionalities that operated seamlessly in both the Front-End (updating prices dynamically) and Back-End, preserving all selected custom fields.',
           mediaIs: 'video',
           mediaType: 'video/mp4',
           mediaSource: k9FeaturedTask1,
         },
         {
           $keyId: crypto.randomUUID(),
-          title: 'ANOTHER FEATURE',
+          title: 'Cart Recap',
           description:
-            'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
+            'I seamlessly incorporated Custom Product Fields into the Cart Page, allowing users to visually review their selections, including custom fields such as files and color choices.',
           mediaIs: 'video',
           mediaType: 'video/mp4',
           mediaSource: k9FeaturedTask2,
@@ -248,24 +248,24 @@ const data: Job[] = [
     jobFeaturedPhrase:
       'I successfully built custom and customizable components for their Shopify Store, including upsell features directly on the product page. This implementation led to increased conversion rates and enhanced overall performance.',
     jobAdditionalInfo:
-      'diamond mattress diamond mattress diamond mattress diamond mattress diamond mattress diamond mattress diamond mattress diamond mattress diamond mattress diamond mattress diamond mattress diamond mattress diamond mattress diamond mattress.',
+      'Diamond Mattress believes that sleep has the power to change our lives. It is the path to feeling more fulfilled and finding a deeper connection to the beauty of life. Diamond Mattress is dedicated to pursuing people-first innovation to improve life and transform our relationship with sleep. More than just making mattresses, Diamond is defining a better way to live by perfecting the art of sleep wellness.',
     jobFeaturedTasks: {
       contain: 'margin',
       tabbedContent: [
         {
           $keyId: crypto.randomUUID(),
-          title: 'AWESOME FEATURE',
+          title: 'Product Page',
           description:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
+            "I introduced fresh visual assets (based from an external skilled designer) to Diamond's Product Page, incorporating attention-grabbing disclaimers for Upselling features that contributed to a boost in conversion rates.",
           mediaIs: 'video',
           mediaType: 'video/mp4',
           mediaSource: diamondFeaturedTask1,
         },
         {
           $keyId: crypto.randomUUID(),
-          title: 'ANOTHER FEATURE',
+          title: 'Upsell Function',
           description:
-            'Lorem ipsum doloriciis distinctio nam aperiam ea! Expedita sit, temporibus sunt ducimus aliquid quia dolor ex, ipsum possimus in at earum eligendi, numquam iste?',
+            'I effectively developed an upsell mechanism that automatically included a complimentary product in the cart when a specific item (configurable in the Shopify Editor Admin) was chosen.',
           mediaIs: 'video',
           mediaType: 'video/mp4',
           mediaSource: diamondFeaturedTask2,
