@@ -2,6 +2,31 @@ import styled from 'styled-components';
 
 const SpanOne = styled.span`
   @media only screen and (max-width: 574px) {
+    display: block;
+    font-size: 11.9vw;
+  }
+  @media only screen and (max-width: 410px) {
+    font-size: 11.4vw;
+  }
+  @media only screen and (max-width: 332px) {
+    font-size: 11.3vw;
+  }
+`;
+const SpanTwo = styled.span`
+  @media only screen and (max-width: 574px) {
+    display: block;
+    font-size: 8.6vw;
+  }
+  @media only screen and (max-width: 410px) {
+    font-size: 8.3vw;
+  }
+  @media only screen and (max-width: 332px) {
+    font-size: 8.2vw;
+  }
+`;
+const SpanThree = styled.span`
+  @media only screen and (max-width: 574px) {
+    display: block;
     font-size: 12vw;
   }
   @media only screen and (max-width: 410px) {
@@ -11,47 +36,39 @@ const SpanOne = styled.span`
     font-size: 11.6vw;
   }
 `;
-const SpanTwo = styled.span`
-  @media only screen and (max-width: 574px) {
-    font-size: 7.7vw;
-  }
-  @media only screen and (max-width: 410px) {
-    font-size: 7.5vw;
-  }
-  @media only screen and (max-width: 332px) {
-    font-size: 7.4vw;
-  }
-`;
-const SpanThree = styled.span`
-  @media only screen and (max-width: 574px) {
-    font-size: 6.5vw;
-  }
-  @media only screen and (max-width: 410px) {
-    font-size: 6.4vw;
-  }
-  @media only screen and (max-width: 332px) {
-    font-size: 6.3vw;
-  }
-`;
 const SpanFour = styled.span`
   @media only screen and (max-width: 574px) {
-    font-size: 10.2vw;
+    display: block;
+    font-size: 12.3vw;
   }
   @media only screen and (max-width: 410px) {
-    font-size: 10.1vw;
+    font-size: 11.9vw;
   }
   @media only screen and (max-width: 332px) {
-    font-size: 10vw;
+    font-size: 11.8vw;
+  }
+`;
+const SpanFive = styled.span`
+  @media only screen and (max-width: 574px) {
+    display: block;
+    font-size: 9.1vw;
+  }
+  @media only screen and (max-width: 410px) {
+    font-size: 8.8vw;
+  }
+  @media only screen and (max-width: 332px) {
+    font-size: 8.7vw;
   }
 `;
 
 // TODO - CREATE A TOTALLY NEW PHRASE
 const servicesHeroHeadingText = (
   <>
-    <SpanOne className="highlight-primary">Lorem ipsum dolor </SpanOne>
-    <SpanTwo>sit amet </SpanTwo>
-    <SpanThree>consectetur adipisicing </SpanThree>
-    <SpanFour className="highlight-primary">elit. Modi, iure?</SpanFour>
+    <SpanOne>TURNING YOUR </SpanOne>
+    <SpanTwo className="highlight-primary">GOALS INTO REALITY: </SpanTwo>
+    <SpanThree>PROFESSIONAL </SpanThree>
+    <SpanFour className="highlight-primary">WEB SERVICES </SpanFour>
+    <SpanFive>THAT PROPEL YOUR PROJECT FORWARD</SpanFive>
   </>
 );
 

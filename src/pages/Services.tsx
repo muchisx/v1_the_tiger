@@ -27,11 +27,16 @@ function Services() {
   return (
     <main className="page page--services">
       <Section enableGutter>
-        <Heading headingLevel="h1" fontSize={{ all: '4vw' }}>
+        <Heading headingLevel="h1" fontSize={{ all: '3.38vw' }}>
           {ServicesHeroHeadingText}
         </Heading>
       </Section>
-      <SplitContent contain leftContent={servicesCTA.leftContent} rightContent={servicesCTA.rightContent} />
+      <SplitContent
+        contain
+        leftContent={servicesCTA.leftContent}
+        rightContent={servicesCTA.rightContent}
+        customStyles={servicesCTA.customStyles}
+      />
       <ImageBanner src={placeholderImageBanner} minHeight={{ all: '360px', md: '96svh' }} enableParallax />
 
       <Divider customStyles={serviceDividerCustomCSS} paddingBottom={60} />

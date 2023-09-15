@@ -15,12 +15,16 @@
 - [x] only use useMediaQuery state globally to improve performance and grab it from context.
 - [x] use crypto.randomUUID() for all $keyId throught the app
 - [ ] rework Button comp so the clickable/actionnable area is not misleading with the padding of the top-wrapper, basically, make the entire button action on click, not just the center
+- [ ] rework HomeServices to use services.data instead of hardcoded data.
+- [ ] rework Page CTAs to use a sharedCTA like sharedContact that changes the links, bgshape and the text, but keeps the style
 - [x] create more import aliases and update all imports
 - [x] Remove styled icons fluent-regular if its not needed, as I am using just fluent-filled icons.
 - [ ] Add footer privacy, terms and copyright
 - [ ] Create webp version of all image assets and create optimized fallbacks for browsers that don't support webp.
 - [ ] Pass Section paddingTop and Bottom a standard number declared elsewhere to have similar distancing across all sections
-- [ ] Fix BackgroundShape in Split content to no be direct child of Section, but instead be contained within the content
+- [ ] BG Shape
+  - [ ] Fix BackgroundShape in Split content to no be direct child of Section, but instead be contained within the content
+  - [ ] Give it a size prop, to use breakpoint sizes instead of fixed width %.
 - [ ] Refactor ImageMasked to use ImageResponsive as dependency 
 - [x] Add Logo to Nav to make spacing for hamburger icon
 - [x] Replace defaultProps for default Attributtes for optional props on all components
