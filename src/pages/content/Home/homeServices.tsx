@@ -117,7 +117,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       ],
       bodyText: {
         children:
-          'As the front of your business, your website demands equal dedication and investment in both its aesthetics and functionality. This is precisely why I prioritize the development of adaptable, customer-focused websites that align seamlessly with your business needs.',
+          'As the front of your business, your website demands equal dedication and investment in both its aesthetics and functionality. This is precisely why I prioritize the development of adaptable, customer-focused features that align seamlessly with your business needs.',
       },
     },
     {
@@ -174,7 +174,7 @@ const rightContent: SplitContentProps['rightContent'] = {
     },
     {
       $keyId: crypto.randomUUID(),
-      headerHeading: 'BACKING EST. BUSINESS',
+      headerHeading: 'BACKING EST. BUSINESSES',
       HeaderIcon: Building,
       headerTags: [
         {
