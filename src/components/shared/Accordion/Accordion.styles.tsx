@@ -9,6 +9,7 @@ export const QuestionIcon = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: var(--icon-size);
   height: var(--icon-size);
 `;
@@ -17,9 +18,11 @@ export const QuestionButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   width: 100%;
   height: 100%;
   padding-block: var(--global-padding);
+  text-align: left;
   cursor: pointer;
   background-color: transparent;
 
@@ -41,7 +44,7 @@ export const AnswerContainer = styled(motion.dd)`
   display: flex;
   overflow: hidden;
 
-  ${TextStyled} {
+  > ${TextStyled} {
     padding-bottom: var(--global-padding);
   }
 `;

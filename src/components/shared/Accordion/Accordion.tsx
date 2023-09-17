@@ -24,6 +24,9 @@ function AccordionItem(props: AccordionItemProps) {
 
   // By using `AnimatePresence` to mount and unmount the contents, we can animate
   // them in and out while also only rendering the contents of open accordions
+
+  const wrapAnswerInSpan = typeof answer.children !== 'string';
+
   return (
     <AccordionItemContainer>
       <QuestionContainer initial={false}>
@@ -46,7 +49,7 @@ function AccordionItem(props: AccordionItemProps) {
             variants={AccordionItemMotionVariants}
             transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
-            <Text>{answer}</Text>
+            <Text tag={wrapAnswerInSpan ? 'span' : 'p'} {...answer} />
           </AnswerContainer>
         )}
       </AnimatePresence>
