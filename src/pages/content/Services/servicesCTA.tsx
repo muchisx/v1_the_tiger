@@ -54,7 +54,7 @@ const textRight = (
     </Text>
     <Text tag="span">
       By partnering with me, you can expect excellence in every aspect of our work, and together, we&rsquo;ll achieve
-      results you&rsquo;ll be proud of.
+      results we&rsquo;ll be proud of.
     </Text>
   </>
 );

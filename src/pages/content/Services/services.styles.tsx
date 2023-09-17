@@ -52,6 +52,10 @@ export const serviceCustomCSS = css`
   .split-content__second {
     ${AccordionList} {
       margin-top: 24px;
+
+      ol {
+        max-width: 80%;
+      }
     }
   }
 
