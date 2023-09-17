@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 // Dependencies
-import { ArrowRight } from '@styled-icons/fluentui-system-filled';
+import { ArrowRight, CalendarLtr } from '@styled-icons/fluentui-system-filled';
 // Components
 import Text from '@components/shared/Text/Text';
 // Types
@@ -138,7 +138,7 @@ const servicesData: Service[] = [
               <br />
               <br />
               <Text fontSize="1.4rem">
-                If you need any help with UI/UX Design-related work, I can assist you by handing you direct contact
+                If you need any help with UI/UX Design-related work, I can assist by handing you direct contact
                 references of known professional Designers.
               </Text>
             </>
@@ -157,12 +157,12 @@ const servicesData: Service[] = [
         $keyId: crypto.randomUUID(),
         fontWeight: 500,
         children:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto blanditiis labore ipsa incidunt delectus veritatis quasi accusamus non? Quasi rem voluptates minima tempora doloremque. Ullam corrupti est soluta. Quas, temporibus?',
+          'Utilizing my knowledge in web development, along with technical skills in React and extensive CSS & JS knowledge, I am a perfect fit for any custom component development, bug fixing or tweaking existing components to suit your needs.',
       },
       {
         $keyId: crypto.randomUUID(),
         children:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, assumenda et! Fugit itaque beatae quos dolore ex est dignissimos necessitatibus numquam rem, culpa architecto labore. Aspernatur molestiae sequi ipsam similique!',
+          "My commitment to excellence and innovation ensures that your web solutions are not just functional but exceptional. Let's collaborate to bring your ideas to life, leveraging the full potential of React for a seamless, tailored online experience that leaves a lasting impact.",
       },
     ],
     links: [
@@ -170,38 +170,38 @@ const servicesData: Service[] = [
         $keyId: crypto.randomUUID(),
         ...contactLink,
       },
-      {
-        $keyId: crypto.randomUUID(),
-        to: '/shopify',
-        buttonRole: 'link',
-        variant: 'secondary',
-        Icon: ArrowRight,
-        text: 'Learn more',
-      },
     ],
     features: [
       {
         $keyId: crypto.randomUUID(),
-        question: 'QUESTION QST',
+        question: 'NEW & EXISTING COMPONENTS',
         answer: {
           children:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+            'Are you looking to add new features to your app or enhance your existing components? Look no further. I offer expert assistance in crafting high-quality components while adhering to best and modern coding practices and seamlessly integrating them into your existing architecture.',
         },
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'QUESTION QST',
+        question: 'BUG FIXING',
         answer: {
           children:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+            "Web development is a dynamic field where new technologies and devices are introduced constantly. It's only natural that occasional bugs and issues arise. When they do, I'm here to help. With my expertise in bug fixing, I'll swiftly restore your features to their optimal state, so you can confidently pursue your goals without interruption.",
         },
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'QUESTION QST',
+        question: 'MIGRATIONS',
         answer: {
           children:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+            "In today's rapidly evolving tech landscape, React and Next.js have become the preferred choices for startups and companies alike. If you're considering joining this trend, I offer expert assistance in seamlessly transitioning your project to these cutting-edge technologies. Let me guide you through a smooth migration process, ensuring your transition is painless and your goal is achieved.",
+        },
+      },
+      {
+        $keyId: crypto.randomUUID(),
+        question: 'FULL PROJECTS',
+        answer: {
+          children:
+            "While I often tackle specific tasks as a freelancer, I'm also open to embarking on full-scale projects that align with our mutual goals and interests. By working together from inception to completion, we can exert full control over your project's journey, ensuring a comprehensive and successful outcome.",
         },
       },
     ],
@@ -228,14 +228,6 @@ const servicesData: Service[] = [
       {
         $keyId: crypto.randomUUID(),
         ...contactLink,
-      },
-      {
-        $keyId: crypto.randomUUID(),
-        to: '/shopify',
-        buttonRole: 'link',
-        variant: 'secondary',
-        Icon: ArrowRight,
-        text: 'Learn more',
       },
     ],
     features: [
@@ -288,14 +280,6 @@ const servicesData: Service[] = [
         $keyId: crypto.randomUUID(),
         ...contactLink,
       },
-      {
-        $keyId: crypto.randomUUID(),
-        to: '/shopify',
-        buttonRole: 'link',
-        variant: 'secondary',
-        Icon: ArrowRight,
-        text: 'Learn more',
-      },
     ],
     features: [
       {
@@ -345,15 +329,12 @@ const servicesData: Service[] = [
     links: [
       {
         $keyId: crypto.randomUUID(),
-        ...contactLink,
-      },
-      {
-        $keyId: crypto.randomUUID(),
-        to: '/shopify',
         buttonRole: 'link',
-        variant: 'secondary',
-        Icon: ArrowRight,
-        text: 'Learn more',
+        newTab: true,
+        Icon: CalendarLtr,
+        variant: 'primary',
+        text: 'Reserve a free meeting',
+        to: 'https://calendly.com/miguel-angel-creator/free-meeting',
       },
     ],
     features: [

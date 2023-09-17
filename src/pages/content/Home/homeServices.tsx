@@ -143,7 +143,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       ],
       bodyText: {
         children:
-          'Utilizing my knowledge in web design, along with technical skills in React and extensive CSS knowledge, I am a perfect fit for any custom component development, bug fixing or tweaking existing components to suit your needs.',
+          'Utilizing my knowledge in web development, along with technical skills in React and extensive CSS & JS knowledge, I am a perfect fit for any custom component development, bug fixing or tweaking existing components to suit your needs.',
       },
     },
     {
