@@ -138,8 +138,8 @@ const servicesData: Service[] = [
               <br />
               <br />
               <Text fontSize="1.4rem">
-                If you need any help with UI/UX Design-related work, I can assist you by handing you direct references
-                from known Designer professionals.
+                If you need any help with UI/UX Design-related work, I can assist you by handing you direct contact
+                references of known professional Designers.
               </Text>
             </>
           ),
