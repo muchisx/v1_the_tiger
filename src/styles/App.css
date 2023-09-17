@@ -158,6 +158,16 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+ol {
+  margin-block: 1.6rem;
+  padding-left: 2.4rem;
+}
+
+ol li {
+  margin-block: 0.4rem;
+  padding-left: 0.8rem;
+}
+
 /*Scrollbar container*/
 ::-webkit-scrollbar {
   width: var(--scrollbar-size);
