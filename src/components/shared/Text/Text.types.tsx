@@ -8,7 +8,7 @@ import {
   QuoteHTMLAttributes,
   TimeHTMLAttributes,
 } from 'react';
-import type { AvailableCSSFontVar } from '@/types/general.types';
+import type { AvailableCSSFontVar, TextColorCSSVar } from '@/types/general.types';
 import type { TextAlign } from '@/types/css.types';
 
 export type Tag =
@@ -97,9 +97,12 @@ export type TextProps = {
   $fontSize?: Props['fontSize'];
   $fontFamily?: Props['fontFamily'];
   $textAlign?: Props['textAlign'];
+  $textColor?: Props['textColor'];
 };
+
 export type Props = {
   children: ReactNode;
+  textColor?: TextColorCSSVar;
   fontWeight?: number;
   fontSize?: string;
   textAlign?: TextAlign;

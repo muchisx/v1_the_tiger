@@ -7,10 +7,11 @@ import TextStyled from './Text.styles';
 
 const Text = forwardRef<HTMLParagraphElement, Props>((props, ref) => {
   const {
+    tag,
     children,
     className,
-    tag,
     textAlign,
+    textColor,
     fontWeight = 400,
     fontSize = '1.6rem',
     fontFamily = 'var(--text-family)',
@@ -19,13 +20,14 @@ const Text = forwardRef<HTMLParagraphElement, Props>((props, ref) => {
 
   return (
     <TextStyled
-      ref={ref}
       as={tag}
+      ref={ref}
+      $fontSize={fontSize}
       className={className}
+      $textColor={textColor}
       $textAlign={textAlign}
       $fontFamily={fontFamily}
       $fontWeight={fontWeight}
-      $fontSize={fontSize}
       {...attrs}
     >
       {children}
