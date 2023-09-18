@@ -23,12 +23,17 @@ function About() {
   return (
     <main className="page page--about">
       <Section enableGutter>
-        <Heading headingLevel="h1" fontSize={{ all: '4vw' }}>
+        <Heading headingLevel="h1" fontSize={{ all: '4.3vw' }}>
           {aboutHeroHeadingText}
         </Heading>
       </Section>
 
-      <SplitContent contain leftContent={aboutCTA.leftContent} rightContent={aboutCTA.rightContent} />
+      <SplitContent
+        contain
+        leftContent={aboutCTA.leftContent}
+        rightContent={aboutCTA.rightContent}
+        customStyles={aboutCTA.customStyles}
+      />
       <ImageBanner src={placeholderImageBanner} minHeight={{ all: '360px', md: '96svh' }} enableParallax />
 
       <SplitContent

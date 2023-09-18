@@ -55,8 +55,13 @@ const aboutDescription: SplitContentProps = {
   },
   rightContent: {
     rightHeading: {
-      children:
-        'A FREELANCE WEB DEVELOPER DEDICATED TO EMPOWERING FORWARD-THINKING COMPANIES TO UNLOCK THEIR GROWTH POTENTIAL.',
+      children: (
+        <>
+          A WEB DEVELOPER BALANCING TECH WITH A KEEN EYE FOR DETAILS.
+          <br />
+          ROOTED IN VISUAL ARTS, I HARMONIZE FORM AND FUNCTION.
+        </>
+      ),
       fontSize: { all: '3.2rem', sm: '4.8rem' },
     },
     rightTexts: [

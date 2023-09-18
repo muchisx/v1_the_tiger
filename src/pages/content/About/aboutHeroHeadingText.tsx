@@ -2,56 +2,60 @@ import styled from 'styled-components';
 
 const SpanOne = styled.span`
   @media only screen and (max-width: 574px) {
-    font-size: 12vw;
+    display: block;
+    font-size: 21.4vw;
   }
   @media only screen and (max-width: 410px) {
-    font-size: 11.7vw;
+    font-size: 20.8vw;
   }
   @media only screen and (max-width: 332px) {
-    font-size: 11.6vw;
+    font-size: 20.6vw;
   }
 `;
 const SpanTwo = styled.span`
   @media only screen and (max-width: 574px) {
-    font-size: 7.7vw;
+    display: block;
+    font-size: 15.8vw;
   }
   @media only screen and (max-width: 410px) {
-    font-size: 7.5vw;
+    font-size: 15.2vw;
   }
   @media only screen and (max-width: 332px) {
-    font-size: 7.4vw;
+    font-size: 15vw;
   }
 `;
 const SpanThree = styled.span`
   @media only screen and (max-width: 574px) {
-    font-size: 6.5vw;
+    display: block;
+    font-size: 5.2vw;
   }
   @media only screen and (max-width: 410px) {
-    font-size: 6.4vw;
+    font-size: 5vw;
   }
   @media only screen and (max-width: 332px) {
-    font-size: 6.3vw;
+    font-size: 4.8vw;
   }
 `;
 const SpanFour = styled.span`
   @media only screen and (max-width: 574px) {
-    font-size: 10.2vw;
+    display: block;
+    font-size: 7.1vw;
   }
   @media only screen and (max-width: 410px) {
-    font-size: 10.1vw;
+    font-size: 6.9vw;
   }
   @media only screen and (max-width: 332px) {
-    font-size: 10vw;
+    font-size: 6.7vw;
   }
 `;
 
 // TODO - CREATE A TOTALLY NEW PHRASE
 const aboutHeroHeadingText = (
   <>
-    <SpanOne className="highlight-primary">Lorem ipsum dolor </SpanOne>
-    <SpanTwo>sit amet </SpanTwo>
-    <SpanThree>consectetur adipisicing </SpanThree>
-    <SpanFour className="highlight-primary">elit. Modi, iure?</SpanFour>
+    <SpanOne>QUALITY </SpanOne>
+    <SpanTwo className="highlight-primary">ABOVE ALL. </SpanTwo>
+    <SpanThree>I&rsquo;M A PASSIONATE WEB DEVELOPER </SpanThree>
+    <SpanFour className="highlight-primary">WITH AN EYE FOR DETAIL.</SpanFour>
   </>
 );
 

@@ -40,8 +40,9 @@ const customStyles = css`
 
 const leftText = (
   <>
-    My expertise lies in providing reliable web development services and expert Shopify assistance to businesses of all
-    sizes. I strive to empower businesses in establishing strong online services and effectively scale.
+    My expertise lies in providing reliable web development services and expert Shopify and React assistance to
+    businesses of all sizes. My goal is to empower businesses to establish robust online platforms through close
+    collaboration, resulting in successful growth.
   </>
 );
 
@@ -143,7 +144,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       ],
       bodyText: {
         children:
-          'Utilizing my knowledge in web development, along with technical skills in React and extensive CSS & JS knowledge, I am a perfect fit for any custom component development, bug fixing or tweaking existing components to suit your needs.',
+          'Utilizing my knowledge in web development, along with technical skills in React and extensive CSS & JS knowledge, I am a perfect fit for any new component development tasks, bug fixing or for tweaking existing components to suit your needs.',
       },
     },
     {

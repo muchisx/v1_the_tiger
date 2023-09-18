@@ -157,7 +157,7 @@ const servicesData: Service[] = [
         $keyId: crypto.randomUUID(),
         fontWeight: 500,
         children:
-          'Utilizing my knowledge in web development, along with technical skills in React and extensive CSS & JS knowledge, I am a perfect fit for any custom component development, bug fixing or tweaking existing components to suit your needs.',
+          'Utilizing my knowledge in web development, along with technical skills in React and extensive CSS & JS knowledge, I am a perfect fit for any new component development tasks, bug fixing or for tweaking existing components to suit your needs.',
       },
       {
         $keyId: crypto.randomUUID(),
