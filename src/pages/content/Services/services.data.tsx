@@ -209,19 +209,19 @@ const servicesData: Service[] = [
   {
     $keyId: crypto.randomUUID(),
     heading: {
-      children: 'HELPING STARTUPS',
+      children: 'AIDING STARTUPS',
     },
     texts: [
       {
         $keyId: crypto.randomUUID(),
         fontWeight: 500,
         children:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto blanditiis labore ipsa incidunt delectus veritatis quasi accusamus non? Quasi rem voluptates minima tempora doloremque. Ullam corrupti est soluta. Quas, temporibus?',
+          "Starting up a business comes with its fair share of challenges, but your website should not be one of them. That's where I come in. I provide thorough website audits and top-notch Web Development services, empowering startups to conquer their online goals.",
       },
       {
         $keyId: crypto.randomUUID(),
         children:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, assumenda et! Fugit itaque beatae quos dolore ex est dignissimos necessitatibus numquam rem, culpa architecto labore. Aspernatur molestiae sequi ipsam similique!',
+          "In today's digital age, your website is often the first impression potential customers have of your brand. It's not just about having an online presence; it's about having a captivating and user-friendly platform that converts visitors into loyal customers. With my expertise, I ensure that your website not only looks visually appealing but also functions seamlessly, creating an exceptional user experience.",
       },
     ],
     links: [
@@ -233,26 +233,46 @@ const servicesData: Service[] = [
     features: [
       {
         $keyId: crypto.randomUUID(),
-        question: 'QUESTION QST',
+        question: 'CONSULTATIONS',
         answer: {
           children:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+            "What sets my services apart is the option for experienced consultations. I understand that startups may have questions or uncertainties about web development, and that's where I step in. Whether you need advice on choosing the right technology stack, guidance on user experience design, or insights into the latest industry trends, my consultations are designed to provide you with actionable advice and solutions. Startups can come to me anytime they need an informed opinion about web development.",
         },
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'QUESTION QST',
+        question: 'WEBSITE AUDITS',
         answer: {
-          children:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+          children: (
+            <>
+              <Text>
+                My website audits are a comprehensive analysis of your current online presence. I identify areas of
+                improvement, from optimizing page load times, addressing accesibility issues, to enhancing SEO
+                strategies. This valuable insight allows us to create a tailored plan to boost your online visibility
+                and attract the right audience.
+              </Text>
+              <br />
+              <Text fontSize="1.4rem">
+                These are more in depth Audits than the Free Website Audit that I offer for first-commer clients.
+              </Text>
+            </>
+          ),
         },
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'QUESTION QST',
+        question: 'WEB DEVELOPMENT',
         answer: {
           children:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+            "When it comes to web development, I don't believe in one-size-fits-all solutions. Each business is unique, and I take the time to understand your goals, target audience, and industry. Whether you need an e-commerce platform, a content management system, or a custom web application, I craft a solution that aligns perfectly with your vision and objectives.",
+        },
+      },
+      {
+        $keyId: crypto.randomUUID(),
+        question: 'PARTNERSHIP',
+        answer: {
+          children:
+            "In today's fast-paced digital landscape, having a partner who can navigate the intricacies of web development, e-commerce, and digital strategy is essential. Together, we can ensure that your business not only maintains a strong online presence but thrives in the digital realm, capturing the attention and loyalty of your target audience. Let's collaborate to empower your digital success.",
         },
       },
     ],
@@ -267,12 +287,12 @@ const servicesData: Service[] = [
         $keyId: crypto.randomUUID(),
         fontWeight: 500,
         children:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto blanditiis labore ipsa incidunt delectus veritatis quasi accusamus non? Quasi rem voluptates minima tempora doloremque. Ullam corrupti est soluta. Quas, temporibus?',
+          "Solid online presence is essential for established businesses in today's digital age. In an increasingly competitive marketplace, it's crucial to not just have a website, but to have a dynamic and engaging online platform that resonates with your target audience.",
       },
       {
         $keyId: crypto.randomUUID(),
         children:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, assumenda et! Fugit itaque beatae quos dolore ex est dignissimos necessitatibus numquam rem, culpa architecto labore. Aspernatur molestiae sequi ipsam similique!',
+          'My services encompass a wide range of expertise to help bolster your online presence. As a skilled Web Developer, I can create and optimize websites that not only look stunning but also function flawlessly, ensuring a seamless user experience. With a deep understanding of Shopify and React, I can customize and enhance your e-commerce capabilities, giving you the tools to thrive in the ever-evolving online retail landscape.',
       },
     ],
     links: [
@@ -284,26 +304,46 @@ const servicesData: Service[] = [
     features: [
       {
         $keyId: crypto.randomUUID(),
-        question: 'QUESTION QST',
+        question: 'WEB DEVELOPMENT',
         answer: {
           children:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+            "When it comes to web development, I don't believe in one-size-fits-all solutions. Each business is unique, and I take the time to understand your goals, target audience, and industry. Whether you need an e-commerce platform, a content management system, or a custom web application, I craft a solution that aligns perfectly with your vision and objectives.",
         },
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'QUESTION QST',
+        question: 'WEBSITE AUDITS',
         answer: {
-          children:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+          children: (
+            <>
+              <Text>
+                My website audits are a comprehensive analysis of your current online presence. I identify areas of
+                improvement, from optimizing page load times, addressing accesibility issues, to enhancing SEO
+                strategies. This valuable insight allows us to create a tailored plan to boost your online visibility
+                and attract the right audience.
+              </Text>
+              <br />
+              <Text fontSize="1.4rem">
+                These are more in depth Audits than the Free Website Audit that I offer for first-commer clients.
+              </Text>
+            </>
+          ),
         },
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'QUESTION QST',
+        question: 'CONSULTATIONS',
         answer: {
           children:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+            "What sets my services apart is the option for experienced consultations. I understand too that businesses may have questions or uncertainties about web development, and that's where I step in. Whether you need advice on choosing the right technology stack, guidance on user experience design, or insights into the latest industry trends, my consultations are designed to provide you with actionable advice and solutions. Businesses can come to me anytime they need an informed opinion about web development.",
+        },
+      },
+      {
+        $keyId: crypto.randomUUID(),
+        question: 'PARTNERSHIP',
+        answer: {
+          children:
+            "In today's fast-paced digital landscape, having a partner who can navigate the intricacies of web development, e-commerce, and digital strategy is essential. Together, we can ensure that your business not only maintains a strong online presence but thrives in the digital realm, capturing the attention and loyalty of your target audience. Let's collaborate to empower your digital success.",
         },
       },
     ],
@@ -318,12 +358,12 @@ const servicesData: Service[] = [
         $keyId: crypto.randomUUID(),
         fontWeight: 500,
         children:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto blanditiis labore ipsa incidunt delectus veritatis quasi accusamus non? Quasi rem voluptates minima tempora doloremque. Ullam corrupti est soluta. Quas, temporibus?',
+          'Experiencing slow performance, a high bounce rate, or unsuccessful conversion strategies on your website? I offer a free website review that can help you identify areas for improvement that will bring you closer to your goals.',
       },
       {
         $keyId: crypto.randomUUID(),
         children:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, assumenda et! Fugit itaque beatae quos dolore ex est dignissimos necessitatibus numquam rem, culpa architecto labore. Aspernatur molestiae sequi ipsam similique!',
+          "In today's fast-paced digital landscape, your website is often the first interaction potential customers have with your brand. If it's not up to par, you could be losing valuable opportunities. My comprehensive website review will delve into various critical aspects of your site, uncovering hidden issues and untapped potential.",
       },
     ],
     links: [
@@ -340,26 +380,58 @@ const servicesData: Service[] = [
     features: [
       {
         $keyId: crypto.randomUUID(),
-        question: 'QUESTION QST',
+        question: 'OPTIMIZATION & PERFORMANCE',
         answer: {
           children:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+            'I excel at implementing optimization strategies for Web projects to tackle common issues such as slow initial loading, low PageSpeed, Lighthouse, or GTMetrix scores. These improvements translate into enhanced SEO performance and a superior user experience.',
         },
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'QUESTION QST',
+        question: 'ACCESSIBILITY & UX ',
         answer: {
-          children:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+          children: (
+            <>
+              <Text
+                tag="span"
+                fontWeight={500}
+                textColor="var(--text-highlight-secondary)"
+                style={{ display: 'block' }}
+              >
+                Service - Accesiblity
+              </Text>
+              Accessibility plays a crucial role in influencing your SEO rankings and enhancing user interface usability
+              across the entire human spectrum. In my portfolio of services, I offer solutions to address
+              accessibility-related issues that can, in turn, boost your conversion rates.
+              <br />
+              <br />
+              <Text
+                tag="span"
+                fontWeight={500}
+                textColor="var(--text-highlight-secondary)"
+                style={{ display: 'block' }}
+              >
+                Service - UX Improvements
+              </Text>
+              I offer UX Audits, Guidelines, and practical Implementation services. While I excel in UX (User
+              Experience) rather than UI/UX design, my expertise lies in user navigation, feature workflows, and
+              device-specific interactions.
+              <br />
+              <br />
+              <Text fontSize="1.4rem">
+                If you need any help with UI/UX Design-related work, I can assist by handing you direct contact
+                references of known professional Designers.
+              </Text>
+            </>
+          ),
         },
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'QUESTION QST',
+        question: 'BUG FIXING',
         answer: {
           children:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.',
+            "Web development is a dynamic field where new technologies and devices are introduced constantly. It's only natural that occasional bugs and issues arise. When they do, I'm here to help. With my expertise in bug fixing, I'll guide you through strategies that will help you restore your features to their optimal state, so you can confidently pursue your goals without interruption.",
         },
       },
     ],

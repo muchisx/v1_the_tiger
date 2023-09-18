@@ -148,7 +148,7 @@ const rightContent: SplitContentProps['rightContent'] = {
     },
     {
       $keyId: crypto.randomUUID(),
-      headerHeading: 'HELPING STARTUPS',
+      headerHeading: 'AIDING STARTUPS',
       HeaderIcon: Rocket,
       headerTags: [
         {
@@ -169,7 +169,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       ],
       bodyText: {
         children:
-          "Starting up a business comes with its fair share of challenges, but your website should not be one of them. That's where I come in. I provide thorough website audits and top-notch Web Development services, empowering startups to conquer their online goals",
+          "Starting up a business comes with its fair share of challenges, but your website should not be one of them. That's where I come in. I provide thorough website audits and top-notch Web Development services, empowering startups to conquer their online goals.",
       },
     },
     {
@@ -195,7 +195,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       ],
       bodyText: {
         children:
-          'Solid online presence is essential for established businesses. My services - Web Development, Shopify and/or React knowledge, and website audits will empower your digital success.',
+          "Solid online presence is essential for established businesses in today's digital age. In an increasingly competitive marketplace, it's crucial to not just have a website, but to have a dynamic and engaging online platform that resonates with your target audience.",
       },
     },
     {
