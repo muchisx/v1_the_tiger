@@ -62,7 +62,7 @@ const aboutDescription: SplitContentProps = {
           ROOTED IN VISUAL ARTS, I HARMONIZE FORM AND FUNCTION.
         </>
       ),
-      fontSize: { all: '3.2rem', sm: '4.8rem' },
+      fontSize: { all: '2.8rem', sm: '4.8rem' },
     },
     rightTexts: [
       {

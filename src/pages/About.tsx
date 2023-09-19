@@ -65,7 +65,12 @@ function About() {
         gridTemplateColumns={{ sm: '1fr 1fr', md: '1fr 1fr 1fr', lg: '1fr 1fr 1fr 1fr' }}
       />
 
-      <SplitContent contain="margin" leftContent={aboutProcess.leftContent} rightContent={aboutProcess.rightContent}>
+      <SplitContent
+        contain="margin"
+        leftContent={aboutProcess.leftContent}
+        rightContent={aboutProcess.rightContent}
+        customStyles={aboutProcess.customStyles}
+      >
         <SplitContentCustom location="second">
           <Accordion accordionItems={aboutProcessItems} />
         </SplitContentCustom>

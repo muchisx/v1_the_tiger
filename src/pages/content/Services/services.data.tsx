@@ -51,7 +51,9 @@ const servicesData: Service[] = [
     features: [
       {
         $keyId: crypto.randomUUID(),
-        question: 'THEME DEVELOPMENT',
+        question: {
+          children: 'THEME DEVELOPMENT',
+        },
         answer: {
           children: (
             <>
@@ -91,7 +93,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'APP INTEGRATIONS',
+        question: {
+          children: 'APP INTEGRATIONS',
+        },
         answer: {
           children:
             'Occasionally, certain Shopify Apps may not seamlessly integrate with all Shopify Themes, or they may not function correctly at all. In such instances, I offer specialized Custom Development services to ensure these Apps are harmoniously tailored to your Theme for a smooth and effective integration.',
@@ -99,7 +103,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'OPTIMIZATION & PERFORMANCE',
+        question: {
+          children: 'OPTIMIZATION & PERFORMANCE',
+        },
         answer: {
           children:
             'I excel at implementing optimization strategies for your Shopify Theme to tackle common issues such as slow initial loading, low PageSpeed, Lighthouse, or GTMetrix scores. These improvements translate into enhanced SEO performance and a superior user experience.',
@@ -107,7 +113,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'ACCESSIBILITY & UX ',
+        question: {
+          children: 'ACCESSIBILITY & UX',
+        },
         answer: {
           children: (
             <>
@@ -174,7 +182,9 @@ const servicesData: Service[] = [
     features: [
       {
         $keyId: crypto.randomUUID(),
-        question: 'NEW & EXISTING COMPONENTS',
+        question: {
+          children: 'NEW & EXISTING COMPONENTS',
+        },
         answer: {
           children:
             'Are you looking to add new features to your app or enhance your existing components? Look no further. I offer expert assistance in crafting high-quality components while adhering to best and modern coding practices and seamlessly integrating them into your existing architecture.',
@@ -182,7 +192,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'BUG FIXING',
+        question: {
+          children: 'BUG FIXING',
+        },
         answer: {
           children:
             "Web development is a dynamic field where new technologies and devices are introduced constantly. It's only natural that occasional bugs and issues arise. When they do, I'm here to help. With my expertise in bug fixing, I'll swiftly restore your features to their optimal state, so you can confidently pursue your goals without interruption.",
@@ -190,7 +202,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'MIGRATIONS',
+        question: {
+          children: 'MIGRATIONS',
+        },
         answer: {
           children:
             "In today's rapidly evolving tech landscape, React and Next.js have become the preferred choices for startups and companies alike. If you're considering joining this trend, I offer expert assistance in seamlessly transitioning your project to these cutting-edge technologies. Let me guide you through a smooth migration process, ensuring your transition is painless and your goal is achieved.",
@@ -198,7 +212,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'FULL PROJECTS',
+        question: {
+          children: 'FULL PROJECTS',
+        },
         answer: {
           children:
             "While I often tackle specific tasks as a freelancer, I'm also open to embarking on full-scale projects that align with our mutual goals and interests. By working together from inception to completion, we can exert full control over your project's journey, ensuring a comprehensive and successful outcome.",
@@ -233,7 +249,9 @@ const servicesData: Service[] = [
     features: [
       {
         $keyId: crypto.randomUUID(),
-        question: 'CONSULTATIONS',
+        question: {
+          children: 'CONSULTATIONS',
+        },
         answer: {
           children:
             "What sets my services apart is the option for experienced consultations. I understand that startups may have questions or uncertainties about web development, and that's where I step in. Whether you need advice on choosing the right technology stack, guidance on user experience design, or insights into the latest industry trends, my consultations are designed to provide you with actionable advice and solutions. Startups can come to me anytime they need an informed opinion about web development.",
@@ -241,7 +259,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'WEBSITE AUDITS',
+        question: {
+          children: 'WEBSITE AUDITS',
+        },
         answer: {
           children: (
             <>
@@ -261,7 +281,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'WEB DEVELOPMENT',
+        question: {
+          children: 'WEB DEVELOPMENT',
+        },
         answer: {
           children:
             "When it comes to web development, I don't believe in one-size-fits-all solutions. Each business is unique, and I take the time to understand your goals, target audience, and industry. Whether you need an e-commerce platform, a content management system, or a custom web application, I craft a solution that aligns perfectly with your vision and objectives.",
@@ -269,7 +291,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'PARTNERSHIP',
+        question: {
+          children: 'PARTNERSHIP',
+        },
         answer: {
           children:
             "In today's fast-paced digital landscape, having a partner who can navigate the intricacies of web development, e-commerce, and digital strategy is essential. Together, we can ensure that your business not only maintains a strong online presence but thrives in the digital realm, capturing the attention and loyalty of your target audience. Let's collaborate to empower your digital success.",
@@ -304,7 +328,9 @@ const servicesData: Service[] = [
     features: [
       {
         $keyId: crypto.randomUUID(),
-        question: 'WEB DEVELOPMENT',
+        question: {
+          children: 'WEB DEVELOPMENT',
+        },
         answer: {
           children:
             "When it comes to web development, I don't believe in one-size-fits-all solutions. Each business is unique, and I take the time to understand your goals, target audience, and industry. Whether you need an e-commerce platform, a content management system, or a custom web application, I craft a solution that aligns perfectly with your vision and objectives.",
@@ -312,7 +338,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'WEBSITE AUDITS',
+        question: {
+          children: 'WEBSITE AUDITS',
+        },
         answer: {
           children: (
             <>
@@ -332,7 +360,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'CONSULTATIONS',
+        question: {
+          children: 'CONSULTATIONS',
+        },
         answer: {
           children:
             "What sets my services apart is the option for experienced consultations. I understand too that businesses may have questions or uncertainties about web development, and that's where I step in. Whether you need advice on choosing the right technology stack, guidance on user experience design, or insights into the latest industry trends, my consultations are designed to provide you with actionable advice and solutions. Businesses can come to me anytime they need an informed opinion about web development.",
@@ -340,7 +370,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'PARTNERSHIP',
+        question: {
+          children: 'PARTNERSHIP',
+        },
         answer: {
           children:
             "In today's fast-paced digital landscape, having a partner who can navigate the intricacies of web development, e-commerce, and digital strategy is essential. Together, we can ensure that your business not only maintains a strong online presence but thrives in the digital realm, capturing the attention and loyalty of your target audience. Let's collaborate to empower your digital success.",
@@ -380,7 +412,9 @@ const servicesData: Service[] = [
     features: [
       {
         $keyId: crypto.randomUUID(),
-        question: 'OPTIMIZATION & PERFORMANCE',
+        question: {
+          children: 'OPTIMIZATION & PERFORMANCE',
+        },
         answer: {
           children:
             'I excel at implementing optimization strategies for Web projects to tackle common issues such as slow initial loading, low PageSpeed, Lighthouse, or GTMetrix scores. These improvements translate into enhanced SEO performance and a superior user experience.',
@@ -388,7 +422,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'ACCESSIBILITY & UX ',
+        question: {
+          children: 'ACCESSIBILITY & UX ',
+        },
         answer: {
           children: (
             <>
@@ -428,7 +464,9 @@ const servicesData: Service[] = [
       },
       {
         $keyId: crypto.randomUUID(),
-        question: 'BUG FIXING',
+        question: {
+          children: 'BUG FIXING',
+        },
         answer: {
           children:
             "Web development is a dynamic field where new technologies and devices are introduced constantly. It's only natural that occasional bugs and issues arise. When they do, I'm here to help. With my expertise in bug fixing, I'll guide you through strategies that will help you restore your features to their optimal state, so you can confidently pursue your goals without interruption.",
