@@ -6,10 +6,10 @@ import { type Props as AccordionProps } from '@components/shared/Accordion/Accor
 const aboutProcessItems: AccordionProps['accordionItems'] = [
   {
     $keyId: crypto.randomUUID(),
-    question: 'Discovery and Strategy',
+    question: 'Strategy and Planning',
     answer: {
       children:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+        '💡 We will spend some time together knowing each other and our goals. We will collaborate closely to craft strategies that align with your vision, ensuring a solid foundation for your journey to success.',
     },
   },
   {
@@ -17,15 +17,15 @@ const aboutProcessItems: AccordionProps['accordionItems'] = [
     question: 'Development',
     answer: {
       children:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+        '👨🏻‍💻 I will grab my coffee and dive into your project. I bring your vision to life, balancing function and aesthetics with meticulous care for a user-friendly experience.',
     },
   },
   {
     $keyId: crypto.randomUUID(),
-    question: 'Testing and Quality Assurance',
+    question: 'Quality Assurance and Testing',
     answer: {
       children:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+        "🔬 No stone will be left unturned. My rigorous testing guarantees peak performance, security, and an outstanding user experience for your project's success.",
     },
   },
   {
@@ -33,7 +33,7 @@ const aboutProcessItems: AccordionProps['accordionItems'] = [
     question: 'Launch and Optimization',
     answer: {
       children:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+        '🍾 I will bring the champagne as I carefuly ensure a smooth launch for your project. Post-launch, I focus on continuous optimization, ensuring your online presence evolves effectively, adapting to changing needs.',
     },
   },
   {
@@ -41,7 +41,7 @@ const aboutProcessItems: AccordionProps['accordionItems'] = [
     question: 'Ongoing support',
     answer: {
       children:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+        "🔔 Our collaboration doesn't end when the project is launched. I will be there for anything you need moving forward, whether it be a new feature, a bug fix, or a new service. I will have your back.",
     },
   },
 ];
