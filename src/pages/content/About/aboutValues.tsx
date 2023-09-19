@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 // Dependencies
 import { css } from 'styled-components';
-import { Eye } from '@styled-icons/fluentui-system-filled';
+import { DataTrending, Eye, Handshake, Lightbulb, Premium, PuzzlePiece } from '@styled-icons/fluentui-system-filled';
 // Styled Components
 import { CardGridCell, CardGridStyled } from '@components/CardGrid/CardGrid.styles';
 // Utils
@@ -43,7 +43,7 @@ export const aboutValuesHeader: SplitContentProps = {
       {
         $keyId: crypto.randomUUID(),
         children:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod rerum officiis dolorem placeat unde fuga tenetur? Officia ab vero accusamus, sint necessitatibus modi, placeat recusandae minima similique cum, iste fugit.',
+          'My core values center around delivering high-quality web development solutions, embracing transparent client relationships, and promoting collaborative partnerships to achieve digital excellence.',
       },
     ],
   },
@@ -86,9 +86,9 @@ export const aboutValuesCards: CardGridProps = {
       $keyId: crypto.randomUUID(),
       card: {
         headerHeading: 'QUALITY FIRST',
-        HeaderIcon: Eye,
+        HeaderIcon: Premium,
         bodyText: {
-          children: 'Lorem ipsum, dolor sit amet consectetur adipisicinsssadasdadasdg elit.',
+          children: 'I prioritize excellence in every line of code and pixel on the screen.',
         },
         $styles: cardsCommonStyles,
       },
@@ -96,10 +96,40 @@ export const aboutValuesCards: CardGridProps = {
     {
       $keyId: crypto.randomUUID(),
       card: {
-        headerHeading: 'SCALABILITY',
+        headerHeading: 'DETAILED',
         HeaderIcon: Eye,
         bodyText: {
-          children: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+          children: "Driven by attention to detail. I sweat the small stuff, so you don't have to.",
+        },
+        $styles: cardsCommonStyles,
+      },
+    },
+    {
+      $keyId: crypto.randomUUID(),
+      card: {
+        headerHeading: 'PARTNERSHIP',
+        HeaderIcon: Handshake,
+        bodyText: {
+          children: "Your goals are my goals, and together, we'll achieve them.",
+        },
+        $styles: cardsCommonStyles,
+      },
+    },
+    {
+      $keyId: crypto.randomUUID(),
+      card: {},
+    },
+    {
+      $keyId: crypto.randomUUID(),
+      card: {},
+    },
+    {
+      $keyId: crypto.randomUUID(),
+      card: {
+        headerHeading: 'SCALABILITY',
+        HeaderIcon: DataTrending,
+        bodyText: {
+          children: 'I build solutions that grow with your business, ensuring long-term viability.',
         },
         $styles: cardsCommonStyles,
       },
@@ -108,39 +138,9 @@ export const aboutValuesCards: CardGridProps = {
       $keyId: crypto.randomUUID(),
       card: {
         headerHeading: 'COMPATIBILITY',
-        HeaderIcon: Eye,
+        HeaderIcon: PuzzlePiece,
         bodyText: {
-          children: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-        },
-        $styles: cardsCommonStyles,
-      },
-    },
-    {
-      $keyId: crypto.randomUUID(),
-      card: {},
-    },
-    {
-      $keyId: crypto.randomUUID(),
-      card: {},
-    },
-    {
-      $keyId: crypto.randomUUID(),
-      card: {
-        headerHeading: 'PARTNERSHIP',
-        HeaderIcon: Eye,
-        bodyText: {
-          children: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-        },
-        $styles: cardsCommonStyles,
-      },
-    },
-    {
-      $keyId: crypto.randomUUID(),
-      card: {
-        headerHeading: 'ATTENTION TO DETAIL',
-        HeaderIcon: Eye,
-        bodyText: {
-          children: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+          children: 'Your website will function seamlessly across all devices and platforms.',
         },
         $styles: cardsCommonStyles,
       },
@@ -149,9 +149,9 @@ export const aboutValuesCards: CardGridProps = {
       $keyId: crypto.randomUUID(),
       card: {
         headerHeading: 'CREATIVITY',
-        HeaderIcon: Eye,
+        HeaderIcon: Lightbulb,
         bodyText: {
-          children: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.adadasdasdsa',
+          children: 'I unleash innovative ideas to conquer challenges and achieve your goals.',
         },
         $styles: cardsCommonStyles,
       },

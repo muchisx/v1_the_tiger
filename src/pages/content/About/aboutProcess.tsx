@@ -6,33 +6,43 @@ import { type Props as AccordionProps } from '@components/shared/Accordion/Accor
 const aboutProcessItems: AccordionProps['accordionItems'] = [
   {
     $keyId: crypto.randomUUID(),
-    question: 'Lorem Lorem',
-    answer:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+    question: 'Discovery and Strategy',
+    answer: {
+      children:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+    },
   },
   {
     $keyId: crypto.randomUUID(),
-    question: 'Lorem Lorem',
-    answer:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+    question: 'Development',
+    answer: {
+      children:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+    },
   },
   {
     $keyId: crypto.randomUUID(),
-    question: 'LOREM Loooooooorem',
-    answer:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+    question: 'Testing and Quality Assurance',
+    answer: {
+      children:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+    },
   },
   {
     $keyId: crypto.randomUUID(),
-    question: 'Lorem Lorem',
-    answer:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+    question: 'Launch and Optimization',
+    answer: {
+      children:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+    },
   },
   {
     $keyId: crypto.randomUUID(),
-    question: 'Lorem Lorem',
-    answer:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+    question: 'Ongoing support',
+    answer: {
+      children:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem eum facere earum cumque sunt ipsa nihil nostrum sequi officia excepturi blanditiis, quod ullam rerum labore reiciendis laudantium amet dolor est.',
+    },
   },
 ];
 

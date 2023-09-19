@@ -49,7 +49,7 @@ const aboutDescription: SplitContentProps = {
   customStyles,
   leftContent: {
     topTag: {
-      children: 'A handful of words about me',
+      children: 'About me',
       variant: 'tertiary',
     },
   },
@@ -67,14 +67,23 @@ const aboutDescription: SplitContentProps = {
     rightTexts: [
       {
         $keyId: crypto.randomUUID(),
+        fontWeight: 500,
         children: (
           <>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt
-            animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.,
+            I am a Web Developer specializing in Shopify and React, driven by an unwavering commitment to quality.
+            Unlike freelancers who prioritize speed paired with low prices at the expense of quality, I believe in
+            delivering top-notch solutions that not only meet but exceed client expectations.
             <br />
             <br />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt
-            animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.
+            My unique journey began in the world of Visual Arts, infusing my Front-End development work with an acute
+            attention to detail and aesthetics. This background allows me to create visually stunning websites that not
+            only function flawlessly but also engage and captivate users.
+            <br />
+            <br />
+            <Link to="https://calendly.com/miguel-angel-creator/free-meeting" target="_blank" rel="noopener noreferrer">
+              Book a free meeting call
+            </Link>{' '}
+            and let&rsquo;s talk about your ideas!
           </>
         ),
       },
@@ -82,17 +91,15 @@ const aboutDescription: SplitContentProps = {
         $keyId: crypto.randomUUID(),
         children: (
           <>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt
-            animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.
+            Beyond development, I offer valuable services such as Website Audits and Consultations, empowering companies
+            to enhance their online presence strategically. Collaboration and partnership are at the heart of my
+            approach. I collaborate closely with clients, maintaining transparency and honesty in every aspect of our
+            work, ensuring that the solutions I provide align with their objectives.
             <br />
             <br />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab quas dicta ex, amet tenetur. Sunt
-            animi magnam, deserunt iste corporis distinctio itaque laudantium, obcaecati nulla dolorum enim nemo ad.
-            <br />
-            <Link to="https://calendly.com/miguel-angel-creator/free-meeting" target="_blank" rel="noopener noreferrer">
-              Book a free strategy call
-            </Link>{' '}
-            and let&rsquo;s talk about your ideas!
+            In a world where cutting corners is all too common, I stand as a firm advocate for excellence. Partner with
+            me, and together, we can turn your digital aspirations into realities that not only meet but exceed your
+            expectations, while always keeping an eye on quality as our guiding principle.
           </>
         ),
       },
