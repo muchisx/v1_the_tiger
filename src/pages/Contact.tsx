@@ -19,6 +19,7 @@ function Contact() {
         leftContent={{
           backgroundShape: {
             url: contactFormBgShape,
+            rotation: [0, -200],
           },
         }}
         rightContent={{}}
@@ -33,9 +34,9 @@ function Contact() {
             </Heading>
 
             <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              Reach out to me, and together, we&rsquo;ll craft a website that outshines the competition,
               <br />
-              excepturi odio impedit sapiente explicabo provident, itaque reiciendis
+              leaving us proud of the exceptional results we achieve.
             </Text>
 
             <div className="contact-methods">
