@@ -67,7 +67,7 @@ export const sectionCSS = css`
   overflow: hidden;
 
   img {
-    height: 110%;
+    height: 120%;
     object-position: center;
   }
 `;

@@ -26,7 +26,7 @@ function ImageBanner(props: Props) {
   // -------------------------- --------------------------
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', '140vh end'] });
-  const yRange = useTransform(scrollYProgress, [0, 1], ['0%', '-10%']);
+  const yRange = useTransform(scrollYProgress, [0, 1], ['-24%', '0%']);
   // TODO: --------------------Fix useSpring not working for parallax spring
   // --------------------------const y = useSpring(yRange, { stiffness: 400, damping: 90 });
   const parallaxController = enableParallax ? yRange : undefined;
