@@ -1,5 +1,5 @@
 // Assets
-import placeholderImg from '@assets/images/profile-pic.jpeg';
+import placeholderImg from '@assets/images/profile-pic.webp';
 // Types
 import type { Props as CardGridProps } from '@components/CardGrid/CardGrid.types';
 

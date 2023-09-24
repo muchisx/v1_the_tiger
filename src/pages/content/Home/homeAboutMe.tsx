@@ -3,7 +3,7 @@ import { css } from 'styled-components';
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 // Assets
 import svgShape from '@assets/svgs/abstract-1.svg';
-import profilePic from '@assets/images/profile-pic.jpeg';
+import profilePic from '@assets/images/profile-pic.webp';
 // Utils
 import { getMediaQueryValue } from '@utils';
 // Types

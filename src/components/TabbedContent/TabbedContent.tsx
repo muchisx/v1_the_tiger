@@ -12,7 +12,7 @@ import VideoResponsive from '@components/shared/VideoResponsive/VideoResponsive'
 // Utils
 import { useIsMedium } from '@hooks';
 // Media
-import poster from '@assets/images/video-poster.jpg';
+import poster from '@assets/images/video-poster.webp';
 // Styled Components
 import { TabbedContentStyled, Content, Media, Description } from './TabbedContent.styles';
 // Types
