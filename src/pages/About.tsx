@@ -46,15 +46,16 @@ function About() {
       <CardGrid
         contain="margin"
         cardCells={aboutPortraits.cardCells}
-        gridTemplateColumns={{ md: '1.25fr .75fr;' }}
+        customStyles={aboutPortraits.customStyles}
         gridAutoRows={{ all: '50vh', md: '64vh' }}
+        gridTemplateColumns={{ md: '1.25fr .75fr;' }}
       />
 
       <SplitContent
         contain="padding"
-        customStyles={aboutValuesHeader.customStyles}
         leftContent={aboutValuesHeader.leftContent}
         rightContent={aboutValuesHeader.rightContent}
+        customStyles={aboutValuesHeader.customStyles}
       />
 
       <CardGrid
