@@ -9,8 +9,7 @@ import SplitContent, { SplitContentCustom } from '@components/SplitContent/Split
 // Styled Components
 import { serviceCustomCSS, serviceDividerCustomCSS } from '@content/Services/services.styles';
 // Assets
-// TODO - Change this image to the actual one
-import placeholderImageBanner from '@assets/images/hero-banner-1.jpg';
+import websitesboard from '@assets/images/websites-board.webp';
 // Content
 import sharedContact from '@content/shared/sharedContact';
 import servicesWork from '@content/Services/servicesWork';
@@ -37,7 +36,7 @@ function Services() {
         rightContent={servicesCTA.rightContent}
         customStyles={servicesCTA.customStyles}
       />
-      <ImageBanner src={placeholderImageBanner} minHeight={{ all: '360px', md: '96svh' }} enableParallax />
+      <ImageBanner src={websitesboard} minHeight={{ all: '320px', md: '50svh', lg: '96svh' }} enableParallax />
 
       <Divider customStyles={serviceDividerCustomCSS} paddingBottom={60} />
       {servicesData.map((service, index) => (
