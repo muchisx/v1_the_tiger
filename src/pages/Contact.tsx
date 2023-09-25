@@ -19,7 +19,7 @@ function Contact() {
         leftContent={{
           backgroundShape: {
             url: contactFormBgShape,
-            rotation: [0, -200],
+            rotation: [-30, 32],
           },
         }}
         rightContent={{}}
