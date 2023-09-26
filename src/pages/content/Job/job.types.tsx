@@ -11,7 +11,7 @@ export type Job = KeyId & {
   jobRole: string;
   jobAllies?: string;
   jobYear: string;
-  thumbnailImage: CardProps['backgroundImg'];
+  thumbnailImage: NonNullable<CardProps['backgroundImg']>;
   heroBannerImage: ImageBannerProps['src'];
   jobFeaturedPhrase: string;
   jobAdditionalInfo: string;
