@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 // Media
-import qdBanner from '@/assets/images/companies/quality-door/featured-image.webp';
+import qdThumb from '@/assets/images/companies/quality-door/featured-image.webp';
+import qdBanner from '@/assets/images/companies/quality-door/qualitydoor-laptop.webp';
 import qdFeaturedTask1 from '@/assets/videos/companies/quality-door/featured-task-1.mp4';
 import qdFeaturedTask2 from '@/assets/videos/companies/quality-door/featured-task-2.mp4';
 import qdFeaturedTask3 from '@/assets/videos/companies/quality-door/featured-task-3.mp4';
@@ -14,7 +15,7 @@ import resFeaturedTask1 from '@/assets/videos/companies/responsible/featured-tas
 import resFeaturedTask2 from '@/assets/videos/companies/responsible/featured-task-2.mp4';
 import resFeaturedTask3 from '@/assets/videos/companies/responsible/featured-task-3.mp4';
 import resFeaturedTask4 from '@/assets/videos/companies/responsible/featured-task-4.mp4';
-import k9Banner from '@/assets/images/companies/k9-arsenal/featured-image.webp';
+import k9Banner from '@/assets/images/companies/k9-arsenal/featured-image-2.webp';
 import k9FeaturedTask1 from '@/assets/videos/companies/k9-arsenal/featured-task-1.mp4';
 import k9FeaturedTask2 from '@/assets/videos/companies/k9-arsenal/featured-task-2.mp4';
 import diamondBanner from '@/assets/images/companies/diamond-mattress/featured-image2.webp';
@@ -34,7 +35,7 @@ const data: Job[] = [
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
     thumbnailImage: {
-      src: qdBanner,
+      src: qdThumb,
       position: 'center 30%',
     },
     heroBannerImage: qdBanner,
@@ -143,7 +144,7 @@ const data: Job[] = [
     jobYear: '2022',
     thumbnailImage: {
       src: responsibleBanner,
-      position: 'center top',
+      position: '40% top',
     },
     heroBannerImage: responsibleBanner,
     jobFeaturedPhrase:
@@ -202,6 +203,7 @@ const data: Job[] = [
     jobYear: '2023',
     thumbnailImage: {
       src: k9Banner,
+      position: '32% 28%',
     },
     heroBannerImage: k9Banner,
     jobFeaturedPhrase:

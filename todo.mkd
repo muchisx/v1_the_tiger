@@ -36,6 +36,11 @@
   - [ ] Add customStyles prop to all section components
   - [x] SplitContent Background shape rotation vs scroll
 - [ ] Finish ImageResponsive Compontent to accept srcset and different versions of the image, and alt and more accessible attributes
+- [ ] Make border in Card Component optional via props
+- [ ] ...MoreJobs improvements
+  - [ ] Abstract GenerateJobCardProps function and reuse it where its needed
+  - [ ] Services and Job moreJobs cards are currently done differently within each of those Page components, make them have the same workflow
+  - [ ] When the card's title (bottom) goes into two lines it doesn't match the layout of another card that has a one-line title.
 - [ ] Playground layout (with more than one tool, not just component explorer)
 - [ ] Input and Select Field with "\<label>"
 - [ ] Blockquote with "\<blockquote>" or "\<q>" and "\<cite>"
