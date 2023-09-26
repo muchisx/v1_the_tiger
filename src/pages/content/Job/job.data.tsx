@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 // Media
-import qdBanner from '@/assets/images/companies/quality-door/featured-image.webp';
+import qdThumb from '@/assets/images/companies/quality-door/featured-image.webp';
+import qdBanner from '@/assets/images/companies/quality-door/qualitydoor-laptop.webp';
 import qdFeaturedTask1 from '@/assets/videos/companies/quality-door/featured-task-1.mp4';
 import qdFeaturedTask2 from '@/assets/videos/companies/quality-door/featured-task-2.mp4';
 import qdFeaturedTask3 from '@/assets/videos/companies/quality-door/featured-task-3.mp4';
@@ -34,7 +35,7 @@ const data: Job[] = [
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
     thumbnailImage: {
-      src: qdBanner,
+      src: qdThumb,
       position: 'center 30%',
     },
     heroBannerImage: qdBanner,
