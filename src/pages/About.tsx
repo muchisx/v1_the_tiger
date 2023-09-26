@@ -7,7 +7,7 @@ import Accordion from '@components/shared/Accordion/Accordion';
 import SplitContent, { SplitContentCustom } from '@components/SplitContent/SplitContent';
 // Assets
 // TODO - Change this image to the actual one
-import placeholderImageBanner from '@assets/images/hero-banner-1.jpg';
+import portraitWorking from '@assets/images/portrait-working.webp';
 // Content
 import aboutCTA from '@content/About/aboutCTA';
 import aboutDescription from '@content/About/aboutDescription';
@@ -34,7 +34,7 @@ function About() {
         rightContent={aboutCTA.rightContent}
         customStyles={aboutCTA.customStyles}
       />
-      <ImageBanner src={placeholderImageBanner} minHeight={{ all: '360px', md: '96svh' }} enableParallax />
+      <ImageBanner src={portraitWorking} minHeight={{ all: '42vh', md: '50svh', lg: '96svh' }} enableParallax />
 
       <SplitContent
         contain="margin"
