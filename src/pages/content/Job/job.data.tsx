@@ -6,11 +6,13 @@ import qdFeaturedTask1 from '@/assets/videos/companies/quality-door/featured-tas
 import qdFeaturedTask2 from '@/assets/videos/companies/quality-door/featured-task-2.mp4';
 import qdFeaturedTask3 from '@/assets/videos/companies/quality-door/featured-task-3.mp4';
 import qdFeaturedTask4 from '@/assets/videos/companies/quality-door/featured-task-4.mp4';
-import freshVictorBanner from '@/assets/images/companies/fresh-victor/featured-image3.webp';
+import freshVictorThumb from '@/assets/images/companies/fresh-victor/featured-image3.webp';
+import freshVictorBanner from '@/assets/images/companies/fresh-victor/freshvictor-laptop.jpg';
 import fvFeaturedTask1 from '@/assets/videos/companies/fresh-victor/featured-task-1.mp4';
 import fvFeaturedTask2 from '@/assets/videos/companies/fresh-victor/featured-task-2.mp4';
 import fvFeaturedTask3 from '@/assets/videos/companies/fresh-victor/featured-task-3.mp4';
-import responsibleBanner from '@/assets/images/companies/responsible/featured-image.webp';
+import responsibleThumb from '@/assets/images/companies/responsible/featured-image.webp';
+import responsibleBanner from '@/assets/images/companies/responsible/responsible-laptop.webp';
 import resFeaturedTask1 from '@/assets/videos/companies/responsible/featured-task-1.mp4';
 import resFeaturedTask2 from '@/assets/videos/companies/responsible/featured-task-2.mp4';
 import resFeaturedTask3 from '@/assets/videos/companies/responsible/featured-task-3.mp4';
@@ -94,7 +96,7 @@ const data: Job[] = [
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
     thumbnailImage: {
-      src: freshVictorBanner,
+      src: freshVictorThumb,
     },
     heroBannerImage: freshVictorBanner,
     jobFeaturedPhrase:
@@ -143,7 +145,7 @@ const data: Job[] = [
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
     thumbnailImage: {
-      src: responsibleBanner,
+      src: responsibleThumb,
       position: '40% top',
     },
     heroBannerImage: responsibleBanner,
