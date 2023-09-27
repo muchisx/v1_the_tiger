@@ -7,7 +7,7 @@ import qdFeaturedTask2 from '@/assets/videos/companies/quality-door/featured-tas
 import qdFeaturedTask3 from '@/assets/videos/companies/quality-door/featured-task-3.mp4';
 import qdFeaturedTask4 from '@/assets/videos/companies/quality-door/featured-task-4.mp4';
 import freshVictorThumb from '@/assets/images/companies/fresh-victor/featured-image3.webp';
-import freshVictorBanner from '@/assets/images/companies/fresh-victor/freshvictor-laptop.jpg';
+import freshVictorBanner from '@/assets/images/companies/fresh-victor/freshvictor-laptop.webp';
 import fvFeaturedTask1 from '@/assets/videos/companies/fresh-victor/featured-task-1.mp4';
 import fvFeaturedTask2 from '@/assets/videos/companies/fresh-victor/featured-task-2.mp4';
 import fvFeaturedTask3 from '@/assets/videos/companies/fresh-victor/featured-task-3.mp4';
