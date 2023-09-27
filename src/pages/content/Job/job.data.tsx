@@ -6,19 +6,23 @@ import qdFeaturedTask1 from '@/assets/videos/companies/quality-door/featured-tas
 import qdFeaturedTask2 from '@/assets/videos/companies/quality-door/featured-task-2.mp4';
 import qdFeaturedTask3 from '@/assets/videos/companies/quality-door/featured-task-3.mp4';
 import qdFeaturedTask4 from '@/assets/videos/companies/quality-door/featured-task-4.mp4';
-import freshVictorBanner from '@/assets/images/companies/fresh-victor/featured-image3.webp';
+import freshVictorThumb from '@/assets/images/companies/fresh-victor/featured-image3.webp';
+import freshVictorBanner from '@/assets/images/companies/fresh-victor/freshvictor-laptop.jpg';
 import fvFeaturedTask1 from '@/assets/videos/companies/fresh-victor/featured-task-1.mp4';
 import fvFeaturedTask2 from '@/assets/videos/companies/fresh-victor/featured-task-2.mp4';
 import fvFeaturedTask3 from '@/assets/videos/companies/fresh-victor/featured-task-3.mp4';
-import responsibleBanner from '@/assets/images/companies/responsible/featured-image.webp';
+import responsibleThumb from '@/assets/images/companies/responsible/featured-image.webp';
+import responsibleBanner from '@/assets/images/companies/responsible/responsible-laptop.webp';
 import resFeaturedTask1 from '@/assets/videos/companies/responsible/featured-task-1.mp4';
 import resFeaturedTask2 from '@/assets/videos/companies/responsible/featured-task-2.mp4';
 import resFeaturedTask3 from '@/assets/videos/companies/responsible/featured-task-3.mp4';
 import resFeaturedTask4 from '@/assets/videos/companies/responsible/featured-task-4.mp4';
-import k9Banner from '@/assets/images/companies/k9-arsenal/featured-image-2.webp';
+import k9Thumb from '@/assets/images/companies/k9-arsenal/featured-image-2.webp';
+import k9Banner from '@/assets/images/companies/k9-arsenal/k9arsenal-laptop.webp';
 import k9FeaturedTask1 from '@/assets/videos/companies/k9-arsenal/featured-task-1.mp4';
 import k9FeaturedTask2 from '@/assets/videos/companies/k9-arsenal/featured-task-2.mp4';
-import diamondBanner from '@/assets/images/companies/diamond-mattress/featured-image2.webp';
+import diamondThumb from '@/assets/images/companies/diamond-mattress/featured-image2.webp';
+import diamondBanner from '@/assets/images/companies/diamond-mattress/diamondmattress-laptop.webp';
 import diamondFeaturedTask1 from '@/assets/videos/companies/diamond-mattress/featured-task-1.mp4';
 import diamondFeaturedTask2 from '@/assets/videos/companies/diamond-mattress/featured-task-2.mp4';
 
@@ -94,7 +98,7 @@ const data: Job[] = [
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
     thumbnailImage: {
-      src: freshVictorBanner,
+      src: freshVictorThumb,
     },
     heroBannerImage: freshVictorBanner,
     jobFeaturedPhrase:
@@ -143,7 +147,7 @@ const data: Job[] = [
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
     thumbnailImage: {
-      src: responsibleBanner,
+      src: responsibleThumb,
       position: '40% top',
     },
     heroBannerImage: responsibleBanner,
@@ -202,7 +206,7 @@ const data: Job[] = [
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2023',
     thumbnailImage: {
-      src: k9Banner,
+      src: k9Thumb,
       position: '32% 28%',
     },
     heroBannerImage: k9Banner,
@@ -243,7 +247,7 @@ const data: Job[] = [
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
     thumbnailImage: {
-      src: diamondBanner,
+      src: diamondThumb,
       position: 'center 80%',
     },
     heroBannerImage: diamondBanner,
