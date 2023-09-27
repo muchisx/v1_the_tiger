@@ -79,7 +79,7 @@ function Job() {
   };
 
   return (
-    <main className="page page--job">
+    <main className="page page--job" key={jobId}>
       <ImageBanner
         enableParallax
         src={heroBannerImage}
