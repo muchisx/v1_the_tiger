@@ -17,10 +17,12 @@ import resFeaturedTask1 from '@/assets/videos/companies/responsible/featured-tas
 import resFeaturedTask2 from '@/assets/videos/companies/responsible/featured-task-2.mp4';
 import resFeaturedTask3 from '@/assets/videos/companies/responsible/featured-task-3.mp4';
 import resFeaturedTask4 from '@/assets/videos/companies/responsible/featured-task-4.mp4';
-import k9Banner from '@/assets/images/companies/k9-arsenal/featured-image-2.webp';
+import k9Thumb from '@/assets/images/companies/k9-arsenal/featured-image-2.webp';
+import k9Banner from '@/assets/images/companies/k9-arsenal/k9arsenal-laptop.webp';
 import k9FeaturedTask1 from '@/assets/videos/companies/k9-arsenal/featured-task-1.mp4';
 import k9FeaturedTask2 from '@/assets/videos/companies/k9-arsenal/featured-task-2.mp4';
-import diamondBanner from '@/assets/images/companies/diamond-mattress/featured-image2.webp';
+import diamondThumb from '@/assets/images/companies/diamond-mattress/featured-image2.webp';
+import diamondBanner from '@/assets/images/companies/diamond-mattress/diamondmattress-laptop.webp';
 import diamondFeaturedTask1 from '@/assets/videos/companies/diamond-mattress/featured-task-1.mp4';
 import diamondFeaturedTask2 from '@/assets/videos/companies/diamond-mattress/featured-task-2.mp4';
 
@@ -204,7 +206,7 @@ const data: Job[] = [
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2023',
     thumbnailImage: {
-      src: k9Banner,
+      src: k9Thumb,
       position: '32% 28%',
     },
     heroBannerImage: k9Banner,
@@ -245,7 +247,7 @@ const data: Job[] = [
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
     thumbnailImage: {
-      src: diamondBanner,
+      src: diamondThumb,
       position: 'center 80%',
     },
     heroBannerImage: diamondBanner,
