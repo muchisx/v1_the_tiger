@@ -231,7 +231,11 @@ function ContactForm() {
 
         <SubmitContainer>
           <Checkbox
-            label="I agree to the Privacy Policy*"
+            label={
+              <>
+                I agree to the <Link to="/privacy-policy">Privacy Policy</Link>
+              </>
+            }
             isError={!!errors.agreePolicy}
             errorMessage={errors.agreePolicy?.message}
             {...register('agreePolicy', {

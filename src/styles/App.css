@@ -101,6 +101,7 @@ body {
 body {
   min-height: 100vh;
   min-height: 100svh;
+  font-weight: 400;
   color: var(--body-text-primary);
   font-family: var(--text-family);
   background-color: var(--body-bg-color);
@@ -135,6 +136,10 @@ h6 {
 
 a {
   color: var(--accent-color);
+}
+
+strong {
+  font-weight: 600;
 }
 
 button,

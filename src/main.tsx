@@ -13,6 +13,8 @@ import Shopify from '@pages/Shopify';
 import Services from '@pages/Services';
 import NotFound from '@pages/NotFound';
 import Playground from '@pages/Playground';
+import TermsService from '@pages/TermsService';
+import PrivacyPolicy from '@pages/PrivacyPolicy';
 import App from './App';
 
 const router = createBrowserRouter([
@@ -34,6 +36,8 @@ const router = createBrowserRouter([
       { path: 'services', Component: Services },
       { path: 'web-dev', Component: WebDev },
       { path: 'shopify', Component: Shopify },
+      { path: 'privacy-policy', Component: PrivacyPolicy },
+      { path: 'terms-service', Component: TermsService },
       { path: '*', Component: NotFound },
     ],
   },

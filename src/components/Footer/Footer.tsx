@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 import { Chat } from '@styled-icons/fluentui-system-filled';
 // Components
 import Logo from '@components/shared/Logo/Logo';
+import Text from '@components/shared/Text/Text';
 import Button from '@components/shared/Button/Button';
 import Section from '@components/shared/Section/Section';
 // Styled Components
-import { FooterStyled, FooterBlock, FooterMenuItem, sectionCSS, FooterMenu } from './Footer.styles';
+import { FooterStyled, FooterBlock, FooterMenuItem, footerBodyCSS, FooterMenu, footerBottomCSS } from './Footer.styles';
 
 function Footer() {
   return (
     <FooterStyled>
-      <Section contain enableGutter customStyles={sectionCSS}>
+      <Section contain enableGutter customStyles={footerBodyCSS}>
         <FooterBlock className="footer__logo">
           <Logo isUppercase fontSize="2.8rem" />
         </FooterBlock>
@@ -82,6 +83,23 @@ function Footer() {
             />
           </FooterMenu>
         </FooterBlock>
+      </Section>
+      <Section contain enableGutter customStyles={footerBottomCSS}>
+        <FooterMenu>
+          <FooterMenuItem>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+          </FooterMenuItem>
+          <FooterMenuItem>
+            <Link to="/terms-service">Terms of Service</Link>
+          </FooterMenuItem>
+        </FooterMenu>
+
+        <Text fontSize="1.4rem" className="footer__copyright">
+          <Text tag="span" textColor="var(--text-highlight-secondary)" fontWeight={500}>
+            © 2023{' '}
+          </Text>
+          Miguel Ángel. All rights reserved.
+        </Text>
       </Section>
     </FooterStyled>
   );

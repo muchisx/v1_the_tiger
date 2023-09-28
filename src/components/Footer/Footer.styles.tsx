@@ -20,13 +20,47 @@ export const FooterMenuItem = styled.li`
     color: var(--accent-color);
   }
 `;
+
 export const FooterMenu = styled.ul`
   flex-direction: column;
   gap: 8px;
   padding: 0;
 `;
 export const FooterBlock = styled.div``;
-export const sectionCSS = css`
+
+export const footerBottomCSS = css`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    ${FooterMenu} {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+
+  &::before {
+    content: '';
+    margin-block: 20px;
+    order: -2;
+    width: 100%;
+    border-top: 1px solid var(--neutral-color);
+  }
+
+  .footer__copyright {
+    @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+      order: -1;
+    }
+  }
+`;
+
+export const footerBodyCSS = css`
   display: grid;
   justify-content: space-between;
   grid-template-columns: 1fr;
@@ -38,6 +72,7 @@ export const sectionCSS = css`
     gap: 8px;
   }
 `;
+
 export const FooterStyled = styled.footer`
   margin-top: auto;
   padding-block: 100px 52px;
