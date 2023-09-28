@@ -12,6 +12,11 @@ export const QuestionIcon = styled.span`
   flex-shrink: 0;
   width: var(--icon-size);
   height: var(--icon-size);
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const QuestionButton = styled.button`

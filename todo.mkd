@@ -7,7 +7,7 @@
 - [ ] Add floating logo (::after) in all of the thumbnail cards for Jobs.
 - [ ] Modify getMediaqueryValue so instead returns the whole breakpoint rule (ex. returns => 'min-with: 768px', returns => 'max-with: 769px'). This way so I can use both min & max with different values
   - [ ] After, turn all of the style-props into mediaquery-based props { all: ..., xxsm: ...} so they work with the getCSSFromMediaQuery
-- [ ] Fix ScrollRestoration in nested pages not smooth
+- [x] Fix ScrollRestoration in nested pages not smooth
 - [ ] Make exhaustive list of all URLs of websites i worked in, and add a section in the bottom of Work that says
   - [ ] List all non-confidential projects
     - [ ] this should be an accordion that has a LogoGrid with all of the websites I worked in (with url on click)
@@ -30,7 +30,7 @@
 - [x] Replace defaultProps for default Attributtes for optional props on all components
 - [x] Footer
   - [x] Menu Lists
-  - [ ] privacy, terms and copyright
+  - [x] privacy, terms and copyright
   - [ ] Footer Newsletter
 - [ ] Try this for all shared components https://www.youtube.com/watch?v=eXRlVpw1SIQ&ab_channel=Joshtriedcoding
 - [ ] Customize via props:

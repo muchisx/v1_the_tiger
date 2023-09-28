@@ -34,7 +34,7 @@ function AccordionItem(props: AccordionItemProps) {
           <Heading fontSize={{ all: '2rem', md: '2.4rem' }} headingLevel="h4" {...question} />
 
           <QuestionIcon>
-            <ChevronUpDown />
+            <ChevronUpDown size="var(--icon-size)" />
           </QuestionIcon>
         </QuestionButton>
       </QuestionContainer>

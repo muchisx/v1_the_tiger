@@ -1,0 +1,13 @@
+{
+    "name": "Miguel \u00c1ngel",
+    "short_name": "Miguel \u00c1ngel",
+    "icons": [
+        {
+            "src": "/src/assets/favicons/android-chrome-96x96.png?v=2",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#1d1f21",
+    "background_color": "#1d1f21"
+}
