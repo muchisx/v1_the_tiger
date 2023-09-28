@@ -31,6 +31,11 @@ export const HeaderIconWrap = styled.div`
   border-radius: 10px;
   background-color: #1d1f21;
   color: white;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const TagsContainer = styled.div`
