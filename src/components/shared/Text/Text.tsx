@@ -12,8 +12,8 @@ const Text = forwardRef<HTMLParagraphElement, Props>((props, ref) => {
     className,
     textAlign,
     textColor,
-    fontWeight = 400,
-    fontSize = '1.6rem',
+    fontSize,
+    fontWeight,
     fontFamily = 'var(--text-family)',
     ...attrs
   } = props;
