@@ -97,6 +97,9 @@ const rightContent: SplitContentProps['rightContent'] = {
   cards: [
     {
       $keyId: crypto.randomUUID(),
+      $styles: {
+        borderColor: 'var(--neutral-color-quaternary)',
+      },
       headerHeading: 'SHOPIFY DEVELOPMENT',
       HeaderIcon: ShoppingBag,
       headerTags: [
@@ -123,6 +126,9 @@ const rightContent: SplitContentProps['rightContent'] = {
     },
     {
       $keyId: crypto.randomUUID(),
+      $styles: {
+        borderColor: 'var(--neutral-color-quaternary)',
+      },
       headerHeading: 'REACT DEVELOPMENT',
       HeaderIcon: Molecule,
       headerTags: [
@@ -149,6 +155,9 @@ const rightContent: SplitContentProps['rightContent'] = {
     },
     {
       $keyId: crypto.randomUUID(),
+      $styles: {
+        borderColor: 'var(--neutral-color-quaternary)',
+      },
       headerHeading: 'AIDING STARTUPS',
       HeaderIcon: Rocket,
       headerTags: [
@@ -175,6 +184,9 @@ const rightContent: SplitContentProps['rightContent'] = {
     },
     {
       $keyId: crypto.randomUUID(),
+      $styles: {
+        borderColor: 'var(--neutral-color-quaternary)',
+      },
       headerHeading: 'BACKING EST. BUSINESSES',
       HeaderIcon: Building,
       headerTags: [
@@ -201,6 +213,9 @@ const rightContent: SplitContentProps['rightContent'] = {
     },
     {
       $keyId: crypto.randomUUID(),
+      $styles: {
+        borderColor: 'var(--neutral-color-quaternary)',
+      },
       headerHeading: 'FREE WEBSITE REVIEW',
       HeaderIcon: Eye,
       headerTags: [
