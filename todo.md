@@ -5,6 +5,7 @@
   - [x] https://www.emailjs.com/docs
   - [x] https://www.react-hook-form.com/get-started
 - [ ] Add floating logo (::after) in all of the thumbnail cards for Jobs.
+- [ ] Use Local fonts instead of using Fontshare CMS
 - [ ] Modify getMediaqueryValue so instead returns the whole breakpoint rule (ex. returns => 'min-with: 768px', returns => 'max-with: 769px'). This way so I can use both min & max with different values
   - [ ] After, turn all of the style-props into mediaquery-based props { all: ..., xxsm: ...} so they work with the getCSSFromMediaQuery
 - [x] Fix ScrollRestoration in nested pages not smooth
@@ -28,6 +29,7 @@
 - [ ] Refactor ImageMasked to use ImageResponsive as dependency 
 - [x] Add Logo to Nav to make spacing for hamburger icon
 - [x] Replace defaultProps for default Attributtes for optional props on all components
+- [ ] Use better timing functions for transitions and animations that are just using ease
 - [x] Footer
   - [x] Menu Lists
   - [x] privacy, terms and copyright
