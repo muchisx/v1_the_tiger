@@ -1,6 +1,5 @@
 # Todo List
 
-
 - [x] Implement contact form with
   - [x] https://www.emailjs.com/docs
   - [x] https://www.react-hook-form.com/get-started
