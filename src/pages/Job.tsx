@@ -90,9 +90,7 @@ function Job() {
         heading={{ children: jobTitle, headingLevel: 'h1', fontSize: { all: 'clamp(3rem, 6vw, 14rem)' } }}
       />
       <Section contain="margin" enableGutter marginTop={100}>
-        <Heading className="uppercase" fontSize={{ all: 'clamp(24px, 3.2vw, 46px)' }}>
-          {jobFeaturedPhrase}
-        </Heading>
+        <Heading fontSize={{ all: 'clamp(24px, 3.2vw, 46px)' }}>{jobFeaturedPhrase}</Heading>
       </Section>
       <SplitContent
         contain="margin"
