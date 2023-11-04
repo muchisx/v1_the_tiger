@@ -23,10 +23,10 @@ import arrowDownRight from '@assets/svgs/arrow_down-right.svg';
 const jobContact = sharedContact('secondary');
 
 function Job() {
-  const { jobId } = useParams();
+  const { jobSlug } = useParams();
   const navigate = useNavigate();
 
-  const jobData = data.find((job) => job.jobId === jobId);
+  const jobData = data.find((job) => job.jobSlug === jobSlug);
 
   useEffect(() => {
     if (!jobData) {
@@ -79,7 +79,7 @@ function Job() {
   };
 
   return (
-    <main className="page page--job" key={jobId}>
+    <main className="page page--job" key={jobSlug}>
       <ImageBanner
         enableParallax
         src={heroBannerImage}

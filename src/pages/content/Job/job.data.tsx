@@ -1,5 +1,11 @@
 /* eslint-disable max-len */
 // Media
+import nafThumb from '@/assets/images/companies/nafnaf/featured-image.webp';
+import nafBanner from '@/assets/images/companies/nafnaf/nafnaf-laptop.webp';
+import nafFeaturedTask1 from '@/assets/videos/companies/nafnaf/featured-task-1.mp4';
+import nafFeaturedTask2 from '@/assets/videos/companies/nafnaf/featured-task-2.mp4';
+import nafFeaturedTask3 from '@/assets/videos/companies/nafnaf/featured-task-3.mp4';
+import nafFeaturedTaskImage1 from '@/assets/images/companies/nafnaf/featured-task-image-1.webp';
 import qdThumb from '@/assets/images/companies/quality-door/featured-image.webp';
 import qdBanner from '@/assets/images/companies/quality-door/qualitydoor-laptop.webp';
 import qdFeaturedTask1 from '@/assets/videos/companies/quality-door/featured-task-1.mp4';
@@ -32,9 +38,68 @@ import type { Job } from './job.types';
 const data: Job[] = [
   {
     $keyId: crypto.randomUUID(),
-    jobId: 'quality-door',
-    jobTitle: 'Quality Door',
+    jobSlug: 'nafnaf',
+    jobTitle: 'Naf Naf',
     jobSerial: '01',
+    jobRole: 'Fullstack & Shopify Developer',
+    jobAllies: 'Lidz - Agency',
+    jobYear: '2023',
+    thumbnailImage: {
+      src: nafThumb,
+      position: '59% 20%',
+    },
+    heroBannerImage: nafBanner,
+    jobFeaturedPhrase:
+      'I played a pivotal role in launching a state-of-the-art, Headless Shopify store, integrating modern technologies such as Astro, Preact, Serverless Functions, Shopify Checkout Extensions, and Vercel CI/CD. This allowed offering customers a more personalized shopping experience while leveraging the comprehensive features of the Shopify backend system.',
+    jobAdditionalInfo:
+      "NAF NAF is, above all, about dressing women to make them beautiful, fantastic and confident in all circumstances. This is the brand's mission: to empower women. Make them happy by giving them a different, unique and original experience.",
+    jobFeaturedTasks: {
+      contain: 'margin',
+      tabbedContent: [
+        {
+          $keyId: crypto.randomUUID(),
+          title: 'Site-wide',
+          description:
+            'Employed meticulous attention to detail in implementing various site-wide enhancements, including the development of comprehensive Drawer components, streamlined Cart flows, customer Account authentication processes, and seamless yet high-performing Animations, elevating the overall user experience of the website.',
+          mediaIs: 'video',
+          mediaType: 'video/mp4',
+          mediaSource: nafFeaturedTask1,
+        },
+        {
+          $keyId: crypto.randomUUID(),
+          title: 'Product Page',
+          description:
+            'Crafted the Product Page to ensure dynamic responsiveness and exceptional SEO performance. Prioritizing the mobile user experience, we crafted a visually appealing and seamlessly integrated interface. Simultaneously, we meticulously curated the desktop journey, guaranteeing a superior end-to-end experience on the product page.',
+          mediaIs: 'video',
+          mediaType: 'video/mp4',
+          mediaSource: nafFeaturedTask2,
+        },
+        {
+          $keyId: crypto.randomUUID(),
+          title: 'Product Filters',
+          description:
+            'Implemented a smart product filtering system that uses Shopify Graphql resources for filtering, and introduced in-house filters that played along perfectly with it.',
+          mediaIs: 'video',
+          mediaType: 'video/mp4',
+          mediaSource: nafFeaturedTask3,
+        },
+        {
+          $keyId: crypto.randomUUID(),
+          title: 'Optimization',
+          description:
+            'As a collaborative team project, my proficiency in Shopify, Astro, and React proved invaluable in various areas, including bug fixing, optimizing rendering and animation performance, establishing effective CI/CD workflows for the Astro metaframework on Vercel, ensuring proper usage and caching of Serverless Functions, implementing Shopify Checkout Extensions to enhance the checkout experience, and handling other crucial tasks throughout the project.',
+          mediaIs: 'image',
+          mediaType: 'image/webp',
+          mediaSource: nafFeaturedTaskImage1,
+        },
+      ],
+    },
+  },
+  {
+    $keyId: crypto.randomUUID(),
+    jobSlug: 'quality-door',
+    jobTitle: 'Quality Door',
+    jobSerial: '02',
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
@@ -91,9 +156,9 @@ const data: Job[] = [
   },
   {
     $keyId: crypto.randomUUID(),
-    jobId: 'fresh-victor',
+    jobSlug: 'fresh-victor',
     jobTitle: 'Fresh Victor',
-    jobSerial: '02',
+    jobSerial: '03',
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
@@ -140,9 +205,9 @@ const data: Job[] = [
   },
   {
     $keyId: crypto.randomUUID(),
-    jobId: 'responsible',
+    jobSlug: 'responsible',
     jobTitle: 'Responsible',
-    jobSerial: '03',
+    jobSerial: '04',
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
@@ -199,9 +264,9 @@ const data: Job[] = [
   },
   {
     $keyId: crypto.randomUUID(),
-    jobId: 'k9-arsenal',
+    jobSlug: 'k9-arsenal',
     jobTitle: 'K9 Arsenal',
-    jobSerial: '04',
+    jobSerial: '05',
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2023',
@@ -240,7 +305,7 @@ const data: Job[] = [
   },
   {
     $keyId: crypto.randomUUID(),
-    jobId: 'diamond-mattress',
+    jobSlug: 'diamond-mattress',
     jobTitle: 'Diamond mattress',
     jobSerial: '06',
     jobRole: 'Shopify Developer',
