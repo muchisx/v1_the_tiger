@@ -25,6 +25,7 @@ export const Description = styled.div`
 export const Media = styled.div`
   display: flex;
   min-height: 200px;
+  aspect-ratio: 16 / 9;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--neutral-color);

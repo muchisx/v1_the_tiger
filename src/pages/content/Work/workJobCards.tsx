@@ -56,12 +56,12 @@ const generateWorkJobCardsProps = (job: Job): CardGridProps['cardCells'][0] => {
         position: job.thumbnailImage?.position,
       },
       cardLinkWrap: {
-        to: `/work/${job.jobId}`,
+        to: `/work/${job.jobSlug}`,
       },
-      footerButton: { ...footerButtonCommon, to: `/work/${job.jobId}` },
+      footerButton: { ...footerButtonCommon, to: `/work/${job.jobSlug}` },
     },
     subheading: job.jobTitle,
-    button: { ...CardCellButtonCommon, to: `/work/${job.jobId}` },
+    button: { ...CardCellButtonCommon, to: `/work/${job.jobSlug}` },
   };
 };
 

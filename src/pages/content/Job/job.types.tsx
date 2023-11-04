@@ -5,7 +5,7 @@ import type { Props as CardProps } from '@/components/Card/Card.types';
 import type { KeyId } from '@/types/general.types';
 
 export type Job = KeyId & {
-  jobId: string;
+  jobSlug: string;
   jobTitle: string;
   jobSerial: string;
   jobRole: string;

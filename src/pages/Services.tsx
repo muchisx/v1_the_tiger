@@ -26,7 +26,7 @@ function Services() {
   return (
     <main className="page page--services">
       <Section enableGutter>
-        <Heading headingLevel="h1" fontSize={{ all: '3.38vw' }}>
+        <Heading headingLevel="h1" fontSize={{ all: '4.12vw' }}>
           {ServicesHeroHeadingText}
         </Heading>
       </Section>

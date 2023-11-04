@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         path: 'work',
         children: [
           { index: true, Component: Work },
-          { path: ':jobId', Component: Job },
+          { path: ':jobSlug', Component: Job },
         ],
       },
       { path: 'services', Component: Services },

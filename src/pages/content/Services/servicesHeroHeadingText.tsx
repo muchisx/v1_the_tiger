@@ -3,72 +3,59 @@ import styled from 'styled-components';
 const SpanOne = styled.span`
   @media only screen and (max-width: 574px) {
     display: block;
-    font-size: 11.9vw;
+    font-size: 14.4vw;
   }
   @media only screen and (max-width: 410px) {
-    font-size: 11.4vw;
+    font-size: 14vw;
   }
   @media only screen and (max-width: 332px) {
-    font-size: 11.3vw;
+    font-size: 13.9vw;
   }
 `;
 const SpanTwo = styled.span`
   @media only screen and (max-width: 574px) {
     display: block;
-    font-size: 8.6vw;
+    font-size: 15.4vw;
   }
   @media only screen and (max-width: 410px) {
-    font-size: 8.3vw;
+    font-size: 15vw;
   }
   @media only screen and (max-width: 332px) {
-    font-size: 8.2vw;
+    font-size: 14.9vw;
   }
 `;
 const SpanThree = styled.span`
   @media only screen and (max-width: 574px) {
     display: block;
-    font-size: 12vw;
+    font-size: 7.3vw;
   }
   @media only screen and (max-width: 410px) {
-    font-size: 11.7vw;
+    font-size: 7.1vw;
   }
   @media only screen and (max-width: 332px) {
-    font-size: 11.6vw;
+    font-size: 7vw;
   }
 `;
 const SpanFour = styled.span`
   @media only screen and (max-width: 574px) {
     display: block;
-    font-size: 12.3vw;
+    font-size: 6vw;
   }
   @media only screen and (max-width: 410px) {
-    font-size: 11.9vw;
+    font-size: 5.9vw;
   }
   @media only screen and (max-width: 332px) {
-    font-size: 11.8vw;
-  }
-`;
-const SpanFive = styled.span`
-  @media only screen and (max-width: 574px) {
-    display: block;
-    font-size: 9.1vw;
-  }
-  @media only screen and (max-width: 410px) {
-    font-size: 8.8vw;
-  }
-  @media only screen and (max-width: 332px) {
-    font-size: 8.7vw;
+    font-size: 5.8vw;
   }
 `;
 
 // TODO - CREATE A TOTALLY NEW PHRASE
 const servicesHeroHeadingText = (
   <>
-    <SpanOne>TURNING YOUR </SpanOne>
-    <SpanTwo className="highlight-primary">GOALS INTO REALITY: </SpanTwo>
-    <SpanThree>PROFESSIONAL </SpanThree>
-    <SpanFour className="highlight-primary">WEB SERVICES </SpanFour>
-    <SpanFive>THAT PROPEL YOUR PROJECT FORWARD</SpanFive>
+    <SpanOne>YOUR GOALS </SpanOne>
+    <SpanTwo className="highlight-primary">MADE REAL: </SpanTwo>
+    <SpanThree>LAUNCH PROJECTS WITH </SpanThree>
+    <SpanFour className="highlight-primary">PROFESSIONAL WEB SERVICES </SpanFour>
   </>
 );
 

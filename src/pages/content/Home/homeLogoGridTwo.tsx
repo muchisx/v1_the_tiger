@@ -12,12 +12,13 @@ import royceAndRocket from '@assets/images/companies/royceandrocket/logo.webp';
 import calissonToys from '@assets/images/companies/calissontoys/logo.webp';
 import responsible from '@assets/images/companies/responsible/logo.webp';
 import savannahMorrow from '@assets/images/companies/savannahmorrow/logo.webp';
-import shlock from '@assets/images/companies/shlock/logo.webp';
+// import shlock from '@assets/images/companies/shlock/logo.webp';
 import k9Arsenal from '@assets/images/companies/k9-arsenal/logo-smaller.webp';
 import dialogEdu from '@assets/images/companies/dialogedu/logo.png';
 import diamondMattress from '@assets/images/companies/diamond-mattress/logo.webp';
 import freshVictor from '@assets/images/companies/fresh-victor/logo.webp';
 import safkanHealth from '@assets/images/companies/safkan-ottoset/logo.webp';
+import nafnaf from '@assets/svgs/companies/nafnaf/logo.svg';
 import veme from '@assets/svgs/companies/veme/logo.svg';
 // Types
 import { type Props as LogoGridProps } from '@components/LogoGrid/LogoGrid.types';
@@ -27,24 +28,24 @@ const customStyles = css`
 `;
 
 const logoUrlList = [
-  bigLittleBar,
-  pinky,
+  nafnaf,
   qualityDoor,
   sargentDoor,
-  smoothEncore,
-  futureBrandGroup,
+  freshVictor,
+  responsible,
+  bigLittleBar,
+  diamondMattress,
+  k9Arsenal,
+  veme,
+  dialogEdu,
+  safkanHealth,
   blackScreenRecords,
   royceAndRocket,
   calissonToys,
-  responsible,
   savannahMorrow,
-  shlock,
-  k9Arsenal,
-  dialogEdu,
-  diamondMattress,
-  freshVictor,
-  safkanHealth,
-  veme,
+  futureBrandGroup,
+  smoothEncore,
+  pinky,
 ];
 
 const logoUrls: LogoGridProps['logoUrls'] = logoUrlList.map((logoUrl) => ({
