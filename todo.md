@@ -4,6 +4,7 @@
   - [x] https://www.emailjs.com/docs
   - [x] https://www.react-hook-form.com/get-started
 - [x] Add floating logo (::after) in all of the thumbnail cards for Jobs.
+- [ ] Orchestrate Nav animation from the Header comp using framer Variants so I can hide and show also the main header when nav is open
 - [ ] Use Local fonts instead of using Fontshare CMS
 - [ ] Add SeeMore technologies that I use in the homepage and maybe make a more detailed section about it in the Work, Services and About page.
 - [ ] Modify getMediaqueryValue so instead returns the whole breakpoint rule (ex. returns => 'min-with: 768px', returns => 'max-with: 769px'). This way so I can use both min & max with different values
@@ -54,7 +55,7 @@
   - [ ] Add animation for route change
   - [ ] Logo hover animation
   - [ ] Reveal pages animation
-  - [ ] Nav reveal animation
+  - [x] Nav reveal animation
   - [ ] Heading each letter animation
     - [ ] recursion maybe? https://adueck.github.io/blog/recursively-modify-text-jsx-react/
 - [ ] Embed calendly form instead of linking out of my porfolio
