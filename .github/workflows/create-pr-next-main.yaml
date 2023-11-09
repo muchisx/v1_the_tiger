@@ -7,7 +7,9 @@ on:
 jobs:
   create-pr:
     name: Create PR
-    permissions: write
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Create PR
         run: gh pr create -B main -H next --title 'Merge Next into Main' --body 'Created by Github action'
