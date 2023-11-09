@@ -1,32 +1,38 @@
 /* eslint-disable max-len */
 // Media
+import nafLogo from '@/assets/svgs/companies/nafnaf/logo.svg';
 import nafThumb from '@/assets/images/companies/nafnaf/featured-image.webp';
 import nafBanner from '@/assets/images/companies/nafnaf/nafnaf-laptop.webp';
 import nafFeaturedTask1 from '@/assets/videos/companies/nafnaf/featured-task-1.mp4';
 import nafFeaturedTask2 from '@/assets/videos/companies/nafnaf/featured-task-2.mp4';
 import nafFeaturedTask3 from '@/assets/videos/companies/nafnaf/featured-task-3.mp4';
 import nafFeaturedTaskImage1 from '@/assets/images/companies/nafnaf/featured-task-image-1.webp';
+import qdLogo from '@/assets/images/companies/quality-door/logo.webp';
 import qdThumb from '@/assets/images/companies/quality-door/featured-image.webp';
 import qdBanner from '@/assets/images/companies/quality-door/qualitydoor-laptop.webp';
 import qdFeaturedTask1 from '@/assets/videos/companies/quality-door/featured-task-1.mp4';
 import qdFeaturedTask2 from '@/assets/videos/companies/quality-door/featured-task-2.mp4';
 import qdFeaturedTask3 from '@/assets/videos/companies/quality-door/featured-task-3.mp4';
 import qdFeaturedTask4 from '@/assets/videos/companies/quality-door/featured-task-4.mp4';
+import freshVictorLogo from '@/assets/images/companies/fresh-victor/logo.webp';
 import freshVictorThumb from '@/assets/images/companies/fresh-victor/featured-image3.webp';
 import freshVictorBanner from '@/assets/images/companies/fresh-victor/freshvictor-laptop.webp';
 import fvFeaturedTask1 from '@/assets/videos/companies/fresh-victor/featured-task-1.mp4';
 import fvFeaturedTask2 from '@/assets/videos/companies/fresh-victor/featured-task-2.mp4';
 import fvFeaturedTask3 from '@/assets/videos/companies/fresh-victor/featured-task-3.mp4';
+import responsibleLogo from '@/assets/images/companies/responsible/logo.webp';
 import responsibleThumb from '@/assets/images/companies/responsible/featured-image.webp';
 import responsibleBanner from '@/assets/images/companies/responsible/responsible-laptop.webp';
 import resFeaturedTask1 from '@/assets/videos/companies/responsible/featured-task-1.mp4';
 import resFeaturedTask2 from '@/assets/videos/companies/responsible/featured-task-2.mp4';
 import resFeaturedTask3 from '@/assets/videos/companies/responsible/featured-task-3.mp4';
 import resFeaturedTask4 from '@/assets/videos/companies/responsible/featured-task-4.mp4';
+import k9Logo from '@/assets/images/companies/k9-arsenal/logo-smaller-black.webp';
 import k9Thumb from '@/assets/images/companies/k9-arsenal/featured-image-2.webp';
 import k9Banner from '@/assets/images/companies/k9-arsenal/k9arsenal-laptop.webp';
 import k9FeaturedTask1 from '@/assets/videos/companies/k9-arsenal/featured-task-1.mp4';
 import k9FeaturedTask2 from '@/assets/videos/companies/k9-arsenal/featured-task-2.mp4';
+import diamondLogo from '@/assets/images/companies/diamond-mattress/logo.webp';
 import diamondThumb from '@/assets/images/companies/diamond-mattress/featured-image2.webp';
 import diamondBanner from '@/assets/images/companies/diamond-mattress/diamondmattress-laptop.webp';
 import diamondFeaturedTask1 from '@/assets/videos/companies/diamond-mattress/featured-task-1.mp4';
@@ -44,6 +50,7 @@ const data: Job[] = [
     jobRole: 'Fullstack & Shopify Developer',
     jobAllies: 'Lidz - Agency',
     jobYear: '2023',
+    logo: nafLogo,
     thumbnailImage: {
       src: nafThumb,
       position: '59% 20%',
@@ -103,6 +110,7 @@ const data: Job[] = [
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
+    logo: qdLogo,
     thumbnailImage: {
       src: qdThumb,
       position: 'center 30%',
@@ -162,6 +170,7 @@ const data: Job[] = [
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
+    logo: freshVictorLogo,
     thumbnailImage: {
       src: freshVictorThumb,
     },
@@ -211,6 +220,7 @@ const data: Job[] = [
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
+    logo: responsibleLogo,
     thumbnailImage: {
       src: responsibleThumb,
       position: '40% top',
@@ -270,6 +280,7 @@ const data: Job[] = [
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2023',
+    logo: k9Logo,
     thumbnailImage: {
       src: k9Thumb,
       position: '32% 28%',
@@ -311,6 +322,7 @@ const data: Job[] = [
     jobRole: 'Shopify Developer',
     jobAllies: 'ColoredByte - Designers',
     jobYear: '2022',
+    logo: diamondLogo,
     thumbnailImage: {
       src: diamondThumb,
       position: 'center 80%',

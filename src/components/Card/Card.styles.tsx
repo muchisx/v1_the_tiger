@@ -111,6 +111,21 @@ export const CardBgImg = styled(motion(ImageResponsive))`
   z-index: -2;
 `;
 
+export const CardAbsoluteImg = styled(motion(ImageResponsive))`
+  position: absolute;
+  left: var(--card-padding);
+  bottom: var(--card-padding);
+  padding: 6px 8px;
+  border-radius: 4px;
+  z-index: -1;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.32);
+
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    padding: 8px 12px;
+  }
+`;
+
 export const CardLinkWrap = styled(Link)`
   position: absolute;
   inset: 0;
@@ -121,6 +136,7 @@ export const CardLinkWrap = styled(Link)`
 
 export const CardStyled = styled(motion.article)<CardContainerProps>`
   --border-radius: 10px;
+  --card-padding: 12px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -132,6 +148,10 @@ export const CardStyled = styled(motion.article)<CardContainerProps>`
 
   overflow: hidden;
   isolation: isolate;
+
+  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
+    --card-padding: 24px;
+  }
 
   ${(props) => props.customStyles}
 `;
