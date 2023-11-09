@@ -1,6 +1,8 @@
 // Dependencies
+import { createPortal } from 'react-dom';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import { ArrowRight, Navigation, LineHorizontal1, Mail } from '@styled-icons/fluentui-system-filled';
 // Components
 import Nav from '../Nav/Nav';
@@ -22,7 +24,7 @@ function Header() {
   }, [pathname]);
 
   return (
-    <HeaderStyled>
+    <HeaderStyled showBg={!showNavigation}>
       <Logo isUppercase />
       <Button
         buttonRole="link"
@@ -50,13 +52,17 @@ function Header() {
           className="header-nav-toggle"
         />
       )}
-
-      {showNavigation && (
-        <>
-          <Nav />
-          <BodyOverlay onClickAction={toggleNavigation} />
-        </>
-      )}
+      <AnimatePresence>
+        {showNavigation && (
+          <>
+            <Nav key="nav-bar" />
+            {createPortal(
+              <BodyOverlay onClickAction={toggleNavigation} key="body-lock" />,
+              document.getElementById('bodylock-portal') as HTMLElement
+            )}
+          </>
+        )}
+      </AnimatePresence>
     </HeaderStyled>
   );
 }

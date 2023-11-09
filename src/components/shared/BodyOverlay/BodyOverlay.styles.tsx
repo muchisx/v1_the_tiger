@@ -1,4 +1,5 @@
 // Dependencies
+import { motion } from 'framer-motion';
 import styled, { createGlobalStyle } from 'styled-components';
 // Components
 import HeaderStyled from '@components/Header/Header.styles';
@@ -14,17 +15,6 @@ export const BodyLock = createGlobalStyle`
     }
   }
 
-  main,
-  footer {
-    position: relative;
-    ::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      backdrop-filter: blur(4px);
-    }    
-  }
-
   ${HeaderStyled} {
     @media only screen and (min-width: ${getMediaQueryValue('md')}) {
       // Regain the scrollbar space on large screens so the content doesn't shift
@@ -33,12 +23,13 @@ export const BodyLock = createGlobalStyle`
   }
 `;
 
-export const BodyOverlayStyled = styled.div`
+export const BodyOverlayStyled = styled(motion.div)`
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 3;
   background-color: rgba(0, 0, 0, 0.4);
   cursor: alias;
+  backdrop-filter: blur(4px);
 `;
 
 export default BodyOverlayStyled;
