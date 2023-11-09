@@ -1,6 +1,6 @@
 // Dependencies
-import { Outlet, ScrollRestoration } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 // Styles
 import './styles/global-variables.css';
 import './styles/App.css';

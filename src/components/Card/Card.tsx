@@ -17,6 +17,7 @@ import {
   CardLinkWrap,
   TagsContainer,
   HeaderIconWrap,
+  CardAbsoluteImg,
   bgImgMotionMedium,
 } from './Card.styles';
 // Types
@@ -29,6 +30,7 @@ function Card(props: Props) {
     className,
     HeaderIcon,
     headerTags,
+    absoluteImg,
     customStyles,
     footerButton,
     headerHeading,
@@ -69,6 +71,10 @@ function Card(props: Props) {
       bgColor={$styles?.bgColor}
       borderColor={$styles?.borderColor}
     >
+      {absoluteImg && (
+        <CardAbsoluteImg src={absoluteImg.src} fit="contain" height="auto" width="clamp(40px, 50%, 120px)" />
+      )}
+
       {backgroundImg && (
         <CardBgImg
           width="100%"

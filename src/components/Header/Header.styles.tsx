@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // Components
 import { WordWrap } from '@components/shared/Logo/Logo.styles';
 
-const HeaderStyled = styled.header`
+const HeaderStyled = styled.header<{ showBg: boolean }>`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -12,9 +12,11 @@ const HeaderStyled = styled.header`
   bottom: auto;
   padding-inline: calc(12px + 2%);
   padding-block: 12px;
-  background: var(--header-bg-color);
   isolation: isolate;
   z-index: 4;
+
+  transition: background-color ${(props) => (props.showBg ? '400ms' : '40ms')} ease-in-out;
+  background: ${(props) => (props.showBg ? 'var(--header-bg-color)' : 'transparent')};
 
   & > .logo {
     margin-right: auto;

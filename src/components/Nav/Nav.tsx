@@ -7,7 +7,7 @@ import { NavStyled, NavItemsList, SubNav, SubNavItemsList, SubNavSocialsList, Lo
 
 function Nav() {
   return (
-    <NavStyled>
+    <NavStyled initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <NavItemsList>
         <LogoStyled isUppercase fontSize="2rem" />
         <NavItem text="HOME" key="HOME" to="/" Icon={ArrowUpRight} />

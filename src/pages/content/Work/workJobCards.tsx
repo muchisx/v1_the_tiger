@@ -50,6 +50,9 @@ const generateWorkJobCardsProps = (job: Job): CardGridProps['cardCells'][0] => {
   return {
     $keyId: job.$keyId,
     card: {
+      absoluteImg: {
+        src: job.logo,
+      },
       backgroundImg: {
         src: job.thumbnailImage?.src as string,
         loading: job.thumbnailImage?.loading,

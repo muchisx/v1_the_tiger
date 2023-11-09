@@ -33,6 +33,7 @@ export type Props = {
     bgColor?: NeutralColorCSSVar | 'transparent';
     borderColor?: NeutralColorCSSVar | 'transparent';
   };
+  absoluteImg?: Pick<ImageResponsiveProps, 'src'>;
   backgroundImg?: Pick<ImageResponsiveProps, 'src' | 'position' | 'loading'>;
   cardLinkWrap?: {
     to: string;
