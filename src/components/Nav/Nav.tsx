@@ -1,29 +1,69 @@
 // Dependencies
 import { ArrowUpRight } from '@styled-icons/fluentui-system-filled';
-// Components
-import NavItem from '@components/NavItem/NavItem';
+// Context
+import { useMediaQueryContext } from '@context/MediaQueryContext';
 // Styled Components
-import { NavStyled, NavItemsList, SubNav, SubNavItemsList, SubNavSocialsList, LogoStyled } from './Nav.styles';
+import {
+  SubNav,
+  NavStyled,
+  LogoStyled,
+  navVariants,
+  NavItemsList,
+  NavItemMotion,
+  SubNavItemsList,
+  navItemsVariants,
+  SubNavSocialsList,
+  navItemsListVariants,
+  socialNavItemsListVariants,
+} from './Nav.styles';
+
+const mainNavItems = [
+  { text: 'HOME', to: '/' },
+  { text: 'WORK', to: '/work' },
+  { text: 'SERVICES', to: '/services' },
+  { text: 'ABOUT', to: '/about' },
+  { text: 'CONTACT', to: '/contact' },
+];
+const subNavItems = [{ text: 'PLAYGROUND', to: '/playground' }];
+const socialNavItems = [
+  { text: 'IG', to: 'https://instagram.com/imiguel.angel' },
+  { text: 'IN', to: 'https://www.linkedin.com/in/miguelangelpro/' },
+  { text: 'GIT', to: 'https://github.com/muchisx' },
+];
 
 function Nav() {
+  const { isMedium } = useMediaQueryContext();
+
   return (
-    <NavStyled initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-      <NavItemsList>
+    <NavStyled initial="closed" animate="open" exit="closed" variants={navVariants}>
+      <NavItemsList variants={navItemsListVariants}>
         <LogoStyled isUppercase fontSize="2rem" />
-        <NavItem text="HOME" key="HOME" to="/" Icon={ArrowUpRight} />
-        <NavItem text="WORK" key="WORK" to="/work" Icon={ArrowUpRight} />
-        <NavItem text="SERVICES" key="SERVICES" to="/services" Icon={ArrowUpRight} />
-        <NavItem text="ABOUT" key="ABOUT" to="/about" Icon={ArrowUpRight} />
-        <NavItem text="CONTACT" key="CONTACT" to="/contact" Icon={ArrowUpRight} />
+        {mainNavItems.map((item) => (
+          <NavItemMotion
+            to={item.to}
+            key={item.text}
+            text={item.text}
+            Icon={ArrowUpRight}
+            variants={navItemsVariants}
+          />
+        ))}
       </NavItemsList>
       <SubNav>
-        <SubNavItemsList>
-          <NavItem text="PLAYGROUND" key="PLAYGROUND" to="/playground" Icon={ArrowUpRight} />
+        <SubNavItemsList variants={navItemsListVariants}>
+          {subNavItems.map((item) => (
+            <NavItemMotion
+              to={item.to}
+              key={item.text}
+              text={item.text}
+              Icon={ArrowUpRight}
+              variants={navItemsVariants}
+            />
+          ))}
         </SubNavItemsList>
-        <SubNavSocialsList>
-          <NavItem newTab text="IG" key="IG" to="https://instagram.com/imiguel.angel" />
-          <NavItem newTab text="IN" key="IN" to="https://www.linkedin.com/in/miguelangelpro/" />
-          <NavItem newTab text="GIT" key="GIT" to="https://github.com/muchisx" />
+        <SubNavSocialsList variants={isMedium ? navItemsListVariants : socialNavItemsListVariants}>
+          {socialNavItems.map((item) => (
+            <NavItemMotion newTab to={item.to} key={item.text} text={item.text} variants={navItemsVariants} />
+          ))}
         </SubNavSocialsList>
       </SubNav>
     </NavStyled>

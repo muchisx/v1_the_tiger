@@ -1,3 +1,5 @@
+// Dependencies
+import { forwardRef } from 'react';
 // Types
 import { type StyledIcon } from '@styled-icons/styled-icon';
 // Styled Components
@@ -11,13 +13,13 @@ type Props = {
   rel?: string;
 };
 
-function NavItem(props: Props) {
+const NavItem = forwardRef<HTMLLIElement, Props>((props: Props, ref) => {
   const { text, Icon, to, newTab, rel = 'noopener noreferrer' } = props;
   const target = newTab ? '_blank' : '_self';
   const relValue = newTab ? rel : undefined;
 
   return (
-    <NavItemStyled className="nav-item">
+    <NavItemStyled className="nav-item" ref={ref}>
       <NavLinkStyled to={to} target={target} rel={relValue} end>
         <NavLinkSpan>
           {text}
@@ -26,6 +28,8 @@ function NavItem(props: Props) {
       </NavLinkStyled>
     </NavItemStyled>
   );
-}
+});
+
+NavItem.displayName = 'NavItem';
 
 export default NavItem;
