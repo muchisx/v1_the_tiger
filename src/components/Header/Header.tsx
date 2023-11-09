@@ -16,9 +16,6 @@ function Header() {
   const [showNavigation, setShowNavigation] = useState(false);
   const { pathname } = useLocation();
 
-  const toggleNavigation = () => {
-    setShowNavigation((prevShowNavigation: boolean) => !prevShowNavigation);
-  };
   useEffect(() => {
     setShowNavigation(false);
   }, [pathname]);
@@ -40,7 +37,7 @@ function Header() {
           buttonRole="button"
           variant="primary"
           Icon={LineHorizontal1}
-          action={toggleNavigation}
+          action={() => setShowNavigation(false)}
           className="header-nav-toggle --open"
         />
       ) : (
@@ -48,7 +45,7 @@ function Header() {
           buttonRole="button"
           variant="secondary"
           Icon={Navigation}
-          action={toggleNavigation}
+          action={() => setShowNavigation(true)}
           className="header-nav-toggle"
         />
       )}
@@ -57,7 +54,7 @@ function Header() {
           <>
             <Nav key="nav-bar" />
             {createPortal(
-              <BodyOverlay onClickAction={toggleNavigation} key="body-lock" />,
+              <BodyOverlay onClickAction={() => setShowNavigation(false)} key="body-lock" />,
               document.getElementById('bodylock-portal') as HTMLElement
             )}
           </>
