@@ -7,8 +7,17 @@ on:
 jobs:
   create-pr:
     name: Create PR
-    permissions: write
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: next
+
       - name: Create PR
-        env: gh pr create -B main -H next --title 'Merge Next into Main' --body 'Created by Github action'
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr create -B main -H next --title 'Merge Next into Main' --body 'Created by Github action'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
