@@ -10,5 +10,6 @@ jobs:
     permissions: write
     steps:
       - name: Create PR
-        env: gh pr create -B main -H next --title 'Merge Next into Main' --body 'Created by Github action'
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr create -B main -H next --title 'Merge Next into Main' --body 'Created by Github action'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
