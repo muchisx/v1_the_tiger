@@ -1,0 +1,14 @@
+name: create-pr-next-main
+run-name: ${{ github.actor }} is making a PR from next into main.
+on:
+  push:
+    branches:
+      - next
+jobs:
+  create-pr:
+    name: Create PR
+    permissions: write
+    steps:
+      - name: Create PR
+        env: gh pr create -B main -H next --title 'Merge Next into Main' --body 'Created by Github action'
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
