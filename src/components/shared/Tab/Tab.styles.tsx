@@ -35,8 +35,8 @@ export const TabAnchor = styled.a`
 `;
 
 export const TabStyled = styled.li<TabStyledProps>`
-  display: none;
-  flex: 1;
+  display: flex;
+  flex: 1; // turn this one off if coming back from non-motion
 
   font-size: 2.4rem;
   text-transform: uppercase;
@@ -60,16 +60,4 @@ export const TabStyled = styled.li<TabStyledProps>`
             background-color: var(--neutral-color-secondary);
           }
         `}
-
-  // In mobile they will be hidden by default
-  ${(props) =>
-    (props.isShown || props.isActive) &&
-    css`
-      display: flex;
-    `}
-
-  // In desktop they will show by default
-  @media only screen and (min-width: ${getMediaQueryValue('md')}) {
-    display: flex;
-  }
 `;
