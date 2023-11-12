@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 // Utils
 import { getMediaQueryValue } from '@utils';
+import { forwardRef } from 'react';
 
 type Props = {
   children: React.ReactNode;
@@ -20,8 +21,8 @@ export const TabsStyled = styled.ul`
   }
 `;
 
-function Tabs({ children }: Props) {
-  return <TabsStyled>{children}</TabsStyled>;
-}
+const Tabs = forwardRef<HTMLUListElement, Props>(({ children }, ref) => <TabsStyled ref={ref}>{children}</TabsStyled>);
+
+Tabs.displayName = 'Tabs';
 
 export default Tabs;

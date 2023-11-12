@@ -1,7 +1,11 @@
 // Dependencies
 import styled from 'styled-components';
+import { motion, type Variants } from 'framer-motion';
 // Utils
 import { getMediaQueryValue } from '@utils';
+// Components
+import Tab from '@components/shared/Tab/Tab';
+import Tabs from '@components/shared/Tabs/Tabs';
 // Styled Components
 import { ButtonContainerStyled } from '@components/shared/Button/Button.styles';
 
@@ -35,7 +39,10 @@ export const Media = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const TabMotion = motion(Tab);
+export const TabsMotion = motion(Tabs);
+
+export const Content = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -55,3 +62,46 @@ export const TabbedContentStyled = styled.div`
     gap: 60px;
   }
 `;
+
+// Animation Variants - Framer Motion
+
+const OPEN_DURATION = 0.4;
+const CLOSE_DURATION = 0.2;
+
+export const TabVariants: Variants = {
+  open: {
+    opacity: 1,
+    maxHeight: 150,
+    filter: 'blur(0px)',
+    transition: {
+      bounce: false,
+      duration: OPEN_DURATION,
+    },
+  },
+  closed: {
+    opacity: 0,
+    maxHeight: 0,
+    filter: 'blur(8px)',
+    transition: {
+      bounce: false,
+      duration: CLOSE_DURATION,
+    },
+  },
+};
+
+export const ContentVariants: Variants = {
+  visible: {
+    opacity: 1,
+    filter: 'blur(0px)',
+    transition: {
+      duration: OPEN_DURATION,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    filter: 'blur(4px)',
+    transition: {
+      duration: CLOSE_DURATION,
+    },
+  },
+};
