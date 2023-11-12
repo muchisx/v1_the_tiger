@@ -45,7 +45,7 @@ function Contact() {
                 text="Telegram"
                 variant="primary"
                 buttonRole="link"
-                to="https://t.me/muchisx"
+                to="https://t.me/migxang"
                 newTab
               />
               <Button

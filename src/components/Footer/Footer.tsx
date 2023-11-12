@@ -78,7 +78,7 @@ function Footer() {
               text="Telegram"
               variant="quaternary"
               buttonRole="link"
-              to="https://t.me/muchisx"
+              to="https://t.me/migxang"
               newTab
             />
           </FooterMenu>
