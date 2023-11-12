@@ -58,7 +58,7 @@
   - [x] Nav reveal animation
   - [ ] Heading each letter animation
     - [ ] recursion maybe? https://adueck.github.io/blog/recursively-modify-text-jsx-react/
-- [ ] Embed calendly form instead of linking out of my porfolio
+- [ ] Embed calendly form instead of linking out of my porfolio.
 - [ ] Double check all .tsx and .ts files and assign properly .tsx and .ts files.
 - [x] Change types of css values from 'string' to a more complex type that accepts `${number}${unit}` with template literals.
 - [ ] Verify all uses of components with empty/partial props (even while typescript erros) to verify is being well protected for production.
