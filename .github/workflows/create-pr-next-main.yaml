@@ -11,6 +11,12 @@ jobs:
     permissions:
       pull-requests: write
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: next
+
       - name: Check if PR already exists
         id: check-pr-exists
         env:
@@ -27,13 +33,6 @@ jobs:
             echo skipping PR creation
             echo "skip=true" >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Check out repository code
-        if: '!steps.check-pr-exists.outputs.skip'
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          ref: next
 
       - name: Create PR
         if: '!steps.check-pr-exists.outputs.skip'
