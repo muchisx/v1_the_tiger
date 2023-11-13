@@ -4,7 +4,7 @@ import { css } from 'styled-components';
 // Content
 import data from '@content/Job/job.data';
 // Styled Components
-import HeadingStyled from '@components/shared/Heading/Heading.styles';
+import { HeadingStyled } from '@components/shared/Heading/Heading.styles';
 import { CardFooter, CardStyled } from '@components/Card/Card.styles';
 import { CardGridCellBottom } from '@components/CardGrid/CardGrid.styles';
 // Types

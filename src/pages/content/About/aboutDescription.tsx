@@ -6,7 +6,7 @@ import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 // Utils
 import { getMediaQueryValue } from '@utils';
 // Styled Components
-import HeadingStyled from '@components/shared/Heading/Heading.styles';
+import { HeadingStyled } from '@components/shared/Heading/Heading.styles';
 import { TextsContainer } from '@components/SplitContent/SplitContent.styles';
 // Types
 import { type Props as SplitContentProps } from '@/components/SplitContent/SplitContent.types';

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import type { Variants } from 'framer-motion';
 import { motion } from 'framer-motion';
 import TextStyled from '../Text/Text.styles';
-import HeadingStyled from '../Heading/Heading.styles';
+import { HeadingStyled } from '../Heading/Heading.styles';
 
 export const QuestionIcon = styled.span`
   --icon-size: 2.4rem;

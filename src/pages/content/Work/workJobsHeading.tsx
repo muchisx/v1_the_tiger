@@ -1,7 +1,7 @@
 // Dependencies
 import { css } from 'styled-components';
 // Styled Components
-import HeadingStyled from '@components/shared/Heading/Heading.styles';
+import { HeadingStyled } from '@components/shared/Heading/Heading.styles';
 // Utils
 import { getMediaQueryValue } from '@utils';
 // Types

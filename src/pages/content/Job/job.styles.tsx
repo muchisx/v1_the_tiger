@@ -1,7 +1,7 @@
 // Dependencies
 import { css } from 'styled-components';
 // Components
-import HeadingStyled from '@components/shared/Heading/Heading.styles';
+import { HeadingStyled } from '@components/shared/Heading/Heading.styles';
 import { ContentContainer } from '@components/ImageBanner/ImageBanner.styles';
 
 export const customImageBannerStyles = css`
