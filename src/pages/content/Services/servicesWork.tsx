@@ -1,7 +1,5 @@
 /* eslint-disable max-len */
-// Dependencies
-// import { css } from 'styled-components';
-// Types
+import SpanSpace from '@components/shared/SpanSpace/SpanSpace';
 import type { Props as SplitContentProps } from '@/components/SplitContent/SplitContent.types';
 
 const servicesWork: SplitContentProps = {
@@ -15,8 +13,11 @@ const servicesWork: SplitContentProps = {
     rightHeading: {
       children: (
         <>
-          <span>SOME OF</span>
-          <span className="highlight-primary"> MY TOP WORKS</span>
+          <span>
+            SOME OF
+            <SpanSpace />
+          </span>
+          <span className="highlight-primary">MY TOP WORKS</span>
         </>
       ),
       fontSize: { all: '3.8rem', md: '4.8rem' },

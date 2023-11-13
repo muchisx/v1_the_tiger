@@ -1,9 +1,21 @@
 /* eslint-disable max-len */
-import { ArrowRight, ShoppingBag, Molecule, Rocket, Eye, Building } from '@styled-icons/fluentui-system-filled';
+// Dependencies
 import { css } from 'styled-components';
-import { Props as SplitContentProps } from '../../../components/SplitContent/SplitContent.types';
+import {
+  ArrowRight,
+  ShoppingBag,
+  Molecule,
+  Rocket,
+  Eye,
+  Building,
+} from '@styled-icons/fluentui-system-filled';
+// Components
+import SpanSpace from '@components/shared/SpanSpace/SpanSpace';
+// Styled Components
 import { CardStyled } from '../../../components/Card/Card.styles';
 import { ButtonsContainer } from '../../../components/SplitContent/SplitContent.styles';
+// Types
+import { type Props as SplitContentProps } from '../../../components/SplitContent/SplitContent.types';
 
 const customStyles = css`
   --content-top-offset: 24%;
@@ -40,15 +52,18 @@ const customStyles = css`
 
 const leftText = (
   <>
-    My expertise lies in providing reliable web development services and expert Shopify and React assistance to
-    businesses of all sizes. My goal is to empower businesses to establish robust online platforms through close
-    collaboration, resulting in successful growth.
+    My expertise lies in providing reliable web development services and expert Shopify and React
+    assistance to businesses of all sizes. My goal is to empower businesses to establish robust
+    online platforms through close collaboration, resulting in successful growth.
   </>
 );
 
 const leftHeading = (
   <>
-    <span className="highlight-quaternary">WAYS I </span>
+    <span className="highlight-quaternary">
+      WAYS I
+      <SpanSpace />
+    </span>
 
     <span className="highlight-primary">CAN HELP</span>
   </>

@@ -1,7 +1,16 @@
 /* eslint-disable max-len */
 // Dependencies
 import { css } from 'styled-components';
-import { DataTrending, Eye, Handshake, Lightbulb, Premium, PuzzlePiece } from '@styled-icons/fluentui-system-filled';
+import {
+  DataTrending,
+  Eye,
+  Handshake,
+  Lightbulb,
+  Premium,
+  PuzzlePiece,
+} from '@styled-icons/fluentui-system-filled';
+// Components
+import SpanSpace from '@components/shared/SpanSpace/SpanSpace';
 // Styled Components
 import { CardGridCell, CardGridStyled } from '@components/CardGrid/CardGrid.styles';
 // Utils
@@ -30,8 +39,8 @@ export const aboutValuesHeader: SplitContentProps = {
     rightHeading: {
       children: (
         <>
-          DEVELOP WITH
-          <span className="highlight-primary"> PURPOSE</span>
+          DEVELOP WITH <SpanSpace />
+          <span className="highlight-primary">PURPOSE</span>
         </>
       ),
       fontSize: {

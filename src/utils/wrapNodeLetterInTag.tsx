@@ -1,7 +1,9 @@
 import { ReactNode, createElement } from 'react';
+import type { ModifierPayload } from './getDeepModifiedNode';
 
-export default function wrapNodeLetterInTag(node: ReactNode, tag: string): ReactNode {
+export default function wrapNodeLetterInTag(node: ReactNode, tag: string): ModifierPayload {
   let result = node;
+  let lettersWrapped = 0;
 
   if (typeof node === 'string' || typeof node === 'number') {
     const words = String(node)
@@ -10,6 +12,7 @@ export default function wrapNodeLetterInTag(node: ReactNode, tag: string): React
 
     result = words.map((word, wordIndex) => {
       const letters = String(word).split('');
+      lettersWrapped += letters.length;
 
       const letterElements = letters.map((letter, letterIndex) => {
         return createElement(
@@ -33,5 +36,8 @@ export default function wrapNodeLetterInTag(node: ReactNode, tag: string): React
     });
   }
 
-  return result;
+  return {
+    modifiedNode: result,
+    nodesModified: lettersWrapped,
+  };
 }

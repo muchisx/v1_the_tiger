@@ -14,17 +14,24 @@ function Heading(props: Props) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-8% 0px' });
   const [scope, animate] = useAnimate();
+  const animatedLettersRef = useRef(0);
 
   const childrenModified = useMemo(() => {
-    return getDeepModifiedNode(children, (node) => wrapNodeLetterInTag(node, 'span'));
+    const { node, nodesModifiedTotal } = getDeepModifiedNode(children, (nodeItem) =>
+      wrapNodeLetterInTag(nodeItem, 'span')
+    );
+    animatedLettersRef.current = nodesModifiedTotal;
+    return node;
   }, [children]);
 
   useEffect(() => {
     if (isInView) {
+      const staggerDuration = Math.min(1.6 / animatedLettersRef.current, 0.032);
+
       animate(
         'span.letter',
         { y: ['-40%', '0%'], opacity: [0, 1], filter: ['blur(4px)', 'blur(0px)'] },
-        { delay: stagger(0.03), type: 'tween' }
+        { delay: stagger(staggerDuration), type: 'tween' }
       );
     }
   }, [isInView, animate]);
