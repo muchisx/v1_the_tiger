@@ -11,5 +11,13 @@ export const HeadingSpan = styled(motion.span)``;
 export const HeadingStyled = styled.h1<HeadingProps>`
   line-height: 1.15;
   font-weight: ${(props) => props.$fontWeight};
-  ${(props) => props.$fontSize && getCSSFromMediaQuery(props.$fontSize, 'font-size').map((item) => item)};
+  ${(props) =>
+    props.$fontSize && getCSSFromMediaQuery(props.$fontSize, 'font-size').map((item) => item)};
+
+  .letter {
+    display: inline-block;
+  }
+  .word {
+    display: inline-block;
+  }
 `;

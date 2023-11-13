@@ -1,6 +1,9 @@
 // Dependencies
-import { useRef } from 'react';
-import { useInView } from 'framer-motion';
+import { useEffect, useMemo, useRef } from 'react';
+import { useAnimate, useInView, stagger } from 'framer-motion';
+// Utils
+import getDeepModifiedNode from '@utils/getDeepModifiedNode';
+import wrapNodeLetterInTag from '@utils/wrapNodeLetterInTag';
 // Styled Components
 import { HeadingStyled, HeadingSpan } from './Heading.styles';
 // Types
@@ -9,13 +12,32 @@ import { Props } from './Heading.types';
 function Heading(props: Props) {
   const { headingLevel = 'h2', children, className, fontWeight = 500, fontSize } = props;
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, margin: '-8% 0px' });
+  const [scope, animate] = useAnimate();
+
+  const childrenModified = useMemo(() => {
+    return getDeepModifiedNode(children, (node) => wrapNodeLetterInTag(node, 'span'));
+  }, [children]);
+
+  useEffect(() => {
+    if (isInView) {
+      animate(
+        'span.letter',
+        { y: ['-40%', '0%'], opacity: [0, 1] },
+        { delay: stagger(0.03), type: 'tween' }
+      );
+    }
+  }, [isInView, animate]);
 
   return (
-    <HeadingStyled as={headingLevel} ref={ref} className={className} $fontWeight={fontWeight} $fontSize={fontSize}>
-      <HeadingSpan style={{ opacity: isInView ? 1 : 0, transition: 'all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s' }}>
-        {children}
-      </HeadingSpan>
+    <HeadingStyled
+      ref={ref}
+      as={headingLevel}
+      className={className}
+      $fontSize={fontSize}
+      $fontWeight={fontWeight}
+    >
+      <HeadingSpan ref={scope}>{childrenModified}</HeadingSpan>
     </HeadingStyled>
   );
 }

@@ -52,7 +52,11 @@ function Home() {
         customStyles={homeServices.customStyles}
       />
 
-      <LogoGrid logoUrls={homeLogoGridTwo.logoUrls} title="DEVELOPED FOR" customStyles={homeLogoGridTwo.customStyles} />
+      <LogoGrid
+        logoUrls={homeLogoGridTwo.logoUrls}
+        title="DEVELOPED FOR"
+        customStyles={homeLogoGridTwo.customStyles}
+      />
       <SplitContent
         contain
         leftContent={homeContact.leftContent}

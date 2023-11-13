@@ -30,6 +30,6 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
-    'max-len': ['error', { code: 120, ignoreUrls: true }],
+    'max-len': ['error', { code: 100, ignoreUrls: true }],
   },
 };
