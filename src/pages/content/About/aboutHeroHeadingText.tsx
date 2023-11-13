@@ -61,7 +61,6 @@ const SpanFour = styled.span`
   }
 `;
 
-// TODO - CREATE A TOTALLY NEW PHRASE
 const aboutHeroHeadingText = (
   <>
     <SpanOne>
