@@ -13,6 +13,7 @@ export type Props = {
 
 // Styled Components
 export type HeadingProps = {
+  className?: string;
   $fontWeight?: Props['fontWeight'];
   $fontSize?: Props['fontSize'];
 };

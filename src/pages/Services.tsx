@@ -26,7 +26,7 @@ function Services() {
   return (
     <main className="page page--services">
       <Section enableGutter>
-        <Heading headingLevel="h1" fontSize={{ all: '4.12vw' }}>
+        <Heading headingLevel="h1" fontSize={{ all: '4vw' }}>
           {ServicesHeroHeadingText}
         </Heading>
       </Section>
@@ -36,7 +36,11 @@ function Services() {
         rightContent={servicesCTA.rightContent}
         customStyles={servicesCTA.customStyles}
       />
-      <ImageBanner src={websitesboard} minHeight={{ all: '320px', md: '50svh', lg: '96svh' }} enableParallax />
+      <ImageBanner
+        src={websitesboard}
+        minHeight={{ all: '320px', md: '50svh', lg: '96svh' }}
+        enableParallax
+      />
 
       <Divider customStyles={serviceDividerCustomCSS} paddingBottom={60} />
       {servicesData.map((service, index) => (

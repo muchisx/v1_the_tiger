@@ -12,8 +12,8 @@ import {
   QuestionButton,
   AnswerContainer,
   QuestionContainer,
+  AccordionItemVariants,
   AccordionItemContainer,
-  AccordionItemMotionVariants,
 } from './Accordion.styles';
 // Types
 import type { AccordionItem as AccordionItemProps, Props } from './Accordion.types';
@@ -44,7 +44,7 @@ function AccordionItem(props: AccordionItemProps) {
             initial="collapsed"
             animate="open"
             exit="collapsed"
-            variants={AccordionItemMotionVariants}
+            variants={AccordionItemVariants}
             transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
             <Text tag={wrapAnswerInSpan ? 'span' : 'p'} {...answer} />
@@ -61,7 +61,12 @@ function Accordion(props: Props) {
   return (
     <AccordionList>
       {accordionItems.map((item) => (
-        <AccordionItem key={item.$keyId} $keyId={item.$keyId} answer={item.answer} question={item.question} />
+        <AccordionItem
+          key={item.$keyId}
+          $keyId={item.$keyId}
+          answer={item.answer}
+          question={item.question}
+        />
       ))}
     </AccordionList>
   );

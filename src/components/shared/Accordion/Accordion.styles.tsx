@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import type { Variants } from 'framer-motion';
 import { motion } from 'framer-motion';
 import TextStyled from '../Text/Text.styles';
-import HeadingStyled from '../Heading/Heading.styles';
+import { HeadingStyled } from '../Heading/Heading.styles';
 
 export const QuestionIcon = styled.span`
   --icon-size: 2.4rem;
@@ -73,7 +73,7 @@ export const AccordionList = styled.dl`
 
 // Animation Variants - Framer Motion
 
-export const AccordionItemMotionVariants: Variants = {
+export const AccordionItemVariants: Variants = {
   open: { opacity: 1, height: 'auto' },
   collapsed: { opacity: 0, height: 0 },
 };
