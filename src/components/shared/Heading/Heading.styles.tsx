@@ -19,5 +19,9 @@ export const HeadingStyled = styled.h1<HeadingProps>`
   }
   .word {
     display: inline-block;
+
+    span {
+      white-space: break-spaces;
+    }
   }
 `;

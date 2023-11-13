@@ -4,18 +4,20 @@ export default function wrapNodeLetterInTag(node: ReactNode, tag: string): React
   let result = node;
 
   if (typeof node === 'string' || typeof node === 'number') {
-    const words = String(node).split(' ');
+    const words = String(node)
+      .split(' ')
+      .filter((word) => word.length > 0);
 
     result = words.map((word, wordIndex) => {
       const letters = String(word).split('');
 
-      const letterElements = letters.map((letter, letterIndex) =>
-        createElement(
+      const letterElements = letters.map((letter, letterIndex) => {
+        return createElement(
           tag,
           { className: letter !== ' ' ? 'letter' : '', key: `${letterIndex}-${letter}` },
           letter
-        )
-      );
+        );
+      });
 
       const spaceElement =
         words.length - 1 === wordIndex
@@ -24,6 +26,7 @@ export default function wrapNodeLetterInTag(node: ReactNode, tag: string): React
 
       const wordElement = createElement(tag, { className: 'word', key: `${wordIndex}-${word}` }, [
         letterElements,
+        spaceElement,
       ]);
 
       return wordElement;

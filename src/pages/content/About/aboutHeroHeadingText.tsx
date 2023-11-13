@@ -1,9 +1,15 @@
+// Dependencies
 import styled from 'styled-components';
+// Components
+import SpanSpace from '@components/shared/SpanSpace/SpanSpace';
 
 const SpanOne = styled.span`
   @media only screen and (max-width: 574px) {
     display: block;
     font-size: 21.4vw;
+    .span-space {
+      display: none;
+    }
   }
   @media only screen and (max-width: 410px) {
     font-size: 20.8vw;
@@ -16,6 +22,9 @@ const SpanTwo = styled.span`
   @media only screen and (max-width: 574px) {
     display: block;
     font-size: 15.8vw;
+    .span-space {
+      display: none;
+    }
   }
   @media only screen and (max-width: 410px) {
     font-size: 15.2vw;
@@ -27,10 +36,13 @@ const SpanTwo = styled.span`
 const SpanThree = styled.span`
   @media only screen and (max-width: 574px) {
     display: block;
-    font-size: 5.2vw;
+    font-size: 5.1vw;
+    .span-space {
+      display: none;
+    }
   }
   @media only screen and (max-width: 410px) {
-    font-size: 5vw;
+    font-size: 4.9vw;
   }
   @media only screen and (max-width: 332px) {
     font-size: 4.8vw;
@@ -52,9 +64,18 @@ const SpanFour = styled.span`
 // TODO - CREATE A TOTALLY NEW PHRASE
 const aboutHeroHeadingText = (
   <>
-    <SpanOne>QUALITY </SpanOne>
-    <SpanTwo className="highlight-primary">ABOVE ALL. </SpanTwo>
-    <SpanThree>I&rsquo;M A PASSIONATE WEB DEVELOPER </SpanThree>
+    <SpanOne>
+      QUALITY
+      <SpanSpace />
+    </SpanOne>
+    <SpanTwo className="highlight-primary">
+      ABOVE ALL.
+      <SpanSpace />
+    </SpanTwo>
+    <SpanThree>
+      I&rsquo;M A PASSIONATE WEB DEVELOPER
+      <SpanSpace />
+    </SpanThree>
     <SpanFour className="highlight-primary">WITH AN EYE FOR DETAIL.</SpanFour>
   </>
 );
