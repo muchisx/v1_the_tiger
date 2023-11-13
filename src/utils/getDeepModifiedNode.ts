@@ -1,24 +1,45 @@
 import { Children, ReactNode, isValidElement, cloneElement } from 'react';
 
+export type ModifierPayload = {
+  modifiedNode: ReactNode;
+  nodesModified: number;
+};
+
+type GetDeepModifierNodePayload = {
+  node: ReactNode;
+  nodesModifiedTotal: number;
+};
+
 export default function getDeepModifiedNode(
   node: ReactNode,
-  modifier: (node: ReactNode) => ReactNode
-): ReactNode {
-  return Children.map(node, (child) => {
-    let currentNode = child;
+  modifier: (node: ReactNode) => ModifierPayload
+): GetDeepModifierNodePayload {
+  let nodesModifiedTotal = 0;
 
-    if (!isValidElement(currentNode)) {
-      return modifier(currentNode);
-    }
+  const deepNode = Children.map(node, (child) => {
+    const { modifiedNode, nodesModified } = modifier(child);
 
-    if (currentNode.props.children) {
-      const props = {
-        children: getDeepModifiedNode(currentNode.props.children, modifier),
-      };
-      if (isValidElement(child)) {
-        currentNode = cloneElement(child, props);
+    if (isValidElement(modifiedNode)) {
+      if (modifiedNode.props.children) {
+        const nextNode = getDeepModifiedNode(modifiedNode.props.children, modifier);
+
+        nodesModifiedTotal += nextNode.nodesModifiedTotal;
+        const props = {
+          children: nextNode.node,
+        };
+
+        return cloneElement(modifiedNode, props);
       }
+
+      return modifiedNode;
     }
-    return modifier(currentNode);
+
+    nodesModifiedTotal += nodesModified;
+    return modifiedNode;
   });
+
+  return {
+    node: deepNode,
+    nodesModifiedTotal,
+  };
 }
