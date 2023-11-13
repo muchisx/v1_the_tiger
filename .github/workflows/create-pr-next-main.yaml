@@ -11,13 +11,32 @@ jobs:
     permissions:
       pull-requests: write
     steps:
+      - name: Check if PR already exists
+        id: check-pr-exists
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          prs=$(gh pr list -B main -H next)  
+          # Even when there are no PRs, this array always seems to have 1 result
+          echo Size of PRS ARRAY: ${#prs[@]}
+          # Locally, it seems the gh cli says 'no pull requests match your search..' but not here.
+          # The first element exists but is of length 0
+          echo Length of PRS[0] string: ${#prs[0]}
+
+          if ((${#prs[@]} > 0 && ${#prs[0]} != 0 )); then
+            echo skipping PR creation
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Check out repository code
+        if: '!steps.check-pr-exists.outputs.skip'
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: next
 
       - name: Create PR
+        if: '!steps.check-pr-exists.outputs.skip'
         run: gh pr create -B main -H next --title 'Merge Next into Main' --body 'Created by Github action'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
