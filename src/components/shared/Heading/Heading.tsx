@@ -23,7 +23,7 @@ function Heading(props: Props) {
     if (isInView) {
       animate(
         'span.letter',
-        { y: ['-40%', '0%'], opacity: [0, 1], filter: ['blur(5px)', 'blur(0px)'] },
+        { y: ['-40%', '0%'], opacity: [0, 1], filter: ['blur(4px)', 'blur(0px)'] },
         { delay: stagger(0.03), type: 'tween' }
       );
     }

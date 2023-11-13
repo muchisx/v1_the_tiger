@@ -16,6 +16,10 @@ export const HeadingStyled = styled.h1<HeadingProps>`
 
   .letter {
     display: inline-block;
+    // Initial styles for animation
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(-40%) translateZ(0px);
   }
   .word {
     display: inline-block;

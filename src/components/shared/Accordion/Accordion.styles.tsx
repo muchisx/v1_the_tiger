@@ -73,7 +73,7 @@ export const AccordionList = styled.dl`
 
 // Animation Variants - Framer Motion
 
-export const AccordionItemMotionVariants: Variants = {
+export const AccordionItemVariants: Variants = {
   open: { opacity: 1, height: 'auto' },
   collapsed: { opacity: 0, height: 0 },
 };
