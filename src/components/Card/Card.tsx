@@ -72,14 +72,18 @@ function Card(props: Props) {
       borderColor={$styles?.borderColor}
     >
       {absoluteImg && (
-        <CardAbsoluteImg src={absoluteImg.src} fit="contain" height="auto" width="clamp(40px, 50%, 120px)" />
+        <CardAbsoluteImg
+          src={absoluteImg.src}
+          fit="contain"
+          height="auto"
+          width="clamp(40px, 50%, 120px)"
+        />
       )}
 
       {backgroundImg && (
         <CardBgImg
           width="100%"
           height="100%"
-          refTarget="container"
           variants={bgImgMotion}
           src={backgroundImg.src}
           transition={{ duration: 0.4 }}

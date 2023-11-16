@@ -87,7 +87,11 @@ function Job() {
         bottomContent={heroBannerBottom}
         imgOverlayColor="rgba(0,0,0,0.36)"
         customStyles={customImageBannerStyles}
-        heading={{ children: jobTitle, headingLevel: 'h1', fontSize: { all: 'clamp(3rem, 6vw, 14rem)' } }}
+        heading={{
+          children: jobTitle,
+          headingLevel: 'h1',
+          fontSize: { all: 'clamp(3rem, 6vw, 14rem)' },
+        }}
       />
       <Section contain="margin" enableGutter marginTop={100}>
         <Heading fontSize={{ all: 'clamp(24px, 3.2vw, 46px)' }}>{jobFeaturedPhrase}</Heading>
@@ -107,7 +111,10 @@ function Job() {
           />
         </SplitContentCustom>
       </SplitContent>
-      <TabbedContent tabbedContent={jobFeaturedTasks.tabbedContent} contain={jobFeaturedTasks.contain} />
+      <TabbedContent
+        tabbedContent={jobFeaturedTasks.tabbedContent}
+        contain={jobFeaturedTasks.contain}
+      />
       <SplitContent
         contain="padding"
         leftContent={jobContact.leftContent}
