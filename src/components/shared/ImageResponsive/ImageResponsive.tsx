@@ -21,12 +21,6 @@ const ImageResponsive = forwardRef<HTMLDivElement, Props>((props: Props, ref) =>
 
   const [isLoading, setIsLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 99999999999);
-  // }, []);
-
   return (
     <ImageResponsiveStyled $width={width} $height={height} $padding={padding} ref={ref} {...attrs}>
       <AnimatePresence>
