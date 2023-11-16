@@ -20,7 +20,8 @@ import {
 import type { Props } from './imageBanner.types';
 
 function ImageBanner(props: Props) {
-  const { customStyles, src, minHeight, enableParallax, imgOverlayColor, heading, bottomContent } = props;
+  const { customStyles, src, minHeight, enableParallax, imgOverlayColor, heading, bottomContent } =
+    props;
 
   // 1️⃣ Parallax animation handlers
   // -------------------------- --------------------------
