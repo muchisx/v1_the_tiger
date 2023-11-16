@@ -13,6 +13,7 @@ import type { Width, Height } from '@/types/css.types';
 export type ImageProps = {
   fit: Props['fit'];
   position: Props['position'];
+  isLoading: boolean;
 };
 
 export type ImageContainerProps = {

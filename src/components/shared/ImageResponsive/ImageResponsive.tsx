@@ -1,10 +1,11 @@
 // Dependencies
-import { forwardRef, useEffect, useRef, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import { forwardRef, useState } from 'react';
 // Styled Components
-import ImageSkeleton from '../ImageSkeleton/ImageSkeleton';
 import { Image as ImageStyled, ImageResponsiveStyled } from './ImageResponsive.styles';
 // Types
 import type { Props } from './ImageResponsive.types';
+import ImageSkeleton from '../ImageSkeleton/ImageSkeleton';
 
 const ImageResponsive = forwardRef<HTMLDivElement, Props>((props: Props, ref) => {
   const {
@@ -19,27 +20,27 @@ const ImageResponsive = forwardRef<HTMLDivElement, Props>((props: Props, ref) =>
   } = props;
 
   const [isLoading, setIsLoading] = useState(true);
-  const imageRef = useRef<HTMLImageElement>(null);
 
-  useEffect(() => {
-    const img = new Image();
-    img.src = src;
-    img.onload = () => {
-      setIsLoading(false);
-    };
-  }, [src]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 99999999999);
+  // }, []);
 
   return (
     <ImageResponsiveStyled $width={width} $height={height} $padding={padding} ref={ref} {...attrs}>
-      {isLoading && <ImageSkeleton ref={imageRef} />}
+      <AnimatePresence>
+        {isLoading && (
+          <ImageSkeleton initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} />
+        )}
+      </AnimatePresence>
       <ImageStyled
-        onLoad={() => setIsLoading(false)}
         fit={fit}
         src={src}
         loading={loading}
         position={position}
-        ref={imageRef}
-        style={{ display: isLoading ? 'none' : 'block' }}
+        isLoading={isLoading}
+        onLoad={() => setIsLoading(false)}
       />
     </ImageResponsiveStyled>
   );
