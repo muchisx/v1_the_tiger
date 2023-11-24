@@ -2,7 +2,7 @@
 import { ArrowRight } from '@styled-icons/fluentui-system-filled';
 import { css } from 'styled-components';
 // Styles Components
-import { CardFooter, CardStyled } from '@components/Card/Card.styles';
+import { CardFooter } from '@components/Card/Card.styles';
 import { HeadingStyled } from '@components/shared/Heading/Heading.styles';
 import { CardGridCellBottom } from '@components/CardGrid/CardGrid.styles';
 // Types
@@ -11,9 +11,6 @@ import type { Props as CardGridProps } from '@components/CardGrid/CardGrid.types
 
 const customStyles: CardGridProps['customStyles'] = css`
   padding-top: 12px;
-  ${CardStyled} {
-    border: none;
-  }
 
   ${CardGridCellBottom} {
     ${HeadingStyled} {
@@ -49,6 +46,9 @@ const generateJobCardsProps = (job: Job): CardGridProps['cardCells'][0] => {
   return {
     $keyId: job.$keyId,
     card: {
+      $styles: {
+        borderColor: 'noBorder',
+      },
       backgroundImg: {
         src: job.thumbnailImage.src,
         position: job.thumbnailImage.position,

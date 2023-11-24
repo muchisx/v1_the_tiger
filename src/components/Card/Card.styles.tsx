@@ -144,8 +144,13 @@ export const CardStyled = styled(motion.article)<CardContainerProps>`
   position: relative;
   border-radius: var(--border-radius);
   background-color: ${(props) => (props.bgColor ? props.bgColor : 'var(--neutral-color)')};
-  border: 1px solid
-    ${(props) => (props.borderColor ? props.borderColor : 'var(--neutral-color-secondary)')};
+  ${(props) =>
+    props.borderColor === 'noBorder'
+      ? null
+      : css`
+          border: 1px solid
+            ${props.borderColor ? props.borderColor : 'var(--neutral-color-secondary)'};
+        `}
 
   overflow: hidden;
   isolation: isolate;
