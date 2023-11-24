@@ -140,7 +140,12 @@ function ContactForm() {
           SUBMIT A REQUEST
         </Heading>
 
-        <Text className="form-heading" fontWeight={500} fontSize="2rem" fontFamily="var(--heading-family)">
+        <Text
+          className="form-heading"
+          fontWeight={500}
+          fontSize="2rem"
+          fontFamily="var(--heading-family)"
+        >
           ABOUT YOU
         </Text>
 
@@ -196,7 +201,12 @@ function ContactForm() {
           })}
         />
 
-        <Text className="form-heading" fontWeight={500} fontSize="2rem" fontFamily="var(--heading-family)">
+        <Text
+          className="form-heading"
+          fontWeight={500}
+          fontSize="2rem"
+          fontFamily="var(--heading-family)"
+        >
           DESCRIBE YOUR PROJECT & NEEDS
         </Text>
 
@@ -212,7 +222,12 @@ function ContactForm() {
           })}
         />
 
-        <Text className="form-heading" fontWeight={500} fontSize="2rem" fontFamily="var(--heading-family)">
+        <Text
+          className="form-heading"
+          fontWeight={500}
+          fontSize="2rem"
+          fontFamily="var(--heading-family)"
+        >
           HOW DID YOU LEARN ABOUT ME?
         </Text>
         <InputText
@@ -254,7 +269,11 @@ function ContactForm() {
           deliver an ordinary email
         </Link>
         {' or '}
-        <Link target="_blank" rel="noopener noreferrer" to="https://calendly.com/miguel-angel-creator/free-meeting">
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          to="https://calendly.com/miguel-angel-creator/free-meeting"
+        >
           schedule a meeting
         </Link>
         .
