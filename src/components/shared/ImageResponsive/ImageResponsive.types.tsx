@@ -1,5 +1,5 @@
 // Dependencies
-import { HtmlHTMLAttributes } from 'react';
+import { HTMLAttributes } from 'react';
 // Types
 import type { Width, Height } from '@/types/css.types';
 
@@ -29,6 +29,6 @@ export type Props = {
   src: string;
   fit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
   loading?: 'eager' | 'lazy';
-  // This allows autocomplete while allowing any string aswell
+  // Record<never, never> - This allows autocomplete while allowing any string aswell
   position?: 'bottom' | 'center' | 'left' | 'right' | 'top' | Record<never, never>;
-} & HtmlHTMLAttributes<HTMLDivElement>;
+} & HTMLAttributes<HTMLDivElement>;
