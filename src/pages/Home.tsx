@@ -15,18 +15,15 @@ import {
   HomeHeroHeadingText,
 } from './content/Home';
 import sharedContact from './content/shared/sharedContact';
-import { isBrowser, getUA } from 'react-device-detect';
+import { getUA } from 'react-device-detect';
 
 const homeContact = sharedContact('primary');
 
 function Home() {
-  console.log(isBrowser);
   return (
     <main className="page page--home">
       <Section enableGutter>
-        {isBrowser && 'isBrowser'}
-        <p>user agent</p>
-        <p>{getUA}</p>
+        <p>{getUA.includes('Instagram') && 'Modafoka'}</p>
         <Heading headingLevel="h1" fontSize={{ all: '6.4vw' }}>
           {HomeHeroHeadingText}
         </Heading>
