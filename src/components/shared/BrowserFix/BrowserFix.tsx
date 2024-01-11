@@ -9,7 +9,7 @@ const DefaultGlobalStyle = createGlobalStyle`
 
 const InstagramGlobalStyle = createGlobalStyle`
   :root {
-    --vw-fix: 16px;
+    --vw-fix: 14px;
   }
 
   html {
