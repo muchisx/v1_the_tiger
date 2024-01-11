@@ -1,14 +1,26 @@
 import { getUA } from 'react-device-detect';
 import { createGlobalStyle } from 'styled-components';
 
-const InstagramGlobalStyle = createGlobalStyle`
-  html {
-    font-size: 76.15%;
+const DefaultGlobalStyle = createGlobalStyle`
+  :root {
+    --vw-fix: 0px;
   }
 `;
 
+const InstagramGlobalStyle = createGlobalStyle`
+  :root {
+    --vw-fix: 20px;
+  }
+
+  html {
+    font-size: 76.15%;
+  }
+  
+`;
+
 function BrowserFix() {
-  let Fix;
+  let Fix = DefaultGlobalStyle;
+
   if (getUA.includes('Instagram')) {
     Fix = InstagramGlobalStyle;
   }

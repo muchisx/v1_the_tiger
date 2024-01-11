@@ -34,7 +34,11 @@ function About() {
         rightContent={aboutCTA.rightContent}
         customStyles={aboutCTA.customStyles}
       />
-      <ImageBanner src={portraitWorking} minHeight={{ all: '42vh', md: '50svh', lg: '96svh' }} enableParallax />
+      <ImageBanner
+        src={portraitWorking}
+        minHeight={{ all: '42vh', md: '50svh', lg: '96svh' }}
+        enableParallax
+      />
 
       <SplitContent
         contain="margin"
