@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // Components
 import SpanSpace from '@components/shared/SpanSpace/SpanSpace';
 // Utils
-import getFixedCSSvw from '@/utils/getFixedCSSvw';
+import getFixedCSSvw from '@utils/getFixedCSSvw';
 
 const SpanOne = styled.span`
   @media only screen and (max-width: 574px) {
