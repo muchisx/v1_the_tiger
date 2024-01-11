@@ -3,13 +3,13 @@ import { createGlobalStyle } from 'styled-components';
 
 const DefaultGlobalStyle = createGlobalStyle`
   :root {
-    --vw-fix: 0px;
+    --vw-fix: 1;
   }
 `;
 
 const InstagramGlobalStyle = createGlobalStyle`
   :root {
-    --vw-fix: 8px;
+    --vw-fix: 1.2;
   }
 
   html {
