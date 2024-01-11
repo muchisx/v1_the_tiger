@@ -8,14 +8,16 @@ import './styles/App.css';
 import Header from '@components/Header/Header';
 import Footer from '@components/Footer/Footer';
 import Badge from '@components/shared/Badge/Badge';
+import BrowserFix from '@components/shared/BrowserFix/BrowserFix';
 // Contexts
 import MediaQueryProvider from '@context/MediaQueryContext';
-
+// Assets
 import { ReactComponent as ShopifyBag } from '@assets/svgs/shopify_glyph.svg';
 
 function App() {
   return (
     <MediaQueryProvider>
+      <BrowserFix />
       <Analytics />
       <ScrollRestoration />
       <Header />

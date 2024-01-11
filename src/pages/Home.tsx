@@ -15,7 +15,6 @@ import {
   HomeHeroHeadingText,
 } from './content/Home';
 import sharedContact from './content/shared/sharedContact';
-import { getUA } from 'react-device-detect';
 
 const homeContact = sharedContact('primary');
 
@@ -23,7 +22,6 @@ function Home() {
   return (
     <main className="page page--home">
       <Section enableGutter>
-        <p>{getUA.includes('Instagram') && 'Modafoka'}</p>
         <Heading headingLevel="h1" fontSize={{ all: '6.4vw' }}>
           {HomeHeroHeadingText}
         </Heading>
