@@ -4,6 +4,8 @@ import Heading from '@components/shared/Heading/Heading';
 import Section from '@components/shared/Section/Section';
 import ImageBanner from '@components/ImageBanner/ImageBanner';
 import SplitContent from '@components/SplitContent/SplitContent';
+// Utils
+import getFixedCSSvw from '@utils/getFixedCSSvw';
 // Content
 import {
   homeCTA,
@@ -22,7 +24,7 @@ function Home() {
   return (
     <main className="page page--home">
       <Section enableGutter>
-        <Heading headingLevel="h1" fontSize={{ all: '6.4vw' }}>
+        <Heading headingLevel="h1" fontSize={{ all: getFixedCSSvw(6.4) }}>
           {HomeHeroHeadingText}
         </Heading>
       </Section>

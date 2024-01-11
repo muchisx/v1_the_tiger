@@ -1,4 +1,6 @@
-const getFixedCSSvw = (vwValue: number): string => {
+import type { FontSize } from '@/types/css.types';
+
+const getFixedCSSvw = (vwValue: number): FontSize => {
   return `calc(${vwValue}vw * var(--vw-fix))`;
 };
 

@@ -14,6 +14,8 @@ import { customImageBannerStyles, additionalInfoCSS } from '@content/Job/job.sty
 // Types
 import type { Props as ImageBannerProps } from '@components/ImageBanner/imageBanner.types';
 import type { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
+// Utils
+import getFixedCSSvw from '@utils/getFixedCSSvw';
 // Content
 import data from '@content/Job/job.data';
 import jobMoreJobs from '@content/Job/jobMoreJobs';
@@ -90,11 +92,13 @@ function Job() {
         heading={{
           children: jobTitle,
           headingLevel: 'h1',
-          fontSize: { all: 'clamp(3rem, 6vw, 14rem)' },
+          fontSize: { all: `clamp(3rem, ${getFixedCSSvw(6)}, 14rem)` },
         }}
       />
       <Section contain="margin" enableGutter marginTop={100}>
-        <Heading fontSize={{ all: 'clamp(24px, 3.2vw, 46px)' }}>{jobFeaturedPhrase}</Heading>
+        <Heading fontSize={{ all: `clamp(24px, ${getFixedCSSvw(3.2)}, 46px)` }}>
+          {jobFeaturedPhrase}
+        </Heading>
       </Section>
       <SplitContent
         contain="margin"
