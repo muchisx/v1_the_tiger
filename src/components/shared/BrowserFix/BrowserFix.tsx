@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const InstagramGlobalStyle = createGlobalStyle`
   html {
-    font-size: 76.153%;
+    font-size: 76.154%;
   }
 `;
 
