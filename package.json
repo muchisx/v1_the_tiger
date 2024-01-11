@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite -- --host",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -15,6 +15,7 @@
     "@vercel/analytics": "^1.0.2",
     "framer-motion": "^10.11.4",
     "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.4",
     "react-router-dom": "^6.9.0",
