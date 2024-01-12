@@ -3,7 +3,12 @@ import { createPortal } from 'react-dom';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { ArrowRight, Navigation, LineHorizontal1, Mail } from '@styled-icons/fluentui-system-filled';
+import {
+  ArrowRight,
+  Navigation,
+  LineHorizontal1,
+  Mail,
+} from '@styled-icons/fluentui-system-filled';
 // Components
 import Nav from '../Nav/Nav';
 import Logo from '../shared/Logo/Logo';
@@ -31,7 +36,13 @@ function Header() {
         to="/contact"
         className="header_contact"
       />
-      <Button buttonRole="link" variant="primary" Icon={Mail} to="/contact" className="header_m-contact" />
+      <Button
+        buttonRole="link"
+        variant="primary"
+        Icon={Mail}
+        to="/contact"
+        className="header_m-contact"
+      />
       {showNavigation ? (
         <Button
           buttonRole="button"

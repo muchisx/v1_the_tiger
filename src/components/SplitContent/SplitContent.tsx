@@ -26,8 +26,15 @@ import { Props, SplitContentCustomProps } from './SplitContent.types';
 
 function SplitContent(props: Props) {
   const { leftContent, rightContent, customStyles, contain, children } = props;
-  const { topTag, leftTexts, backgroundShape, buttonsLabel, leftButtons, maskedImageURL, leftHeading } =
-    leftContent || {};
+  const {
+    topTag,
+    leftTexts,
+    backgroundShape,
+    buttonsLabel,
+    leftButtons,
+    maskedImageURL,
+    leftHeading,
+  } = leftContent || {};
   const { rightHeading, rightButtons, rightTexts, cards } = rightContent || {};
 
   // 1️⃣ Filtering of {children} because one goes in the left and another in the right
@@ -37,8 +44,12 @@ function SplitContent(props: Props) {
   // TODO : Make this trully only accept the custom component,
   // TODO : So far it takes any component aslong as it has a 'location' prop
   // TODO : with a value that matches the check below.
-  const leftCustomChild = Children.map(children, (child) => (child?.props.location === 'first' ? child : null))?.[0];
-  const rightCustomChild = Children.map(children, (child) => (child?.props.location === 'second' ? child : null))?.[0];
+  const leftCustomChild = Children.map(children, (child) =>
+    child?.props.location === 'first' ? child : null
+  )?.[0];
+  const rightCustomChild = Children.map(children, (child) =>
+    child?.props.location === 'second' ? child : null
+  )?.[0];
   // -------------------------- --------------------------
 
   // 2️⃣ Render Validations
@@ -53,14 +64,16 @@ function SplitContent(props: Props) {
     maskedImageURL ||
     leftHeading ||
     leftCustomChild;
-  const renderRightContent = rightHeading || rightButtons || rightTexts || cards || rightCustomChild;
+  const renderRightContent =
+    rightHeading || rightButtons || rightTexts || cards || rightCustomChild;
 
   if (!renderLeftContent && !renderRightContent) {
     throw new Error('SplitContent: top-level children must exist');
   }
   // -------------------------- --------------------------
 
-  // Animations - Scroll Progress variables - checks the scroll progress of the page and assigns its value in a variable
+  // Animations - Scroll Progress variables
+  // checks the scroll progress of the page and assigns its value in a variable
   const sectionRef = useRef(null);
   const rotationValues = backgroundShape?.rotation || [0, 20];
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', '132vh end'] });
@@ -77,7 +90,11 @@ function SplitContent(props: Props) {
       ref={sectionRef}
     >
       {backgroundShape && (
-        <BackgroundShape src={backgroundShape.url} style={{ rotateZ: shapeRotationSpring }} loading="lazy" />
+        <BackgroundShape
+          src={backgroundShape.url}
+          style={{ rotateZ: shapeRotationSpring }}
+          loading="lazy"
+        />
       )}
 
       {renderLeftContent && (
@@ -105,7 +122,12 @@ function SplitContent(props: Props) {
           )}
 
           {maskedImageURL && (
-            <ImageMasked height="144px" width="144px" src={maskedImageURL} customStyles={ImageMaskedCSS} />
+            <ImageMasked
+              height="144px"
+              width="144px"
+              src={maskedImageURL}
+              customStyles={ImageMaskedCSS}
+            />
           )}
         </SubSection>
       )}

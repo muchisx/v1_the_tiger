@@ -1,5 +1,5 @@
 // Dependencies
-import { ImgHTMLAttributes, HtmlHTMLAttributes } from 'react';
+import { HTMLAttributes } from 'react';
 // Types
 import type { Width, Height } from '@/types/css.types';
 
@@ -13,6 +13,7 @@ import type { Width, Height } from '@/types/css.types';
 export type ImageProps = {
   fit: Props['fit'];
   position: Props['position'];
+  isLoading: boolean;
 };
 
 export type ImageContainerProps = {
@@ -21,10 +22,6 @@ export type ImageContainerProps = {
   $padding?: Props['padding'];
 };
 
-type ConditionnalRefProps =
-  | ({ refTarget?: 'container' } & HtmlHTMLAttributes<HTMLDivElement>)
-  | ({ refTarget?: 'image' } & ImgHTMLAttributes<HTMLImageElement>);
-
 export type Props = {
   height: Height;
   width: Width;
@@ -32,6 +29,6 @@ export type Props = {
   src: string;
   fit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
   loading?: 'eager' | 'lazy';
-  // This allows autocomplete while allowing any string aswell
+  // Record<never, never> - This allows autocomplete while allowing any string aswell
   position?: 'bottom' | 'center' | 'left' | 'right' | 'top' | Record<never, never>;
-} & ConditionnalRefProps;
+} & HTMLAttributes<HTMLDivElement>;

@@ -4,6 +4,7 @@ import { css } from 'styled-components';
 import { BackgroundShape } from '@components/SplitContent/SplitContent.styles';
 // Utils
 import { getMediaQueryValue } from '@utils';
+import getFixedCSSvw from '@utils/getFixedCSSvw';
 
 const contactFormSectionCSS = css`
   gap: 60px;
@@ -14,7 +15,7 @@ const contactFormSectionCSS = css`
     ::before {
       content: '';
       position: absolute;
-      width: 46vw;
+      width: ${getFixedCSSvw(46)};
       right: 0;
       top: 0;
       bottom: 0;
@@ -30,13 +31,13 @@ const contactFormSectionCSS = css`
 
     @media only screen and (min-width: ${getMediaQueryValue('md')}) {
       top: unset;
-      width: min(640px, 46vw);
+      width: min(640px, ${getFixedCSSvw(46)});
       bottom: 6%;
-      left: 30vw;
+      left: ${getFixedCSSvw(30)};
     }
 
     @media only screen and (min-width: ${getMediaQueryValue('xxl')}) {
-      left: 36vw;
+      left: ${getFixedCSSvw(36)};
     }
   }
 

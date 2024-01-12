@@ -1,11 +1,13 @@
 // Dependencies
-import { forwardRef } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import { forwardRef, useState } from 'react';
 // Styled Components
-import { Image, ImageResponsiveStyled } from './ImageResponsive.styles';
+import { Image as ImageStyled, ImageResponsiveStyled } from './ImageResponsive.styles';
 // Types
 import type { Props } from './ImageResponsive.types';
+import ImageSkeleton from '../ImageSkeleton/ImageSkeleton';
 
-const ImageResponsive = forwardRef<HTMLDivElement | HTMLImageElement, Props>((props: Props, ref) => {
+const ImageResponsive = forwardRef<HTMLDivElement, Props>((props: Props, ref) => {
   const {
     src,
     width,
@@ -14,33 +16,25 @@ const ImageResponsive = forwardRef<HTMLDivElement | HTMLImageElement, Props>((pr
     fit = 'cover',
     loading = 'lazy',
     position = 'center',
-    refTarget = 'container',
     ...attrs
   } = props;
 
-  // Dynamically attatch ref target depending on the usage,
-  // This allows libraries like framer-motion to target the correct element for animating
-  const imageRef = refTarget === 'image' ? ref : undefined;
-  const containerRef = refTarget === 'container' ? ref : undefined;
-
-  const imageAttributes = refTarget === 'image' ? attrs : {};
-  const containerAttributes = refTarget === 'container' ? attrs : {};
+  const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <ImageResponsiveStyled
-      $width={width}
-      $height={height}
-      $padding={padding}
-      ref={containerRef as React.ForwardedRef<HTMLDivElement>}
-      {...containerAttributes}
-    >
-      <Image
+    <ImageResponsiveStyled $width={width} $height={height} $padding={padding} ref={ref} {...attrs}>
+      <AnimatePresence>
+        {isLoading && (
+          <ImageSkeleton initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} />
+        )}
+      </AnimatePresence>
+      <ImageStyled
         fit={fit}
         src={src}
         loading={loading}
         position={position}
-        ref={imageRef as React.ForwardedRef<HTMLImageElement>}
-        {...imageAttributes}
+        isLoading={isLoading}
+        onLoad={() => setIsLoading(false)}
       />
     </ImageResponsiveStyled>
   );

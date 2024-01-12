@@ -14,6 +14,8 @@ import { customImageBannerStyles, additionalInfoCSS } from '@content/Job/job.sty
 // Types
 import type { Props as ImageBannerProps } from '@components/ImageBanner/imageBanner.types';
 import type { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
+// Utils
+import getFixedCSSvw from '@utils/getFixedCSSvw';
 // Content
 import data from '@content/Job/job.data';
 import jobMoreJobs from '@content/Job/jobMoreJobs';
@@ -87,10 +89,16 @@ function Job() {
         bottomContent={heroBannerBottom}
         imgOverlayColor="rgba(0,0,0,0.36)"
         customStyles={customImageBannerStyles}
-        heading={{ children: jobTitle, headingLevel: 'h1', fontSize: { all: 'clamp(3rem, 6vw, 14rem)' } }}
+        heading={{
+          children: jobTitle,
+          headingLevel: 'h1',
+          fontSize: { all: `clamp(3rem, ${getFixedCSSvw(6)}, 14rem)` },
+        }}
       />
       <Section contain="margin" enableGutter marginTop={100}>
-        <Heading fontSize={{ all: 'clamp(24px, 3.2vw, 46px)' }}>{jobFeaturedPhrase}</Heading>
+        <Heading fontSize={{ all: `clamp(24px, ${getFixedCSSvw(3.2)}, 46px)` }}>
+          {jobFeaturedPhrase}
+        </Heading>
       </Section>
       <SplitContent
         contain="margin"
@@ -101,13 +109,16 @@ function Job() {
         <SplitContentCustom location="first">
           <ImageResponsive
             src={arrowDownRight}
-            width="clamp(80px, 20vw, 92px)"
-            height="clamp(80px, 20vw, 92px)"
+            width={`clamp(80px, ${getFixedCSSvw(20)}, 92px)`}
+            height={`clamp(80px, ${getFixedCSSvw(20)}, 92px)`}
             fit="contain"
           />
         </SplitContentCustom>
       </SplitContent>
-      <TabbedContent tabbedContent={jobFeaturedTasks.tabbedContent} contain={jobFeaturedTasks.contain} />
+      <TabbedContent
+        tabbedContent={jobFeaturedTasks.tabbedContent}
+        contain={jobFeaturedTasks.contain}
+      />
       <SplitContent
         contain="padding"
         leftContent={jobContact.leftContent}

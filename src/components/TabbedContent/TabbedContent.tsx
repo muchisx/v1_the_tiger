@@ -49,7 +49,13 @@ function TabbedContent(props: Props) {
   };
 
   return (
-    <Section contain={contain} enableGutter marginTop={40} marginBottom={40} customStyles={customStyles}>
+    <Section
+      contain={contain}
+      enableGutter
+      marginTop={40}
+      marginBottom={40}
+      customStyles={customStyles}
+    >
       <TabbedContentStyled>
         <TabsMotion>
           {tabbedContent.map((tab) => {

@@ -28,7 +28,7 @@
   - [ ] Fix BackgroundShape in Split content to no be direct child of Section, but instead be contained within the content
   - [ ] Give it a size prop, to use breakpoint sizes instead of fixed width %.
   - [ ] Standarize all abstract SVGs to have the same viewbox
-- [ ] Refactor ImageMasked to use ImageResponsive as dependency 
+- [x] Refactor ImageMasked to use ImageResponsive as dependency 
 - [x] Add Logo to Nav to make spacing for hamburger icon
 - [x] Replace defaultProps for default Attributtes for optional props on all components
 - [ ] Use better timing functions for transitions and animations that are just using ease
@@ -48,6 +48,7 @@
   - [ ] When the card's title (bottom) goes into two lines it doesn't match the layout of another card that has a one-line title.
 - [ ] Playground layout (with more than one tool, not just component explorer)
 - [ ] Input and Select Field with "\<label>"
+- [ ] Consider making the header transparent with backdropfilter blur
 - [ ] Blockquote with "\<blockquote>" or "\<q>" and "\<cite>"
 - [ ] Add loading state before images and fonts load
 - [ ] Look into lazy loading react router routes with route.lazy
@@ -56,8 +57,8 @@
   - [ ] Logo hover animation
   - [ ] Reveal pages animation
   - [x] Nav reveal animation
-  - [ ] Heading each letter animation
-    - [ ] recursion maybe? https://adueck.github.io/blog/recursively-modify-text-jsx-react/
+  - [x] Heading each letter animation
+    - [x] recursion maybe? https://adueck.github.io/blog/recursively-modify-text-jsx-react/
 - [ ] Embed calendly form instead of linking out of my porfolio.
 - [ ] Double check all .tsx and .ts files and assign properly .tsx and .ts files.
 - [x] Change types of css values from 'string' to a more complex type that accepts `${number}${unit}` with template literals.

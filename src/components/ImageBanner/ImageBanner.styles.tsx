@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components';
 import { getCSSFromMediaQuery } from '@utils';
 // Types
 import type { ContainerProps } from './imageBanner.types';
+import ImageSkeleton from '../shared/ImageSkeleton/ImageSkeleton';
 
 export const ParallaxContainer = styled(motion.div)`
   height: 100%;
@@ -58,7 +59,8 @@ export const ImageBannerContainer = styled.div<ContainerProps>`
       }
     `}
 
-  ${(props) => props.$minHeight && getCSSFromMediaQuery(props.$minHeight, 'min-height').map((item) => item)}
+  ${(props) =>
+    props.$minHeight && getCSSFromMediaQuery(props.$minHeight, 'min-height').map((item) => item)}
 `;
 
 export const sectionCSS = css`
@@ -66,7 +68,8 @@ export const sectionCSS = css`
   position: relative;
   overflow: hidden;
 
-  img {
+  img,
+  ${ImageSkeleton} {
     height: 120%;
     object-position: center;
   }

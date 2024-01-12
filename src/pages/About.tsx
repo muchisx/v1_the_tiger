@@ -8,6 +8,8 @@ import SplitContent, { SplitContentCustom } from '@components/SplitContent/Split
 // Assets
 // TODO - Change this image to the actual one
 import portraitWorking from '@assets/images/portrait-working.webp';
+// Utils
+import getFixedCSSvw from '@utils/getFixedCSSvw';
 // Content
 import aboutCTA from '@content/About/aboutCTA';
 import aboutDescription from '@content/About/aboutDescription';
@@ -23,7 +25,7 @@ function About() {
   return (
     <main className="page page--about">
       <Section enableGutter>
-        <Heading headingLevel="h1" fontSize={{ all: '4.3vw' }}>
+        <Heading headingLevel="h1" fontSize={{ all: getFixedCSSvw(4.3) }}>
           {aboutHeroHeadingText}
         </Heading>
       </Section>
@@ -34,7 +36,11 @@ function About() {
         rightContent={aboutCTA.rightContent}
         customStyles={aboutCTA.customStyles}
       />
-      <ImageBanner src={portraitWorking} minHeight={{ all: '42vh', md: '50svh', lg: '96svh' }} enableParallax />
+      <ImageBanner
+        src={portraitWorking}
+        minHeight={{ all: '42vh', md: '50svh', lg: '96svh' }}
+        enableParallax
+      />
 
       <SplitContent
         contain="margin"
