@@ -4,6 +4,7 @@ import { css } from 'styled-components';
 import { HeadingStyled } from '@components/shared/Heading/Heading.styles';
 // Utils
 import { getMediaQueryValue } from '@utils';
+import getFixedCSSvw from '@utils/getFixedCSSvw';
 // Types
 import type { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
 
@@ -35,8 +36,8 @@ const workJobsHeading: SplitContentProps = {
       children: 'FEATURED PROJECTS',
       fontSize: {
         all: '3.2rem',
-        md: 'clamp(3rem, 4vw, 5.4rem)',
-        xl: 'clamp(4rem, 4.1vw, 6.1rem)',
+        md: `clamp(3rem, ${getFixedCSSvw(4)}, 5.4rem)`,
+        xl: `clamp(4rem, ${getFixedCSSvw(4.1)}, 6.1rem)`,
       },
     },
   },

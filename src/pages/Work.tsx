@@ -3,6 +3,8 @@ import Section from '@components/shared/Section/Section';
 import Heading from '@components/shared/Heading/Heading';
 import SplitContent from '@components/SplitContent/SplitContent';
 import CardGrid from '@components/CardGrid/CardGrid';
+// Utils
+import getFixedCSSvw from '@utils/getFixedCSSvw';
 // Content
 import { WorkHeroHeadingText, workCTA, workJobCards, workJobsHeading } from '@content/Work';
 import sharedContact from '@content/shared/sharedContact';
@@ -13,7 +15,7 @@ function Work() {
   return (
     <main className="page page--work">
       <Section enableGutter>
-        <Heading headingLevel="h1" fontSize={{ all: '4vw' }}>
+        <Heading headingLevel="h1" fontSize={{ all: getFixedCSSvw(4) }}>
           {WorkHeroHeadingText}
         </Heading>
       </Section>

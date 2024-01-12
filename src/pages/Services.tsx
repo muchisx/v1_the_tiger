@@ -15,6 +15,8 @@ import sharedContact from '@content/shared/sharedContact';
 import servicesWork from '@content/Services/servicesWork';
 import servicesJobs from '@content/Services/servicesJobs';
 import { ServicesHeroHeadingText, servicesCTA } from '@content/Services';
+// Utils
+import getFixedCSSvw from '@utils/getFixedCSSvw';
 // Data
 import servicesData from '@content/Services/services.data';
 import data from '@content/Job/job.data';
@@ -26,7 +28,7 @@ function Services() {
   return (
     <main className="page page--services">
       <Section enableGutter>
-        <Heading headingLevel="h1" fontSize={{ all: '4vw' }}>
+        <Heading headingLevel="h1" fontSize={{ all: getFixedCSSvw(4) }}>
           {ServicesHeroHeadingText}
         </Heading>
       </Section>

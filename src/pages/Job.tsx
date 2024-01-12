@@ -109,8 +109,8 @@ function Job() {
         <SplitContentCustom location="first">
           <ImageResponsive
             src={arrowDownRight}
-            width="clamp(80px, 20vw, 92px)"
-            height="clamp(80px, 20vw, 92px)"
+            width={`clamp(80px, ${getFixedCSSvw(20)}, 92px)`}
+            height={`clamp(80px, ${getFixedCSSvw(20)}, 92px)`}
             fit="contain"
           />
         </SplitContentCustom>

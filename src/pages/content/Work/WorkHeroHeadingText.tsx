@@ -2,55 +2,57 @@
 import styled from 'styled-components';
 // Components
 import SpanSpace from '@components/shared/SpanSpace/SpanSpace';
+// Utils
+import getFixedCSSvw from '@utils/getFixedCSSvw';
 
 const SpanOne = styled.span`
   @media only screen and (max-width: 574px) {
-    font-size: 12vw;
+    font-size: ${getFixedCSSvw(12)};
     .span-space {
       display: none;
     }
   }
   @media only screen and (max-width: 410px) {
-    font-size: 11.6vw;
+    font-size: ${getFixedCSSvw(11.6)};
   }
   @media only screen and (max-width: 332px) {
-    font-size: 11.6vw;
+    font-size: ${getFixedCSSvw(11.6)};
   }
 `;
 const SpanTwo = styled.span`
   @media only screen and (max-width: 574px) {
-    font-size: 7.6vw;
+    font-size: ${getFixedCSSvw(7.6)};
   }
   @media only screen and (max-width: 410px) {
-    font-size: 7.4vw;
+    font-size: ${getFixedCSSvw(7.4)};
   }
   @media only screen and (max-width: 332px) {
-    font-size: 7.3vw;
+    font-size: ${getFixedCSSvw(7.3)};
   }
 `;
 const SpanThree = styled.span`
   @media only screen and (max-width: 574px) {
-    font-size: 6.5vw;
+    font-size: ${getFixedCSSvw(6.5)};
     .span-space {
       display: none;
     }
   }
   @media only screen and (max-width: 410px) {
-    font-size: 6.3vw;
+    font-size: ${getFixedCSSvw(6.3)};
   }
   @media only screen and (max-width: 332px) {
-    font-size: 6.3vw;
+    font-size: ${getFixedCSSvw(6.3)};
   }
 `;
 const SpanFour = styled.span`
   @media only screen and (max-width: 574px) {
-    font-size: 10.1vw;
+    font-size: ${getFixedCSSvw(10.1)};
   }
   @media only screen and (max-width: 410px) {
-    font-size: 9.8vw;
+    font-size: ${getFixedCSSvw(9.8)};
   }
   @media only screen and (max-width: 332px) {
-    font-size: 9.7vw;
+    font-size: ${getFixedCSSvw(9.7)};
   }
 `;
 
