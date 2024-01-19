@@ -32,7 +32,9 @@ function Heading(props: Props) {
         'span.letter',
         { y: ['-40%', '0%'], opacity: [0, 1], filter: ['blur(4px)', 'blur(0px)'] },
         { delay: stagger(staggerDuration), type: 'tween' }
-      );
+        // TODO - Find a better performance tweak that doesn't generate a warning
+        // TODO - or find a way to supress the warning
+      ).then(() => animate('span.letter', { y: 'none', filter: 'none' }, { duration: 0 }));
     }
   }, [isInView, animate]);
 
