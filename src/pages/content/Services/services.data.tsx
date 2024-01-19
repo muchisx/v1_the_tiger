@@ -58,9 +58,9 @@ const servicesData: Service[] = [
           children: (
             <>
               <Text>
-                Numerous Shopify base and paid themes often lack the specific features necessary to achieve your unique
-                goals. This is where my expertise comes into play. With my extensive knowledge in Theme Development, I
-                can assist you in the following ways:
+                Numerous Shopify base and paid themes often lack the specific features necessary to
+                achieve your unique goals. This is where my expertise comes into play. With my
+                extensive knowledge in Theme Development, I can assist you in the following ways:
               </Text>
 
               <ol>
@@ -68,22 +68,24 @@ const servicesData: Service[] = [
                   <Text tag="span" fontWeight={500} textColor="var(--text-highlight-secondary)">
                     New & Existing Sections Development:{' '}
                   </Text>
-                  Empower your Shopify Store by introducing totally custom and new sections or by extending existing
-                  ones, with all of the controls that you need.
+                  Empower your Shopify Store by introducing totally custom and new sections or by
+                  extending existing ones, with all of the controls that you need.
                 </li>
                 <li>
                   <Text tag="span" fontWeight={500} textColor="var(--text-highlight-secondary)">
                     Bug Fixing:{' '}
                   </Text>
-                  If a Theme&rsquo;s default functionality is not working as you expected, or you had a previous code
-                  change that broke your theme, I can come in and fix any issues.
+                  If a Theme&rsquo;s default functionality is not working as you expected, or you
+                  had a previous code change that broke your theme, I can come in and fix any
+                  issues.
                 </li>
                 <li>
                   <Text tag="span" fontWeight={500} textColor="var(--text-highlight-secondary)">
                     Complex System Integration:{' '}
                   </Text>
-                  If you have a complex workflow involving elements such as Metafields, MetaObjects, Tags, Pages, or any
-                  custom systems, I specialize in seamlessly integrating them with your Shopify Theme.
+                  If you have a complex workflow involving elements such as Metafields, MetaObjects,
+                  Tags, Pages, or any custom systems, I specialize in seamlessly integrating them
+                  with your Shopify Theme.
                 </li>
                 <li>And virtually anything Theme-related!</li>
               </ol>
@@ -127,9 +129,10 @@ const servicesData: Service[] = [
               >
                 Service - Accesiblity
               </Text>
-              Accessibility plays a crucial role in influencing your SEO rankings and enhancing user interface usability
-              across the entire human spectrum. In my portfolio of services, I offer solutions to address
-              accessibility-related issues that can, in turn, boost your conversion rates.
+              Accessibility plays a crucial role in influencing your SEO rankings and enhancing user
+              interface usability across the entire human spectrum. In my portfolio of services, I
+              offer solutions to address accessibility-related issues that can, in turn, boost your
+              conversion rates.
               <br />
               <br />
               <Text
@@ -140,14 +143,14 @@ const servicesData: Service[] = [
               >
                 Service - UX Improvements
               </Text>
-              I offer UX Audits, Guidelines, and practical Implementation services. While I excel in UX (User
-              Experience) rather than UI/UX design, my expertise lies in user navigation, feature workflows, and
-              device-specific interactions.
+              I offer UX Audits, Guidelines, and practical Implementation services. While I excel in
+              UX (User Experience) rather than UI/UX design, my expertise lies in user navigation,
+              feature workflows, and device-specific interactions.
               <br />
               <br />
               <Text fontSize="1.4rem">
-                If you need any help with UI/UX Design-related work, I can assist by handing you direct contact
-                references of known professional Designers.
+                If you need any help with UI/UX Design-related work, I can assist by handing you
+                direct contact references of known professional Designers.
               </Text>
             </>
           ),
@@ -266,14 +269,16 @@ const servicesData: Service[] = [
           children: (
             <>
               <Text>
-                My website audits are a comprehensive analysis of your current online presence. I identify areas of
-                improvement, from optimizing page load times, addressing accesibility issues, to enhancing SEO
-                strategies. This valuable insight allows us to create a tailored plan to boost your online visibility
-                and attract the right audience.
+                My website audits are a comprehensive analysis of your current online presence. I
+                identify areas of improvement, from optimizing page load times, addressing
+                accesibility issues, to enhancing SEO strategies. This valuable insight allows us to
+                create a tailored plan to boost your online visibility and attract the right
+                audience.
               </Text>
               <br />
               <Text fontSize="1.4rem">
-                These are more in depth Audits than the Free Website Audit that I offer for first-commer clients.
+                These are more in depth Audits than the Free Website Audit that I offer for
+                first-commer clients.
               </Text>
             </>
           ),
@@ -345,14 +350,16 @@ const servicesData: Service[] = [
           children: (
             <>
               <Text>
-                My website audits are a comprehensive analysis of your current online presence. I identify areas of
-                improvement, from optimizing page load times, addressing accesibility issues, to enhancing SEO
-                strategies. This valuable insight allows us to create a tailored plan to boost your online visibility
-                and attract the right audience.
+                My website audits are a comprehensive analysis of your current online presence. I
+                identify areas of improvement, from optimizing page load times, addressing
+                accesibility issues, to enhancing SEO strategies. This valuable insight allows us to
+                create a tailored plan to boost your online visibility and attract the right
+                audience.
               </Text>
               <br />
               <Text fontSize="1.4rem">
-                These are more in depth Audits than the Free Website Audit that I offer for first-commer clients.
+                These are more in depth Audits than the Free Website Audit that I offer for
+                first-commer clients.
               </Text>
             </>
           ),
@@ -436,9 +443,10 @@ const servicesData: Service[] = [
               >
                 Service - Accesiblity
               </Text>
-              Accessibility plays a crucial role in influencing your SEO rankings and enhancing user interface usability
-              across the entire human spectrum. In my portfolio of services, I offer solutions to address
-              accessibility-related issues that can, in turn, boost your conversion rates.
+              Accessibility plays a crucial role in influencing your SEO rankings and enhancing user
+              interface usability across the entire human spectrum. In my portfolio of services, I
+              offer solutions to address accessibility-related issues that can, in turn, boost your
+              conversion rates.
               <br />
               <br />
               <Text
@@ -449,14 +457,14 @@ const servicesData: Service[] = [
               >
                 Service - UX Improvements
               </Text>
-              I offer UX Audits, Guidelines, and practical Implementation services. While I excel in UX (User
-              Experience) rather than UI/UX design, my expertise lies in user navigation, feature workflows, and
-              device-specific interactions.
+              I offer UX Audits, Guidelines, and practical Implementation services. While I excel in
+              UX (User Experience) rather than UI/UX design, my expertise lies in user navigation,
+              feature workflows, and device-specific interactions.
               <br />
               <br />
               <Text fontSize="1.4rem">
-                If you need any help with UI/UX Design-related work, I can assist by handing you direct contact
-                references of known professional Designers.
+                If you need any help with UI/UX Design-related work, I can assist by handing you
+                direct contact references of known professional Designers.
               </Text>
             </>
           ),

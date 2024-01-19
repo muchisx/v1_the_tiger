@@ -88,10 +88,6 @@ select {
                 MAIN CSS BELOW
 --------------------------------------------------- */
 
-html {
-  scroll-behavior: smooth;
-}
-
 
 html,
 body {

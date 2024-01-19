@@ -1,5 +1,6 @@
 # Todo List
 
+- [ ] Optimize the Heading animation, right now even when finished is causing a lot of CPU usage during the scroll, find a way to disconnect the JS once it finishes the animation.
 - [x] Implement contact form with
   - [x] https://www.emailjs.com/docs
   - [x] https://www.react-hook-form.com/get-started

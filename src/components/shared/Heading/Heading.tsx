@@ -32,7 +32,7 @@ function Heading(props: Props) {
         'span.letter',
         { y: ['-40%', '0%'], opacity: [0, 1], filter: ['blur(4px)', 'blur(0px)'] },
         { delay: stagger(staggerDuration), type: 'tween' }
-      );
+      ).then(() => animate('span.letter', { y: 'unset', filter: 'none' }, { duration: 0 }));
     }
   }, [isInView, animate]);
 
