@@ -34,7 +34,8 @@ function Contact() {
             </Heading>
 
             <Text>
-              Reach out to me, and together, we&rsquo;ll craft a website that outshines the competition,
+              Reach out to me, and together, we&rsquo;ll craft a website that outshines the
+              competition,
               <br />
               leaving us proud of the exceptional results we achieve.
             </Text>
@@ -42,10 +43,10 @@ function Contact() {
             <div className="contact-methods">
               <Button
                 Icon={Chat}
-                text="Telegram"
+                text="WhatsApp"
                 variant="primary"
                 buttonRole="link"
-                to="https://t.me/migxang"
+                to="https://wa.me/+573052665559"
                 newTab
               />
               <Button

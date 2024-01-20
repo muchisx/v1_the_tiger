@@ -30,6 +30,14 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
-    'max-len': ['error', { code: 100, ignoreUrls: true }],
+    'max-len': [
+      'error',
+      {
+        code: 100,
+        ignoreUrls: true,
+        ignoreComments: true,
+        ignorePattern: '^import\\s.+\\sfrom\\s.+;$',
+      },
+    ],
   },
 };
