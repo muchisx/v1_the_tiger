@@ -7,7 +7,14 @@ import Text from '@components/shared/Text/Text';
 import Button from '@components/shared/Button/Button';
 import Section from '@components/shared/Section/Section';
 // Styled Components
-import { FooterStyled, FooterBlock, FooterMenuItem, footerBodyCSS, FooterMenu, footerBottomCSS } from './Footer.styles';
+import {
+  FooterStyled,
+  FooterBlock,
+  FooterMenuItem,
+  footerBodyCSS,
+  FooterMenu,
+  footerBottomCSS,
+} from './Footer.styles';
 
 function Footer() {
   return (
@@ -48,12 +55,20 @@ function Footer() {
           </FooterMenu>
           <FooterMenu>
             <FooterMenuItem>
-              <Link target="_blank" rel="noopener noreferrer" to="https://www.linkedin.com/in/miguelangelpro/">
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                to="https://www.linkedin.com/in/miguelangelpro/"
+              >
                 LinkedIn
               </Link>
             </FooterMenuItem>
             <FooterMenuItem>
-              <Link target="_blank" rel="noopener noreferrer" to="https://instagram.com/imiguel.angel">
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                to="https://instagram.com/imiguel.angel"
+              >
                 Instagram
               </Link>
             </FooterMenuItem>
@@ -75,10 +90,10 @@ function Footer() {
             />
             <Button
               Icon={Chat}
-              text="Telegram"
+              text="WhatsApp"
               variant="quaternary"
               buttonRole="link"
-              to="https://t.me/migxang"
+              to="https://wa.me/+573052665559"
               newTab
             />
           </FooterMenu>
