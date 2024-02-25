@@ -111,7 +111,7 @@ function Footer() {
 
         <Text fontSize="1.4rem" className="footer__copyright">
           <Text tag="span" textColor="var(--text-highlight-secondary)" fontWeight={500}>
-            © 2023{' '}
+            © 2024{' '}
           </Text>
           Miguel Ángel. All rights reserved.
         </Text>
