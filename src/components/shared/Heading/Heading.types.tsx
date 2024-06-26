@@ -17,3 +17,7 @@ export type HeadingProps = {
   $fontWeight?: Props['fontWeight'];
   $fontSize?: Props['fontSize'];
 };
+
+export type HeadingSpanProps = {
+  animated?: boolean;
+};
