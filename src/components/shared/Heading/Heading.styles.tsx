@@ -1,12 +1,22 @@
 // Dependencies
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 // Utils
 import { getCSSFromMediaQuery } from '@utils';
 // Types
-import type { HeadingProps } from './Heading.types';
+import type { HeadingProps, HeadingSpanProps } from './Heading.types';
 
-export const HeadingSpan = styled(motion.span)``;
+export const HeadingSpan = styled(motion.span)<HeadingSpanProps>`
+  ${(props) =>
+    props.animated &&
+    // Removes transform and filter css properties once the animation finishes to improve performance
+    css`
+      span.letter {
+        transform: none !important;
+        filter: none !important;
+      }
+    `}
+`;
 
 export const HeadingStyled = styled.h1<HeadingProps>`
   line-height: 1.15;

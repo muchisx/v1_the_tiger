@@ -1,5 +1,5 @@
 // Dependencies
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useAnimate, useInView, stagger } from 'framer-motion';
 // Utils
 import getDeepModifiedNode from '@utils/getDeepModifiedNode';
@@ -15,6 +15,7 @@ function Heading(props: Props) {
   const isInView = useInView(ref, { once: true, margin: '-8% 0px' });
   const [scope, animate] = useAnimate();
   const animatedLettersRef = useRef(0);
+  const [animated, setAnimated] = useState(false);
 
   const childrenModified = useMemo(() => {
     const { node, nodesModifiedTotal } = getDeepModifiedNode(children, (nodeItem) =>
@@ -32,10 +33,8 @@ function Heading(props: Props) {
         'span.letter',
         { y: ['-40%', '0%'], opacity: [0, 1], filter: ['blur(4px)', 'blur(0px)'] },
         { delay: stagger(staggerDuration), type: 'tween' }
-        // TODO - Find a better performance tweak that doesn't generate a warning
-        // TODO - or find a way to supress the warning
         // Removes transform and filter css properties once the animation finishes to improve performance
-      ).then(() => animate('span.letter', { y: 'none', filter: 'none' }, { duration: 0 }));
+      ).then(() => setAnimated(true));
     }
   }, [isInView, animate]);
 
@@ -47,7 +46,9 @@ function Heading(props: Props) {
       $fontSize={fontSize}
       $fontWeight={fontWeight}
     >
-      <HeadingSpan ref={scope}>{childrenModified}</HeadingSpan>
+      <HeadingSpan ref={scope} animated={animated}>
+        {childrenModified}
+      </HeadingSpan>
     </HeadingStyled>
   );
 }

@@ -19,7 +19,8 @@ export const ButtonContainerStyled = styled(motion.div)<ContainerProps>`
   color: var(--btn-color-text-${(props) => props.variant});
   background: var(--btn-color-bg-${(props) => props.variant});
   border: 1px solid var(--btn-color-border-${(props) => props.variant});
-  padding: ${(props) => (props.text ? (props.Icon ? '.2rem .2rem .2rem 1.4rem' : '.7rem 1.4rem') : '.6rem')};
+  padding: ${(props) =>
+    props.text ? (props.Icon ? '.2rem .2rem .2rem 1.4rem' : '.7rem 1.4rem') : '.6rem'};
   transition: padding 200ms ease-in-out;
 
   ${(props) =>
@@ -32,7 +33,8 @@ export const ButtonContainerStyled = styled(motion.div)<ContainerProps>`
     `}
 
   &:hover {
-    ${(props) => props.isHovered && props.text && props.Icon && 'padding: .2rem 1.4rem .2rem .2rem '};
+    ${(props) =>
+      props.isHovered && props.text && props.Icon && 'padding: .2rem 1.4rem .2rem .2rem '};
   }
 
   & ${IconWrap} {
@@ -41,7 +43,9 @@ export const ButtonContainerStyled = styled(motion.div)<ContainerProps>`
     justify-content: center;
     border-radius: 50%;
     padding: ${(props) => props.IconWrapPadding};
-    color: var(--btn-color-${(props) => (props.text ? `icon-${props.variant}` : `text-${props.variant}`)});
+    color: var(
+      --btn-color-${(props) => (props.text ? `icon-${props.variant}` : `text-${props.variant}`)}
+    );
     ${(props) =>
       props.text &&
       css`
