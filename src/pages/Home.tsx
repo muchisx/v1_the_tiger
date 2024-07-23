@@ -1,20 +1,20 @@
 // Components
+import ImageBanner from '@components/ImageBanner/ImageBanner';
 import LogoGrid from '@components/LogoGrid/LogoGrid';
+import SplitContent from '@components/SplitContent/SplitContent';
 import Heading from '@components/shared/Heading/Heading';
 import Section from '@components/shared/Section/Section';
-import ImageBanner from '@components/ImageBanner/ImageBanner';
-import SplitContent from '@components/SplitContent/SplitContent';
 // Utils
 import getFixedCSSvw from '@utils/getFixedCSSvw';
 // Content
 import {
-  homeCTA,
-  homeAboutMe,
-  homeLogoGrid,
-  homeServices,
-  homeLogoGridTwo,
-  homeImageBanner,
   HomeHeroHeadingText,
+  homeAboutMe,
+  homeCTA,
+  homeImageBanner,
+  homeLogoGrid,
+  homeLogoGridTwo,
+  homeServices,
 } from './content/Home';
 import sharedContact from './content/shared/sharedContact';
 
@@ -28,6 +28,7 @@ function Home() {
           {HomeHeroHeadingText}
         </Heading>
       </Section>
+
       <SplitContent
         contain
         leftContent={homeCTA.leftContent}
