@@ -7,7 +7,6 @@ import Section from '@components/shared/Section/Section';
 // Utils
 import getFixedCSSvw from '@utils/getFixedCSSvw';
 // Content
-import { getUA } from 'react-device-detect';
 import {
   HomeHeroHeadingText,
   homeAboutMe,
@@ -30,7 +29,6 @@ function Home() {
         </Heading>
       </Section>
 
-      {getUA}
       <SplitContent
         contain
         leftContent={homeCTA.leftContent}
