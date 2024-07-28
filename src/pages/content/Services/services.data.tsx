@@ -52,6 +52,50 @@ const servicesData: Service[] = [
       {
         $keyId: crypto.randomUUID(),
         question: {
+          children: 'APP DEVELOPMENT (PUBLIC & PRIVATE)',
+        },
+        answer: {
+          children: (
+            <>
+              <Text>
+                With extensive experience in Shopify App Development, I can help you create custom
+                apps that cater to your unique business requirements. Whether you are creating a
+                public app to release it to the App Store or a private app to streamline your
+                internal processes, I&apos;ve got you covered.
+              </Text>
+
+              <ol>
+                <li>
+                  <Text tag="span" fontWeight={500} textColor="var(--text-highlight-secondary)">
+                    Public App Development:{' '}
+                  </Text>
+                  I can assist you in developing a public app that is compliant with Shopify&apos;s
+                  guidelines and requirements, ensuring a seamless integration with everything
+                  Shopify.
+                </li>
+                <li>
+                  <Text tag="span" fontWeight={500} textColor="var(--text-highlight-secondary)">
+                    Custom Private App Development:{' '}
+                  </Text>
+                  If you require a custom private app to streamline your business processes, I can
+                  help you create a tailored solution that meets your specific needs.
+                </li>
+                <li>
+                  <Text tag="span" fontWeight={500} textColor="var(--text-highlight-secondary)">
+                    Existing App Customization:{' '}
+                  </Text>
+                  If you already have a Shopify app but need to customize it to better suit your
+                  business requirements, I can help you make the necessary changes.
+                </li>
+                <li>And virtually anything App-related!</li>
+              </ol>
+            </>
+          ),
+        },
+      },
+      {
+        $keyId: crypto.randomUUID(),
+        question: {
           children: 'THEME DEVELOPMENT',
         },
         answer: {
@@ -75,9 +119,8 @@ const servicesData: Service[] = [
                   <Text tag="span" fontWeight={500} textColor="var(--text-highlight-secondary)">
                     Bug Fixing:{' '}
                   </Text>
-                  If a Theme&rsquo;s default functionality is not working as you expected, or you
-                  had a previous code change that broke your theme, I can come in and fix any
-                  issues.
+                  If a Theme&apos;s default functionality is not working as you expected, or you had
+                  a previous code change that broke your theme, I can come in and fix any issues.
                 </li>
                 <li>
                   <Text tag="span" fontWeight={500} textColor="var(--text-highlight-secondary)">
@@ -91,6 +134,16 @@ const servicesData: Service[] = [
               </ol>
             </>
           ),
+        },
+      },
+      {
+        $keyId: crypto.randomUUID(),
+        question: {
+          children: 'HEADLESS STOREFRONT',
+        },
+        answer: {
+          children:
+            'Headless commerce is a rapidly growing trend that decouples the front-end and back-end of an e-commerce platform. By leveraging the power of Shopify as a headless CMS, I can help you create a unique and engaging shopping experience that is tailored to your brand. No matter the framework, I can help you build a headless storefront that is fast, flexible, and scalable.',
         },
       },
       {
@@ -183,6 +236,16 @@ const servicesData: Service[] = [
       },
     ],
     features: [
+      {
+        $keyId: crypto.randomUUID(),
+        question: {
+          children: 'FULL-STACK FRAMERWORKS',
+        },
+        answer: {
+          children:
+            'Choose your React stack and let me handle the rest. Whether it is Remix, Next.js, Astro... no matter. I can help you with your project, from the initial setup to the final deployment, ensuring that your project is built with the best practices and the latest (or legacy, if required) technologies.',
+        },
+      },
       {
         $keyId: crypto.randomUUID(),
         question: {
