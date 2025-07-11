@@ -8,6 +8,7 @@ import { getMediaQueryValue } from '@utils';
 // Types
 import type { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
 import backgroundshape from '@assets/svgs/abstract-1-shape-1.svg';
+import { EXTERNAL_URL } from '@constants/urls';
 
 const customStyles = css`
   @media only screen and (min-width: ${getMediaQueryValue('all')}) {
@@ -31,8 +32,8 @@ const customStyles = css`
 
 const textRight = (
   <>
-    I use my proficiency in Shopify or React Development and thorough coding practices to create robust digital
-    presences for innovative startups and established businesses alike.
+    I use my proficiency in Shopify or React Development and thorough coding practices to create
+    robust digital presences for innovative startups and established businesses alike.
   </>
 );
 
@@ -67,7 +68,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       variant: 'primary',
       $keyId: crypto.randomUUID(),
       text: 'Reserve a free meeting',
-      to: 'https://calendly.com/miguel-angel-creator/free-meeting',
+      to: EXTERNAL_URL.scheduler,
     },
   ],
 };

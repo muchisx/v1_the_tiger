@@ -4,6 +4,7 @@ import { ArrowRight, CalendarLtr } from '@styled-icons/fluentui-system-filled';
 // Components
 import Text from '@components/shared/Text/Text';
 // Types
+import { EXTERNAL_URL } from '@constants/urls';
 import type { Service } from './services.types';
 import type { Props as ButtonProps } from '@/components/shared/Button/Button.types';
 
@@ -476,7 +477,7 @@ const servicesData: Service[] = [
         Icon: CalendarLtr,
         variant: 'primary',
         text: 'Reserve a free meeting',
-        to: 'https://calendly.com/miguel-angel-creator/free-meeting',
+        to: EXTERNAL_URL.scheduler,
       },
     ],
     features: [

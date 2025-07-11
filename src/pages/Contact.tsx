@@ -9,6 +9,7 @@ import SplitContent, { SplitContentCustom } from '@components/SplitContent/Split
 // Styled Components
 import contactFormSectionCSS from '@content/Contact/contactFormSection';
 // Assets
+import { EXTERNAL_URL } from '@constants/urls';
 import contactFormBgShape from '@assets/svgs/abstract-8.svg';
 
 function Contact() {
@@ -50,11 +51,11 @@ function Contact() {
                 newTab
               />
               <Button
-                text="Reserve a free meeting"
-                Icon={CalendarLtr}
                 variant="primary"
                 buttonRole="link"
-                to="https://calendly.com/miguel-angel-creator/free-meeting"
+                Icon={CalendarLtr}
+                to={EXTERNAL_URL.scheduler}
+                text="Reserve a free meeting"
                 newTab
               />
               <Button

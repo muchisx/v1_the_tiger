@@ -9,6 +9,7 @@ import svgShape from '@assets/svgs/abstract-8.svg';
 import { getMediaQueryValue } from '@utils';
 // Types
 import type { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
+import { EXTERNAL_URL } from '@constants/urls';
 
 const customStyles = css`
   @media only screen and (min-width: ${getMediaQueryValue('all')}) {
@@ -39,10 +40,10 @@ const customStyles = css`
 
 const textRight = (
   <>
-    Crafting web experiences that captivate and convert is my forte. With a portfolio spanning diverse industries,
-    I&rsquo;ve honed my skills to create websites that not only look stunning but also function flawlessly. I thrive on
-    turning your vision into a digital reality, ensuring each element is pixel-perfect and every interaction is
-    intuitive.
+    Crafting web experiences that captivate and convert is my forte. With a portfolio spanning
+    diverse industries, I&rsquo;ve honed my skills to create websites that not only look stunning
+    but also function flawlessly. I thrive on turning your vision into a digital reality, ensuring
+    each element is pixel-perfect and every interaction is intuitive.
   </>
 );
 
@@ -69,7 +70,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       Icon: CalendarLtr,
       variant: 'primary',
       text: 'Reserve a free meeting',
-      to: 'https://calendly.com/miguel-angel-creator/free-meeting',
+      to: EXTERNAL_URL.scheduler,
     },
     {
       $keyId: crypto.randomUUID(),

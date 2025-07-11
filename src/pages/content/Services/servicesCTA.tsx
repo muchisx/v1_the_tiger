@@ -11,6 +11,7 @@ import svgShape from '@assets/svgs/abstract-8.svg';
 import { getMediaQueryValue } from '@utils';
 // Types
 import type { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
+import { EXTERNAL_URL } from '@constants/urls';
 
 const customStyles = css`
   @media only screen and (min-width: ${getMediaQueryValue('all')}) {
@@ -43,18 +44,18 @@ const customStyles = css`
 const textRight = (
   <>
     <Text tag="span" style={{ display: 'block', marginBottom: '1.5rem' }}>
-      When seeking development services, it&rsquo;s crucial to consider various factors that ensure a successful
-      collaboration. These factors include the quality of the code, the developer&rsquo;s integrity, transparency, and
-      reliability.
+      When seeking development services, it&rsquo;s crucial to consider various factors that ensure
+      a successful collaboration. These factors include the quality of the code, the
+      developer&rsquo;s integrity, transparency, and reliability.
     </Text>
     <Text tag="span" style={{ display: 'block', marginBottom: '1.5rem' }}>
-      Unfortunately, many freelance developers prioritize speed and rock-bottom prices, resulting in subpar products
-      that can lead to future headaches. I take a different approach. I prioritize quality and client satisfaction above
-      all else.
+      Unfortunately, many freelance developers prioritize speed and rock-bottom prices, resulting in
+      subpar products that can lead to future headaches. I take a different approach. I prioritize
+      quality and client satisfaction above all else.
     </Text>
     <Text tag="span">
-      By partnering with me, you can expect excellence in every aspect of our work, and together, we&rsquo;ll achieve
-      results we&rsquo;ll be proud of.
+      By partnering with me, you can expect excellence in every aspect of our work, and together,
+      we&rsquo;ll achieve results we&rsquo;ll be proud of.
     </Text>
   </>
 );
@@ -82,7 +83,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       Icon: CalendarLtr,
       variant: 'primary',
       text: 'Reserve a free meeting',
-      to: 'https://calendly.com/miguel-angel-creator/free-meeting',
+      to: EXTERNAL_URL.scheduler,
     },
     {
       $keyId: crypto.randomUUID(),

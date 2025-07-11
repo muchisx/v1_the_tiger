@@ -9,6 +9,7 @@ import svgShape from '@assets/svgs/abstract-8.svg';
 import { getMediaQueryValue } from '@utils';
 // Types
 import type { Props as SplitContentProps } from '@components/SplitContent/SplitContent.types';
+import { EXTERNAL_URL } from '@constants/urls';
 
 const customStyles = css`
   @media only screen and (min-width: ${getMediaQueryValue('all')}) {
@@ -40,10 +41,19 @@ const customStyles = css`
 // TODO - change the text
 const textRight = (
   <>
-    I take pride in presenting my projects that exemplify the outstanding work I have accomplished. Explore my portfolio
-    to discover a wide array of projects spanning across different industries.
-    <span style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: '1.4rem', marginTop: '1.6rem' }}>
-      <LockClosed size="1.4rem" /> Due to confidentiality, only a limited selection can be shared here.
+    I take pride in presenting my projects that exemplify the outstanding work I have accomplished.
+    Explore my portfolio to discover a wide array of projects spanning across different industries.
+    <span
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.8rem',
+        fontSize: '1.4rem',
+        marginTop: '1.6rem',
+      }}
+    >
+      <LockClosed size="1.4rem" /> Due to confidentiality, only a limited selection can be shared
+      here.
     </span>
   </>
 );
@@ -71,7 +81,7 @@ const rightContent: SplitContentProps['rightContent'] = {
       Icon: CalendarLtr,
       variant: 'primary',
       text: 'Reserve a free meeting',
-      to: 'https://calendly.com/miguel-angel-creator/free-meeting',
+      to: EXTERNAL_URL.scheduler,
     },
     {
       $keyId: crypto.randomUUID(),

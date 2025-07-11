@@ -29,7 +29,7 @@
   - [ ] Fix BackgroundShape in Split content to no be direct child of Section, but instead be contained within the content
   - [ ] Give it a size prop, to use breakpoint sizes instead of fixed width %.
   - [ ] Standarize all abstract SVGs to have the same viewbox
-- [x] Refactor ImageMasked to use ImageResponsive as dependency 
+- [x] Refactor ImageMasked to use ImageResponsive as dependency
 - [x] Add Logo to Nav to make spacing for hamburger icon
 - [x] Replace defaultProps for default Attributtes for optional props on all components
 - [ ] Use better timing functions for transitions and animations that are just using ease
@@ -60,7 +60,7 @@
   - [x] Nav reveal animation
   - [x] Heading each letter animation
     - [x] recursion maybe? https://adueck.github.io/blog/recursively-modify-text-jsx-react/
-- [ ] Embed calendly form instead of linking out of my porfolio.
+- [ ] Embed scheduler form instead of linking out of my porfolio.
 - [ ] Double check all .tsx and .ts files and assign properly .tsx and .ts files.
 - [x] Change types of css values from 'string' to a more complex type that accepts `${number}${unit}` with template literals.
 - [ ] Verify all uses of components with empty/partial props (even while typescript erros) to verify is being well protected for production.
@@ -69,6 +69,7 @@
   - [ ] https://ryanmulligan.dev/blog/layout-breakouts/
   - [ ] https://smolcss.dev/#smol-breakout-grid
 - [x] Use this breakpoint system inspired in Tailwind and MiUI **(I did this with the getMediaQueryValue Util)**
+
   ```javascript
   {
     'xsm': '426px',
