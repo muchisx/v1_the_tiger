@@ -14,6 +14,7 @@ import InputText from '@components/shared/InputText/InputText';
 // Types
 import type { FormData } from '@content/Contact/ContactForm/ContactForm.types';
 // Styled Components
+import { EXTERNAL_URL } from '@constants/urls';
 import {
   StyledForm,
   FormOverlay,
@@ -269,11 +270,7 @@ function ContactForm() {
           deliver an ordinary email
         </Link>
         {' or '}
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          to="https://calendly.com/miguel-angel-creator/free-meeting"
-        >
+        <Link target="_blank" rel="noopener noreferrer" to={EXTERNAL_URL.scheduler}>
           schedule a meeting
         </Link>
         .
