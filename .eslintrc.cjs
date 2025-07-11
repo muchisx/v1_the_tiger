@@ -24,6 +24,7 @@ module.exports = {
     'no-nested-ternary': 'off',
     'react/require-default-props': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'import/prefer-default-export': 'off',
     'prettier/prettier': [
       'error',
       {
@@ -37,6 +38,7 @@ module.exports = {
         ignoreUrls: true,
         ignoreComments: true,
         ignorePattern: '^import\\s.+\\sfrom\\s.+;$',
+        ignoreStrings: true,
       },
     ],
   },
