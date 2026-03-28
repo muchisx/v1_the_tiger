@@ -159,13 +159,13 @@ function TermsService() {
           are the proprietary property of Miguel Angel and are either registered trademarks,
           trademarks or otherwise protected intellectual property of Miguel Angel or third parties
           in the United States and/or other countries. If you are aware of a potential infringement
-          of our intellectual property, please contact Miguel at miguel.angel.creator@gmail.com. We
-          respect the intellectual property rights of others. It is our policy to respond to any
-          claim that Content posted on the Website infringes on the copyright, trademark or other
-          intellectual property rights of any person or entity. If you believe in good faith that
-          the Content infringes on your intellectual property rights, you or your agent may send us
-          a written notice of such infringement titled “Infringement of Intellectual Property Rights
-          - DMCA.” Your notice to us must include the following information:
+          of our intellectual property, please contact Miguel at hello@miguelangel.pro. We respect
+          the intellectual property rights of others. It is our policy to respond to any claim that
+          Content posted on the Website infringes on the copyright, trademark or other intellectual
+          property rights of any person or entity. If you believe in good faith that the Content
+          infringes on your intellectual property rights, you or your agent may send us a written
+          notice of such infringement titled “Infringement of Intellectual Property Rights - DMCA.”
+          Your notice to us must include the following information:
         </Text>
         <br />
         <ol>
@@ -194,7 +194,7 @@ function TermsService() {
         <Text>You may submit your claim to us by contacting us at:</Text>
         <Text>Mr.</Text>
         <Text>Miguel</Text>
-        <Text>miguel.angel.creator@gmail.com</Text>
+        <Text>hello@miguelangel.pro</Text>
         <br />
         <Heading headingLevel="h4" fontSize={{ all: '2.4rem' }} fontWeight={700}>
           Governing law, severability, dispute resolution and venue
@@ -225,7 +225,7 @@ function TermsService() {
         <br />
         <Text>
           If you have any questions about this Privacy Policy, please contact us at{' '}
-          <strong>miguel.angel.creator@gmail.com</strong>.
+          <strong>hello@miguelangel.pro</strong>.
         </Text>
       </Section>
     </main>

@@ -169,7 +169,7 @@ function PrivacyPolicy() {
           marketing is the act of selling products or services directly to consumers rather than
           through retailers. You may, at any time, request that we cease to use your information for
           direct marketing purposes by emailing us at
-          <Text tag="strong"> miguel.angel.creator@gmail.com.</Text>
+          <Text tag="strong"> hello@miguelangel.pro.</Text>
         </Text>
         <br />
         <Heading headingLevel="h4" fontSize={{ all: '2.4rem' }} fontWeight={700}>
@@ -213,7 +213,7 @@ function PrivacyPolicy() {
         <br />
         <Text>Mr.</Text>
         <Text>Miguel</Text>
-        <Text>miguel.angel.creator@gmail.com</Text>
+        <Text>hello@miguelangel.pro</Text>
         <br />
         <Text>
           We will need to verify your identity prior to effectuating your request. To verify your
@@ -243,7 +243,7 @@ function PrivacyPolicy() {
         </Text>
         <Text>Mr.</Text>
         <Text>Miguel</Text>
-        <Text>miguel.angel.creator@gmail.com</Text>
+        <Text>hello@miguelangel.pro</Text>
         <br />
         <Text>
           You may lodge a complaint with us by contacting the person accountable and responsible for
@@ -307,7 +307,7 @@ function PrivacyPolicy() {
         <br />
         <Text>
           If you have any questions about this Privacy Policy, please contact us at{' '}
-          <strong>miguel.angel.creator@gmail.com</strong>.
+          <strong>hello@miguelangel.pro</strong>.
         </Text>
       </Section>
     </main>

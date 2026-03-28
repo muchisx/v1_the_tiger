@@ -80,10 +80,10 @@ function Footer() {
         <FooterBlock className="footer__CTAs">
           <FooterMenu>
             <Button
-              text="miguel.angel.creator@gmail.com"
+              text="hello@miguelangel.pro"
               variant="quaternary"
               buttonRole="link"
-              to="mailto:miguel.angel.creator@gmail.com?subject=Miguel!%20-%20Help%20me%20with:%20"
+              to="mailto:hello@miguelangel.pro?subject=Miguel!%20-%20Help%20me%20with:%20"
             />
             <Button
               Icon={Chat}

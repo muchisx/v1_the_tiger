@@ -59,11 +59,11 @@ function Contact() {
                 newTab
               />
               <Button
-                text="miguel.angel.creator@gmail.com"
+                text="hello@miguelangel.pro"
                 Icon={Mail}
                 variant="primary"
                 buttonRole="link"
-                to="mailto:miguel.angel.creator@gmail.com?subject=Miguel!%20-%20Help%20me%20with:%20"
+                to="mailto:hello@miguelangel.pro?subject=Miguel!%20-%20Help%20me%20with:%20"
               />
             </div>
           </div>
