@@ -266,7 +266,7 @@ function ContactForm() {
 
       <Text fontSize="1.4rem">
         If you face issues with this form, please{' '}
-        <Link to="mailto:miguel.angel.creator@gmail.com?subject=Miguel!%20-%20Help%20me%20with:%20">
+        <Link to="mailto:hello@miguelangel.pro?subject=Miguel!%20-%20Help%20me%20with:%20">
           deliver an ordinary email
         </Link>
         {' or '}
