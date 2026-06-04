@@ -49,17 +49,19 @@ const leftContent: SplitContentProps['leftContent'] = {
 const textOne = (
   <>
     <span style={{ display: 'block', marginBottom: '0.6rem' }}>I&#39;m glad you&#39;re here!</span>
-    I&#39;m Miguel, and as a commited and imaginative freelance Web Developer, my goal is to develop projects that I can
-    take pride in. I am a member Shopify Partners Program, adept in React Development, and I excel at creating digital
-    services that include stunning user interfaces and reliable code.
+    I&#39;m Miguel, a Web Developer specializing in Shopify, React, and AI. I build high-quality
+    digital products that combine great user experiences, reliable code, and thoughtful design. As a
+    member of the Shopify Partners Program, I help businesses turn ideas into scalable, impactful
+    solutions.
   </>
 );
 
 const textTwo = (
   <>
-    Driven by passion for technology and a focus on Shopify and React development, I craft reliable digital experiences
-    that deliver real-world value for my clients and their end-users. I place a strong emphasis on collaboration,
-    partnering closely with clients to create custom solutions that perfectly meet their needs and exceed their goals.
+    Driven by passion for technology and a focus on Shopify and React development, I craft reliable
+    digital experiences that deliver real-world value for my clients and their end-users. I place a
+    strong emphasis on collaboration, partnering closely with clients to create custom solutions
+    that perfectly meet their needs and exceed their goals.
   </>
 );
 

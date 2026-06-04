@@ -40,22 +40,21 @@ const customStyles = css`
   }
 `;
 
-// TODO - change the text, reword more
 const textRight = (
   <>
     <Text tag="span" style={{ display: 'block', marginBottom: '1.5rem' }}>
-      When seeking development services, it&rsquo;s crucial to consider various factors that ensure
-      a successful collaboration. These factors include the quality of the code, the
-      developer&rsquo;s integrity, transparency, and reliability.
+      Great products are built through a combination of thoughtful design, reliable engineering, and
+      strong collaboration. These principles guide every project I take on.
     </Text>
+
     <Text tag="span" style={{ display: 'block', marginBottom: '1.5rem' }}>
-      Unfortunately, many freelance developers prioritize speed and rock-bottom prices, resulting in
-      subpar products that can lead to future headaches. I take a different approach. I prioritize
-      quality and client satisfaction above all else.
+      Specializing in Shopify, React, and AI-powered solutions, I focus on creating digital
+      experiences that are scalable, maintainable, and enjoyable to use.
     </Text>
+
     <Text tag="span">
-      By partnering with me, you can expect excellence in every aspect of our work, and together,
-      we&rsquo;ll achieve results we&rsquo;ll be proud of.
+      My goal is simple: deliver work that creates meaningful business value and stands the test of
+      time.
     </Text>
   </>
 );
