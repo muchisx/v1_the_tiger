@@ -7,16 +7,16 @@ import getFixedCSSvw from '@utils/getFixedCSSvw';
 
 const SpanOne = styled.span`
   @media only screen and (max-width: 574px) {
-    font-size: ${getFixedCSSvw(15.6)};
+    font-size: ${getFixedCSSvw(16)};
     .span-space {
       display: none;
     }
   }
   @media only screen and (max-width: 410px) {
-    font-size: ${getFixedCSSvw(15)};
+    font-size: ${getFixedCSSvw(15.5)};
   }
   @media only screen and (max-width: 332px) {
-    font-size: ${getFixedCSSvw(14.9)};
+    font-size: ${getFixedCSSvw(15.3)};
   }
 `;
 const SpanTwo = styled.span`
@@ -35,25 +35,25 @@ const SpanTwo = styled.span`
 `;
 const SpanThree = styled.span`
   @media only screen and (max-width: 574px) {
-    font-size: ${getFixedCSSvw(7)};
+    font-size: ${getFixedCSSvw(6.3)};
   }
   @media only screen and (max-width: 410px) {
-    font-size: ${getFixedCSSvw(6.8)};
+    font-size: ${getFixedCSSvw(6.1)};
   }
   @media only screen and (max-width: 332px) {
-    font-size: ${getFixedCSSvw(6.7)};
+    font-size: ${getFixedCSSvw(6)};
   }
 `;
 
 const HomeHeroHeadingText = (
   <>
     <SpanOne className="highlight-primary">
-      FREELANCE
+      FULLSTACK
       <SpanSpace />
     </SpanOne>
     <SpanTwo>WEB DEVELOPER</SpanTwo>
     <SpanThree>
-      REACT
+      AI, REACT
       <span className="highlight-primary">
         <SpanSpace />&<SpanSpace />
       </span>

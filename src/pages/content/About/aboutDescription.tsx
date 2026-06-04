@@ -71,10 +71,10 @@ const aboutDescription: SplitContentProps = {
         fontWeight: 500,
         children: (
           <>
-            I am a Web Developer specializing in Shopify and React, driven by an unwavering
-            commitment to quality. Unlike freelancers who prioritize speed paired with low prices at
-            the expense of quality, I believe in delivering top-notch solutions that not only meet
-            but exceed client expectations.
+            I am a Web Developer specializing in Shopify, React, and AI-powered solutions, with a
+            strong commitment to building high-quality digital products. I help businesses create
+            scalable, reliable, and user-focused experiences, combining modern technologies with
+            thoughtful engineering to deliver solutions that drive meaningful results.
             <br />
             <br />
             My unique journey began in the world of Visual Arts, infusing my Front-End development
